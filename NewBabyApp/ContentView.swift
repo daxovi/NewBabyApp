@@ -85,6 +85,10 @@ struct ContentView: View {
                 .navigationDestination(for: DetailModel.self) { detail in
                     DetailView(detail: detail, path: $path)
                 }
+                .navigationDestination(for: StoriesModel.self, destination: { stories in
+                    StoriesView(storiesGroup: stories, path: $path)
+                        .transition(.move(edge: .bottom))
+                })
                 .allowsHitTesting(true)
 
                 .scrollContentBackground(.hidden)

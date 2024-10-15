@@ -10,7 +10,7 @@ import SwiftUI
 struct StoriesView: View {
 
     var storiesGroup: StoriesModel
-    @Binding var isStoriesCompleted: Bool
+    @Binding var path: NavigationPath
 
     @State var selectedStory: Int = 0
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common)
@@ -29,7 +29,7 @@ struct StoriesView: View {
         // tlačítko zavřít
         .overlay(
             Button {
-                isStoriesCompleted = true
+                path.removeLast()
             } label: {
                 Image(systemName: "xmark")
                     .font(.title2)
@@ -84,6 +84,8 @@ struct StoriesView: View {
                         if selectedStory < storiesGroup.stories.count - 1 {
                             selectedStory += 1
                             timerProgress = 0
+                        } else {
+                            path.removeLast()
                         }
                     }
                     .allowsHitTesting(true)
@@ -93,7 +95,7 @@ struct StoriesView: View {
         .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
                             .onEnded({ value in
                                 if value.translation.height > 0 {
-                                    isStoriesCompleted = true
+                                    path.removeLast()
                                 }
                             }))
         .onReceive(timer) { _ in

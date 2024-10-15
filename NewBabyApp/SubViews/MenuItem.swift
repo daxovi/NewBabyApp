@@ -13,7 +13,14 @@ struct MenuItem: View {
 
     var body: some View {
         if detail.bannerName == nil {
-            NavigationLink("\(detail.title)", value: detail)
+            Text("\(detail.title)")
+                .onTapGesture {
+                    path.append(detail)
+                    if let stories = detail.stories {
+                        path.append(stories)
+                    }
+                }
+            //      NavigationLink("\(detail.title)", value: detail)
         } else {
             if let image = detail.getBanner() {
                 image
@@ -26,7 +33,7 @@ struct MenuItem: View {
                         .opacity(0)
                     )
                     .overlay {
-                        HStack() {
+                        HStack {
                             VStack {
                                 Spacer()
                                 Text("\(detail.title)")
