@@ -9,15 +9,11 @@ import SwiftUI
 
 struct MenuItem: View {
     var detail: DetailModel
+    @Binding var path: NavigationPath
 
     var body: some View {
         if detail.bannerName == nil {
-            NavigationLink(value: detail) {
-                Text("\(detail.title)")
-            }
-            .navigationDestination(for: DetailModel.self) { detail in
-                DetailView(detail: detail)
-            }
+            NavigationLink("\(detail.title)", value: detail)
         } else {
             if let image = detail.getBanner() {
                 image
@@ -28,10 +24,6 @@ struct MenuItem: View {
                             Text("\(detail.title)")
                         }
                         .opacity(0)
-                        .navigationDestination(for: DetailModel.self) {
-                            detail in
-                            DetailView(detail: detail)
-                        }
                     )
                     .overlay {
                         HStack() {
@@ -40,10 +32,8 @@ struct MenuItem: View {
                                 Text("\(detail.title)")
                             }
                             Spacer()
-
                         }
                         .padding()
-                        
                     }
                     .listRowInsets(EdgeInsets())
             } else {

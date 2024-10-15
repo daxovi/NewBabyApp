@@ -11,7 +11,8 @@ struct DetailModel: Identifiable, Hashable {
     var id = UUID()
     // data pro zobrazení v menu aplikace
     var title: String
-     var bannerName: String?
+    var bannerName: String?
+    var stories: StoriesModel?
     
     func getBanner() -> Image? {
         // Bezpečné rozbalení optional stringu
@@ -35,5 +36,4 @@ struct DetailModel: Identifiable, Hashable {
      
      Markdown musíá kombinovat texty a obrázky
      */
-    
 }

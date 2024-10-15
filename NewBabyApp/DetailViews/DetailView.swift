@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct DetailView: View {
-    // na vstupu přijme data z DetailModel
     var detail: DetailModel
     
+    @Binding var path: NavigationPath
+    @State var isStoriesCompleted: Bool = false
+    
     var body: some View {
-        Text("\(detail.title)")
+        if let stories = detail.stories, !isStoriesCompleted {
+            StoriesView(storiesGroup: stories, isStoriesCompleted: $isStoriesCompleted)
+         //       .transition(.move(edge: .bottom))
+        } else {
+            Text("\(detail.title)")
+        }
+        /*
+            .onAppear {
+                if let stories = detail.stories, !isStoriesCompleted {
+                    path.append(stories)
+                    isStoriesCompleted = true
+                }
+            }
+         */
     }
 }
 
