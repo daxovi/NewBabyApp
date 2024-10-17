@@ -8,27 +8,19 @@
 import SwiftUI
 
 struct MenuItem: View {
-    var detail: DetailModel
-    @Binding var path: NavigationPath
+    var item: any MenuItemModel
 
     var body: some View {
-        if detail.bannerName == nil {
-            Text("\(detail.title)")
-                .onTapGesture {
-                    path.append(detail)
-                    if let stories = detail.stories {
-                        path.append(stories)
-                    }
-                }
-            //      NavigationLink("\(detail.title)", value: detail)
+        if item.bannerName == nil {
+                  NavigationLink("\(item.title)", value: item)
         } else {
-            if let image = detail.getBanner() {
+            if let image = item.getBanner() {
                 image
                     .resizable()
                     .scaledToFit()
                     .background(
-                        NavigationLink(value: detail) {
-                            Text("\(detail.title)")
+                        NavigationLink(value: item) {
+                            Text("\(item.title)")
                         }
                         .opacity(0)
                     )
@@ -36,7 +28,7 @@ struct MenuItem: View {
                         HStack {
                             VStack {
                                 Spacer()
-                                Text("\(detail.title)")
+                                Text("\(item.title)")
                             }
                             Spacer()
                         }

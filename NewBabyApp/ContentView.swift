@@ -12,23 +12,16 @@ struct ContentView: View {
     @State private var path = NavigationPath()
     @State private var scrollPosition: CGFloat = 300.0
 
-    let predPorodem: [DetailModel] = [
-        DetailModel(
-            title: "Screeningy",
-            stories: StoriesModel(stories: [
-                Story(type: .video, sourceName: "testclip", text: "test text")
-            ])),
-        DetailModel(
-            title: "Screeningy",
-            stories: StoriesModel(
-                stories: [
-                    Story(
-                        type: .video, sourceName: "testclip", text: "test text"),
-                    Story(
-                        type: .video, sourceName: "testclip1", text: "test"),
-                    Story(
-                        type: .video, sourceName: "testclip", text: "text"),
-                ])),
+    let predPorodem: [any MenuItemModel] = [
+        DetailModel(title: "Screeningy"),
+        DetailModel(title: "Screeningy"),
+        StoriesModel(title: "Stories", stories: [
+            Story(type: .video, sourceName: "testclip2", text: "test text"),
+            Story(type: .video, sourceName: "testclip3", text: "test text"),
+            Story(type: .video, sourceName: "testclip2", text: "test text"),
+            Story(type: .video, sourceName: "testclip3", text: "test text"),
+            Story(type: .video, sourceName: "testclip2", text: "test text")
+        ]),
         DetailModel(title: "Screeningy"),
         DetailModel(title: "Proč rodit ve FNOL"),
         DetailModel(title: "Screeningy"),
@@ -50,8 +43,8 @@ struct ContentView: View {
             NavigationStack(path: $path) {
                 List {
                     Section {
-                        ForEach(predPorodem) { detail in
-                            MenuItem(detail: detail, path: $path)
+                        ForEach(predPorodem.indices, id: \.self) { index in
+                            MenuItem(item: predPorodem[index])
                         }
                     } header: {
                         Text("před porodem")
@@ -72,8 +65,8 @@ struct ContentView: View {
                     }
 
                     Section {
-                        ForEach(vPorodnici) { detail in
-                            MenuItem(detail: detail, path: $path)
+                        ForEach(vPorodnici.indices, id: \.self) { index in
+                            MenuItem(item: vPorodnici[index])
                         }
                     } header: {
                         Text("v porodnici")
@@ -86,7 +79,7 @@ struct ContentView: View {
                     DetailView(detail: detail, path: $path)
                 }
                 .navigationDestination(for: StoriesModel.self, destination: { stories in
-                    StoriesView(storiesGroup: stories, path: $path)
+                    StoriesView(storiesGroup: stories)
                         .transition(.move(edge: .bottom))
                 })
                 .allowsHitTesting(true)

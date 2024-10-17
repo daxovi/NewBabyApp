@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-struct DetailModel: Identifiable, Hashable {
+struct DetailModel: Identifiable, Hashable, MenuItemModel {
     var id = UUID()
     // data pro zobrazení v menu aplikace
     var title: String
     var bannerName: String?
-    var stories: StoriesModel?
     
     func getBanner() -> Image? {
         // Bezpečné rozbalení optional stringu

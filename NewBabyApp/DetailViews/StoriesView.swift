@@ -10,7 +10,7 @@ import SwiftUI
 struct StoriesView: View {
 
     var storiesGroup: StoriesModel
-    @Binding var path: NavigationPath
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     @State var selectedStory: Int = 0
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common)
@@ -18,26 +18,38 @@ struct StoriesView: View {
     @State var timerProgress: CGFloat = 0
 
     var body: some View {
-        TabView {
-            Image(storiesGroup.stories[selectedStory].sourceName)
-                .resizable()
-                .scaledToFit()
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-        }
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .background(.black)
-        // tlačítko zavřít
-        .overlay(
-            Button {
-                path.removeLast()
-            } label: {
-                Image(systemName: "xmark")
-                    .font(.title2)
-                    .foregroundColor(.white)
+        ZStack {
+            Color.black
+            VStack {
+                (getImage(imageName: storiesGroup.stories[selectedStory].sourceName) ?? Image("placeholder"))
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .overlay(
+                        LinearGradient(colors: [.black.opacity(0.8), .black.opacity(0.0)], startPoint: .top, endPoint: .bottom)
+                            .frame(height: 200)
+                        , alignment: .top
+                    )
+                    .overlay (
+                        HStack {
+                            Text(storiesGroup.stories[selectedStory].text)
+                                .foregroundStyle(.white)
+                            Spacer()
+                            Button {
+                                presentationMode.wrappedValue.dismiss()
+                            } label: {
+                                Image(systemName: "xmark")
+                                    .font(.title2)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                            .padding()
+                        , alignment: .topLeading)
             }
-            .padding(), alignment: .topTrailing
-        )
-        // progressbar
+            
+            // tlačítko zavřít
+            
+        }
         .overlay(
             VStack {
                 HStack(spacing: 5) {
@@ -65,9 +77,12 @@ struct StoriesView: View {
                     }
                 }
                 .frame(height: 2.4)
-                .padding(.horizontal)
-            }, alignment: .top
+                
+            }
+                .padding()
+             , alignment: .topTrailing
         )
+        .background(.black)
         // přeskakování stories
         .overlay{
             HStack {
@@ -85,7 +100,7 @@ struct StoriesView: View {
                             selectedStory += 1
                             timerProgress = 0
                         } else {
-                            path.removeLast()
+                            presentationMode.wrappedValue.dismiss()
                         }
                     }
                     .allowsHitTesting(true)
@@ -95,7 +110,7 @@ struct StoriesView: View {
         .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
                             .onEnded({ value in
                                 if value.translation.height > 0 {
-                                    path.removeLast()
+                                    presentationMode.wrappedValue.dismiss()
                                 }
                             }))
         .onReceive(timer) { _ in
