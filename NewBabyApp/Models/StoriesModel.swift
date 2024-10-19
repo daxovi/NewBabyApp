@@ -18,21 +18,7 @@ struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel {
         guard let bannerName = bannerName else {
             return nil
         }
-
-        // Získání cesty k souboru uvnitř balíčku aplikace
-        if let filePath = Bundle.main.path(
-            forResource: bannerName, ofType: "jpg")
-        {
-            if let uiImage = UIImage(contentsOfFile: filePath) {
-                return Image(uiImage: uiImage)
-            } else {
-                print("Obrázek \(bannerName) nebyl nalezen.")
-            }
-        } else {
-            print("Cesta k souboru \(bannerName) nebyla nalezena.")
-        }
-
-        return nil
+        return getImage(imageName: bannerName)
     }
 
     static func == (lhs: StoriesModel, rhs: StoriesModel) -> Bool {
