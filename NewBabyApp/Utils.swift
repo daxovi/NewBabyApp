@@ -10,7 +10,7 @@ import AVKit
 func getImage(imageName: String) -> Image? {
     // Získání cesty k souboru uvnitř balíčku aplikace
     if let filePath = Bundle.main.path(
-        forResource: imageName, ofType: "jpg")
+        forResource: imageName, ofType: "png")
     {
         if let uiImage = UIImage(contentsOfFile: filePath) {
             return Image(uiImage: uiImage)

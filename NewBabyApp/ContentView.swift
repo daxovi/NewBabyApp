@@ -15,19 +15,30 @@ struct ContentView: View {
     let predPorodem: [any MenuItemModel] = [
         DetailModel(title: "Screeningy"),
         DetailModel(title: "Screeningy"),
-        StoriesModel(title: "Stories", stories: [
-            Story(type: .image, sourceName: "testclip2", text: "Nejeden filozof by mohl tvrdit, že balónky se sluncem závodí, ale fyzikové by to jistě vyvrátili. Z fyzikálního pohledu totiž balónky působí zcela nezajímavě."),
-            Story(type: .image, sourceName: "testclip3", text: "Vítr skoro nefouká a tak by se na první pohled mohlo zdát, že se balónky snad vůbec nepohybují. Jenom tak klidně levitují ve vzduchu."),
-            Story(type: .video, sourceName: "cliptest", text: "Uvidět tak balónky náhodný kolemjdoucí, jistě by si pomyslel, že už tu takhle poletují snad tisíc let."),
-            Story(type: .image, sourceName: "testclip2", text: "test text"),
-            Story(type: .image, sourceName: "testclip3", text: "test text"),
-            Story(type: .image, sourceName: "testclip2", text: "test text"),
+        
+        StoriesModel(title: "Manipulace s novorozencem", stories: [
+            Story(type: .video, sourceName: "otaceni01", text: "text"),
+            Story(type: .video, sourceName: "otaceni02", text: "text2"),
+            Story(type: .video, sourceName: "otaceni03", text: "text3"),
+            Story(type: .video, sourceName: "otaceni04", text: "text"),
+            Story(type: .video, sourceName: "otaceni05", text: "text"),
+            Story(type: .video, sourceName: "otaceni06", text: "text"),
+            Story(type: .video, sourceName: "otaceni07", text: "text"),
+
         ]),
+        
         StoriesModel(title: "Videotest", stories: [
             Story(type: .video, sourceName: "cliptest", text: ""),
-            Story(type: .video, sourceName: "cliptest", text: ""),
+            Story(type: .video, sourceName: "animace", text: ""),
             Story(type: .video, sourceName: "cliptest", text: ""),
             Story(type: .video, sourceName: "cliptest", text: "")
+        ]),
+        
+        StoriesModel(title: "Otáčení", stories: [
+            Story(type: .image, sourceName: "otaceni01", text: ""),
+            Story(type: .image, sourceName: "otaceni02", text: ""),
+            Story(type: .image, sourceName: "otaceni03", text: ""),
+            Story(type: .image, sourceName: "otaceni04", text: "")
         ]),
         DetailModel(title: "Screeningy"),
         DetailModel(title: "Proč rodit ve FNOL"),

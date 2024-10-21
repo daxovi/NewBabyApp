@@ -22,6 +22,58 @@ struct StoriesView: View {
     @State var timerProgress: CGFloat = 0
 
     var body: some View {
+        TabView(selection: $selectedStory, content: {
+            ForEach(storiesGroup.stories.indices, id: \.self) { index in
+                GeometryReader { proxy in
+                    if storiesGroup.stories[index].type == .video {
+                            if let (newPlayer, playerView) = getVideo(
+                                videoName: storiesGroup.stories[selectedStory]
+                                    .sourceName)
+                            {
+                                playerView
+                                    .overlay(topShadow, alignment: .top)
+
+                                    .ignoresSafeArea()
+
+                                    .scaledToFill()
+                                    .frame(
+                                        width: proxy.size.width,
+                                        height: proxy.size.height
+                                    )
+                                    .onAppear {
+                                        player = newPlayer
+                                        newPlayer.seek(to: .zero)
+                                        newPlayer.play()
+                                        print("IN \(newPlayer.currentItem?.asset) apear")
+                                    }
+                                    .onDisappear {
+                                        print("OUT \(newPlayer.currentItem?.asset) disapear")
+                                        newPlayer.seek(to: .zero)
+                                        newPlayer.pause()
+                                    }
+
+                            }
+                    } else {
+                        if let image = getImage(imageName: storiesGroup.stories[index].sourceName) {
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                                    .overlay(topShadow, alignment: .top)
+
+                                    .ignoresSafeArea()
+                                    .frame(
+                                        width: proxy.size.width,
+                                        height: proxy.size.height
+                                    )
+                            }
+                    }
+                }
+            }
+            
+        })
+        .tabViewStyle(.page(indexDisplayMode: .never))
+        .background(Color.black)
+        /*
         ZStack {
             Color.black
             VStack {
@@ -59,6 +111,7 @@ struct StoriesView: View {
                 }
             }
         }
+         */
         .onReceive(timer) { _ in
             if timerProgress < 1 {
                 if storiesGroup.stories[selectedStory].type == .video {
@@ -165,6 +218,7 @@ struct StoriesView: View {
                             selectedStory -= 1
                         }
                         player?.seek(to: .zero)
+                   //     player?.play()
                     } else {
                         if selectedStory > 0 {
                             selectedStory -= 1
@@ -184,6 +238,7 @@ struct StoriesView: View {
                                 timer = Timer.publish(
                                     every: 0.1, on: .main, in: .common
                                 ).autoconnect()
+                  
                                 player?.play()
                             }))
                 )
