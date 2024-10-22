@@ -11,8 +11,7 @@ import SwiftUI
 struct StoriesView: View {
 
     var storiesGroup: StoriesModel
-    @Environment(\.presentationMode) var presentationMode:
-        Binding<PresentationMode>
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
     @State var player: AVPlayer?
 
@@ -20,39 +19,21 @@ struct StoriesView: View {
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common)
         .autoconnect()
     @State var timerProgress: CGFloat = 0
+    @State var videoProgressGroup: [Double] = []
 
     var body: some View {
         TabView(selection: $selectedStory, content: {
             ForEach(storiesGroup.stories.indices, id: \.self) { index in
                 GeometryReader { proxy in
                     if storiesGroup.stories[index].type == .video {
-                            if let (newPlayer, playerView) = getVideo(
-                                videoName: storiesGroup.stories[selectedStory]
-                                    .sourceName)
-                            {
-                                playerView
-                                    .overlay(topShadow, alignment: .top)
-
-                                    .ignoresSafeArea()
-
-                                    .scaledToFill()
-                                    .frame(
-                                        width: proxy.size.width,
-                                        height: proxy.size.height
-                                    )
-                                    .onAppear {
-                                        player = newPlayer
-                                        newPlayer.seek(to: .zero)
-                                        newPlayer.play()
-                                        print("IN \(newPlayer.currentItem?.asset) apear")
-                                    }
-                                    .onDisappear {
-                                        print("OUT \(newPlayer.currentItem?.asset) disapear")
-                                        newPlayer.seek(to: .zero)
-                                        newPlayer.pause()
-                                    }
-
-                            }
+                        VideoTabView(videoName: storiesGroup.stories[index].sourceName, progress: $videoProgressGroup[index])
+                            .overlay(topShadow, alignment: .top)
+                            .ignoresSafeArea()
+                            .scaledToFill()
+                            .frame(
+                                width: proxy.size.width,
+                                height: proxy.size.height
+                            )
                     } else {
                         if let image = getImage(imageName: storiesGroup.stories[index].sourceName) {
                                 image
@@ -71,59 +52,19 @@ struct StoriesView: View {
             }
             
         })
+        .onAppear {
+            videoProgressGroup = Array(repeating: 0.0, count: storiesGroup.stories.count)
+        }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .background(Color.black)
-        /*
-        ZStack {
-            Color.black
-            VStack {
-                GeometryReader { proxy in
-                    if storiesGroup.stories[selectedStory].type == .video {
-                        if let (newPlayer, playerView) = getVideo(
-                            videoName: storiesGroup.stories[selectedStory]
-                                .sourceName)
-                        {
-                            playerView
-                                .scaledToFill()
-                                .frame(
-                                    width: proxy.size.width,
-                                    height: proxy.size.height
-                                )
-                                .overlay(topShadow, alignment: .top)
-                                .onAppear {
-                                    player = newPlayer
-                                    player?.play()
-                                }
-                        }
-
-                    } else {
-                        getImage(
-                            imageName: storiesGroup.stories[selectedStory]
-                                .sourceName)!
-                            .resizable()
-                            .scaledToFill()
-                            .frame(
-                                width: proxy.size.width,
-                                height: proxy.size.height
-                            )
-                            .overlay(topShadow, alignment: .top)
-                    }
-                }
-            }
-        }
-         */
         .onReceive(timer) { _ in
             if timerProgress < 1 {
                 if storiesGroup.stories[selectedStory].type == .video {
-                    let currentTime = player?.currentTime().seconds ?? 1
-                    let totalTime = player?.currentItem?.duration.seconds ?? 1
-                    let fraction = currentTime / totalTime
-                    if fraction > 0 {
-                        timerProgress = currentTime / totalTime
+                    if videoProgressGroup[selectedStory] > 0 {
+                        timerProgress = videoProgressGroup[selectedStory]
                     } else {
                         timerProgress = 0.0
                     }
-                    player?.play()
                 } else {
                     timerProgress += 0.01
                 }
@@ -134,9 +75,7 @@ struct StoriesView: View {
                 } else {
                     presentationMode.wrappedValue.dismiss()
                 }
-                player?.seek(to: .zero)
                 timerProgress = 0
-                
             }
         }
         .ignoresSafeArea()
@@ -213,18 +152,25 @@ struct StoriesView: View {
         HStack(spacing: 0) {
             Color.black.opacity(0.01)
                 .onTapGesture {
-                    if storiesGroup.stories[selectedStory].type == .video {
-                        if timerProgress < 0.1 && selectedStory > 0 {
-                            selectedStory -= 1
+                        if timerProgress > 0.2 {
+                            if selectedStory > 0 {
+                                selectedStory -= 1
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+                                    selectedStory += 1
+                                    timerProgress = 0
+                                }
+                            } else {
+                                selectedStory += 1
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
+                                    selectedStory -= 1
+                                    timerProgress = 0
+                                }
+                            }
+                        } else {
+                            if selectedStory > 0 {
+                                selectedStory -= 1
+                            }
                         }
-                        player?.seek(to: .zero)
-                   //     player?.play()
-                    } else {
-                        if selectedStory > 0 {
-                            selectedStory -= 1
-                        }
-                        timerProgress = 0
-                    }
                 }
                 .allowsHitTesting(true)
             Color.black.opacity(0.01)
@@ -247,9 +193,6 @@ struct StoriesView: View {
                     if selectedStory < storiesGroup.stories.count - 1 {
                         selectedStory += 1
                         timerProgress = 0
-                        if storiesGroup.stories[selectedStory].type == .video {
-                            player?.seek(to: .zero)
-                        }
                     } else {
                         presentationMode.wrappedValue.dismiss()
                     }
