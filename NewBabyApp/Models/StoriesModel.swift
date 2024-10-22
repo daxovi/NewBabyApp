@@ -15,10 +15,11 @@ struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel {
     var stories: [Story]
 
     func getBanner() -> Image? {
+        // Bezpečné rozbalení optional stringu
         guard let bannerName = bannerName else {
             return nil
         }
-        return getImage(imageName: bannerName)
+        return Image(bannerName)
     }
 
     static func == (lhs: StoriesModel, rhs: StoriesModel) -> Bool {
