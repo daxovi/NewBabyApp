@@ -64,11 +64,26 @@ struct ContentView: View {
     ]
     
     let druhyDen: [any MenuItemModel] = [
-        DetailModel(title: "Přebalování"),
-        DetailModel(title: "Měření teploty"),
-        DetailModel(title: "Kontrola smolky a močení"),
-        DetailModel(title: "Screeningy"),
-        DetailModel(title: "Koupání")
+        StoriesModel(title: "Manipulace fotky", stories: [
+            Story(type: .image, sourceName: "otaceni01", text: "Vítr skoro nefouká a tak by se na první pohled mohlo zdát, že se balónky snad vůbec nepohybují. Jenom tak klidně levitují ve vzduchu."),
+            Story(type: .image, sourceName: "otaceni02", text: "Jelikož slunce jasně září a na obloze byste od východu k západu hledali mráček marně."),
+            Story(type: .image, sourceName: "otaceni03", text: "Zkrátka široko daleko nikde nic."),
+            Story(type: .image, sourceName: "otaceni04", text: "Jenže kvůli všudy přítomné trávě jsou stíny balónků sotva vidět, natož aby šlo rozeznat, jakou barvu tyto stíny mají."),
+            Story(type: .image, sourceName: "otaceni05", text: "Nejeden filozof by mohl tvrdit, že balónky se sluncem závodí, ale fyzikové by to jistě vyvrátili. Z fyzikálního pohledu totiž balónky působí zcela nezajímavě."),
+            Story(type: .image, sourceName: "otaceni06", text: "Jelikož slunce jasně září a na obloze byste od východu k západu hledali mráček marně."),
+            Story(type: .image, sourceName: "otaceni07", text: "Zkrátka široko daleko nikde nikdo.")
+        ]),
+        StoriesModel(title: "Zvedání novorozemce", stories: [
+            Story(type: .video, sourceName: "zvedani01", text: "Zkrátka široko daleko nikde nikdo."),
+            Story(type: .video, sourceName: "zvedani02", text: ""),
+            Story(type: .video, sourceName: "zvedani03", text: "Jenom tak klidně levitují ve vzduchu.")
+        ]),
+        StoriesModel(title: "Balení novorozence", stories: [
+            Story(type: .video, sourceName: "zabaleni01", text: "K západu hledali mráček marně."),
+            Story(type: .video, sourceName: "zabaleni02", text: "Jenže kvůli všudy přítomné trávě jsou stíny."),
+            Story(type: .video, sourceName: "zabaleni03", text: ""),
+            Story(type: .video, sourceName: "zabaleni04", text: "")
+        ])
     ]
     
     let tretiDen: [any MenuItemModel] = [
