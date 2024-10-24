@@ -96,7 +96,7 @@ struct StoriesView: View {
 
     var topShadow: some View {
         LinearGradient(
-            colors: [.black.opacity(0.8), .black.opacity(0.0)],
+            colors: [Color("dark-shadow").opacity(0.8), Color("dark-shadow").opacity(0.0)],
             startPoint: .top, endPoint: .bottom
         )
         .frame(height: 200)
