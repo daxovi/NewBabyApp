@@ -19,7 +19,7 @@ struct StoriesView: View {
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common)
         .autoconnect()
     @State var timerProgress: CGFloat = 0
-    @State var videoProgressGroup: [Double] = []
+    @State var videoProgressGroup: [Double] = [0.0]
 
     var body: some View {
         TabView(selection: $selectedStory, content: {
