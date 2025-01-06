@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var path = NavigationPath()
     @State private var scrollPosition: CGFloat = 300.0
     
+    @State private var showVideo: Bool = false
+    
     let bonding: [any MenuItemModel] = [
         DetailModel(title: "Bonding", bannerName: "banner-bonding")
         ]
@@ -51,7 +53,7 @@ struct ContentView: View {
     ]
 
     let manipulaceSDitetem: [any MenuItemModel] = [
-        StoriesModel(title: "Manipulace s dítětem", bannerName: "banner-manipulacesditetem", stories: [
+        StoriesModel(title: "Poloha tygříka - díly", bannerName: "banner-manipulacesditetem", stories: [
             Story(type: .video, sourceName: "tygrik01", text: "Miminko otočíme do polohy na boku, ručičky a nožičky míří před něj."),
             Story(type: .video, sourceName: "tygrik02", text: "Uchopením na přední a zadní straně hrudníku dotočíme na bříško."),
             Story(type: .video, sourceName: "tygrik03", text: "Jedna ruka-miska zepředu pod hrudníčkem, druhá ruka v oblasti pánve, palec mezi nožky a zvedneme miminko tak, že jej opřeme zadečkem o sebe."),
@@ -91,103 +93,110 @@ struct ContentView: View {
     ]
 
     var body: some View {
-        VStack {
-            NavigationStack(path: $path) {
-                List {
-                    Section {
-                        ForEach(bonding.indices, id: \.self) { index in
-                            MenuItem(item: bonding[index])
+        ZStack {
+            if showVideo {
+                VideoPlayerFullscreen(videoURL: Bundle.main.url(forResource: "tygrik00", withExtension: "mp4")!)
+                    .onDisappear {showVideo = false}
+            }
+            VStack {
+                NavigationStack(path: $path) {
+                    List {
+                        Section {
+                            Button("Poloha tygříka - celá") {
+                                showVideo = true
+                            }
+                            .foregroundStyle(.black)
+                        } header: {
+                            VStack (alignment: .leading, content: {
+                                Text("1. den v porodnici")
+                                    .font(.title)
+                                    .textCase(.lowercase)
+                                    .foregroundColor(.black)
+                                    .background(
+                                        GeometryReader(content: { geometry in
+                                                Color.clear
+                                                    .onChange(
+                                                        of: geometry.frame(in: .global).minY
+                                                    ) { oldValue, newValue in
+                                                        scrollPosition = newValue
+                                                    }
+                                        })
+                                    )
+                            })
+                            .padding(.top, 300)
                         }
-                    } header: {
-                        VStack (alignment: .leading, content: {
-                            Text("1. den v porodnici")
+                        
+                        Section {
+                            ForEach(prvniDen.indices, id: \.self) { index in
+                                MenuItem(item: prvniDen[index])
+                            }
+                        }
+                        
+                        Section {
+                            ForEach(manipulaceSDitetem.indices, id: \.self) { index in
+                                MenuItem(item: manipulaceSDitetem[index])
+                            }
+                        } header: {
+                            Text("2. den v porodnici")
                                 .font(.title)
                                 .textCase(.lowercase)
                                 .foregroundColor(.black)
-                                .background(
-                                    GeometryReader(content: { geometry in
-                                            Color.clear
-                                                .onChange(
-                                                    of: geometry.frame(in: .global).minY
-                                                ) { oldValue, newValue in
-                                                    scrollPosition = newValue
-                                                }
+                        }
+                        
+                        Section {
+                            ForEach(druhyDen.indices, id: \.self) { index in
+                                MenuItem(item: druhyDen[index])
+                            }
+                        }
+                        
+                        Section {
+                            ForEach(tretiDen.indices, id: \.self) { index in
+                                MenuItem(item: tretiDen[index])
+                            }
+                        } header: {
+                            Text("3. den v porodnici")
+                                .font(.title)
+                                .textCase(.lowercase)
+                                .foregroundColor(.black)
+                        }
+                    }
+                    .listSectionSpacing(15)
+                    .navigationDestination(for: DetailModel.self) { detail in
+                        DetailView(detail: detail, path: $path)
+                    }
+                    .navigationDestination(for: StoriesModel.self, destination: { stories in
+                        StoriesView(storiesGroup: stories)
+                            .transition(.move(edge: .bottom))
+                    })
+                    .allowsHitTesting(true)
+
+                    .scrollContentBackground(.hidden)
+                    .background(
+                        ZStack {
+                            Color("background")
+                            VStack {
+                                //  Text("\(scrollPosition)")
+                                Image("title-baby")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .onTapGesture(perform: {
+                                        path.append(
+                                            DetailModel(title: "nic tady není"))
                                     })
-                                )
-                        })
-                        .padding(.top, 300)
-                    }
-                    
-                    Section {
-                        ForEach(prvniDen.indices, id: \.self) { index in
-                            MenuItem(item: prvniDen[index])
+                                    .overlay(content: {
+                                        LinearGradient(colors: [Color("background").opacity(0.0), Color("background").opacity(0.0), Color("background")], startPoint: .center, endPoint: .bottom)
+                                    })
+                                    //        .opacity((scrollPosition-200.0) * 0.01)
+                                    .blur(radius: (300 - scrollPosition) * 0.1)
+
+                                Spacer()
+                                
+                            }
+
                         }
-                    }
-                    
-                    Section {
-                        ForEach(manipulaceSDitetem.indices, id: \.self) { index in
-                            MenuItem(item: manipulaceSDitetem[index])
-                        }
-                    } header: {
-                        Text("2. den v porodnici")
-                            .font(.title)
-                            .textCase(.lowercase)
-                            .foregroundColor(.black)
-                    }
-                    
-                    Section {
-                        ForEach(druhyDen.indices, id: \.self) { index in
-                            MenuItem(item: druhyDen[index])
-                        }
-                    }
-                    
-                    Section {
-                        ForEach(tretiDen.indices, id: \.self) { index in
-                            MenuItem(item: tretiDen[index])
-                        }
-                    } header: {
-                        Text("3. den v porodnici")
-                            .font(.title)
-                            .textCase(.lowercase)
-                            .foregroundColor(.black)
-                    }
+                        .ignoresSafeArea()
+                    )
                 }
-                .listSectionSpacing(15)
-                .navigationDestination(for: DetailModel.self) { detail in
-                    DetailView(detail: detail, path: $path)
-                }
-                .navigationDestination(for: StoriesModel.self, destination: { stories in
-                    StoriesView(storiesGroup: stories)
-                        .transition(.move(edge: .bottom))
-                })
-                .allowsHitTesting(true)
-
-                .scrollContentBackground(.hidden)
-                .background(
-                    ZStack {
-                        Color("background")
-                        VStack {
-                            //  Text("\(scrollPosition)")
-                            Image("title-baby")
-                                .resizable()
-                                .scaledToFit()
-                                .onTapGesture(perform: {
-                                    path.append(
-                                        DetailModel(title: "nic tady není"))
-                                })
-                                .overlay(content: {
-                                    LinearGradient(colors: [Color("background").opacity(0.0), Color("background").opacity(0.0), Color("background")], startPoint: .center, endPoint: .bottom)
-                                })
-                                //        .opacity((scrollPosition-200.0) * 0.01)
-                                .blur(radius: (300 - scrollPosition) * 0.1)
-
-                            Spacer()
-                            
-                        }
-
-                    }
-                    .ignoresSafeArea()
-                )
             }
         }
     }
