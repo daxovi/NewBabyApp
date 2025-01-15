@@ -52,6 +52,7 @@ struct StoriesView: View {
             }
             
         })
+        .toolbar(.hidden, for: .tabBar)
         .onAppear {
             videoProgressGroup = Array(repeating: 0.0, count: storiesGroup.stories.count)
         }
