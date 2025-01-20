@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selected: Int = 0
-    @State var isBoardingPresented: Bool = false
+    @State var isBoardingPresented: Bool = true
     @AppStorage("clientName") var clientName: String = ""
     @State private var navigationPath = NavigationPath()
     

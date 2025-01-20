@@ -152,6 +152,27 @@ private struct HubMenu: View {
     
     var body: some View {
         VStack {
+            Button { action(0) } label: {
+                Image("pregnant-hub")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width - 32, height: isSmallDevice ? 120 : 140)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay {
+                        VStack{
+                            Image("pregnant")
+                                .renderingMode(.template)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                            Text("čekám miminko")
+                                .font(.title2)
+                        }
+                        .foregroundStyle(.black)
+                        .padding()
+                    }
+            }
+            
             Button { action(1) } label: {
                 Image("baby-hub")
                     .resizable()
@@ -172,27 +193,6 @@ private struct HubMenu: View {
                         .padding()
                     }
             }
-            Button { action(2) } label: {
-                Image("home-hub")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width - 32, height: isSmallDevice ? 120 : 140)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .overlay {
-                        VStack{
-                            Image("seatchair")
-                                .renderingMode(.template)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 50, height: 50)
-                            Text("jsem doma")
-                                .font(.title2)
-                        }
-                        .foregroundStyle(.black)
-                        .padding()
-                    }
-            }
-
             Button { action(2) } label: {
                 Image("home-hub")
                     .resizable()
