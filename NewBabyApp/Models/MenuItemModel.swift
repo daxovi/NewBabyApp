@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-protocol MenuItemModel: Identifiable, Hashable {
+protocol MenuItemModel: Hashable {
     var id: UUID { get }
     // data pro zobrazení v menu aplikace
     var title: String { get }

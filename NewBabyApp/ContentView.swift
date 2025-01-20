@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selected: Int = 0
-    @State var isBoardingPresented: Bool = true
+    @State var isBoardingPresented: Bool = false
     @AppStorage("clientName") var clientName: String = ""
+    @State private var navigationPath = NavigationPath()
     
     init() {
             let appearance = UITabBarAppearance()
@@ -23,7 +24,9 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selected) {
-            MenuPregnantView(clientName: $clientName)
+            NavigationStack(path: $navigationPath) {
+                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $navigationPath)
+            }
                 .tabItem{
                     VStack {
                         Text("čekám miminko")
@@ -32,7 +35,9 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            MenuHospitalView(clientName: $clientName)
+            NavigationStack(path: $navigationPath) {
+                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $navigationPath)
+            }
                 .tabItem{
                     VStack {
                         Spacer(minLength: 10)
@@ -43,7 +48,9 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            MenuHomeView(clientName: $clientName)
+            NavigationStack(path: $navigationPath) {
+                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $navigationPath)
+            }
                 .tabItem{
                     VStack {
                         Text("jsem doma")

@@ -21,18 +21,7 @@ struct TextModel: Identifiable, Hashable, MenuItemModel {
         return Image(bannerName)
     }
     
-    /*
-     Model musí obsahovat:
-     Array video souborů nebo obrázků
-     ke každému videu a obrázku text
-     nakonec markdown dokument
-     
-     Informace pro menu:
-     informace o tom jestli je to obrázkový banner nebo textový
-     
-     Musí být vyřešené zobrazení obrázků i videí v jednom array
-     Nesmí se rozbít když nebude předaný titulek k videu/obrázku
-     
-     Markdown musíá kombinovat texty a obrázky
-     */
+    var imageName: String?
+    var text: String
+
 }

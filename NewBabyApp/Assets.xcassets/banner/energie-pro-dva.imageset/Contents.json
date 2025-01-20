@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "energie-pro-dva.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

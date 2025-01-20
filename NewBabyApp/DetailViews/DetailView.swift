@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct DetailView: View {
-    var detail: DetailModel
-    
-    @Binding var path: NavigationPath
-    
+    var model: DetailModel
+        
     var body: some View {
 
-            Text("\(detail.title)")
+            Text("\(model.title)")
         /*
             .onAppear {
                 if let stories = detail.stories, !isStoriesCompleted {
