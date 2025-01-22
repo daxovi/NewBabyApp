@@ -19,15 +19,16 @@ struct MenuItem: View {
                     .overlay {
                         ZStack {
                             LinearGradient(colors: [ // TODO: vyzkoušet nastavení rozmazání .thinMaterial
-                                .background.opacity(0),
-                                .background.opacity(0),
-                                .background.opacity(0.7)
+                                .black.opacity(0),
+                                .black.opacity(0),
+                                .black.opacity(0.5)
                             ], startPoint: .top, endPoint: .bottom)
                             HStack {
                                 VStack {
                                     Spacer()
                                     Text("\(item.title)")
                                         .padding()
+                                        .foregroundStyle(.white)
                                 }
                                 Spacer()
                             }
