@@ -37,10 +37,13 @@ struct OnboardingView: View {
                     .frame(width: UIScreen.main.bounds.width)
 
             case .second:
-                SayYourNameView(completed: progressToNext, name: $clientName)
+                DisclaimerView(completed: progressToNext)
                     .frame(width: UIScreen.main.bounds.width)
 
             case .third:
+                SayYourNameView(completed: progressToNext, name: $clientName)
+                    .frame(width: UIScreen.main.bounds.width)
+            case .fourth:
                 HubMenu(action: navigateTo)
                     .frame(width: UIScreen.main.bounds.width)
             }
@@ -77,6 +80,7 @@ struct OnboardingView: View {
         case first
         case second
         case third
+        case fourth
         
         mutating func next() {
                let allCases = Self.allCases
@@ -92,39 +96,43 @@ private struct AboutView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            ScrollView {
-                Text("""
-    Vítejte v aplikaci, která je tu pro vás! 🌸 
+            Text("""
+Čeká vás jedinečná cesta plná emocí, radosti i nových výzev. Nebojte se – nejste na to sama. Jsme tu, abychom vás provedli každým krokem této krásné kapitoly vašeho života.
 
-    Milí rodiče, 
-    gratulujeme vám k této jedinečné životní cestě! Ať už čekáte miminko, nebo jste ho již přivítali na svět, jsme tu proto, abychom vás podpořili na každém kroku. 
-    Naše aplikace vám přináší: 
-    👶 Základní informace o těhotenství a porodu, které vám pomohou s přípravou na velký den. 
-    🍼 Praktické tipy a rady o péči o vaše novorozené miminko. 
-    🌼 Inspirace a podporu pro psychické i fyzické pohodlí maminky i tatínka, protože harmonická rodina je klíčem ke spokojenému miminku. 
-    Projděte si klidně všechny funkce aplikace a najděte to, co vás zaujme. Společně zvládneme každý krok! 
-
-    S láskou, 
-    personál Porodnice \na Novorozeneckého oddělení  
-    """)
+👶 Vše, co potřebujete vědět o těhotenství a porodu
+📚 Podpůrné kurzy a programy
+🍼 Péči o vaše novorozené miminko
+💙 Podporu pro vaši duševní pohodu
+""")
                 .padding(32)
-                
-
-            }
-            .overlay{
-                LinearGradient(colors: [.white, .white.opacity(0.0), .white.opacity(0.0), .white.opacity(0.0), .white.opacity(0.0), .white.opacity(0.0), .white], startPoint: .top, endPoint: .bottom)
-                    .allowsHitTesting(false)
-            }
+            Spacer()
             ContinueButton(action: completed)
+                .padding(.horizontal)
+                .padding(.bottom)
+        }
+    }
+}
 
-            .padding(.horizontal)
-            .padding(.bottom)
+private struct DisclaimerView: View {
+    var completed: () -> Void
 
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("""
+ℹ️ Tento materiál slouží jako informační a podpůrný průvodce. Každé těhotenství i porod jsou jedinečné a mohou probíhat odlišně. Není nutné, aby vše šlo podle plánu – každá zkušenost je jiná a není to špatně. V případě nejasností se vždy obraťte na zdravotnický personál.
+""")
+                .padding(32)
+            Spacer()
+            ContinueButton(action: completed)
+                .padding(.horizontal)
+                .padding(.bottom)
         }
     }
 }
 
 private struct SayYourNameView: View {
+    @FocusState private var keyboardFocused: Bool
+
     var completed: () -> Void
     @Binding var name: String
     var body: some View {
@@ -137,6 +145,12 @@ private struct SayYourNameView: View {
                     Color.gray.opacity(0.2)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 )
+                .focused($keyboardFocused)
+                .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                            keyboardFocused = true
+                        }
+                    }
             Spacer()
             ContinueButton(action: completed)
 

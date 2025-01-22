@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selected: Int = 0
-    @State var isBoardingPresented: Bool = true
     @AppStorage("clientName") var clientName: String = ""
+    @AppStorage("firstLaunch") var firstLaunch: Bool = true
     @State private var navigationPath = NavigationPath()
     
     init() {
@@ -25,7 +25,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selected) {
             NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $navigationPath)
+                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
             }
                 .tabItem{
                     VStack {
@@ -36,7 +36,7 @@ struct ContentView: View {
                 .tag(0)
             
             NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $navigationPath)
+                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
             }
                 .tabItem{
                     VStack {
@@ -49,7 +49,7 @@ struct ContentView: View {
                 .tag(1)
             
             NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $navigationPath)
+                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
             }
                 .tabItem{
                     VStack {
@@ -60,10 +60,14 @@ struct ContentView: View {
                 .tag(2)
         }
         .accentColor(.accentColor)
-        .sheet(isPresented: $isBoardingPresented) {
+        .sheet(isPresented: $firstLaunch) {
             OnboardingView(selected: $selected, clientName: $clientName)
         }
         .background(Color.black)
+    }
+    
+    func showOnbording() {
+        self.firstLaunch.toggle()
     }
 }
 

@@ -34,17 +34,24 @@ struct MenuItem: View {
                             }
                         }
                     }
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .padding(.vertical, 10)
+
+
             } else {
-                HStack {
-                    Text("\(item.title)")
-                    Spacer()
+                VStack(spacing: 0) {
+                    HStack(alignment: .center) {
+                        Text("\(item.title)")
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                    }
+                    .padding()
+                    .background(Color.white)
+                    Divider()
                 }
-                .padding()
-                .background(Color.white)
             }
         }
         .foregroundColor(.black)
-        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 
     private func mapToDestination(_ item: any MenuItemModel) -> NavigationDestination {

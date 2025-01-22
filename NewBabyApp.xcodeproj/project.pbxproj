@@ -86,11 +86,11 @@
 				};
 			};
 			buildConfigurationList = CFE57A202CBD6FA100C48924 /* Build configuration list for PBXProject "NewBabyApp" */;
-			developmentRegion = en;
+			developmentRegion = cs;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				cs,
 			);
 			mainGroup = CFE57A1C2CBD6FA100C48924;
 			minimizedProjectReferenceProxies = 1;
