@@ -25,6 +25,19 @@ enum NavigationDestination: Hashable {
             hasher.combine(model.id)
         }
     }
+    
+    func isBanner() -> Bool {
+        switch self {
+        case .stories(let model):
+            return model.bannerName != nil
+        case .text(let model):
+            return model.bannerName != nil
+        case .menu(let model):
+            return model.bannerName != nil
+        case .detail(let model):
+            return model.bannerName != nil
+        }
+    }
 
     static func == (lhs: NavigationDestination, rhs: NavigationDestination) -> Bool {
         switch (lhs, rhs) {

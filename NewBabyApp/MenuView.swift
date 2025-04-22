@@ -52,16 +52,23 @@ struct MenuView: View {
                 
                 VStack(spacing: 0) {
                     ForEach(menuItems.indices, id: \.self) { index in
-                        switch menuItems[index] {
-                        case .stories(let model):
-                            MenuItem(item: model)
-                        case .text(let model):
-                            MenuItem(item: model)
-                        case .menu(let model):
-                            MenuItem(item: model)
-                        case .detail(let model):
-                            MenuItem(item: model)
+                        Group {
+                            switch menuItems[index] {
+                            case .stories(let model):
+                                MenuItem(item: model)
+                            case .text(let model):
+                                MenuItem(item: model)
+                            case .menu(let model):
+                                MenuItem(item: model)
+                            case .detail(let model):
+                                MenuItem(item: model)
+                            }
                         }
+                        .clipShape(UnevenRoundedRectangle(
+                            topLeadingRadius: getTopRadius(index),
+                            bottomLeadingRadius: getBottomRadius(index),
+                            bottomTrailingRadius: getBottomRadius(index),
+                            topTrailingRadius: getTopRadius(index)))
                     }
                     if title == "Bezpečná maipulace" {
                         Button {
@@ -126,13 +133,39 @@ struct MenuView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
     
+    func getTopRadius(_ index: Int) -> CGFloat {
+        guard index > 0, index - 1 < menuItems.count else {
+            return 0
+        }
+        
+        let prev = menuItems[index - 1]
+        if prev.isBanner() {
+            return 10
+        }
+        
+        return 0
+    }
+    
+    func getBottomRadius(_ index: Int) -> CGFloat {
+        guard index > 0, index + 1 < menuItems.count else {
+            return 0
+        }
+        
+        let next = menuItems[index + 1]
+        if next.isBanner() {
+            return 10
+        }
+        
+        return 0
+    }
+    
     func isNextItemBanner(_ index: Int, menuItems: [NavigationDestination]) -> Bool {
         return true
     }
 }
 
 #Preview {
-    MenuView(model: MenuModel(title: "", subtitle: "", backgroundImageName: "title-baby", menuItems: [LocalRepository.manipulaceSDitetem[0]]), clientName: "Name", path: .constant(NavigationPath()))
+    MenuView(model: MenuModel(title: "", subtitle: "", backgroundImageName: "title-baby", menuItems: [LocalRepository.manipulaceSDitetem[0]] + LocalRepository.prvniden + [LocalRepository.manipulaceSDitetem[0]] + [LocalRepository.prvniden[0]] + [LocalRepository.manipulaceSDitetem[0]]), clientName: "Name", path: .constant(NavigationPath()))
 }
 
 private struct MenuBackground: View {
