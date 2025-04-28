@@ -13,6 +13,9 @@ struct TextModel: Identifiable, Hashable, MenuItemModel {
     var title: String
     var bannerName: String?
     var isHalf: Bool = false
+    var needSpace: Bool {
+        bannerName != nil
+    }
     
     func getBanner() -> Image? {
         // Bezpečné rozbalení optional stringu

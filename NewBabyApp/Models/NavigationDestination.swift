@@ -44,6 +44,21 @@ enum NavigationDestination: Hashable {
         }
     }
     
+    func needSpace() -> Bool {
+        switch self {
+        case .stories(let model):
+            return model.needSpace
+        case .text(let model):
+            return model.needSpace
+        case .menu(let model):
+            return model.needSpace
+        case .detail(let model):
+            return model.needSpace
+        case .introText(_):
+            return true
+        }
+    }
+    
     func isHalf() -> Bool {
             switch self {
             case .stories(let model): return model.isHalf

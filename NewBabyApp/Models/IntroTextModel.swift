@@ -14,6 +14,7 @@ struct IntroTextModel: Identifiable, Hashable, MenuItemModel {
     var content: String
     var bannerName: String? = nil
     var isHalf: Bool = false
+    var needSpace: Bool = true
 
     func getBanner() -> Image? {
         return nil

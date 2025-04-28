@@ -12,6 +12,9 @@ struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel {
     var title: String
     var bannerName: String?
     var isHalf: Bool = false
+    var needSpace: Bool {
+        bannerName != nil
+    }
 
     var stories: [Story]
 

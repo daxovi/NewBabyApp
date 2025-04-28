@@ -9,7 +9,8 @@ import AVKit
 import SwiftUI
 
 struct StoriesView: View {
-
+// TODO: ošetřit vyjímku kdy nebude žádné stories aby aplikace nespadla
+    
     var storiesGroup: StoriesModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
@@ -22,77 +23,81 @@ struct StoriesView: View {
     @State var videoProgressGroup: [Double] = [0.0]
 
     var body: some View {
-        TabView(selection: $selectedStory, content: {
-            ForEach(storiesGroup.stories.indices, id: \.self) { index in
-                GeometryReader { proxy in
-                    if storiesGroup.stories[index].type == .video {
-                        VideoTabView(videoName: storiesGroup.stories[index].sourceName, progress: $videoProgressGroup[index])
-                            .overlay(topShadow, alignment: .top)
-                            .ignoresSafeArea()
-                            .scaledToFill()
-                            .frame(
-                                width: proxy.size.width,
-                                height: proxy.size.height
-                            )
-                    } else {
-                        if let image = getImage(imageName: storiesGroup.stories[index].sourceName) {
-                                image
-                                    .resizable()
-                                    .scaledToFill()
-                                    .overlay(topShadow, alignment: .top)
+        if storiesGroup.stories.isEmpty {
+            Text("Tady není nic k vidění") // TODO: dodělat vtipný emptyview
+        } else {
+            TabView(selection: $selectedStory, content: {
+                ForEach(storiesGroup.stories.indices, id: \.self) { index in
+                    GeometryReader { proxy in
+                        if storiesGroup.stories[index].type == .video {
+                            VideoTabView(videoName: storiesGroup.stories[index].sourceName, progress: $videoProgressGroup[index])
+                                .overlay(topShadow, alignment: .top)
+                                .ignoresSafeArea()
+                                .scaledToFill()
+                                .frame(
+                                    width: proxy.size.width,
+                                    height: proxy.size.height
+                                )
+                        } else {
+                            if let image = getImage(imageName: storiesGroup.stories[index].sourceName) {
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                        .overlay(topShadow, alignment: .top)
 
-                                    .ignoresSafeArea()
-                                    .frame(
-                                        width: proxy.size.width,
-                                        height: proxy.size.height
-                                    )
-                            }
+                                        .ignoresSafeArea()
+                                        .frame(
+                                            width: proxy.size.width,
+                                            height: proxy.size.height
+                                        )
+                                }
+                        }
                     }
                 }
+                
+            })
+            .toolbar(.hidden, for: .tabBar)
+            .onAppear {
+                videoProgressGroup = Array(repeating: 0.0, count: storiesGroup.stories.count)
             }
-            
-        })
-        .toolbar(.hidden, for: .tabBar)
-        .onAppear {
-            videoProgressGroup = Array(repeating: 0.0, count: storiesGroup.stories.count)
-        }
-        .tabViewStyle(.page(indexDisplayMode: .never))
-        .background(Color.black)
-        .onReceive(timer) { _ in
-            if timerProgress < 1 {
-                if storiesGroup.stories[selectedStory].type == .video {
-                    if videoProgressGroup[selectedStory] > 0 {
-                        timerProgress = videoProgressGroup[selectedStory]
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .background(Color.black)
+            .onReceive(timer) { _ in
+                if timerProgress < 1 {
+                    if storiesGroup.stories[selectedStory].type == .video {
+                        if videoProgressGroup[selectedStory] > 0 {
+                            timerProgress = videoProgressGroup[selectedStory]
+                        } else {
+                            timerProgress = 0.0
+                        }
                     } else {
-                        timerProgress = 0.0
+                        timerProgress += 0.01
                     }
                 } else {
-                    timerProgress += 0.01
-                }
-            } else {
-                if selectedStory < storiesGroup.stories.count - 1
-                {
-                    selectedStory += 1
-                } else {
-                    presentationMode.wrappedValue.dismiss()
-                }
-                timerProgress = 0
-            }
-        }
-        .ignoresSafeArea()
-  //      .overlay(storiesText, alignment: .topLeading)
-        .overlay(progressBar, alignment: .topTrailing)
-        .background(.black)
-        .overlay(controls)
-        .gesture(
-            DragGesture(minimumDistance: 100, coordinateSpace: .local)
-                .onEnded({ value in
-                    if value.translation.height > 0 {
+                    if selectedStory < storiesGroup.stories.count - 1
+                    {
+                        selectedStory += 1
+                    } else {
                         presentationMode.wrappedValue.dismiss()
                     }
-                })
-        )
-        .navigationBarBackButtonHidden(true)
+                    timerProgress = 0
+                }
+            }
+            .ignoresSafeArea()
+      //      .overlay(storiesText, alignment: .topLeading)
+            .overlay(progressBar, alignment: .topTrailing)
+            .background(.black)
+            .overlay(controls)
+            .gesture(
+                DragGesture(minimumDistance: 100, coordinateSpace: .local)
+                    .onEnded({ value in
+                        if value.translation.height > 0 {
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    })
+            )
+            .navigationBarBackButtonHidden(true)
+        }
     }
 
     var topShadow: some View {

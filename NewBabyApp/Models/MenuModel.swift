@@ -12,6 +12,9 @@ struct MenuModel: Identifiable, Hashable, MenuItemModel {
     var title: String
     var bannerName: String?
     var isHalf: Bool = false
+    var needSpace: Bool {
+        bannerName != nil
+    }
 
     func getBanner() -> Image? {
         guard let bannerName = bannerName else { return nil }

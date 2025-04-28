@@ -13,31 +13,28 @@ struct MenuItem: View {
     var body: some View {
         NavigationLink(value: mapToDestination(item)) {
             if let image = item.getBanner() {
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .overlay {
-                        ZStack {
-                            LinearGradient(colors: [ // TODO: vyzkoušet nastavení rozmazání .thinMaterial
-                                .black.opacity(0),
-                                .black.opacity(0),
-                                .black.opacity(0.5)
-                            ], startPoint: .top, endPoint: .bottom)
-                            HStack {
-                                VStack {
-                                    Spacer()
-                                    Text("\(item.title)")
-                                        .multilineTextAlignment(.leading)
-                                        .padding()
-                                        .foregroundStyle(.white)
-                                }
-                                Spacer()
-                            }
+                ZStack {
+                    image
+                        .resizable()
+                        .scaledToFill()
+                    
+                    LinearGradient(colors: [ // TODO: vyzkoušet nastavení rozmazání .thinMaterial
+                        .black.opacity(0),
+                        .black.opacity(0),
+                        .black.opacity(0.5)
+                    ], startPoint: .top, endPoint: .bottom)
+                    HStack {
+                        VStack {
+                            Spacer()
+                            Text("\(item.title)")
+                                .multilineTextAlignment(.leading)
+                                .padding()
+                                .foregroundStyle(.white)
                         }
+                        Spacer()
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .padding(.vertical, 10)
-
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             } else {
                 VStack(spacing: 0) {
                     HStack(alignment: .center) {
@@ -46,9 +43,10 @@ struct MenuItem: View {
                         Image(systemName: "chevron.right")
                     }
                     .padding()
-                    .background(Color.white)
                     Divider()
+                        .padding(.vertical, 1)
                 }
+                .background(Color.white)
             }
         }
         .foregroundColor(.black)

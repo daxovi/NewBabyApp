@@ -12,6 +12,7 @@ protocol MenuItemModel: Hashable {
     var title: String { get }
     var bannerName: String? { get }
     var isHalf: Bool { get }
+    var needSpace: Bool { get }
     
     func getBanner() -> Image?
 }

@@ -37,11 +37,6 @@ struct MenuView: View {
                 MenuBackground(imageName: backgroundImageName, scrollPosition: $scrollPosition)
             }
             
-            if showVideo {
-                VideoPlayerFullscreen(videoURL: Bundle.main.url(forResource: "tygrik00", withExtension: "mp4")!)
-                    .onDisappear { showVideo = false }
-            }
-            
             ScrollView {
                 if backgroundImageName != nil {
                     MenuHeader(clientName: clientName, subtitle: subtitle, heartTapAction: heartTapAction, scrollPosition: $scrollPosition)
@@ -67,9 +62,6 @@ struct MenuView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
                 .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
-                
-                
-                
                 
                 ZStack {
                     Image(.footerCloud)
@@ -135,10 +127,6 @@ struct MenuView: View {
         return 0
     }
     
-    func isNextItemBanner(_ index: Int, menuItems: [NavigationDestination]) -> Bool {
-        return true
-    }
-    
     private func groupedMenuItems() -> [[NavigationDestination]] {
         var result: [[NavigationDestination]] = []
         var index = 0
@@ -160,7 +148,7 @@ struct MenuView: View {
 }
 
 #Preview {
-    MenuView(model: MenuModel(title: "První den", subtitle: "", backgroundImageName: "title-baby", menuItems: LocalRepository.bonding
+    MenuView(model: MenuModel(title: "První den", subtitle: "", backgroundImageName: "title-baby", menuItems: LocalRepository.prvniden
                              ), clientName: "Name", path: .constant(NavigationPath()))
 }
 
@@ -240,6 +228,7 @@ private struct MenuItemView: View {
     let menuItem: NavigationDestination
     
     var body: some View {
+        VStack {
             switch menuItem {
             case .stories(let model):
                 MenuItem(item: model)
@@ -252,6 +241,11 @@ private struct MenuItemView: View {
             case .introText(let model):
                 IntroTextView(model: model)
             }
+            
+            if menuItem.needSpace() {
+                Color.clear.frame(height: 10)
+            }
+        }
     }
 }
 
@@ -259,10 +253,10 @@ private struct DoubleMenuItemView: View {
     let item: [NavigationDestination]
     
     var body: some View {
-        HStack(spacing: 20) {
-            ForEach(item.indices, id: \.self) { index in
-                MenuItemView(menuItem: item[index])
-            }
+            HStack(spacing: 20) {
+                ForEach(item.indices, id: \.self) { index in
+                    MenuItemView(menuItem: item[index])
+                }
         }
     }
 }
@@ -281,7 +275,7 @@ private struct IntroTextView: View {
         .padding()
         .background(.white)
         .clipShape(RoundedRectangle(cornerRadius: 10))
-        .padding(.vertical, 10)
+//        .padding(.vertical, 10)
     }
 }
 
