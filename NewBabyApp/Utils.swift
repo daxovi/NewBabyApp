@@ -8,19 +8,19 @@ import SwiftUI
 import AVKit
 
 func getImage(imageName: String) -> Image? {
-    // Získání cesty k souboru uvnitř balíčku aplikace
-    if let filePath = Bundle.main.path(
-        forResource: imageName, ofType: "png")
-    {
-        if let uiImage = UIImage(contentsOfFile: filePath) {
-            return Image(uiImage: uiImage)
-        } else {
-            print("Obrázek \(imageName) nebyl nalezen.")
+    let supportedExtensions = ["png", "jpg", "jpeg"]
+    
+    for ext in supportedExtensions {
+        if let filePath = Bundle.main.path(forResource: imageName, ofType: ext) {
+            if let uiImage = UIImage(contentsOfFile: filePath) {
+                return Image(uiImage: uiImage)
+            } else {
+                print("Obrázek \(imageName).\(ext) nebyl načten.")
+            }
         }
-    } else {
-        print("Cesta k souboru \(imageName) nebyla nalezena.")
     }
-
+    
+    print("Obrázek \(imageName) nebyl nalezen v podporovaných formátech.")
     return nil
 }
 
