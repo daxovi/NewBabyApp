@@ -20,24 +20,27 @@ extension LocalRepository {
             .detail(DetailModel(title: "Chystáme se domů", bannerName: "chystame-se-domu"))
         ]
     )
-    
+        
     
     static let prvniden: [NavigationDestination] = [
-        .text(TextModel(
-            title: "Jak vypadá dítě po porodu?",
-            text: "Když se vaše dítě narodí, jeho kůže může být modrá. Modré zbarvení kůže rychle ustupuje v prvních minutách po porodu. Kůže je často mokrá od plodové vody a je pokrytá mázkem. Plodová voda a mázek se vyskytovali již během těhotenství v děloze. Mimo jiné jsou důležité pro rozvoj čichu a chuti. Pomáhají vašemu dítěti cítit se bezpečně v novém světě mimo dělohu.")),
-        .text(TextModel(
-            title: "Bonding",
-            text: "tento termín označuje proces utváření laskyplné vazby mezi matkou a dítětem. Bezprostředně po porodu začíná přiložením novorozence na tělo maminky (kontakt kůže novorozence na kůži maminky, tzv. skin-to-skin kontakt).  Pokud to dovolí Váš zdravotní stav a Vaše dítě bude po narození v pořádku, uděláme maximum proto, aby jsme Vaše miminko po narození položili na Vás. V případě potřeby se můžete vystřídat s tatínkem. ")),
-        .text(TextModel(
-            title: "Váha a délka",
-            text: "miminko Vážíme ve velké většině případů vážíme po ukončení  bondingu (přibližně 2 hodiny po narození). Délku miminka v den porodu určujeme jen odhadem na základně tělesné hmotnosti (je to pro něho šetrnější).")),
-        .text(TextModel(title: "Značení novorozence", text: "po porodu dostane Vaše dítě identifikační náramek, současně ho označíme omyvatelnou barvou na hrudník a nohu. ")),
-        .text(TextModel(title: "Změření tělesné teploty", text: "Probíha měřením  teploty v zadečku. V případě že je teplota nízká, můžeme miminko uložit na vyhřívanou podložku, nebo někdy i do inkubátoru.")),
-        .text(TextModel(title: "Vitamín K", imageName: "kanavit", text: "Po porodu dostává miminko do pusy kapky s  vitaminem K (Kanavit). Jedná se o vitamin, který zabraňuje rozvoji krvácivé nemoci novorozence. Tato nemoc vzniká právě z nedostatku vitaminu K.")),
-        .text(TextModel(title: "Vyšetření krevní skupiny", text: "Krevní skupinu Vašeho dítěte vyšetřujeme jen za situace, kdy má maminka krevní skupinu 0, nebo Rh faktor -.  Vyšetření krevní skupiny novorozence se provádí z pupečníkové krve a nevyžaduje si odběr krve u dítěte.")),
-        .text(TextModel(title: "První močení a smolka", text: "Ve velké většině případů se Vaše miminko minimálně jednou vymočí a odejde stolička, která je zcela černá, mazlavá - říká se jí smolka."))
+        .introText(IntroTextModel(title: "Co vás čeká?", content: "Tady bysme mohli napsat informaci že to nemusí být první den")),
+        .menu(MenuModel(title: "Bonding", bannerName: "zdravi-pod-kontrolou", menuItems: bonding)),
+        .stories(StoriesModel(title: "Jak vypadá miminko po porodu", stories: [])),
+        .stories(StoriesModel(title: "Měření tělesné teploty", stories: [])),
+        .stories(StoriesModel(title: "Označení novorozence", stories: [])),
+        .stories(StoriesModel(title: "Močení a odchod stoličky", stories: [])),
+        .stories(StoriesModel(title: "Váha a délka miminka", stories: [])),
+        .stories(StoriesModel(title: "Vitamin K", stories: [])),
+        .stories(StoriesModel(title: "Vyšetření krevní skupiny novorozence", stories: []))
     ]
+    
+    static let bonding: [NavigationDestination] = [
+        .introText(IntroTextModel(title: "Co je bonding?", content: "Bonding, neboli kontakt kůže na kůži (skin-to-skin), je proces vytváření láskyplné vazby mezi rodičem a dítětem. Bezprostředně po porodu se miminko položí přímo na nahou hruď maminky, kde cítí její teplo, tlukot srdce a vůni.")),
+        .stories(StoriesModel(title: "Jak bonding probíhá?", bannerName: "zdravi-pod-kontrolou", stories: [])),
+        .stories(StoriesModel(title: "Proč je bonding důležitý?", bannerName: "zdravi-pod-kontrolou", isHalf: true, stories: [])),
+        .stories(StoriesModel(title: "Bonding s tatínkem", bannerName: "zdravi-pod-kontrolou", isHalf: true, stories: []))
+    ]
+    
     private static let manipulace: [NavigationDestination] = [
         .stories(StoriesModel(title: "Poloha tygříka - stories", stories: [
             Story(type: .video, sourceName: "tygrik01", text: "Miminko otočíme do polohy na boku, ručičky a nožičky míří před něj."),

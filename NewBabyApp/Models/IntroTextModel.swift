@@ -1,27 +1,25 @@
 //
-//  DetailModel.swift
+//  IntroTextModel.swift
 //  NewBabyApp
 //
-//  Created by Dalibor Janeček on 14.10.2024.
+//  Created by Dalibor Janeček on 28.04.2025.
 //
 
 import SwiftUI
 
-struct DetailModel: Identifiable, Hashable, MenuItemModel {
+struct IntroTextModel: Identifiable, Hashable, MenuItemModel {
     var id = UUID()
     // data pro zobrazení v menu aplikace
     var title: String
-    var bannerName: String?
+    var content: String
+    var bannerName: String? = nil
     var isHalf: Bool = false
-    
+
     func getBanner() -> Image? {
-        // Bezpečné rozbalení optional stringu
-        guard let bannerName = bannerName else {
-            return nil
-        }
-        return Image(bannerName)
+        return nil
     }
     
+
     /*
      Model musí obsahovat:
      Array video souborů nebo obrázků

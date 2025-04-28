@@ -11,6 +11,7 @@ protocol MenuItemModel: Hashable {
     // data pro zobrazení v menu aplikace
     var title: String { get }
     var bannerName: String? { get }
+    var isHalf: Bool { get }
     
     func getBanner() -> Image?
 }

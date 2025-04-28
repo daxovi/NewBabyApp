@@ -7,10 +7,12 @@
 import SwiftUI
 
 struct MenuModel: Identifiable, Hashable, MenuItemModel {
+
     var id = UUID()
     var title: String
     var bannerName: String?
-    
+    var isHalf: Bool = false
+
     func getBanner() -> Image? {
         guard let bannerName = bannerName else { return nil }
         return Image(bannerName)

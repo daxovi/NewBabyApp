@@ -15,7 +15,7 @@ struct MenuItem: View {
             if let image = item.getBanner() {
                 image
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .overlay {
                         ZStack {
                             LinearGradient(colors: [ // TODO: vyzkoušet nastavení rozmazání .thinMaterial
@@ -27,6 +27,7 @@ struct MenuItem: View {
                                 VStack {
                                     Spacer()
                                     Text("\(item.title)")
+                                        .multilineTextAlignment(.leading)
                                         .padding()
                                         .foregroundStyle(.white)
                                 }
@@ -36,7 +37,6 @@ struct MenuItem: View {
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .padding(.vertical, 10)
-
 
             } else {
                 VStack(spacing: 0) {

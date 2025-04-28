@@ -49,46 +49,20 @@ struct MenuView: View {
                 
                 // MARK: Welcome text
                 
-                
                 VStack(spacing: 0) {
-                    ForEach(menuItems.indices, id: \.self) { index in
-                        Group {
-                            switch menuItems[index] {
-                            case .stories(let model):
-                                MenuItem(item: model)
-                            case .text(let model):
-                                MenuItem(item: model)
-                            case .menu(let model):
-                                MenuItem(item: model)
-                            case .detail(let model):
-                                MenuItem(item: model)
-                            }
+                    ForEach(groupedMenuItems().indices, id: \.self) { index in
+                        let item = groupedMenuItems()[index]
+                        if item.count == 2 {
+                            DoubleMenuItemView(item: item)
+                        } else {
+                            MenuItemView(menuItem: item[0])
+                            .clipShape(UnevenRoundedRectangle(
+                                topLeadingRadius: getTopRadius(index),
+                                bottomLeadingRadius: getBottomRadius(index),
+                                bottomTrailingRadius: getBottomRadius(index),
+                                topTrailingRadius: getTopRadius(index)))
                         }
-                        .clipShape(UnevenRoundedRectangle(
-                            topLeadingRadius: getTopRadius(index),
-                            bottomLeadingRadius: getBottomRadius(index),
-                            bottomTrailingRadius: getBottomRadius(index),
-                            topTrailingRadius: getTopRadius(index)))
                     }
-                    if title == "Bezpečná maipulace" {
-                        Button {
-                            showVideo = true
-                        } label: {
-                            VStack(spacing: 0) {
-                                HStack(alignment: .center) {
-                                    Text("Poloha tygříka - v celku")
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                }
-                                .padding()
-                                .background(Color.white)
-                                .foregroundStyle(Color.black)
-                                Divider()
-                            }
-                        }
-                        
-                    }
-                    
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
@@ -125,6 +99,8 @@ struct MenuView: View {
                     MenuView(model: model, clientName: clientName, path: $path)
                 case .detail(let model):
                     DetailView(model: model)
+                case .introText(_):
+                    EmptyView()
                 }
             }
         }
@@ -162,10 +138,30 @@ struct MenuView: View {
     func isNextItemBanner(_ index: Int, menuItems: [NavigationDestination]) -> Bool {
         return true
     }
+    
+    private func groupedMenuItems() -> [[NavigationDestination]] {
+        var result: [[NavigationDestination]] = []
+        var index = 0
+        while index < menuItems.count {
+            let current = menuItems[index]
+            
+            if current.isHalf(),
+               index + 1 < menuItems.count,
+               menuItems[index + 1].isHalf() {
+                result.append([current, menuItems[index + 1]])
+                index += 2
+            } else {
+                result.append([current])
+                index += 1
+            }
+        }
+        return result
+    }
 }
 
 #Preview {
-    MenuView(model: MenuModel(title: "", subtitle: "", backgroundImageName: "title-baby", menuItems: [LocalRepository.manipulaceSDitetem[0]] + LocalRepository.prvniden + [LocalRepository.manipulaceSDitetem[0]] + [LocalRepository.prvniden[0]] + [LocalRepository.manipulaceSDitetem[0]]), clientName: "Name", path: .constant(NavigationPath()))
+    MenuView(model: MenuModel(title: "První den", subtitle: "", backgroundImageName: "title-baby", menuItems: LocalRepository.bonding
+                             ), clientName: "Name", path: .constant(NavigationPath()))
 }
 
 private struct MenuBackground: View {
@@ -239,3 +235,54 @@ private struct MenuHeader: View {
         .padding(.horizontal)
     }
 }
+
+private struct MenuItemView: View {
+    let menuItem: NavigationDestination
+    
+    var body: some View {
+            switch menuItem {
+            case .stories(let model):
+                MenuItem(item: model)
+            case .text(let model):
+                MenuItem(item: model)
+            case .menu(let model):
+                MenuItem(item: model)
+            case .detail(let model):
+                MenuItem(item: model)
+            case .introText(let model):
+                IntroTextView(model: model)
+            }
+    }
+}
+
+private struct DoubleMenuItemView: View {
+    let item: [NavigationDestination]
+    
+    var body: some View {
+        HStack(spacing: 20) {
+            ForEach(item.indices, id: \.self) { index in
+                MenuItemView(menuItem: item[index])
+            }
+        }
+    }
+}
+
+private struct IntroTextView: View {
+    let model: IntroTextModel
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text(model.title)
+                .bold()
+            Divider()
+            Text(model.content)
+                .multilineTextAlignment(.leading)
+        }
+        .padding()
+        .background(.white)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .padding(.vertical, 10)
+    }
+}
+
+
