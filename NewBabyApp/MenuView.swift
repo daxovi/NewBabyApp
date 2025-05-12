@@ -56,6 +56,10 @@ struct MenuView: View {
                                 bottomLeadingRadius: getBottomRadius(index),
                                 bottomTrailingRadius: getBottomRadius(index),
                                 topTrailingRadius: getTopRadius(index)))
+                            
+                            if getBottomRadius(index) > 0 && !item[0].needSpace() {
+                                Color.clear.frame(height: 10)
+                            }
                         }
                     }
                 }
@@ -100,13 +104,13 @@ struct MenuView: View {
         .navigationBarHidden(backgroundImageName != nil)
         .navigationBarTitleDisplayMode(.inline)
     }
-    
+        
     func getTopRadius(_ index: Int) -> CGFloat {
-        guard index > 0, index - 1 < menuItems.count else {
+        guard index > 0, index - 1 < groupedMenuItems().count else {
             return 0
         }
         
-        let prev = menuItems[index - 1]
+        let prev = groupedMenuItems()[index - 1][0]
         if prev.isBanner() {
             return 10
         }
@@ -115,11 +119,11 @@ struct MenuView: View {
     }
     
     func getBottomRadius(_ index: Int) -> CGFloat {
-        guard index > 0, index + 1 < menuItems.count else {
+        guard index > 0, index + 1 < groupedMenuItems().count else {
             return 0
         }
         
-        let next = menuItems[index + 1]
+        let next = groupedMenuItems()[index + 1][0]
         if next.isBanner() {
             return 10
         }
@@ -148,7 +152,7 @@ struct MenuView: View {
 }
 
 #Preview {
-    MenuView(model: MenuModel(title: "První den", subtitle: "", backgroundImageName: "title-baby", menuItems: LocalRepository.prvniden
+    MenuView(model: MenuModel(title: "První den", subtitle: "", backgroundImageName: "title-baby", menuItems: LocalRepository.iDobaPorodni
                              ), clientName: "Name", path: .constant(NavigationPath()))
 }
 
@@ -263,14 +267,32 @@ private struct DoubleMenuItemView: View {
 
 private struct IntroTextView: View {
     let model: IntroTextModel
+    @State private var isCollapsed = true
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Text(model.title)
-                .bold()
-            Divider()
-            Text(model.content)
-                .multilineTextAlignment(.leading)
+            HStack {
+                Text(model.title)
+                    .bold()
+                Spacer()
+                if model.isCollapsable {
+                    Image(systemName: "chevron.right")
+                        .rotationEffect(Angle(degrees: isCollapsed ? 0 : 90))
+                }
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                withAnimation {
+                    if model.isCollapsable {
+                        isCollapsed.toggle()
+                    }
+                }
+            }
+            if !model.isCollapsable || !isCollapsed {
+                Divider()
+                Text(model.content)
+                    .multilineTextAlignment(.leading)
+            }
         }
         .padding()
         .background(.white)

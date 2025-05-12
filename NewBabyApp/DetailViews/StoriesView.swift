@@ -50,6 +50,7 @@ struct StoriesView: View {
                                             width: proxy.size.width,
                                             height: proxy.size.height
                                         )
+                            
                                 }
                         }
                     }

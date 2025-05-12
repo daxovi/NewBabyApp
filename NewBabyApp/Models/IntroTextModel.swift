@@ -12,9 +12,11 @@ struct IntroTextModel: Identifiable, Hashable, MenuItemModel {
     // data pro zobrazení v menu aplikace
     var title: String
     var content: String
-    var bannerName: String? = nil
-    var isHalf: Bool = false
-    var needSpace: Bool = true
+    var isCollapsable: Bool = false
+    
+    let bannerName: String? = nil
+    let isHalf: Bool = false
+    let needSpace: Bool = true
 
     func getBanner() -> Image? {
         return nil

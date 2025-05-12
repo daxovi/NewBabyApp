@@ -39,6 +39,7 @@ struct MenuItem: View {
                 VStack(spacing: 0) {
                     HStack(alignment: .center) {
                         Text("\(item.title)")
+                            .lineLimit(1)
                         Spacer()
                         Image(systemName: "chevron.right")
                     }
