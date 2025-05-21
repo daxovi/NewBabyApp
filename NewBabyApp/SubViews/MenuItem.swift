@@ -14,26 +14,47 @@ struct MenuItem: View {
         NavigationLink(value: mapToDestination(item)) {
             if let image = item.getBanner() {
                 ZStack {
+                    Color.bannerBlurPink
+
                     image
                         .resizable()
                         .scaledToFill()
                     
-                    LinearGradient(colors: [ // TODO: vyzkoušet nastavení rozmazání .thinMaterial
-                        .black.opacity(0),
-                        .black.opacity(0),
-                        .black.opacity(0.5)
-                    ], startPoint: .top, endPoint: .bottom)
-                    HStack {
-                        VStack {
-                            Spacer()
-                            Text("\(item.title)")
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Text(item.title)
+                                .textStyle(.bannerOverlay)
                                 .multilineTextAlignment(.leading)
                                 .padding()
-                                .foregroundStyle(.white)
+                            Spacer()
                         }
-                        Spacer()
+                        .padding(.top, 50)
+                        .background {
+                            ZStack {
+                                
+                                Rectangle()
+                                    .fill(.ultraThinMaterial)
+                                    .mask {
+                                        LinearGradient(colors: [
+                                            .white.opacity(0),
+                                            .white.opacity(0.8),
+                                            .white
+                                        ], startPoint: .top, endPoint: .bottom)
+                                    }
+                                LinearGradient(colors: [
+                                    .bannerBlurPink.opacity(0),
+//                                    .bannerBlurPink.opacity(0.8),
+                                    .bannerBlurPink.opacity(1)
+                                ], startPoint: .top, endPoint: .bottom)
+                                .padding(.top, 0)
+                                .blendMode(.overlay)
+                            }
+                        }
                     }
+
                 }
+                .background(.bannerBlurPink)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             } else {
                 VStack(spacing: 0) {
@@ -66,4 +87,11 @@ struct MenuItem: View {
             fatalError("Neznámý typ MenuItemModel")
         }
     }
+}
+
+#Preview {
+    VStack {
+        MenuItem(item: StoriesModel(title: "Ahoj", bannerName: "vase-cesta-porodem-0", stories: []))
+    }
+    .padding()
 }

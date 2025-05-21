@@ -12,15 +12,15 @@ extension LocalRepository {
         
         .stories(StoriesModel(title: "Jak to u nás vypadá?", bannerName: "jak-to-u-nas-vypada-0", stories: [
                 Story(type: .image, sourceName: "jak-to-u-nas-vypada-1", text: "Velmi nás těší, že jste si pro narození svého děťátka vybrala právě naši porodnici."),
-                Story(type: .image, sourceName: "jak-to-u-nas-vypada-2", text: "Přejeme vám, aby váš porod proběhl hladce a podle vašich představ!"),
+                Story(type: .image, sourceName: "jak-to-u-nas-vypada-2", text: "Přejeme si, aby váš porod proběhl hladce a podle vašich představ."),
             ])),
         .stories(StoriesModel(title: "Vaše cesta porodem", bannerName: "vase-cesta-porodem-0", stories: [
-            Story(type: .image, sourceName: "vase-cesta-porodem-1", text: "Naším cílem je co nejvíce respektovat přirozený průběh porodu, ale zároveň být připraveni na nečekané situace a zajistit maximální bezpečí maminky i miminka."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-1", text: "Naším záměrem je respektovat přirozený průběh porodu a zároveň být připraveni na nečekané situace."),
             Story(type: .image, sourceName: "vase-cesta-porodem-2", text: "Porod je přirozený proces, který probíhá ve čtyřech fázích. "),
-            Story(type: .image, sourceName: "vase-cesta-porodem-3", text: "Přibližně 85% porodů proběhne bez komplikací, u zbývajících 15% může dojít k situacím, které vyžadují lékařský zásah"),
-            Story(type: .image, sourceName: "vase-cesta-porodem-4", text: "U pacientky s nízkým rizikem a po zvážení aktuálního stavu při přijetí je možné vést porod samostatně porodní asistentkou. Lékař je přivolán, kdykoliv to vyžaduje situace."),
-            Story(type: .image, sourceName: "vase-cesta-porodem-5", text: "U pacientky s vyšším rizikem porod vedou společně lékař s porodní asistentkou."),
-            Story(type: .image, sourceName: "vase-cesta-porodem-6", text: "Během porodu  je přítomná sestra z novorozeneckého oddělení, která zajišťuje navazující péči o vaše dítě. V případě komplikací je přivolán i lékař – neonatolog, který se specializuje na péči o novorozence."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-3", text: "Přibližně 85 % porodů proběhně bez komplikací, u zbývajících 15 % dochází k situacím, které vyžadují lékařský zásah."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-4", text: "Pacientkám s nízkým rizikem nabízíme možnost vést porod samostatně  porodní asistentkou. Vždy však musíme zvážit i aktuální stav porodu a rodičky při přijetí. Lékař je přivolán, kdykoli to vyžaduje situace."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-5", text: "U pacientky s vyšším rizikem komplikací porod vedou společně lékař s porodní asistentkou."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-6", text: "Během druhé fáze porodu je přítomna sestra z novorozeneckého oddělení, která zajistí navazující péči o miminko. V komplikovaných případech je přivolán neonatolog - lékař se specializací na péči o novorozence."),
         ])),
         
         .menu(MenuModel(title: "I. doba porodní – otevírání porodních cest", menuItems: iDobaPorodni)),
@@ -35,7 +35,7 @@ extension LocalRepository {
         
         // MARK: - Vyvolání porodu
         .stories(StoriesModel(title: "Vyvolání porodu", bannerName: "vyvolani-porodu-0", stories: [
-            Story(type: .image, sourceName: "preindukce-porodu-1", text: "Je-li nutné přistoupit k vyvolání porodu, je indikována vždy lékařem. Vlastní formu nebo její kombinaci určuje lékař."),
+            Story(type: .image, sourceName: "preindukce-porodu-1", text: "Vyvolání porodu je vždy indikováno lékařem. Vlastní formu nebo jeho kombinaci určuje lékař."),
             Story(type: .image, sourceName: "preindukce-porodu-2", text: "Mechanická forma kdy je katetr s balonkem, naplněným tekutinou, zavedený do oblasti děložního čípku. Tlakem balonku na čípek dochází k jeho otevírání"),
             Story(type: .image, sourceName: "preindukce-porodu-3", text: "Chemická forma – většinou polknutím tablety dochází k vyvoláním děložních kontrakcí.")
         ])),
@@ -43,7 +43,7 @@ extension LocalRepository {
         // MARK: - Císařský řez
         .stories(StoriesModel(title: "Akutní císařský řez", bannerName: "akutni-cisarsky-rez-0", isHalf: true, stories: [
             Story(type: .image, sourceName: "akutni-cisarsky-rez-1", text: "Při akutním císařském řezu je operace většinou vedena v celkové anestezii."),
-            Story(type: .image, sourceName: "akutni-cisarsky-rez-2", text: "Pokud to stav Vás i Vašeho miminka dovoluje, snažíme se o časný bonding co nejdříve po operaci"),
+            Story(type: .image, sourceName: "akutni-cisarsky-rez-2", text: "Pokud to stav vás i vašeho miminka dovoluje, snažíme se o časný bonding co nejdříve po operaci"),
             Story(type: .image, sourceName: "akutni-cisarsky-rez-3", text: "Vašemu doprovodu /nejčastěji otci dítěte/ je umožněn bonding záhy po porodu"),
             Story(type: .image, sourceName: "akutni-cisarsky-rez-4", text: "Většinou další péče o vás probíhá opět na porodním boxu nebo na intermediálním pokoji."),
             Story(type: .image, sourceName: "akutni-cisarsky-rez-5", text: "Ošetřující lékař pro Vás vybere nejvhodnější a nejbezpečnější variantu.")
@@ -52,9 +52,9 @@ extension LocalRepository {
             Story(type: .image, sourceName: "planovany-cisarsky-rez-1", text: "Většinou jsou pacientky přijímány v den operace. Komplikovanější pacientky přijímáme den předem."),
             Story(type: .image, sourceName: "planovany-cisarsky-rez-2", text: "Příjem posledního jídla je povolený maximálně 6 hodin před operací, příjem neslazených tekutin max. 2 hodiny před operací."),
             Story(type: .image, sourceName: "planovany-cisarsky-rez-3", text: "Před operací zavedeme do žíly kanylu k aplikaci léků a infuzí. Na operačním sále vám bude zaveden na nezbytně dlouhou dobu močová cévka."),
-            Story(type: .image, sourceName: "planovany-cisarsky-rez-4", text: "Dle situace je péče o maminku na porodním sále nebo intermediálním pokoji, kde se o Vás postaráme."),
+            Story(type: .image, sourceName: "planovany-cisarsky-rez-4", text: "Dle situace probíhá péče o maminku na porodním sále nebo intermediálním pokoji."),
             Story(type: .image, sourceName: "planovany-cisarsky-rez-5", text: "Při nekomplikovaném průběhu operace vedené ve svodné – spinální anestezii je možná přítomnost otce přímo na operačním sále."),
-            Story(type: .image, sourceName: "planovany-cisarsky-rez-6", text: "Dovoluje-li to vás stav a stav vašeho dítěte následuje téměř okamžitý bonding ještě v průběhu operace.")
+            Story(type: .image, sourceName: "planovany-cisarsky-rez-6", text: "Dovoluje-li to váš stav a stav vašeho dítěte následuje téměř okamžitý bonding ještě v průběhu operace.")
         ])),
     ]
     
@@ -89,7 +89,7 @@ extension LocalRepository {
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-1", text: "Změny poloh u porodu můžou tlumit bolest."),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-2", text: "K tomu můžete použít porodní lůžko, gymnastický míč, žíněnku, porodní závěs, polohovací pomůcky, porodní židličku apod."),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-3", text: "Zaměření se na správnou techniku dýchání harmonizují celé tělo a pomáhá ovlivnit vnímání bolesti."),
-            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-4", text: "K vaší relaxaci může pomoci zahřívání určitých částí těla (bedra, podbříšek). Využíváme masáže, sprcha, termofor s teplou vodou baňkování a jiné."),
+            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-4", text: "K vaší relaxaci může pomoci zahřívání určitých částí těla (bedra, podbříšek). Využíváme masáže, sprchu, termofor s teplou vodou baňkování a jiné."),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-5", text: "Rebozo šátek pomáhá podpořit správnou polohu miminka před porodem, ulevuje od bolesti zad. Rádi vám s tím pomůžeme."),
         ])),
         .stories(StoriesModel(title: "Tlumení bolesti s použitím léků", bannerName: "placeholder", isHalf: true, stories: [
@@ -123,7 +123,7 @@ extension LocalRepository {
                 Vysoký krevní tlak, křečové stavy, embolie
                 
                 Pokud se vyskytne závažná komplikace, je nutné rychlé ukončení porodu císařským řezem.
-                """))
+                """, isCollapsable: true))
     ]
     
     // MARK: - II. doba
@@ -150,8 +150,8 @@ extension LocalRepository {
             Story(type: .image, sourceName: "chraneni-hraze-behem-porodu-3", text: "Episiotomie se provádí pouze v případě nutnosti – například při nedostatku kyslíku u plodu")
         ])),
         .stories(StoriesModel(title: "Po porodu", bannerName: "placeholder", stories: [
-            Story(type: .image, sourceName: "po-porodu-1", text: "Pokud je vše v pořádku, může proběhnout okamžitý bonding, jen minimálně rušený ze strany zdravoutníků"),
-            Story(type: .image, sourceName: "po-porodu-2", text: "Novorozenecká sestřička u miminko u maminky lehce osuší a nasadí mu čepičku"),
+            Story(type: .image, sourceName: "po-porodu-1", text: "Pokud je vše v pořádku, může proběhnout okamžitý bonding, jen minimálně rušený ze strany zdravotníků"),
+            Story(type: .image, sourceName: "po-porodu-2", text: "Novorozenecká sestřička miminko u maminky lehce osuší a nasadí mu čepičku"),
             Story(type: .image, sourceName: "po-porodu-3", text: "Na hlavičku dostane čepičku, na končetinu se připevní malé čidlo ke snímaní množství kyslíku v krvi a srdeční akce."),
             Story(type: .image, sourceName: "po-porodu-4", text: "Péči o miminko zajišťuje novorozenecká sestřička, event. společně s pediatrem")
         ])),
@@ -191,7 +191,7 @@ extension LocalRepository {
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-1", text: "Odpočíváte a regenerujete v porodním pokoji."),
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-2", text: "Porodní asistentka monitoruje váš stav – kontroluje krevní tlak, zavinování dělohy a intenzitu krvácení."),
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-3", text: "Pokud je vše v pořádku, zůstáváte s miminkem a doprovodem (partnerem, blízkou osobou)."),
-            Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-4", text: "Během tohoto období by jste neměla nic jíst, příjem tekutin je omezen na minimum"),
+            Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-4", text: "Během tohoto období byste neměla nic jíst, příjem tekutin je omezen na minimum"),
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-5", text: "Po uplynutí této doby se můžete najíst a personál porodního sálu vás doprovodí do sprchy"),
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-6", text: "Po skončení této fáze jste převezena na oddělení šestinedělí, kde budete společně s miminkem.")
         ])),

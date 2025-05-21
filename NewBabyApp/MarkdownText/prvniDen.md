@@ -2,7 +2,7 @@
 Když se vaše dítě narodí, jeho kůže může být modrá. Modré zbarvení kůže rychle ustupuje v prvních minutách po porodu. Kůže je často mokrá od plodové vody a je pokrytá mázkem. Plodová voda a mázek se vyskytovali již během těhotenství v děloze. Mimo jiné jsou důležité pro rozvoj čichu a chuti. Pomáhají vašemu dítěti cítit se bezpečně v novém světě mimo dělohu. 
 
 ## Bonding (skin to skin = kontakt kůže na kůži)
-Tento termín označuje proces utváření laskyplné vazby mezi matkou a dítětem. Bezprostředně po porodu začíná přiložením novorozence na tělo maminky (kontakt kůže novorozence na kůži maminky, tzv. skin-to-skin kontakt).  Pokud to dovolí Váš zdravotní stav a Vaše dítě bude po narození v pořádku, uděláme maximum proto, aby jsme Vaše miminko po narození položili na Vás. V případě potřeby se můžete vystřídat s tatínkem.  
+Tento termín označuje proces utváření laskyplné vazby mezi matkou a dítětem. Bezprostředně po porodu začíná přiložením novorozence na tělo maminky (kontakt kůže novorozence na kůži maminky, tzv. skin-to-skin kontakt).  Pokud to dovolí váš zdravotní stav a vaše dítě bude po narození v pořádku, uděláme maximum proto, aby jsme Vaše miminko po narození položili na Vás. V případě potřeby se můžete vystřídat s tatínkem.  
 
 ### Průběh bondingu:
 Bezprostředně *po* porodu je novorozenec položen na nahý hrudník matky, zakryje se vyhratym ručníkem a takto společne  bondují po dobu aspoň 2 hodin. Během kontaktu kůže na kůži (anglicky skin-to-skin) se podporuje první přísátí novorozence. 

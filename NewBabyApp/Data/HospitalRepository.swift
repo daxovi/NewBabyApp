@@ -50,9 +50,13 @@ extension LocalRepository {
             .stories(StoriesModel(title: "Jaké jsou příznaky žloutenky?", bannerName: "jake-jsou-priznaky-zloutenky-0", stories: [
                 Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-1", text: "Žluté zbarvení kůže, sliznic a očního bělma."),
                 Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-2", text: "Zvýšená spavost."),
-                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-3", text: "Obtíže s krmením (např. líné sání, delší intervaly mezi krmením)."),
-                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-4", text: "Podrážděnost a vyšší tón pláče."),
+                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-3", text: "Obtíže s krmením (např. líné sání, delší intervaly mezi krmením). Pokud jsou hodnoty žloutenky extrémně vysoké, může být přítomná podrážděnost a vyšší tón pláče."),
                 ])),
+            .introText(IntroTextModel(title: "Kdy se žloutenka objevuje?", content: """
+                U donošených miminek vrcholí hladina bilirubinu mezi 3. a 5. dnem života a obvykle klesá do dvou týdnů.
+                U nedonošených dětí bývá nejvyšší hladina bilirubinu mezi 5. a 7. dnem života.
+                """)),
+
             .stories(StoriesModel(title: "Jak se žloutenka vyšetřuje?", stories: [
                 Story(type: .image, sourceName: "jak-se-zloutenka-vysetruje-1", text: "Vyšetření se provádí pomocí přístroje, který měří hladinu bilirubinu přes kůži. Toto měření je bezbolestné a bezpečné."),
                 Story(type: .image, sourceName: "jak-se-zloutenka-vysetruje-2", text: "Pokud jsou hodnoty vysoké, následuje odběr krve ze žíly pro přesnější hodnotu bilirubinu.")])),
@@ -149,7 +153,7 @@ extension LocalRepository {
         .introText(IntroTextModel(title: "Co vás čeká?", content: "Všechny děti i maminky mají svůj vlastní rytmus. Pokud se vaše první dny budou odlišovat, je to naprosto v pořádku. Důležité je, že na to nejste sami.")),
         .menu(MenuModel(title: "Bonding", bannerName: "bonding", menuItems: bonding)),
         .stories(StoriesModel(title: "Jak vypadá miminko po porodu", stories: [
-            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-1", text: "Kůže novorozence je často vlhká od plodové vody a pokrytá bílým mázkem. Mazek chrání kůži miminka děloze a mají důležitou roli i po porodu."),
+            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-1", text: "Mázek chrání kůži miminka v děloze a má důležitou roli i po porodu."),
             Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-2", text: "Když se vaše miminko narodí, jeho kůže může mít namodralý nádech. To je zcela normální a během prvních minut po porodu se barva kůže postupně změní na růžovou."),
             Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-3", text: "Plodová voda a mázek pomáhají novorozenci rozpoznat vůně a chutě, které znal z dělohy. Díky tomu se cítí bezpečně v novém prostředí."),
         ])),
@@ -157,7 +161,7 @@ extension LocalRepository {
         .stories(StoriesModel(title: "Měření tělesné teploty", stories: [
             Story(type: .image, sourceName: "mereni-teploty-1", text: "Pro nejpřesnější výsledek se teplota miminka měří v konečníku."),
             Story(type: .image, sourceName: "mereni-teploty-2", text: "Pokud je teplota příliš nízká, můžeme miminko uložit na vyhřívanou podložku."),
-            Story(type: .image, sourceName: "mereni-teploty-3", text: "Ve zcela výjimečných případech je nutné je dát do inkubátoru nebo na vyhřívané lůžko."),
+            Story(type: .image, sourceName: "mereni-teploty-3", text: "Ve zcela výjímečných případech je nutné dát miminko do inkubátoru nebo na vyhřívané lůžko."),
         ])),
         .stories(StoriesModel(title: "Označení novorozence", stories: [
             Story(type: .image, sourceName: "oznaceni-novorozence-1", text: "Po porodu dostane vaše miminko na zápěstí papírový náramek s identifikačními údaji."),
@@ -188,7 +192,7 @@ extension LocalRepository {
         .stories(StoriesModel(title: "Jak bonding probíhá?", bannerName: "jak_bonding_probiha", stories: [
             Story(type: .image, sourceName: "jak-bonding-probiha-1", text: "Po porodu je novorozenec položen na nahou hruď maminky."),
             Story(type: .image, sourceName: "jak-bonding-probiha-2", text: "Přikryje se vyhřátým ručníkem pro udržení tepla."),
-            Story(type: .image, sourceName: "jak-bonding-probiha-3", text: "Kontakt by měl trvat alespoň 2 hodiny."),
+            Story(type: .image, sourceName: "jak-bonding-probiha-3", text: "Kontakt kůže na kůži by měl trvat minimálně 2 hodiny."),
             Story(type: .image, sourceName: "jak-bonding-probiha-4", text: "Během bondingu se většinou miminko poprvé přisává k prsu."),
             Story(type: .image, sourceName: "jak-bonding-probiha-5", text: "Pomáhá miminku zklidnit se a adaptovat na novou situaci."),
             Story(type: .image, sourceName: "jak-bonding-probiha-6", text: "Miminko je během bondingu monitorováno pomocí saturačního čidla na ručičce."),

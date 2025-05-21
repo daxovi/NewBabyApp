@@ -65,7 +65,7 @@ struct MenuView: View {
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding()
-                .shadow(color: .black.opacity(0.1), radius: 2, x: 0, y: 1)
+                .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 1)
                 
                 ZStack {
                     Image(.footerCloud)
@@ -152,8 +152,15 @@ struct MenuView: View {
 }
 
 #Preview {
-    MenuView(model: MenuModel(title: "První den", subtitle: "", backgroundImageName: "title-baby", menuItems: LocalRepository.iDobaPorodni
-                             ), clientName: "Name", path: .constant(NavigationPath()))
+    MenuView(
+        model: MenuModel(
+            title: "První den",
+            subtitle: "",
+            backgroundImageName: "title-baby",
+            menuItems: LocalRepository.porod
+        ),
+        clientName: "Name",
+        path: .constant(NavigationPath()))
 }
 
 private struct MenuBackground: View {
@@ -273,7 +280,7 @@ private struct IntroTextView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
                 Text(model.title)
-                    .bold()
+                    .textStyle(.smallTitle)
                 Spacer()
                 if model.isCollapsable {
                     Image(systemName: "chevron.right")
@@ -291,6 +298,7 @@ private struct IntroTextView: View {
             if !model.isCollapsable || !isCollapsed {
                 Divider()
                 Text(model.content)
+                    .textStyle(.bodyPrimary)
                     .multilineTextAlignment(.leading)
             }
         }

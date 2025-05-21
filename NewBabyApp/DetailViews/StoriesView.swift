@@ -40,16 +40,35 @@ struct StoriesView: View {
                                 )
                         } else {
                             if let image = getImage(imageName: storiesGroup.stories[index].sourceName) {
-                                    image
-                                        .resizable()
-                                        .scaledToFill()
-                                        .overlay(topShadow, alignment: .top)
+                                VStack(spacing: 8) {
+                                    progressBar
+                                        .padding(.top, 6)
+                                    HStack(alignment: .top) {
+                                            Text(storiesGroup.stories[selectedStory].text)
+                                                .textStyle(.bodyPrimary)
+                                            Spacer(minLength: 24)
+                                            Button {
+                                                presentationMode.wrappedValue.dismiss()
+                                            } label: {
+                                                Image(systemName: "xmark")
+                                                    .font(.title2)
+                                                    .foregroundColor(.black)
+                                            }
+                                        }
+                                        .padding()
 
-                                        .ignoresSafeArea()
-                                        .frame(
-                                            width: proxy.size.width,
-                                            height: proxy.size.height
-                                        )
+                                        image
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(maxHeight: .infinity)
+                                            .clipped()
+                                            .clipShape(RoundedRectangle(cornerRadius: 30))
+                                            
+
+                                    }
+                                .background(Color.background)
+//                                    .ignoresSafeArea()
+                                
                             
                                 }
                         }
@@ -57,12 +76,12 @@ struct StoriesView: View {
                 }
                 
             })
+            .statusBar(hidden: true)
             .toolbar(.hidden, for: .tabBar)
             .onAppear {
                 videoProgressGroup = Array(repeating: 0.0, count: storiesGroup.stories.count)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .background(Color.black)
             .onReceive(timer) { _ in
                 if timerProgress < 1 {
                     if storiesGroup.stories[selectedStory].type == .video {
@@ -86,8 +105,8 @@ struct StoriesView: View {
             }
             .ignoresSafeArea()
       //      .overlay(storiesText, alignment: .topLeading)
-            .overlay(progressBar, alignment: .topTrailing)
-            .background(.black)
+//            .overlay(progressBar, alignment: .topTrailing)
+            .background(Color.background)
             .overlay(controls)
             .gesture(
                 DragGesture(minimumDistance: 100, coordinateSpace: .local)
@@ -121,7 +140,7 @@ struct StoriesView: View {
                         let width = proxy.size.width
 
                         Capsule()
-                            .fill(.gray.opacity(0.5))
+                            .fill(.bannerBlurPink.opacity(0.5))
                             .overlay(alignment: .leading) {
                                 if isActive {
                                     Capsule()
@@ -136,23 +155,8 @@ struct StoriesView: View {
                 }
             }
             .frame(height: 2.4)
-            HStack(alignment: .top) {
-                Text(storiesGroup.stories[selectedStory].text)
-                    .foregroundStyle(.white)
-                    .padding(.top, 10)
-                Spacer()
-                Button {
-                    presentationMode.wrappedValue.dismiss()
-                } label: {
-                    Image(systemName: "xmark")
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 10)
-                }
-            }
-
         }
-        .padding()
+        .padding(.horizontal)
     }
 
     var controls: some View {
@@ -221,5 +225,14 @@ struct StoriesView: View {
 }
 
 #Preview {
-    ContentView()
+    StoriesView(storiesGroup:
+                    StoriesModel(title: "Plánovaný císařský řez", bannerName: "planovany-cisarsky-rez-0", isHalf: true, stories: [
+                        Story(type: .image, sourceName: "planovany-cisarsky-rez-1", text: "Většinou jsou pacientky přijímány v den operace. Komplikovanější pacientky přijímáme den předem."),
+                        Story(type: .image, sourceName: "planovany-cisarsky-rez-2", text: "Příjem posledního jídla je povolený maximálně 6 hodin před operací, příjem neslazených tekutin max. 2 hodiny před operací."),
+                        Story(type: .image, sourceName: "planovany-cisarsky-rez-3", text: "Před operací zavedeme do žíly kanylu k aplikaci léků a infuzí. Na operačním sále vám bude zaveden na nezbytně dlouhou dobu močová cévka."),
+                        Story(type: .image, sourceName: "planovany-cisarsky-rez-4", text: "Dle situace probíhá péče o maminku na porodním sále nebo intermediálním pokoji."),
+                        Story(type: .image, sourceName: "planovany-cisarsky-rez-5", text: "Při nekomplikovaném průběhu operace vedené ve svodné – spinální anestezii je možná přítomnost otce přímo na operačním sále."),
+                        Story(type: .image, sourceName: "planovany-cisarsky-rez-6", text: "Dovoluje-li to váš stav a stav vašeho dítěte následuje téměř okamžitý bonding ještě v průběhu operace.")
+                    ])
+    )
 }
