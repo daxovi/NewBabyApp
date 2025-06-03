@@ -30,14 +30,40 @@ struct StoriesView: View {
                 ForEach(storiesGroup.stories.indices, id: \.self) { index in
                     GeometryReader { proxy in
                         if storiesGroup.stories[index].type == .video {
-                            VideoTabView(videoName: storiesGroup.stories[index].sourceName, progress: $videoProgressGroup[index])
-                                .overlay(topShadow, alignment: .top)
-                                .ignoresSafeArea()
-                                .scaledToFill()
-                                .frame(
-                                    width: proxy.size.width,
-                                    height: proxy.size.height
-                                )
+                            
+                            VStack(spacing: 8) {
+                                progressBar
+                                    .padding(.top, 6)
+                                HStack(alignment: .top) {
+                                        Text(storiesGroup.stories[selectedStory].text)
+                                            .textStyle(.bodyPrimary)
+                                        Spacer(minLength: 24)
+                                        Button {
+                                            presentationMode.wrappedValue.dismiss()
+                                        } label: {
+                                            Image(systemName: "xmark")
+                                                .font(.title2)
+                                                .foregroundColor(.black)
+                                        }
+                                    }
+                                    .padding()
+
+                                Color.clear
+                                    .overlay(
+                                        VideoTabView(videoName: storiesGroup.stories[index].sourceName, progress: $videoProgressGroup[index])
+                                            .scaledToFill()
+                                            .ignoresSafeArea()
+                                            .frame(
+                                                width: proxy.size.width,
+                                                height: proxy.size.height
+                                            )
+//                                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                            .scaledToFill()
+                                            .clipped()
+                                        )
+                                    .clipShape(RoundedRectangle(cornerRadius: 30))
+                                    .ignoresSafeArea()
+                            }
                         } else {
                             if let image = getImage(imageName: storiesGroup.stories[index].sourceName) {
                                 VStack(spacing: 8) {
@@ -57,13 +83,17 @@ struct StoriesView: View {
                                         }
                                         .padding()
 
-                                        image
-                                            .resizable()
-                                            .scaledToFill()
-                                            .frame(maxHeight: .infinity)
-                                            .clipped()
-                                            .clipShape(RoundedRectangle(cornerRadius: 30))
-                                            
+                                    Color.clear
+                                        .overlay(
+                                            image
+                                                .resizable()
+                                                .scaledToFill()
+                                                .frame(maxHeight: .infinity)
+                                                .clipped()
+                                            )
+                                        .clipShape(RoundedRectangle(cornerRadius: 30))
+                                        .ignoresSafeArea()
+
 
                                     }
                                 .background(Color.background)
@@ -227,12 +257,13 @@ struct StoriesView: View {
 #Preview {
     StoriesView(storiesGroup:
                     StoriesModel(title: "Plánovaný císařský řez", bannerName: "planovany-cisarsky-rez-0", isHalf: true, stories: [
-                        Story(type: .image, sourceName: "planovany-cisarsky-rez-1", text: "Většinou jsou pacientky přijímány v den operace. Komplikovanější pacientky přijímáme den předem."),
-                        Story(type: .image, sourceName: "planovany-cisarsky-rez-2", text: "Příjem posledního jídla je povolený maximálně 6 hodin před operací, příjem neslazených tekutin max. 2 hodiny před operací."),
-                        Story(type: .image, sourceName: "planovany-cisarsky-rez-3", text: "Před operací zavedeme do žíly kanylu k aplikaci léků a infuzí. Na operačním sále vám bude zaveden na nezbytně dlouhou dobu močová cévka."),
-                        Story(type: .image, sourceName: "planovany-cisarsky-rez-4", text: "Dle situace probíhá péče o maminku na porodním sále nebo intermediálním pokoji."),
-                        Story(type: .image, sourceName: "planovany-cisarsky-rez-5", text: "Při nekomplikovaném průběhu operace vedené ve svodné – spinální anestezii je možná přítomnost otce přímo na operačním sále."),
-                        Story(type: .image, sourceName: "planovany-cisarsky-rez-6", text: "Dovoluje-li to váš stav a stav vašeho dítěte následuje téměř okamžitý bonding ještě v průběhu operace.")
+                        Story(type: .video, sourceName: "test-1", text: "kjsdhf dvdkvj vjev qef efkdcnrefv fvkkjdv jenfn kfvnj kjvn ffv fvdfv dfvefš fvef nv ac cercacd ffvdavkvš elve ava vevvnnieu vceavkv vvakaev"),
+                        Story(type: .image, sourceName: "test-1", text: "kjsdhf dvdkvj vjev qef efkdcnrefv fvkkjdv jenfn kfvnj kjvn ffv fvdfv dfvefš fvef nv ac cercacd ffvdavkvš elve ava vevvnnieu vceavkv vvakaev"),
+                        Story(type: .video, sourceName: "test-1", text: "v"),
+//                        Story(type: .video, sourceName: "vysetreni-sluchu-2", text: "Před operací zavedeme do žíly kanylu k aplikaci léků a infuzí. Na operačním sále vám bude zaveden na nezbytně dlouhou dobu močová cévka."),
+//                        Story(type: .image, sourceName: "planovany-cisarsky-rez-4", text: "Dle situace probíhá péče o maminku na porodním sále nebo intermediálním pokoji."),
+//                        Story(type: .image, sourceName: "planovany-cisarsky-rez-5", text: "Při nekomplikovaném průběhu operace vedené ve svodné – spinální anestezii je možná přítomnost otce přímo na operačním sále."),
+//                        Story(type: .image, sourceName: "planovany-cisarsky-rez-6", text: "Dovoluje-li to váš stav a stav vašeho dítěte následuje téměř okamžitý bonding ještě v průběhu operace.")
                     ])
     )
 }

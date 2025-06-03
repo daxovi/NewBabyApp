@@ -27,8 +27,8 @@ extension LocalRepository {
             .introText(IntroTextModel(title: "Co je novorozenecký screening?", content: "Novorozenecký screening je laboratorní test, který se provádí u všech novorozenců narozených v ČR. Pomáhá včas odhalit vážná dědičná onemocnění, která by mohla ohrozit zdraví dítěte.")),
             .introText(IntroTextModel(title: "Kdy se screening provádí?", content: "Odběr probíhá mezi 48. a 72. hodinou po porodu. Tato doba je klíčová pro včasnou diagnostiku možných onemocnění.")),
             .stories(StoriesModel(title: "Jak se odběr provádí?", bannerName: "nls-jak-se-odber-provadi-0", stories: [
-                Story(type: .image, sourceName: "novorozenecky-screening-1", text: "Screening se provádí odebráním několika kapek krve z patičky novorozence."),
-                Story(type: .image, sourceName: "novorozenecky-screening-2", text: "Krev se nanese na speciální papírovou kartičku (tzv. novorozeneckou screeningovou kartičku) a odešle se do laboratoře k analýze.")])),
+                Story(type: .video, sourceName: "novorozenecky-screening-1", text: "Screening se provádí odebráním několika kapek krve z patičky novorozence."),
+                Story(type: .video, sourceName: "novorozenecky-screening-2", text: "Krev se nanese na speciální papírovou kartičku (tzv. novorozeneckou screeningovou kartičku) a odešle se do laboratoře k analýze.")])),
             .introText(IntroTextModel(title: "Jak se výsledky vyhodnocují?", content: """
                                       Negativní výsledek – Vše je v pořádku, laboratoř nekontaktuje rodiče ani lékaře
                                       Pozitivní výsledek – Laboratoř kontaktuje rodiče nebo lékaře dítěte a doporučí další vyšetření na specializovaném pracovišti. Včasná léčba může zabránit rozvoji komplikací a zajistit dítěti co nejlepší kvalitu života.
@@ -85,9 +85,9 @@ extension LocalRepository {
         .menu(MenuModel(title: "Vyšetření sluchu", menuItems: [
             .introText(IntroTextModel(title: "Proč se provádí vyšetření sluchu?", content: "Cílem vyšetření sluchu je včasné odhalení vrozené sluchové vady. Díky tomu je možné zahájit rehabilitaci sluchu a zajistit správný rozvoj komunikačních schopností a řeči dítěte.")),
             .stories(StoriesModel(title: "Jak probíhá vyšetření sluchu?", bannerName: "placeholder", stories: [
-                Story(type: .image, sourceName: "vysetreni-sluchu-1", text: "Vyšetření je bezbolestné a neinvazivní. Dítě při něm může klidně spát."),
-                Story(type: .image, sourceName: "vysetreni-sluchu-2", text: "Zdravotnický personál zavede do zevního zvukovodu jemnou sondu, která vyšle slabý zvukový podnět."),
-                Story(type: .image, sourceName: "vysetreni-sluchu-3", text: "Přístroj zaznamená odpovědi sluchového aparátu a vyhodnotí, zda sluch funguje správně.")
+                Story(type: .video, sourceName: "vysetreni-sluchu-1", text: "Vyšetření je bezbolestné a neinvazivní. Dítě při něm může klidně spát."),
+                Story(type: .video, sourceName: "vysetreni-sluchu-2", text: "Zdravotnický personál zavede do zevního zvukovodu jemnou sondu, která vyšle slabý zvukový podnět."),
+                Story(type: .video, sourceName: "vysetreni-sluchu-3", text: "Přístroj zaznamená odpovědi sluchového aparátu a vyhodnotí, zda sluch funguje správně.")
                 ])),
             .stories(StoriesModel(title: "Kdy se vyšetření provádí?", bannerName: "placeholder", stories: [
                 Story(type: .image, sourceName: "vysetreni-sluchu-4", text: "TEOAE (tranzientně evokované otoakustické emise)"),
@@ -136,11 +136,10 @@ extension LocalRepository {
             .introText(IntroTextModel(title: "Je toto vyšetření povinné?", content: "Vyšetření ledvin a močových cest pomocí ultrazvuku není v ČR povinný a neprovádí se na všech odděleních. U nás ho provádíme standardně, protože přispívá k včasné diagnostice a péči o zdraví novorozenců."))
             ])),
         .menu(MenuModel(title: "Vyšetření dětským ortopedem", menuItems: [
-            .introText(IntroTextModel(title: "Jak probíhá vyšetření?", content: "Vyšetření kyčlí a dolních končetin se provádí klinicky a pomocí ultrazvuku. Cílem je včasné odhalení vývojové dysplazie kyčelního kloubu případně jiných odchylek v oblasti dolních končetin. Při vyšetření kyčlí se zjišťuje zda je hlavice stehenní kosti správně zakloubená v kyčelní jamce.")),
-            .stories(StoriesModel(title: "Jaké jsou příznaky?", bannerName: "placeholder", stories: [
-                Story(type: .image, sourceName: "vysetreni-detsky-ortoped-1", text: "Vyšetření začíná pomocí ultrazvuku."),
-                Story(type: .image, sourceName: "vysetreni-detsky-ortoped-2", text: "Následuje klinické vyšetření."),
-                Story(type: .image, sourceName: "vysetreni-detsky-ortoped-3", text: "Nedílnou součástí je vyšetření nožiček."),
+            .introText(IntroTextModel(title: "Vyšetření kyčlí a dolních končetin", content: "Vyšetření kyčlí a dolních končetin se provádí klinicky a pomocí ultrazvuku. Cílem je včasné odhalení vývojové dysplazie kyčelního kloubu případně jiných odchylek v oblasti dolních končetin. Při vyšetření kyčlí se zjišťuje zda je hlavice stehenní kosti správně zakloubená v kyčelní jamce.")),
+            .stories(StoriesModel(title: "Jak probíhá vyšetření?", bannerName: "placeholder", stories: [
+                Story(type: .video, sourceName: "vysetreni-detsky-ortoped-1", text: "Vyšetření začíná pomocí ultrazvuku."),
+                Story(type: .video, sourceName: "vysetreni-detsky-ortoped-2", text: "Následuje klinické vyšetření. Nedílnou součástí je vyšetření nožiček."),
                 ])),
             .introText(IntroTextModel(title: "Proč je vyšetření důležité", content: "Včasná diagnostika umožňuje rychlou a efektivní léčbu, která zabrání budoucím problémům s chůzí nebo vývojem kyčlí. Screening probíhá v ortopedických ambulancích ve vaší spádové oblasti. Pediatr vám poradí, kam se objednat.")),
             .introText(IntroTextModel(title: "Kdy vyšetření probíhá?", content: "Každé miminko podstupuje tři ultrazvuková vyšetření. První vyšetření – do 3 týdnů po narození. Druhé vyšetření – mezi 6. až 8. týdnem a třetí vyšetření – kolem 3. měsíce věku.")),
@@ -159,9 +158,9 @@ extension LocalRepository {
         ])),
         // TODO: dodělat obrázky - názvy souborů jsou prázdné
         .stories(StoriesModel(title: "Měření tělesné teploty", stories: [
-            Story(type: .image, sourceName: "mereni-teploty-1", text: "Pro nejpřesnější výsledek se teplota miminka měří v konečníku."),
-            Story(type: .image, sourceName: "mereni-teploty-2", text: "Pokud je teplota příliš nízká, můžeme miminko uložit na vyhřívanou podložku."),
-            Story(type: .image, sourceName: "mereni-teploty-3", text: "Ve zcela výjímečných případech je nutné dát miminko do inkubátoru nebo na vyhřívané lůžko."),
+            Story(type: .video, sourceName: "mereni-teploty-1", text: "Pro nejpřesnější výsledek se teplota miminka měří v konečníku."),
+            Story(type: .video, sourceName: "mereni-teploty-2", text: "Pokud je teplota příliš nízká, můžeme miminko uložit na vyhřívanou podložku."),
+            Story(type: .video, sourceName: "mereni-teploty-3", text: "Ve zcela výjímečných případech je nutné dát miminko do inkubátoru nebo na vyhřívané lůžko."),
         ])),
         .stories(StoriesModel(title: "Označení novorozence", stories: [
             Story(type: .image, sourceName: "oznaceni-novorozence-1", text: "Po porodu dostane vaše miminko na zápěstí papírový náramek s identifikačními údaji."),
