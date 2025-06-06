@@ -168,6 +168,7 @@
 		CF478DBB2DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */; };
 		CF478DBC2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */; };
 		CF478DBD2DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */; };
+		CFB0B18F2DF2E5AD008C5E35 /* NonSwipeableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0B18E2DF2E5A5008C5E35 /* NonSwipeableTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -332,6 +333,7 @@
 		CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-1.mp4"; sourceTree = "<group>"; };
 		CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-2.mp4"; sourceTree = "<group>"; };
 		CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-3.mp4"; sourceTree = "<group>"; };
+		CFB0B18E2DF2E5A5008C5E35 /* NonSwipeableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonSwipeableTabView.swift; sourceTree = "<group>"; };
 		CFE57A252CBD6FA100C48924 /* NewBabyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBabyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -599,6 +601,7 @@
 		CF478D032DEF89E2003AE7D8 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				CFB0B18E2DF2E5A5008C5E35 /* NonSwipeableTabView.swift */,
 				CF478D012DEF89E2003AE7D8 /* MenuItem.swift */,
 				CF478D022DEF89E2003AE7D8 /* VideoPlayerFullscreen.swift */,
 			);
@@ -849,6 +852,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */,
+				CFB0B18F2DF2E5AD008C5E35 /* NonSwipeableTabView.swift in Sources */,
 				CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */,
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,
 				CF478D0E2DEF89E2003AE7D8 /* PorodRepository.swift in Sources */,
