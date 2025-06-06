@@ -17,81 +17,53 @@ struct StoriesView: View {
     
     @State var player: AVPlayer?
     
-    @State var selectedStory: Int = 0
+    @State var selectedStory: Int = 0 { didSet {
+        print("Selected story updated: \(selectedStory)")
+        resetProgress()
+    } }
     @State var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     @State var timerProgress: CGFloat = 0
-    @State var videoProgressGroup: [Double] = [0.0]
+    @State var videoProgressGroup: [Double] = [0.0] { didSet {
+        print("Video progress group updated: \(videoProgressGroup)")
+    } }
     
     var body: some View {
         if storiesGroup.stories.isEmpty {
             Text("Tady není nic k vidění") // TODO: dodělat vtipný emptyview
         } else {
             ZStack (alignment: .topTrailing) {
-                TabView(selection: $selectedStory, content: {
-                    ForEach(storiesGroup.stories.indices, id: \.self) { index in
-                        GeometryReader { proxy in
-                            
-                            VStack(spacing: 8) {
-                                progressBar
-                                    .padding(.top, 6)
-                                HStack(alignment: .top) {
-                                    storiesText
-                                    Spacer(minLength: 24)
-                                    Image(systemName: "xmark")
-                                        .font(.title2)
-                                        .foregroundColor(.black)
-                                        .padding()
-                                        .opacity(0.0)
-                                }
-                                .padding()
-
-                                VStack {
-                                    if storiesGroup.stories[index].type == .video {
-                                        Color.clear
-                                            .overlay(
-                                                VideoTabView(videoName: storiesGroup.stories[index].sourceName, progress: $videoProgressGroup[index])
-                                                    .scaledToFill()
-                                                    .ignoresSafeArea()
-                                                    .frame(
-                                                        width: proxy.size.width,
-                                                        height: proxy.size.height
-                                                    )
-                                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                                    .scaledToFill()
-                                                    .clipped()
-                                            )
-                                            .clipShape(clipShape)
-                                            .ignoresSafeArea()
-                                    } else {
-                                        if let image = getImage(imageName: storiesGroup.stories[index].sourceName) {
-                                            Color.clear
-                                                .overlay(
-                                                    image
-                                                        .resizable()
-                                                        .scaledToFill()
-                                                        .frame(maxHeight: .infinity)
-                                                        .clipped()
-                                                )
-                                                .clipShape(clipShape)
-                                                .ignoresSafeArea()
-                                        }
-                                    }
-                                }
-                                .overlay(controls)
+                if let story = storiesGroup.stories[safe: selectedStory] {
+                    GeometryReader { proxy in
+                        VStack(spacing: 8) {
+                            progressBar
+                                .padding(.top, 6)
+                            HStack(alignment: .top) {
+                                storiesText
+                                Spacer(minLength: 24)
+                                Image(systemName: "xmark")
+                                    .font(.title2)
+                                    .foregroundColor(.black)
+                                    .padding()
+                                    .opacity(0.0)
                             }
-                            .background(Color.background)
+                            .padding()
+                            
+                            ZStack {
+                                Color.background
+                                StoriesMediaView(story: story, proxy: proxy, progress: $videoProgressGroup[selectedStory])
+                            }
+                                .overlay(controls)
                         }
+                        .statusBar(hidden: true)
+                        .onAppear(perform: resetProgress)
+                        .onReceive(timer) { _ in tick() }
+                        .toolbar(.hidden, for: .tabBar)
+                        .background(Color.background)
+                        .gesture(dragToDismiss)
+                        .navigationBarBackButtonHidden(true)
                     }
-                })
-                .statusBar(hidden: true)
-                .toolbar(.hidden, for: .tabBar)
-                .onAppear(perform: resetProgress)
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                .onReceive(timer) { _ in tick() }
-                .ignoresSafeArea()
-                .background(Color.background)
-                .gesture(dragToDismiss)
-                .navigationBarBackButtonHidden(true)
+                }
+                
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
@@ -102,6 +74,7 @@ struct StoriesView: View {
                         .padding(.top)
                 }
             }
+            
         }
     }
     
@@ -153,13 +126,11 @@ struct StoriesView: View {
         HStack(spacing: 0) {
             Color.black.opacity(0.01)
                 .onTapGesture { handleTapPrevious() }
-//                .allowsHitTesting(true)
             Color.black.opacity(0.01)
                 .simultaneousGesture(handleTapAndHold)
             Color.black.opacity(0.01)
                 .onTapGesture { handleTapNext() }
         }
-        .padding(.top, 100)
     }
     
     var handleTapAndHold: some Gesture {
@@ -186,7 +157,7 @@ struct StoriesView: View {
                     timerProgress = 0.0
                 }
             } else {
-                timerProgress += 0.01
+                    timerProgress += 0.01
             }
         } else {
             if selectedStory < storiesGroup.stories.count - 1
@@ -200,23 +171,23 @@ struct StoriesView: View {
     }
     
     func handleTapPrevious() {
-        if timerProgress > 0.2 {
-            if selectedStory > 0 {
-                selectedStory -= 1
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
-                    selectedStory += 1
-                    timerProgress = 0
-                }
-            } else {
-                selectedStory += 1
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.001) {
-                    selectedStory -= 1
-                    timerProgress = 0
-                }
+                if timerProgress > 0.2 {
+            switch storiesGroup.stories[selectedStory].type {
+            case .video:
+                print("Video progress reset for first story") // TODO: resetovat stav videa
+            case .image:
+                timerProgress = 0
             }
         } else {
             if selectedStory > 0 {
                 selectedStory -= 1
+            } else {
+                switch storiesGroup.stories[selectedStory].type {
+                case .video:
+                    print("Video progress reset for first story") // TODO: resetovat stav videa
+                case .image:
+                    timerProgress = 0
+                }
             }
         }
     }
@@ -239,6 +210,50 @@ struct StoriesView: View {
         UnevenRoundedRectangle(topLeadingRadius: 30, bottomLeadingRadius: 0, bottomTrailingRadius: 0, topTrailingRadius: 30, style: .circular)
     }
 }
+
+private struct StoriesMediaView: View {
+    var story: Story
+    var proxy: GeometryProxy
+    @Binding var progress: Double
+    
+    var body: some View {
+        if story.type == .video {
+            Color.clear
+                .overlay(
+                    VideoPlayerView(videoName: story.sourceName, progress: $progress)
+                        .scaledToFill()
+                        .ignoresSafeArea()
+                        .frame(
+                            width: proxy.size.width,
+                            height: proxy.size.height
+                        )
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .scaledToFill()
+                        .clipped()
+                )
+                .clipShape(clipShape)
+                .ignoresSafeArea()
+        } else {
+            if let image = getImage(imageName: story.sourceName) {
+                Color.clear
+                    .overlay(
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(maxHeight: .infinity)
+                            .clipped()
+                    )
+                    .clipShape(clipShape)
+                    .ignoresSafeArea()
+            }
+        }
+    }
+    
+    var clipShape: some Shape {
+        UnevenRoundedRectangle(topLeadingRadius: 30, bottomLeadingRadius: 0, bottomTrailingRadius: 0, topTrailingRadius: 30, style: .circular)
+    }
+}
+
 
 #Preview {
     StoriesView(storiesGroup:

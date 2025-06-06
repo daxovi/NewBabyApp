@@ -7,7 +7,7 @@
 import SwiftUI
 import _AVKit_SwiftUI
 
-struct VideoTabView: View {
+struct VideoPlayerView: View {
     var videoName: String
     @StateObject var videoPlayerViewModel: VideoPlayerViewModel
     @Binding var progress: Double // Binding pro přenos progressu do ContentView
@@ -25,6 +25,8 @@ struct VideoTabView: View {
             .onReceive(videoPlayerViewModel.$currentProgress) { newProgress in
                 progress = newProgress // Aktualizace bindingu v ContentView
             }
+            .onChange(of: videoName) { oldValue, newValue in
+                videoPlayerViewModel.updateVideoName(newValue)
+            }
     }
-    
 }

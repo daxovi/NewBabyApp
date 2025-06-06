@@ -40,6 +40,15 @@ class VideoPlayerViewModel: ObservableObject {
         player.pause()
         player.seek(to: .zero)
     }
+    
+    func updateVideoName(_ newVideoName: String) {
+        if let filePath = Bundle.main.path(forResource: newVideoName, ofType: "mp4") {
+            player.replaceCurrentItem(with: AVPlayerItem(url: URL(fileURLWithPath: filePath)))
+            restart() // Restart the player with the new video
+        } else {
+            print("Cesta k souboru \(newVideoName) nebyla nalezena.")
+        }
+    }
 
     private func addTimeObserver() {
         let interval = CMTime(seconds: 0.1, preferredTimescale: CMTimeScale(NSEC_PER_SEC)) // Update every 0.1 seconds
