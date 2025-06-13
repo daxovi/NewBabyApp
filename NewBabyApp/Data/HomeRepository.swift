@@ -13,10 +13,10 @@ extension LocalRepository {
         subtitle: "subtitle_jsmedoma".localizedString,
         backgroundImageName: "title-home".localizedString,
         menuItems: [
-            .detail(DetailModel(title: "Podpora pro rodiče", bannerName: "podpora-pro-rodice")),
-            .detail(DetailModel(title: "Bezpečí", bannerName: "bezpeci")),
-            .detail(DetailModel(title: "Energie pro dva", bannerName: "energie-pro-dva")),
-            .detail(DetailModel(title: "Kojení doma", bannerName: "kojeni-doma"))
+            .detail(DetailModel(title: "title_podporaprorodice".localizedString, bannerName: "podpora-pro-rodice")),
+            .detail(DetailModel(title: "title_bezpeci".localizedString, bannerName: "bezpeci")),
+            .detail(DetailModel(title: "title_energieprodva".localizedString, bannerName: "energie-pro-dva")),
+            .detail(DetailModel(title: "title_kojenidoma".localizedString, bannerName: "kojeni-doma"))
         ]
     )
 }

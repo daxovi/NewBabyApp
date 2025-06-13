@@ -13,10 +13,10 @@ extension LocalRepository {
         subtitle: "subtitle_cekamemiminko".localizedString,
         backgroundImageName: "title-pregnant",
         menuItems: [
-            .detail(DetailModel(title: "Předporodní kurzy", bannerName: "predporodni-kurzy")),
-            .detail(DetailModel(title: "screeningy", bannerName: "screeningy")),
-            .detail(DetailModel(title: "Nadstandardní služby", bannerName: "sluzby")),
-            .detail(DetailModel(title: "Porod", bannerName: "porod"))
+            .detail(DetailModel(title: "title_predporodnikurzy".localizedString, bannerName: "predporodni-kurzy")),
+            .detail(DetailModel(title: "title_screeningy".localizedString, bannerName: "screeningy")),
+            .detail(DetailModel(title: "title_nastandardnikurzy".localizedString, bannerName: "sluzby")),
+            .detail(DetailModel(title: "title_porod".localizedString, bannerName: "porod"))
         ]
     )
 }

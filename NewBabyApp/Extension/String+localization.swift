@@ -7,6 +7,7 @@
 
 import Foundation
 
+#if !BARTY_CROUCH
 extension String {
     /// Vrátí lokalizovaný řetězec podle klíče
     var localizedString: String {
@@ -42,3 +43,4 @@ extension String {
 // Příklad použití:
 // let welcome = "welcome_message".localizedString
 // let logout  = "logout_button".localizedString(comment: "Tlačítko pro odhlášení")
+#endif

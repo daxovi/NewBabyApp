@@ -13,9 +13,9 @@ extension LocalRepository {
         subtitle: "subtitle_jsmevporodnici".localizedString,
         backgroundImageName: "title-baby",
         menuItems: [
-            .menu(MenuModel(title: "Po porodu - krok za krokem", bannerName: "prvni-den", menuItems: prvniden)),
-            .menu(MenuModel(title: "Zdraví pod kontrolou", bannerName: "zdravi-pod-kontrolou", menuItems: zdraviPodKontrolou)),
-            .menu(MenuModel(title: "Porod", bannerName: "porod", menuItems: porod))
+            .menu(MenuModel(title: "title_poporodukrokzakrokem".localizedString, bannerName: "prvni-den", menuItems: prvniden)),
+            .menu(MenuModel(title: "title_zdravipodkontrolou".localizedString, bannerName: "zdravi-pod-kontrolou", menuItems: zdraviPodKontrolou)),
+            .menu(MenuModel(title: "title_porod".localizedString, bannerName: "porod", menuItems: porod))
 //            .menu(MenuModel(title: "Bezpečná maipulace", bannerName: "bezpecna-manipulace", menuItems: manipulace)),
 //            .detail(DetailModel(title: "Kojení a výživa", bannerName: "kojeni-a-vyziva")),
 //            .detail(DetailModel(title: "Chystáme se domů", bannerName: "chystame-se-domu"))
@@ -23,186 +23,172 @@ extension LocalRepository {
     )
     
     private static let zdraviPodKontrolou: [NavigationDestination] = [
-        .menu(MenuModel(title: "Novorozenecký laboratorní screening", bannerName: "novorozenecky-laboratorni-screening-0", menuItems: [
-            .introText(IntroTextModel(title: "Co je novorozenecký screening?", content: "Novorozenecký screening je laboratorní test, který se provádí u všech novorozenců narozených v ČR. Pomáhá včas odhalit vážná dědičná onemocnění, která by mohla ohrozit zdraví dítěte.")),
-            .introText(IntroTextModel(title: "Kdy se screening provádí?", content: "Odběr probíhá mezi 48. a 72. hodinou po porodu. Tato doba je klíčová pro včasnou diagnostiku možných onemocnění.")),
-            .stories(StoriesModel(title: "Jak se odběr provádí?", bannerName: "nls-jak-se-odber-provadi-0", stories: [
-                Story(type: .video, sourceName: "novorozenecky-screening-1", text: "Screening se provádí odebráním několika kapek krve z patičky novorozence."),
-                Story(type: .video, sourceName: "novorozenecky-screening-2", text: "Krev se nanese na speciální papírovou kartičku (tzv. novorozeneckou screeningovou kartičku) a odešle se do laboratoře k analýze.")])),
-            .introText(IntroTextModel(title: "Jak se výsledky vyhodnocují?", content: """
-                                      Negativní výsledek – Vše je v pořádku, laboratoř nekontaktuje rodiče ani lékaře
-                                      Pozitivní výsledek – Laboratoř kontaktuje rodiče nebo lékaře dítěte a doporučí další vyšetření na specializovaném pracovišti. Včasná léčba může zabránit rozvoji komplikací a zajistit dítěti co nejlepší kvalitu života.
-                                      Nejasný výsledek (Recall) – Screening se musí zopakovat, aby byl výsledek jednoznačný.
-                                      """, isCollapsable: true)),
-            .introText(IntroTextModel(title: "Může být moje dítě nemocné?", content: "Pravděpodobnost je velmi nízká – pouze 1 z 1150 dětí má některé z těchto onemocnění. Pokud ale screening odhalí problém, může to dítěti zachránit zdraví nebo dokonce život.")),
-            .introText(IntroTextModel(title: "Jaké nemoci lze screeningem odhalit?", content: """
-                Mezi onemocnění, která lze screeningem vyšetřit patří:
-                vrozené poruchy štítné žlázy (hypotyreóza)
-                poruchy hormonů nadledvin (adrenální hyperplazie)
-                cystická fibróza
-                dědičné metabolické poruchy
-                spinální svalová atrofie (SMA)
-                těžké poruchy imunity (SCID)
-                """, isCollapsable: true))
+        
+        // MARK: - Novorozenecký laboratorní screening
+        .menu(MenuModel(title: "title_nls".localizedString, bannerName: "novorozenecky-laboratorni-screening-0", menuItems: [
+            .introText(IntroTextModel(title: "title_cojenls".localizedString, content: "detail_cojenls".localizedString)),
+            .introText(IntroTextModel(title: "title_kdysescreeningsedyzakalprovadi".localizedString, content: "detail_kdysenlsprovadi".localizedString)),
+            .stories(StoriesModel(title: "title_jaksenlsprovadi".localizedString, bannerName: "nls-jak-se-odber-provadi-0", stories: [
+                Story(type: .video, sourceName: "novorozenecky-screening-1", text: "novorozenecky_screening_1".localizedString),
+                Story(type: .video, sourceName: "novorozenecky-screening-2", text: "novorozenecky_screening_2".localizedString)])),
+            .introText(IntroTextModel(title: "title_jaksenlsvyhodnocuje".localizedString, content: "detail_jaksenlsvyhodnocuje".localizedString, isCollapsable: true)),
+            .introText(IntroTextModel(title: "title_muzebytmojeditenemocnenls".localizedString, content: "detail_muzebytmojeditenemocnenls".localizedString)),
+            .introText(IntroTextModel(title: "title_jakenenemocilzenlsodhalit".localizedString, content: "detail_jakenenemocilzenlsodhalit".localizedString, isCollapsable: true))
         ])),
-        .menu(MenuModel(title: "Novorozenecká žloutenka", menuItems: [
-            .introText(IntroTextModel(title: "Co je novorozenecká žloutenka?", content: "Novorozenecká žloutenka je stav, kdy dochází ke žlutému zbarvení kůže, sliznic a očního bělma. Způsobuje ji zvýšená hladina bilirubinu, který vzniká při rozpadu červených krvinek. Červené krvinky se po narození začínají rozpadat, aby jejich místo nahradily nové. Tyto nové krvinky již obsahují červené barvivo přizpůsobené na pobyt mimo dělohu. Játra bilirubin zpracují a následně ho tělo vyloučí močí a stolicí.")),
-            .stories(StoriesModel(title: "Jaké jsou příznaky žloutenky?", bannerName: "jake-jsou-priznaky-zloutenky-0", stories: [
-                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-1", text: "Žluté zbarvení kůže, sliznic a očního bělma."),
-                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-2", text: "Zvýšená spavost."),
-                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-3", text: "Obtíže s krmením (např. líné sání, delší intervaly mezi krmením). Pokud jsou hodnoty žloutenky extrémně vysoké, může být přítomná podrážděnost a vyšší tón pláče."),
+        
+        // MARK: - Žloutenka
+        .menu(MenuModel(title: "title_zloutenka".localizedString, menuItems: [
+            .introText(IntroTextModel(title: "title_cojezloutenka".localizedString, content: "detail_cojezloutenka".localizedString)),
+            .stories(StoriesModel(title: "title_jakejsoupriznakyzloutenky".localizedString, bannerName: "jake-jsou-priznaky-zloutenky-0", stories: [
+                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-1", text: "jake_jsou_priznaky_zloutenky_1".localizedString),
+                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-2", text: "jake_jsou_priznaky_zloutenky_2".localizedString),
+                Story(type: .image, sourceName: "jake-jsou-priznaky-zloutenky-3", text: "jake_jsou_priznaky_zloutenky_3".localizedString),
                 ])),
-            .introText(IntroTextModel(title: "Kdy se žloutenka objevuje?", content: """
-                U donošených miminek vrcholí hladina bilirubinu mezi 3. a 5. dnem života a obvykle klesá do dvou týdnů.
-                U nedonošených dětí bývá nejvyšší hladina bilirubinu mezi 5. a 7. dnem života.
-                """)),
-
-            .stories(StoriesModel(title: "Jak se žloutenka vyšetřuje?", stories: [
-                Story(type: .image, sourceName: "jak-se-zloutenka-vysetruje-1", text: "Vyšetření se provádí pomocí přístroje, který měří hladinu bilirubinu přes kůži. Toto měření je bezbolestné a bezpečné."),
-                Story(type: .image, sourceName: "jak-se-zloutenka-vysetruje-2", text: "Pokud jsou hodnoty vysoké, následuje odběr krve ze žíly pro přesnější hodnotu bilirubinu.")])),
-            //Jak se žloutenka léčí?
-            .stories(StoriesModel(title: "Jak se žloutenka léčí?", stories: [
-                Story(type: .image, sourceName: "jak-se-zloutenka-leci-1", text: "Fototerapie modrým světlem pomáhá přeměnit bilirubin na látky, které se snadno vyloučí žlučí a močí."),
-                Story(type: .image, sourceName: "jak-se-zloutenka-leci-2", text: "Miminko stráví zhruba 3 hodiny pod modrým světlem (délka se přizpůsobuje kojení)."),
-                Story(type: .image, sourceName: "jak-se-zloutenka-leci-3", text: "Následná 1 hodina je pro kojení a kontakt s rodiči."),
-                Story(type: .image, sourceName: "jak-se-zloutenka-leci-4", text: "Během terapie je nutné chránit oči miminka, aby nedošlo k poškození sítnice."),
-                Story(type: .image, sourceName: "jak-se-zloutenka-leci-5", text: "Ve většině případů léčba trvá do dalšího dne, kdy se opět kontroluje hladina bilirubinu z krve. Fototerapie je ukončena, jakmile bilirubin klesne na bezpečnou úroveň."),
-                Story(type: .image, sourceName: "jak-se-zloutenka-leci-6", text: "Lékař může tento režim upravit na základě aktuálních hodnot žloutenky a případně i s ohledem na přítomnost dalších rizikových faktorů, které by její průběh mohly zhoršit.")])),
+            .introText(IntroTextModel(title: "title_kdysezloutenkaobjevuje".localizedString, content: "detail_kdysezloutenkaobjevuje".localizedString)),
+            .stories(StoriesModel(title: "title_jaksezloutenkavysetruje".localizedString, stories: [
+                Story(type: .image, sourceName: "jak-se-zloutenka-vysetruje-1", text: "jak_se_zloutenka_vysetruje_1".localizedString),
+                Story(type: .image, sourceName: "jak-se-zloutenka-vysetruje-2", text: "jak_se_zloutenka_vysetruje_2".localizedString)])),
+            .stories(StoriesModel(title: "title_jaksezloutenkaleci".localizedString, stories: [
+                Story(type: .image, sourceName: "jak-se-zloutenka-leci-1", text: "jak_se_zloutenka_leci_1".localizedString),
+                Story(type: .image, sourceName: "jak-se-zloutenka-leci-2", text: "jak_se_zloutenka_leci_2".localizedString),
+                Story(type: .image, sourceName: "jak-se-zloutenka-leci-3", text: "srdecni_jak_probiha_mereni_3".localizedString),
+                Story(type: .image, sourceName: "jak-se-zloutenka-leci-4", text: "jak_se_zloutenka_leci_4".localizedString),
+                Story(type: .image, sourceName: "jak-se-zloutenka-leci-5", text: "jak_se_zloutenka_leci_5".localizedString),
+                Story(type: .image, sourceName: "jak-se-zloutenka-leci-6", text: "jak_se_zloutenka_leci_6".localizedString)])),
         ])),
-        .menu(MenuModel(title: "Screening vrozených srdečních vad", menuItems: [
-            .introText(IntroTextModel(title: "Proč se provádí screening?", content: "Kritické srdeční vady se vyskytují přibližně u 2 novorozenců z 1000 živě narozených dětí.  Pulzní oxymetrie pomáhá včas odhalit tyto vady tím, že měří okysličení krve v kombinaci s prokrvením končetiny.")),
-            .stories(StoriesModel(title: "Jak probíhá měření?", bannerName: "srdecni-vady-jak-probiha-mereni-0", stories: [
-                Story(type: .image, sourceName: "srdecni-jak-probiha-mereni-1", text: "Saturace kyslíkem se měří pomocí speciálního čidla na pravé ručičce a na jakékoliv dolní končetině."),
-                Story(type: .image, sourceName: "srdecni-jak-probiha-mereni-2", text: "Vyšetření se doporučuje provést nejdříve po 6 hodinách života miminka."),
-                Story(type: .image, sourceName: "srdecni-jak-probiha-mereni-3", text: "Následná 1 hodina je pro kojení a kontakt s rodiči.")])),
-            .introText(IntroTextModel(title: "Kdy se dozvím výsledek?", content: "Výsledek screeningu vám oznámí zdravotnický personál ihned po jeho provedení.")),
-            .introText(IntroTextModel(title: "Jaké mohou být výsledky?", content: """
-                Negativní screening – Srdeční vada je málo pravděpodobná. 
-                Pozitivní screening – Miminko podstoupí ultrazvukové vyšetření srdce (echokardiografii).
-                Falešně pozitivní screening – Srdeční vada není přítomná, ale naměřené hodnoty nejsou  v normě. Miminko bude podrobeno dalšímu vyšetření, aby se zjistila příčina odchylky.
-                """, isCollapsable: true))
+        
+        // MARK: - Screening srdečních vad
+        .menu(MenuModel(title: "title_screeningsrdecnichvad".localizedString, menuItems: [
+            .introText(IntroTextModel(title: "title_procseprovadisvsv".localizedString, content: "detail_procseprovadisvsv".localizedString)),
+            .stories(StoriesModel(title: "title_jakprobihamerenisvsv".localizedString, bannerName: "srdecni-vady-jak-probiha-mereni-0", stories: [
+                Story(type: .image, sourceName: "srdecni-jak-probiha-mereni-1", text: "srdecni_jak_probiha_mereni_1".localizedString),
+                Story(type: .image, sourceName: "srdecni-jak-probiha-mereni-2", text: "srdecni_jak_probiha_mereni_2".localizedString),
+                Story(type: .image, sourceName: "srdecni-jak-probiha-mereni-3", text: "srdecni_jak_probiha_mereni_3".localizedString)])),
+            .introText(IntroTextModel(title: "title_kdysedozvimvysledeksvsv".localizedString, content: "detail_kdysedozvimvysledeksvsv".localizedString)),
+            .introText(IntroTextModel(title: "title_jakemohoubytvysledkysvsv".localizedString, content: "detail_jakemohoubytvysledkysvsv".localizedString, isCollapsable: true))
             ])),
-        .menu(MenuModel(title: "Vyšetření sluchu", menuItems: [
-            .introText(IntroTextModel(title: "Proč se provádí vyšetření sluchu?", content: "Cílem vyšetření sluchu je včasné odhalení vrozené sluchové vady. Díky tomu je možné zahájit rehabilitaci sluchu a zajistit správný rozvoj komunikačních schopností a řeči dítěte.")),
-            .stories(StoriesModel(title: "Jak probíhá vyšetření sluchu?", bannerName: "placeholder", stories: [
-                Story(type: .video, sourceName: "vysetreni-sluchu-1", text: "Vyšetření je bezbolestné a neinvazivní. Dítě při něm může klidně spát."),
-                Story(type: .video, sourceName: "vysetreni-sluchu-2", text: "Zdravotnický personál zavede do zevního zvukovodu jemnou sondu, která vyšle slabý zvukový podnět."),
-                Story(type: .video, sourceName: "vysetreni-sluchu-3", text: "Přístroj zaznamená odpovědi sluchového aparátu a vyhodnotí, zda sluch funguje správně.")
+        
+        // MARK: - vyšetření sluchu
+        .menu(MenuModel(title: "title_vysetrenisluchu".localizedString, menuItems: [
+            .introText(IntroTextModel(title: "title_procseprovadivysetrenisluchu".localizedString, content: "detail_procseprovadivysetrenisluchu".localizedString)),
+            .stories(StoriesModel(title: "title_jakprobihavysetrenisluchu".localizedString, bannerName: "placeholder", stories: [
+                Story(type: .video, sourceName: "vysetreni-sluchu-1", text: "vysetreni_sluchu_1".localizedString),
+                Story(type: .video, sourceName: "vysetreni-sluchu-2", text: "vysetreni_sluchu_2".localizedString),
+                Story(type: .video, sourceName: "vysetreni-sluchu-3", text: "vysetreni_sluchu_3".localizedString)
                 ])),
-            .stories(StoriesModel(title: "Kdy se vyšetření provádí?", bannerName: "placeholder", stories: [
-                Story(type: .image, sourceName: "vysetreni-sluchu-4", text: "TEOAE (tranzientně evokované otoakustické emise)"),
-                Story(type: .image, sourceName: "vysetreni-sluchu-5", text: "TEOAE se používá u fyziologických novorozenců. Měří odpověď vláskových buněk v uchu na zvukové podněty."),
-                Story(type: .image, sourceName: "vysetreni-sluchu-6", text: "AABR (automatic auditory brainstem responses)"),
-                Story(type: .image, sourceName: "vysetreni-sluchu-7", text: "AABR se používá u novorozenců s rizikem poruchy sluchu.Funguje na principu měření mozkových odpovědí na zvukové podněty pomocí elektrod.instem responses)"),
+            .stories(StoriesModel(title: "title_kdysevysetrenisluchuprovadi".localizedString, bannerName: "placeholder", stories: [
+                Story(type: .image, sourceName: "vysetreni-sluchu-4", text: "vysetreni_sluchu_4".localizedString),
+                Story(type: .image, sourceName: "vysetreni-sluchu-5", text: "vysetreni_sluchu_5".localizedString),
+                Story(type: .image, sourceName: "vysetreni-sluchu-6", text: "vysetreni_sluchu_6".localizedString),
+                Story(type: .image, sourceName: "vysetreni-sluchu-7", text: "vysetreni_sluchu_7".localizedString),
                 ])),
-            .introText(IntroTextModel(title: "Kdy se dozvím výsledek?", content: "Výsledek se dozvíte ihned po vyšetření. Pokud bude nutné vyšetření opakovat, lékař (nebo zdravotní sestřička) vám sdělí další postup.")),
-            .introText(IntroTextModel(title: "Jaké mohou být výsledky?", content: """
-                • Negativní screening – Sluch dítěte je s největší pravděpodobností v pořádku.
-                • Pozitivní screening – Vyšetření je nutné opakovat pro potvrzení výsledku.
-                """, isCollapsable: true)),
-            .introText(IntroTextModel(title: "Co když se screening nepovede?", content: "Pokud se nepodaří získat příznivý výsledek, vyšetření provádíme opakovaně. Teprve po několika testech lze vyslovit podezření na poruchu sluchu a dítě je odesláno na specializované vyšetření.", isCollapsable: true)),
-            .introText(IntroTextModel(title: "Proč je screening sluchu důležitý?", content: "Včasná diagnostika zabrání opoždění vývoje řeči nebo dokonce hluchoněmosti. Pokud se sluchová vada neodhalí včas, může mít dítě trvalé potíže s komunikací.")),
-            .introText(IntroTextModel(title: "Může mít moje dítě poruchu sluchu?", content: "Závažná oboustranná ztráta sluchu je spíše vzácnější. Objevuje se u 1–3 dětí z 1000 narozených.", isCollapsable: true))
+            .introText(IntroTextModel(title: "title_kdysedozvimvysledekvysetrenisluchu".localizedString, content: "detail_kdysedozvimvysledekvysetrenisluchu".localizedString)),
+            .introText(IntroTextModel(title: "title_jakemohoubytvysledkyvysetrenisluchu".localizedString, content: "detail_jakemohoubytvysledkyvysetrenisluchu".localizedString, isCollapsable: true)),
+            .introText(IntroTextModel(title: "title_cokdyzsescreeningnepovedevysetrenisluchu".localizedString, content: "detail_cokdyzsescreeningnepovedevysetrenisluchu".localizedString, isCollapsable: true)),
+            .introText(IntroTextModel(title: "title_procjevysetrenisluchudulezite".localizedString, content: "detail_procjevysetrenisluchudulezite".localizedString)),
+            .introText(IntroTextModel(title: "title_muzemitmojediteporuchusluchu".localizedString, content: "detail_muzemitmojediteporuchusluchu".localizedString, isCollapsable: true))
         ])),
-        .menu(MenuModel(title: "Screening na vrozený šedý zákal", menuItems: [
-            .introText(IntroTextModel(title: " Co je vrozený šedý zákal?", content: "Vrozený šedý zákal (kongenitální katarakta) je onemocnění, které narušuje průhlednost oční čočky v kritickém období vývoje zraku. Pokud  se včas nezahájí léčba, může vést k trvalému zrakovému postižení.")),
-            .stories(StoriesModel(title: "Jak probíhá vyšetření?", bannerName: "placeholder", stories: [
-                Story(type: .image, sourceName: "vysetreni-sedy-zakal-1", text: "Vyšetření se provádí pomocí oftalmoskopu."),
-                Story(type: .image, sourceName: "vysetreni-sedy-zakal-2", text: "Lékař nebo zdravotní sestra prosvítí oko novorozence a sleduje tzv. červený reflex."),
-                Story(type: .image, sourceName: "vysetreni-sedy-zakal-3", text: "Pokud se reflex objeví, znamená to, že je čočka čirá a vyšetření je negativní (v pořádku).")])),
-            .introText(IntroTextModel(title: "Proč je screening důležitý?", content: "Včasné odhalení šedého zákalu je klíčové pro správný vývoj zraku. Pokud se problém neřeší včas, může dítě trpět trvalým poškozením zraku nebo dokonce slepotou.")),
-            .introText(IntroTextModel(title: "Kdy se screening provádí?", content: "Vyšetření probíhá v prvních dnech po narození, nejpozději však do 4. týdne života.", isCollapsable: true)),
-            .introText(IntroTextModel(title: "Kdy se dozvím výsledek vyšetření?", content: "Výsledek se dozvíte ihned po vyšetření. Pokud bude nutné další vyšetření, lékař vám sdělí přesný postup.", isCollapsable: true)),
-            .introText(IntroTextModel(title: "Co znamená pozitivní výsledek testu?", content: "Pokud červený reflex není patrný nebo je oslabený, může to znamenat přítomnost šedého zákalu.V takovém případě dítě podstoupí další specializovaná vyšetření.", isCollapsable: true)),
-            .introText(IntroTextModel(title: "Jak často se vrozený šedý zákal vyskytuje?", content: "Toto onemocnění je spíše vzácnější. Vyskytuje se u 2–4 novorozenců z 10 000 narozených dětí. Může postihnout jedno oko nebo obě oči.", isCollapsable: true)),
+        
+        // MARK: - Šedý zákal
+        .menu(MenuModel(title: "title_screeningnavrozenysedyzakal".localizedString, menuItems: [
+            .introText(IntroTextModel(title: "title_cojesedyzakal".localizedString, content: "detail_cojesedyzakal".localizedString)),
+            .stories(StoriesModel(title: "title_jakprobihavysetrenisedyzakal".localizedString, bannerName: "placeholder", stories: [
+                Story(type: .image, sourceName: "vysetreni-sedy-zakal-1", text: "vysetreni_sedy_zakal_1".localizedString),
+                Story(type: .image, sourceName: "vysetreni-sedy-zakal-2", text: "vysetreni_sedy_zakal_2".localizedString),
+                Story(type: .image, sourceName: "vysetreni-sedy-zakal-3", text: "vysetreni_sedy_zakal_3".localizedString)])),
+            .introText(IntroTextModel(title: "title_procjescreeningsedyzakaldulezity".localizedString, content: "detail_procjescreeningsedyzakaldulezity".localizedString)),
+            .introText(IntroTextModel(title: "title_kdysescreeningsedyzakalprovadi".localizedString, content: "detail_kdysescreeningsedyzakalprovadi".localizedString, isCollapsable: true)),
+            .introText(IntroTextModel(title: "title_kdysedozvimvysledeksedyzakal".localizedString, content: "detail_kdysedozvimvysledeksedyzakal".localizedString, isCollapsable: true)),
+            .introText(IntroTextModel(title: "title_coznamenapozitivnivysledeksedyzakal".localizedString, content: "detail_coznamenapozitivnivysledeksedyzakal".localizedString, isCollapsable: true)),
+            .introText(IntroTextModel(title: "title_jakcastosesedyzakalvyskytuje".localizedString, content: "detail_jakcastosesedyzakalvyskytuje".localizedString, isCollapsable: true)),
         ])),
-        .menu(MenuModel(title: "Screening vrozené syfilis", menuItems: [
-            .introText(IntroTextModel(title: "Jak probíhá vyšetření?", content: "Test na protilátky proti syfilis se provádí z pupečníkové krve, která je odebrána ihned po porodu z pupečníku.")),
-            .introText(IntroTextModel(title: "Jaké mohou být výsledky?", content: """
-                Negativní screening – Protilátky proti syfilis nebyly potvrzeny, laboratoř nikoho nekontaktuje.
-                Reaktivní screening – Pokud jsou protilátky přítomny, vzorek se odesílá k dalšímu testování do Národní referenční laboratoře v Praze.
-                """)),
-            .introText(IntroTextModel(title: "Kdy se dozvím výsledek?", content: "Výsledek vyšetření vám oznámí zdravotnický personál pouze v případě pozitivního nálezu."))
+        
+        // MARK: - Syfilis
+        .menu(MenuModel(title: "title_screeningvrozenesyfilis".localizedString, menuItems: [
+            .introText(IntroTextModel(title: "title_jakprobihavysetrenisyfilis".localizedString, content: "detail_jakprobihavysetrenisyfilis".localizedString)),
+            .introText(IntroTextModel(title: "title_jakemohoubytvysledkysyfilis".localizedString, content: "detail_jakemohoubytvysledkysyfilis".localizedString)),
+            .introText(IntroTextModel(title: "title_kdysedozvimvysledeksyfilis".localizedString, content: "detail_kdysedozvimvysledeksyfilis".localizedString))
             ])),
-        .menu(MenuModel(title: "Vyšetření ledvin", menuItems: [
-            .stories(StoriesModel(title: "Jak probíhá vyšetření?", bannerName: "placeholder", stories: [
-                Story(type: .image, sourceName: "vysetreni-ledvin-1", text: "Závažné vrozené vady ledvin a močových cest se vyskytují u 2 novorozenců z 1000 živě narozených."),
-                Story(type: .image, sourceName: "vysetreni-ledvin-2", text: "Ultrazvukové vyšetření pomáhá odhalit případné abnormality a umožňuje včasnou léčbu."),
-                Story(type: .image, sourceName: "vysetreni-ledvin-3", text: "Pomocí ultrazvuku se hodnotí velikost, tvar a umístění ledvin, močovodů a močového měchýře."),
-                Story(type: .image, sourceName: "vysetreni-ledvin-4", text: "Nejlepší čas pro vyšetření je těsně před propuštěním, obvykle v den závěrečné prohlídky novorozence."),
-                Story(type: .image, sourceName: "vysetreni-ledvin-5" , text: "V případě, že je výsledek pozitivní, provádí se s odstupem času kontrolní ultrazvuk."),
-                Story(type: .image, sourceName: "vysetreni-ledvin-6", text: "V případě vážnějšího nálezu je třeba provést další vyšetření během hospitalizace a nález konzultovat s urologem a nefrologem."),
+        
+        // MARK: - Vyšetření ledvin
+        .menu(MenuModel(title: "title_vysetreniledvin".localizedString, menuItems: [
+            .stories(StoriesModel(title: "title_jakprobihavysetreniortopedem".localizedString, bannerName: "placeholder", stories: [
+                Story(type: .image, sourceName: "vysetreni-ledvin-1", text: "vysetreni_ledvin_1".localizedString),
+                Story(type: .image, sourceName: "vysetreni-ledvin-2", text: "vysetreni_ledvin_2".localizedString),
+                Story(type: .image, sourceName: "vysetreni-ledvin-3", text: "vysetreni_ledvin_3".localizedString),
+                Story(type: .image, sourceName: "vysetreni-ledvin-4", text: "vysetreni_ledvin_4".localizedString),
+                Story(type: .image, sourceName: "vysetreni-ledvin-5" , text: "vysetreni_ledvin_5".localizedString),
+                Story(type: .image, sourceName: "vysetreni-ledvin-6", text: "vysetreni_ledvin_6".localizedString),
             ])),
-            .introText(IntroTextModel(title: "Je toto vyšetření povinné?", content: "Vyšetření ledvin a močových cest pomocí ultrazvuku není v ČR povinný a neprovádí se na všech odděleních. U nás ho provádíme standardně, protože přispívá k včasné diagnostice a péči o zdraví novorozenců."))
+            .introText(IntroTextModel(title: "title_jevysetreniledvinpovinne".localizedString, content: "detail_jevysetreniledvinpovinne".localizedString))
             ])),
-        .menu(MenuModel(title: "Vyšetření dětským ortopedem", menuItems: [
-            .introText(IntroTextModel(title: "Vyšetření kyčlí a dolních končetin", content: "Vyšetření kyčlí a dolních končetin se provádí klinicky a pomocí ultrazvuku. Cílem je včasné odhalení vývojové dysplazie kyčelního kloubu případně jiných odchylek v oblasti dolních končetin. Při vyšetření kyčlí se zjišťuje zda je hlavice stehenní kosti správně zakloubená v kyčelní jamce.")),
-            .stories(StoriesModel(title: "Jak probíhá vyšetření?", bannerName: "placeholder", stories: [
-                Story(type: .video, sourceName: "vysetreni-detsky-ortoped-1", text: "Vyšetření začíná pomocí ultrazvuku."),
-                Story(type: .video, sourceName: "vysetreni-detsky-ortoped-2", text: "Následuje klinické vyšetření. Nedílnou součástí je vyšetření nožiček."),
+        
+        // MARK: - Vyšetření dětským ortopedem
+        .menu(MenuModel(title: "title_vysetrenidetskymortopedem".localizedString, menuItems: [
+            .introText(IntroTextModel(title: "title_vysetrenikycliadolnichkoncetinortopedem".localizedString, content: "detail_vysetrenikycliadolnichkoncetinortopedem".localizedString)),
+            .stories(StoriesModel(title: "title_jakprobihavysetreniortopedem".localizedString, bannerName: "placeholder", stories: [
+                Story(type: .video, sourceName: "vysetreni-detsky-ortoped-1", text: "vysetreni_detsky_ortoped_1".localizedString),
+                Story(type: .video, sourceName: "vysetreni-detsky-ortoped-2", text: "vysetreni_detsky_ortoped_2".localizedString),
                 ])),
-            .introText(IntroTextModel(title: "Proč je vyšetření důležité", content: "Včasná diagnostika umožňuje rychlou a efektivní léčbu, která zabrání budoucím problémům s chůzí nebo vývojem kyčlí. Screening probíhá v ortopedických ambulancích ve vaší spádové oblasti. Pediatr vám poradí, kam se objednat.")),
-            .introText(IntroTextModel(title: "Kdy vyšetření probíhá?", content: "Každé miminko podstupuje tři ultrazvuková vyšetření. První vyšetření – do 3 týdnů od narození. Druhé vyšetření – mezi 6. až 8. týdnem a třetí vyšetření – kolem 3. měsíce věku.")),
-            .introText(IntroTextModel(title: "Když není všechno jak má být", content: "Pokud je zjištěna dysplazie kyčlí nebo vykloubení, doporučuje se široké balení pomocí abdukčních kalhotek, které lze zakoupit v lékárně. Poté následuje pravidelná kontrola na ortopedické klinice a pokud problém přetrvává, nasazuje se speciální léčebná pomůcka.", isCollapsable: true)),
-            .stories(StoriesModel(title: "Široké balení", bannerName: "placeholder", stories: []))
+            .introText(IntroTextModel(title: "title_procjevysetreniortopedemdulezite".localizedString, content: "detail_procjevysetreniortopedemdulezite".localizedString)),
+            .introText(IntroTextModel(title: "title_kdyvysetreniortopedemprobiha".localizedString, content: "detail_kdyvysetreniortopedemprobiha".localizedString)),
+            .introText(IntroTextModel(title: "title_kdyznenivsechnojakmabytvysetreniortopedem".localizedString, content: "detail_kdyznenivsechnojakmabytvysetreniortopedem".localizedString, isCollapsable: true)),
+            .stories(StoriesModel(title: "title_sirokebalenivysetreniortopedem".localizedString, bannerName: "placeholder", stories: []))
     ])),
-    ] // Hotovo
+    ]
     
     private static let prvniden: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "Co vás čeká?", content: "Všechny děti i maminky mají svůj vlastní rytmus. Pokud se vaše první dny budou odlišovat, je to naprosto v pořádku. Důležité je, že na to nejste sami.")),
-        .menu(MenuModel(title: "Bonding", bannerName: "bonding", menuItems: bonding)),
-        .stories(StoriesModel(title: "Jak vypadá miminko po porodu", stories: [
-            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-1", text: "Mázek chrání kůži miminka v děloze a má důležitou roli i po porodu."),
-            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-2", text: "Když se vaše miminko narodí, jeho kůže může mít namodralý nádech. To je zcela normální a během prvních minut po porodu se barva kůže postupně změní na růžovou."),
-            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-3", text: "Plodová voda a mázek pomáhají novorozenci rozpoznat vůně a chutě, které zná z dělohy. Díky tomu se cítí bezpečně v novém prostředí."),
+        .introText(IntroTextModel(title: "title_prvnidencovasceka".localizedString, content: "detail_prvnidencovasceka".localizedString)),
+        
+        // MARK: - Bonding
+        .menu(MenuModel(title: "title_bonding".localizedString, bannerName: "bonding", menuItems: [
+            .introText(IntroTextModel(title: "title_cojebonding".localizedString, content: "detail_cojebonding".localizedString)),
+            .stories(StoriesModel(title: "title_jakbondingprobiha".localizedString, bannerName: "jak_bonding_probiha", stories: [
+                Story(type: .image, sourceName: "jak-bonding-probiha-1", text: "jak_bonding_probiha_1".localizedString),
+                Story(type: .image, sourceName: "jak-bonding-probiha-2", text: "jak_bonding_probiha_2".localizedString),
+                Story(type: .image, sourceName: "jak-bonding-probiha-3", text: "jak_bonding_probiha_3".localizedString),
+                Story(type: .image, sourceName: "jak-bonding-probiha-4", text: "jak_bonding_probiha_4".localizedString),
+                Story(type: .image, sourceName: "jak-bonding-probiha-5", text: "jak_bonding_probiha_5".localizedString),
+                Story(type: .image, sourceName: "jak-bonding-probiha-6", text: "jak_bonding_probiha_6".localizedString),
+            ])),
+            .stories(StoriesModel(title: "title_procjebondingdulezity".localizedString, bannerName: "proc_je_bonding_dulezity", isHalf: true, stories: [
+                Story(type: .image, sourceName: "proc-je-bonding-dulezity-1", text: "proc_je_bonding_dulezity_1".localizedString),
+                Story(type: .image, sourceName: "proc-je-bonding-dulezity-2", text: "proc_je_bonding_dulezity_2".localizedString),
+                Story(type: .image, sourceName: "proc-je-bonding-dulezity-3", text: "proc_je_bonding_dulezity_3".localizedString),
+                
+            ])),
+            .stories(StoriesModel(title: "title_bondingstatinkem".localizedString, bannerName: "bonding_s_tatinkem", isHalf: true, stories: [
+                Story(type: .image, sourceName: "bonding-s-tatinkem-1", text: "bonding_s_tatinkem_1".localizedString),
+                Story(type: .image, sourceName: "bonding-s-tatinkem-2", text: "bonding_s_tatinkem_2".localizedString),
+            ]))])),
+        .stories(StoriesModel(title: "title_jakvypadamiminkopoporodu".localizedString, stories: [
+            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-1", text: "jak_vypada_miminko_po_porodu_1".localizedString),
+            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-2", text: "jak_vypada_miminko_po_porodu_2".localizedString),
+            Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-3", text: "jak_vypada_miminko_po_porodu_3".localizedString),
         ])),
-        // TODO: dodělat obrázky - názvy souborů jsou prázdné
-        .stories(StoriesModel(title: "Měření tělesné teploty", stories: [
-            Story(type: .video, sourceName: "mereni-teploty-1", text: "Pro nejpřesnější výsledek se teplota miminka měří v konečníku."),
-            Story(type: .video, sourceName: "mereni-teploty-2", text: "Pokud je teplota příliš nízká, můžeme miminko uložit na vyhřívanou podložku."),
-            Story(type: .video, sourceName: "mereni-teploty-3", text: "Ve zcela výjímečných případech je nutné dát miminko do inkubátoru nebo na vyhřívané lůžko."),
+        .stories(StoriesModel(title: "title_merenitelesneteploty".localizedString, stories: [
+            Story(type: .video, sourceName: "mereni-teploty-1", text: "mereni_teploty_1".localizedString),
+            Story(type: .video, sourceName: "mereni-teploty-2", text: "mereni_teploty_2".localizedString),
+            Story(type: .video, sourceName: "mereni-teploty-3", text: "mereni_teploty_3".localizedString),
         ])),
-        .stories(StoriesModel(title: "Označení novorozence", stories: [
-            Story(type: .image, sourceName: "oznaceni-novorozence-1", text: "Po porodu dostane miminko na zápěstí papírový náramek s identifikačními údaji."),
-            Story(type: .image, sourceName: "oznaceni-novorozence-2", text: "Při prvním ošetření po dvou hodinách je navíc označeno barvou na hrudníček a nožičku pro ještě větší bezpečnost.")
+        .stories(StoriesModel(title: "title_oznaceninovorozence".localizedString, stories: [
+            Story(type: .image, sourceName: "oznaceni-novorozence-1", text: "oznaceni_novorozence_1".localizedString),
+            Story(type: .image, sourceName: "oznaceni-novorozence-2", text: "oznaceni_novorozence_2".localizedString)
         ])),
-        .stories(StoriesModel(title: "Močení a odchod stoličky", stories: [
-            Story(type: .image, sourceName: "moceni-a-odchod-stolicky-1", text: "Většina miminek se během prvního dne po narození alespoň jednou vymočí."),
-            Story(type: .image, sourceName: "moceni-a-odchod-stolicky-2", text: "První stolička - smolka -  by měla odejít do 48 hodin po porodu. Má černou, mazlavou konzistenci."),
+        .stories(StoriesModel(title: "title_moceniaodchodstolicky".localizedString, stories: [
+            Story(type: .image, sourceName: "moceni-a-odchod-stolicky-1", text: "moceni_a_odchod_stolicky_1".localizedString),
+            Story(type: .image, sourceName: "moceni-a-odchod-stolicky-2", text: "moceni_a_odchod_stolicky_2".localizedString),
         ])),
-        .stories(StoriesModel(title: "Váha a délka miminka", stories: [
-            Story(type: .image, sourceName: "vaha-a-delka-miminka-1", text: "Miminko vážíme až po ukončení bondingu, tedy přibližně 2 hodiny po narození."),
-            Story(type: .image, sourceName: "vaha-a-delka-miminka-2", text: "V den porodu se délka určuje pouze odhadem na základě tělesné hmotnosti. Tento přístup minimalizuje zbytečnou manipulaci a zajišťuje miminku pohodlí."),
+        .stories(StoriesModel(title: "title_vahaadelkamiminka".localizedString, stories: [
+            Story(type: .image, sourceName: "vaha-a-delka-miminka-1", text: "vaha_a_delka_miminka_1".localizedString),
+            Story(type: .image, sourceName: "vaha-a-delka-miminka-2", text: "vaha_a_delka_miminka_2".localizedString),
         ])),
-        .stories(StoriesModel(title: "Vitamin K", stories: [
-            Story(type: .image, sourceName: "vitamin-k-1", text: "Při prvním ošetření po bondingu dostává miminko 2 kapky vitamínu K (Kanavit) přímo do pusinky. Tímto se předchází krvácivé nemoci novorozence."),
+        .stories(StoriesModel(title: "title_vitamink".localizedString, stories: [
+            Story(type: .image, sourceName: "vitamin-k-1", text: "vitamin_k_1".localizedString),
         ])),
-        .stories(StoriesModel(title: "Vyšetření krevní skupiny novorozence", stories: [
-            Story(type: .image, sourceName: "vysetreni-krevni-skupiny-1", text: "Krevní skupinu novorozence vyšetřujeme pouze v případě, že maminka má krevní skupinu 0 nebo Rh faktor negativní (-)."),
-            Story(type: .image, sourceName: "vysetreni-krevni-skupiny-2", text: "Vzorek se odebírá z pupečníkové krve, takže není potřeba odběr krve miminka.")
+        .stories(StoriesModel(title: "title_vysetrenikrevniskupiny".localizedString, stories: [
+            Story(type: .image, sourceName: "vysetreni-krevni-skupiny-1", text: "vysetreni_krevni_skupiny_1".localizedString),
+            Story(type: .image, sourceName: "vysetreni-krevni-skupiny-2", text: "vysetreni_krevni_skupiny_2".localizedString)
         ]))
-    ] // Hotovo
-    
-    private static let bonding: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "Co je bonding?", content: "Bonding, neboli kontakt kůže na kůži (skin-to-skin), je proces vytváření láskyplné vazby mezi rodičem a dítětem. Bezprostředně po porodu se miminko položí přímo na nahou hruď maminky, kde cítí její teplo, tlukot srdce a vůni.")),
-        .stories(StoriesModel(title: "Jak bonding probíhá?", bannerName: "jak_bonding_probiha", stories: [
-            Story(type: .image, sourceName: "jak-bonding-probiha-1", text: "Po porodu je novorozenec položen na nahou hruď maminky."),
-            Story(type: .image, sourceName: "jak-bonding-probiha-2", text: "Přikryje se vyhřátým ručníkem pro udržení tepla."),
-            Story(type: .image, sourceName: "jak-bonding-probiha-3", text: "Kontakt kůže na kůži by měl trvat minimálně 2 hodiny."),
-            Story(type: .image, sourceName: "jak-bonding-probiha-4", text: "Během bondingu se většinou miminko poprvé přisává k prsu."),
-            Story(type: .image, sourceName: "jak-bonding-probiha-5", text: "Pomáhá miminku zklidnit se a adaptovat na novou situaci."),
-            Story(type: .image, sourceName: "jak-bonding-probiha-6", text: "Miminko je během bondingu monitorováno pomocí čidla, které snímá okysličení krve a srdeční tep."),
-        ])),
-        .stories(StoriesModel(title: "Proč je bonding důležitý?", bannerName: "proc_je_bonding_dulezity", isHalf: true, stories: [
-            Story(type: .image, sourceName: "proc-je-bonding-dulezity-1", text: "Posiluje citové pouto mezi rodičem a dítětem."),
-            Story(type: .image, sourceName: "proc-je-bonding-dulezity-2", text: "Podporuje úspěšný začátek kojení."),
-            Story(type: .image, sourceName: "proc-je-bonding-dulezity-3", text: "Reguluje tělesnou teplotu, dech a srdeční rytmus miminka."),
-            
-        ])),
-        .stories(StoriesModel(title: "Bonding s tatínkem", bannerName: "bonding_s_tatinkem", isHalf: true, stories: [
-            Story(type: .image, sourceName: "bonding-s-tatinkem-1", text: "Pokud maminka nemůže bonding absolvovat, může tuto důležitou roli převzít tatínek."),
-            Story(type: .image, sourceName: "bonding-s-tatinkem-2", text: "Jeho náruč poskytne miminku pocit bezpečí a jistoty."),
-            
-        ]))
-    ] // Hotovo
+    ]
 }
