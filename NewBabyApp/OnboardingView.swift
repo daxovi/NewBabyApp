@@ -17,16 +17,16 @@ struct OnboardingView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-                        Image(isSmallDevice ? "logo-fnol" : "logo-fnol-vertical")
+            Image(isSmallDevice ? .logoFnol : .logoFnolVertical)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 170)
                             .padding()
                             .padding(.leading, 11)
-                        Text("vítejte v porodnici \nFN Olomouc")
+            Text("onboarding_welcome".localizedString)
                             .font(.title)
                             .fontWeight(.medium)
-                            .foregroundStyle(Color("FNOLBlue"))
+                            .foregroundStyle(Color.fnolBlue)
                             .padding(.horizontal)
                             .padding()
             Spacer()
@@ -53,7 +53,7 @@ struct OnboardingView: View {
             VStack(alignment: .trailing) {
                 HStack {
                     Spacer()
-                    Image("cloud-background")
+                    Image(.cloudBackground)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 250)
@@ -96,14 +96,7 @@ private struct AboutView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("""
-Čeká vás jedinečná cesta plná emocí, radosti i nových výzev. Nebojte se – nejste na to sama. Jsme tu, abychom vás provedli každým krokem této krásné kapitoly vašeho života.
-
-👶 Vše, co potřebujete vědět o těhotenství a porodu
-📚 Podpůrné kurzy a programy
-🍼 Péči o vaše novorozené miminko
-💙 Podporu pro vaši duševní pohodu
-""")
+            Text("onboarding_about".localizedString)
                 .padding(32)
             Spacer()
             ContinueButton(action: completed)
@@ -118,9 +111,7 @@ private struct DisclaimerView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("""
-ℹ️ Tento materiál slouží jako informační a podpůrný průvodce. Každé těhotenství i porod jsou jedinečné a mohou probíhat odlišně. Není nutné, aby vše šlo podle plánu – každá zkušenost je jiná a není to špatně. V případě nejasností se vždy obraťte na zdravotnický personál.
-""")
+            Text("onboarding_disclaimer".localizedString)
                 .padding(32)
             Spacer()
             ContinueButton(action: completed)
@@ -137,9 +128,9 @@ private struct SayYourNameView: View {
     @Binding var name: String
     var body: some View {
         VStack(alignment: .leading){
-            Text("Jak vám máme říkat?")
+            Text("onboarding_name_question".localizedString)
                 .padding(.horizontal)
-            TextField("jméno", text: $name)
+            TextField("onboarding_name_placeholder".localizedString, text: $name)
                 .padding()
                 .background(
                     Color.gray.opacity(0.2)
@@ -167,19 +158,19 @@ private struct HubMenu: View {
     var body: some View {
         VStack {
             Button { action(0) } label: {
-                Image("pregnant-hub")
+                Image(.pregnantHub)
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width - 32, height: isSmallDevice ? 120 : 140)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay {
                         VStack{
-                            Image("pregnant")
+                            Image(.pregnant)
                                 .renderingMode(.template)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50)
-                            Text("čekám miminko")
+                            Text("title_cekamemiminko".localizedString)
                                 .font(.title2)
                         }
                         .foregroundStyle(.black)
@@ -188,19 +179,19 @@ private struct HubMenu: View {
             }
             
             Button { action(1) } label: {
-                Image("baby-hub")
+                Image(.babyHub)
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width - 32, height: isSmallDevice ? 120 : 140)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay {
                         VStack{
-                            Image("babyboy")
+                            Image(.babyboy)
                                 .renderingMode(.template)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50)
-                            Text("jsem v porodnici")
+                            Text("title_jsmevporodnici".localizedString)
                                 .font(.title2)
                         }
                         .foregroundStyle(.black)
@@ -208,19 +199,19 @@ private struct HubMenu: View {
                     }
             }
             Button { action(2) } label: {
-                Image("home-hub")
+                Image(.homeHub)
                     .resizable()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width - 32, height: isSmallDevice ? 120 : 140)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .overlay {
                         VStack{
-                            Image("seatchair")
+                            Image(.seatchair)
                                 .renderingMode(.template)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50)
-                            Text("jsem doma")
+                            Text("title_jsmedoma".localizedString)
                                 .font(.title2)
                         }
                         .foregroundStyle(.black)
@@ -237,12 +228,12 @@ private struct ContinueButton: View {
         Button {
             action()
         } label: {
-            Text("potvrdit")
+            Text("onboarding_next_button".localizedString)
                 .foregroundStyle(.black)
                 .padding()
                 .frame(width: UIScreen.main.bounds.width - 32)
                 .background(
-                    Color("background")
+                    Color.background
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 )
         }

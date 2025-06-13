@@ -9,8 +9,8 @@ import SwiftUI
 extension LocalRepository {
         
     static let menuHospital = MenuModel(
-        title: "Jsem v porodnici",
-        subtitle: "Praktické tipy a rady o péči o vaše novorozené miminko.",
+        title: "title_jsmevporodnici".localizedString,
+        subtitle: "subtitle_jsmevporodnici".localizedString,
         backgroundImageName: "title-baby",
         menuItems: [
             .menu(MenuModel(title: "Po porodu - krok za krokem", bannerName: "prvni-den", menuItems: prvniden)),

@@ -17,7 +17,6 @@
 		CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6F2DEF89E2003AE7D8 /* TextView.swift */; };
 		CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C702DEF89E2003AE7D8 /* VideoPlayerViewModel.swift */; };
 		CF478D142DEF89E2003AE7D8 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C712DEF89E2003AE7D8 /* VideoPlayerView.swift */; };
-		CF478D152DEF89E2003AE7D8 /* PrvniDenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C742DEF89E2003AE7D8 /* PrvniDenView.swift */; };
 		CF478D162DEF89E2003AE7D8 /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478CF52DEF89E2003AE7D8 /* DetailModel.swift */; };
 		CF478D172DEF89E2003AE7D8 /* IntroTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478CF62DEF89E2003AE7D8 /* IntroTextModel.swift */; };
 		CF478D182DEF89E2003AE7D8 /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478CF72DEF89E2003AE7D8 /* MenuItemModel.swift */; };
@@ -33,7 +32,6 @@
 		CF478D222DEF89E2003AE7D8 /* NewBabyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478D072DEF89E2003AE7D8 /* NewBabyAppApp.swift */; };
 		CF478D232DEF89E2003AE7D8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478D082DEF89E2003AE7D8 /* OnboardingView.swift */; };
 		CF478D242DEF89E2003AE7D8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478D092DEF89E2003AE7D8 /* Utils.swift */; };
-		CF478D252DEF89E2003AE7D8 /* prvniDen.md in Resources */ = {isa = PBXBuildFile; fileRef = CF478C732DEF89E2003AE7D8 /* prvniDen.md */; };
 		CF478D262DEF89E2003AE7D8 /* bonding-s-tatinkem-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C762DEF89E2003AE7D8 /* bonding-s-tatinkem-1.jpg */; };
 		CF478D272DEF89E2003AE7D8 /* bonding-s-tatinkem-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C772DEF89E2003AE7D8 /* bonding-s-tatinkem-2.jpg */; };
 		CF478D282DEF89E2003AE7D8 /* jak-bonding-probiha-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C782DEF89E2003AE7D8 /* jak-bonding-probiha-1.jpeg */; };
@@ -168,7 +166,9 @@
 		CF478DBB2DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */; };
 		CF478DBC2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */; };
 		CF478DBD2DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */; };
-		CFB0B18F2DF2E5AD008C5E35 /* NonSwipeableTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB0B18E2DF2E5A5008C5E35 /* NonSwipeableTabView.swift */; };
+		CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */; };
+		CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71A5A42DFC106C003AEDC0 /* String+localization.swift */; };
+		CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,8 +182,6 @@
 		CF478C6F2DEF89E2003AE7D8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		CF478C702DEF89E2003AE7D8 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
 		CF478C712DEF89E2003AE7D8 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
-		CF478C732DEF89E2003AE7D8 /* prvniDen.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = prvniDen.md; sourceTree = "<group>"; };
-		CF478C742DEF89E2003AE7D8 /* PrvniDenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrvniDenView.swift; sourceTree = "<group>"; };
 		CF478C762DEF89E2003AE7D8 /* bonding-s-tatinkem-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bonding-s-tatinkem-1.jpg"; sourceTree = "<group>"; };
 		CF478C772DEF89E2003AE7D8 /* bonding-s-tatinkem-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bonding-s-tatinkem-2.jpg"; sourceTree = "<group>"; };
 		CF478C782DEF89E2003AE7D8 /* jak-bonding-probiha-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-bonding-probiha-1.jpeg"; sourceTree = "<group>"; };
@@ -333,8 +331,10 @@
 		CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-1.mp4"; sourceTree = "<group>"; };
 		CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-2.mp4"; sourceTree = "<group>"; };
 		CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-3.mp4"; sourceTree = "<group>"; };
-		CFB0B18E2DF2E5A5008C5E35 /* NonSwipeableTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonSwipeableTabView.swift; sourceTree = "<group>"; };
+		CF71A5A22DFC0E87003AEDC0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CF71A5A42DFC106C003AEDC0 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 		CFE57A252CBD6FA100C48924 /* NewBabyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBabyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,15 +370,6 @@
 				CF478C712DEF89E2003AE7D8 /* VideoPlayerView.swift */,
 			);
 			path = DetailViews;
-			sourceTree = "<group>";
-		};
-		CF478C752DEF89E2003AE7D8 /* MarkdownText */ = {
-			isa = PBXGroup;
-			children = (
-				CF478C732DEF89E2003AE7D8 /* prvniDen.md */,
-				CF478C742DEF89E2003AE7D8 /* PrvniDenView.swift */,
-			);
-			path = MarkdownText;
 			sourceTree = "<group>";
 		};
 		CF478C822DEF89E2003AE7D8 /* Bonding */ = {
@@ -601,7 +592,6 @@
 		CF478D032DEF89E2003AE7D8 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				CFB0B18E2DF2E5A5008C5E35 /* NonSwipeableTabView.swift */,
 				CF478D012DEF89E2003AE7D8 /* MenuItem.swift */,
 				CF478D022DEF89E2003AE7D8 /* VideoPlayerFullscreen.swift */,
 			);
@@ -611,9 +601,9 @@
 		CF478D0A2DEF89E2003AE7D8 /* NewBabyApp */ = {
 			isa = PBXGroup;
 			children = (
+				CF71A5A62DFC10A0003AEDC0 /* Extension */,
 				CF478C6C2DEF89E2003AE7D8 /* Data */,
 				CF478C722DEF89E2003AE7D8 /* DetailViews */,
-				CF478C752DEF89E2003AE7D8 /* MarkdownText */,
 				CF478CF42DEF89E2003AE7D8 /* Media */,
 				CF478CFC2DEF89E2003AE7D8 /* Models */,
 				CF478CFE2DEF89E2003AE7D8 /* Preview Content */,
@@ -625,8 +615,18 @@
 				CF478D072DEF89E2003AE7D8 /* NewBabyAppApp.swift */,
 				CF478D082DEF89E2003AE7D8 /* OnboardingView.swift */,
 				CF478D092DEF89E2003AE7D8 /* Utils.swift */,
+				CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */,
 			);
 			path = NewBabyApp;
+			sourceTree = "<group>";
+		};
+		CF71A5A62DFC10A0003AEDC0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */,
+				CF71A5A42DFC106C003AEDC0 /* String+localization.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		CFE57A1C2CBD6FA100C48924 = {
@@ -706,7 +706,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF478D252DEF89E2003AE7D8 /* prvniDen.md in Resources */,
 				CF478D262DEF89E2003AE7D8 /* bonding-s-tatinkem-1.jpg in Resources */,
 				CF478D272DEF89E2003AE7D8 /* bonding-s-tatinkem-2.jpg in Resources */,
 				CF478D282DEF89E2003AE7D8 /* jak-bonding-probiha-1.jpeg in Resources */,
@@ -792,6 +791,7 @@
 				CF478D732DEF89E2003AE7D8 /* srdecni-jak-probiha-mereni-1.jpg in Resources */,
 				CF478D742DEF89E2003AE7D8 /* srdecni-jak-probiha-mereni-2.jpg in Resources */,
 				CF478D752DEF89E2003AE7D8 /* srdecni-jak-probiha-mereni-3.jpg in Resources */,
+				CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */,
 				CF478D762DEF89E2003AE7D8 /* otaceni01.png in Resources */,
 				CF478D772DEF89E2003AE7D8 /* otaceni02.png in Resources */,
 				CF478D782DEF89E2003AE7D8 /* otaceni03.png in Resources */,
@@ -852,17 +852,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */,
-				CFB0B18F2DF2E5AD008C5E35 /* NonSwipeableTabView.swift in Sources */,
 				CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */,
+				CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */,
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,
 				CF478D0E2DEF89E2003AE7D8 /* PorodRepository.swift in Sources */,
 				CF478D0F2DEF89E2003AE7D8 /* PregnantRepository.swift in Sources */,
 				CF478D102DEF89E2003AE7D8 /* DetailView.swift in Sources */,
+				CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */,
 				CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */,
 				CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */,
 				CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */,
 				CF478D142DEF89E2003AE7D8 /* VideoPlayerView.swift in Sources */,
-				CF478D152DEF89E2003AE7D8 /* PrvniDenView.swift in Sources */,
 				CF478D162DEF89E2003AE7D8 /* DetailModel.swift in Sources */,
 				CF478D172DEF89E2003AE7D8 /* IntroTextModel.swift in Sources */,
 				CF478D182DEF89E2003AE7D8 /* MenuItemModel.swift in Sources */,
@@ -882,6 +882,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF71A5A22DFC0E87003AEDC0 /* cs */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CFE57A312CBD6FA200C48924 /* Debug */ = {

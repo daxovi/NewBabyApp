@@ -9,9 +9,9 @@ import SwiftUI
 extension LocalRepository {
     
     static let menuHome = MenuModel(
-        title: "Jsem doma",
-        subtitle: "Inspirace a podpora pro psychické i fyzické pohodlí maminky i tatínka, protože harmonická rodina je klíčem ke spokojenému miminku.",
-        backgroundImageName: "title-home",
+        title: "title_jsmedoma".localizedString,
+        subtitle: "subtitle_jsmedoma".localizedString,
+        backgroundImageName: "title-home".localizedString,
         menuItems: [
             .detail(DetailModel(title: "Podpora pro rodiče", bannerName: "podpora-pro-rodice")),
             .detail(DetailModel(title: "Bezpečí", bannerName: "bezpeci")),

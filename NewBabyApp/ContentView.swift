@@ -26,23 +26,51 @@ struct ContentView: View {
         TabView(selection: $selected) {
             NavigationStack(path: $navigationPath) {
                 MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
+                    .navigationDestination(for: NavigationDestination.self) { destination in
+                        switch destination {
+                        case .stories(let model):
+                            StoriesView(storiesGroup: model)
+                        case .text(let model):
+                            TextView(model: model)
+                        case .menu(let model):
+                            MenuView(model: model, clientName: clientName, path: $navigationPath)
+                        case .detail(let model):
+                            DetailView(model: model)
+                        case .introText(_):
+                            EmptyView()
+                        }
+                    }
             }
                 .tabItem{
                     VStack {
-                        Text("čekám miminko")
-                        Image("pregnant").renderingMode(.template)
+                        Text("title_cekamemiminko".localizedString.lowercased())
+                        Image(.pregnant).renderingMode(.template)
                     }
                 }
                 .tag(0)
             
             NavigationStack(path: $navigationPath) {
                 MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
+                    .navigationDestination(for: NavigationDestination.self) { destination in
+                        switch destination {
+                        case .stories(let model):
+                            StoriesView(storiesGroup: model)
+                        case .text(let model):
+                            TextView(model: model)
+                        case .menu(let model):
+                            MenuView(model: model, clientName: clientName, path: $navigationPath)
+                        case .detail(let model):
+                            DetailView(model: model)
+                        case .introText(_):
+                            EmptyView()
+                        }
+                    }
             }
                 .tabItem{
                     VStack {
                         Spacer(minLength: 10)
-                        Text("jsem v porodnici")
-                        Image("babyboy")
+                        Text("title_jsmevporodnici".localizedString.lowercased())
+                        Image(.babyboy)
                             .renderingMode(.template)
                     }
                 }
@@ -50,11 +78,25 @@ struct ContentView: View {
             
             NavigationStack(path: $navigationPath) {
                 MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
+                    .navigationDestination(for: NavigationDestination.self) { destination in
+                        switch destination {
+                        case .stories(let model):
+                            StoriesView(storiesGroup: model)
+                        case .text(let model):
+                            TextView(model: model)
+                        case .menu(let model):
+                            MenuView(model: model, clientName: clientName, path: $navigationPath)
+                        case .detail(let model):
+                            DetailView(model: model)
+                        case .introText(_):
+                            EmptyView()
+                        }
+                    }
             }
                 .tabItem{
                     VStack {
-                        Text("jsem doma")
-                        Image("seatchair").renderingMode(.template)
+                        Text("title_jsmedoma".localizedString.lowercased())
+                        Image(.seatchair).renderingMode(.template)
                     }
                 }
                 .tag(2)

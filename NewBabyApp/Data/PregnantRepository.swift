@@ -9,8 +9,8 @@ import SwiftUI
 extension LocalRepository {
     
     static let menuPregnant = MenuModel(
-        title: "Čekám miminko",
-        subtitle: "Základní informace o těhotenství a porodu, které vám pomohou s přípravou na velký den.",
+        title: "title_cekamemiminko".localizedString,
+        subtitle: "subtitle_cekamemiminko".localizedString,
         backgroundImageName: "title-pregnant",
         menuItems: [
             .detail(DetailModel(title: "Předporodní kurzy", bannerName: "predporodni-kurzy")),

@@ -31,7 +31,7 @@ struct MenuView: View {
     
     var body: some View {
         ZStack {
-            Color("background")
+            Color.background
                 .ignoresSafeArea()
             if let backgroundImageName {
                 MenuBackground(imageName: backgroundImageName, scrollPosition: $scrollPosition)
@@ -83,21 +83,6 @@ struct MenuView: View {
                 .zIndex(-1)
                 .offset(y: -130)
                 
-            }
-            
-            .navigationDestination(for: NavigationDestination.self) { destination in
-                switch destination {
-                case .stories(let model):
-                    StoriesView(storiesGroup: model)
-                case .text(let model):
-                    TextView(model: model)
-                case .menu(let model):
-                    MenuView(model: model, clientName: clientName, path: $path)
-                case .detail(let model):
-                    DetailView(model: model)
-                case .introText(_):
-                    EmptyView()
-                }
             }
         }
         .navigationTitle(title)
@@ -174,7 +159,7 @@ private struct MenuBackground: View {
                     .resizable()
                     .scaledToFit()
                     .overlay(
-                        LinearGradient(colors: [Color("background").opacity(0.0), Color("background").opacity(0.0), Color("background")], startPoint: .center, endPoint: .bottom)
+                        LinearGradient(colors: [Color.background.opacity(0.0), Color.background.opacity(0.0), Color.background], startPoint: .center, endPoint: .bottom)
                     )
                     .blur(radius: (300 - scrollPosition) * 0.1)
                 
@@ -210,10 +195,10 @@ private struct MenuHeader: View {
             HStack {
                 VStack(alignment: .leading, spacing: 10) {
                     if let clientName = clientName, clientName.count > 0 {
-                        Text("Vítejte, \(clientName)")
+                        Text("welcome_name".localizedString(clientName))
                             .font(.title)
                     } else {
-                        Text("Vítejte")
+                        Text("welcome_user".localizedString)
                             .font(.title)
                     }
                     if let subtitle, subtitle.count > 0 {

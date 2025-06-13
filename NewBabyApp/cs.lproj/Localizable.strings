@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  NewBabyApp
+
+  Created by Dalibor Janeček on 13.06.2025.
+  
+*/
+"onboarding_welcome" = "vítejte v porodnici \nFN Olomouc";
+
+"onboarding_about" = "Čeká vás jedinečná cesta plná emocí, radosti i nových výzev. Nebojte se – nejste na to sama. Jsme tu, abychom vás provedli každým krokem této krásné kapitoly vašeho života.\n\n👶 Vše, co potřebujete vědět o těhotenství a porodu\n📚 Podpůrné kurzy a programy\n🍼 Péči o vaše novorozené miminko\n💙 Podporu pro vaši duševní pohodu";
+
+"onboarding_disclaimer" = "ℹ️ Tento materiál slouží jako informační a podpůrný průvodce. Každé těhotenství i porod jsou jedinečné a mohou probíhat odlišně. Není nutné, aby vše šlo podle plánu – každá zkušenost je jiná a není to špatně. V případě nejasností se vždy obraťte na zdravotnický personál.";
+
+"onboarding_name_question" = "Jak vám máme říkat?";
+"onboarding_name_placeholder" = "jméno";
+"onboarding_next_button" = "potvrdit";
+
+"welcome_user" = "Vítejte";
+"welcome_name" = "Vítejte, %@";
+
+"title_jsmevporodnici" = "Jsme v porodnici";
+"subtitle_jsmevporodnici" = "Praktické tipy a rady o péči o vaše novorozené miminko.";
+
+"title_jsmedoma" = "Jsme doma";
+"subtitle_jsmedoma" = "Inspirace a podpora pro psychické i fyzické pohodlí maminky i tatínka, protože harmonická rodina je klíčem ke spokojenému miminku.";
+
+"title_cekamemiminko" = "Čekáme miminko";
+"subtitle_cekamemiminko" = "Základní informace o těhotenství a porodu, které vám pomohou s přípravou na velký den.";
