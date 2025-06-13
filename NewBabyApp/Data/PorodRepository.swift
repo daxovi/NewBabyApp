@@ -8,19 +8,18 @@
 extension LocalRepository {
     
     static let porod: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "Porod", content: "Každý porod je jedinečný. Jsme zde, abychom vám pomohli přivést vaše dítě na svět bezpečně a co nejpřirozenější cestou.")),
+        .introText(IntroTextModel(title: "Porod", content: "Naším posláním je respektovat přirozený průběh porodu a zároveň být připraveni na nečekané situace. Naším cílem je vždy zajistit bezpečí maminky i miminka.")),
         
         .stories(StoriesModel(title: "Jak to u nás vypadá?", bannerName: "jak-to-u-nas-vypada-0", stories: [
-                Story(type: .image, sourceName: "jak-to-u-nas-vypada-1", text: "Velmi nás těší, že jste si pro narození svého děťátka vybrala právě naši porodnici."),
-                Story(type: .image, sourceName: "jak-to-u-nas-vypada-2", text: "Přejeme si, aby váš porod proběhl hladce a podle vašich představ."),
+                Story(type: .image, sourceName: "jak-to-u-nas-vypada-1", text: "Velmi nás těší, že jste si pro narození svého miminka vybrala právě naši porodnici."),
+                Story(type: .image, sourceName: "jak-to-u-nas-vypada-2", text: "Přejeme si společně s vámi, aby porod vašeho miminka proběhl hladce a podle vašich představ."),
             ])),
         .stories(StoriesModel(title: "Vaše cesta porodem", bannerName: "vase-cesta-porodem-0", stories: [
-            Story(type: .image, sourceName: "vase-cesta-porodem-1", text: "Naším záměrem je respektovat přirozený průběh porodu a zároveň být připraveni na nečekané situace."),
             Story(type: .image, sourceName: "vase-cesta-porodem-2", text: "Porod je přirozený proces, který probíhá ve čtyřech fázích. "),
             Story(type: .image, sourceName: "vase-cesta-porodem-3", text: "Přibližně 85 % porodů proběhně bez komplikací, u zbývajících 15 % dochází k situacím, které vyžadují lékařský zásah."),
-            Story(type: .image, sourceName: "vase-cesta-porodem-4", text: "Pacientkám s nízkým rizikem nabízíme možnost vést porod samostatně  porodní asistentkou. Vždy však musíme zvážit i aktuální stav porodu a rodičky při přijetí. Lékař je přivolán, kdykoli to vyžaduje situace."),
-            Story(type: .image, sourceName: "vase-cesta-porodem-5", text: "U pacientky s vyšším rizikem komplikací porod vedou společně lékař s porodní asistentkou."),
-            Story(type: .image, sourceName: "vase-cesta-porodem-6", text: "Během druhé fáze porodu je přítomna sestra z novorozeneckého oddělení, která zajistí navazující péči o miminko. V komplikovaných případech je přivolán neonatolog - lékař se specializací na péči o novorozence."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-4", text: "Porodní asistentka vede samostatně porod u žen s nízkým rizikem komplikací, vždy s přihlédnutím ke stavu při příjmu. Lékař je přivolán, kdykoliv to vyžaduje situace."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-5", text: "U žen s vyšším rizikem komplikací vedou porod lékař společně s porodní asistentkou."),
+            Story(type: .image, sourceName: "vase-cesta-porodem-6", text: "Během třetí fáze porodu je na sále přítomna i sestra z novorozeneckého oddělení, která zajišťuje navazující péči o miminko. V případě komplikací je přivolán neonatolog - specialista na péči o novorozence."),
         ])),
         
         .menu(MenuModel(title: "I. doba porodní – otevírání porodních cest", menuItems: iDobaPorodni)),
@@ -64,14 +63,13 @@ extension LocalRepository {
         .introText(IntroTextModel(title: "Co se děje v první fázi porodu?", content: """
                 Začínají pravidelné děložní kontrakce.
                 Ty mohou být zpočátku nepravidelné, postupně se zesilují a zkracuje se interval mezi nimi. 
-                
+
                 Může také spontánně odtéci plodová voda – ale nemusí.
-                
+
                 Porodní cesty se postupně otevírají.
                 Děložní hrdlo se zkracuje a rozšiřuje – zhruba od 1 do 10 cm.
-                
-                Sledujeme polohu a sestup miminka.
-                Porodní tým průběžně kontroluje, jak se miminko posouvá porodními cestami.
+
+                Porodní tým průběžně sleduje polohu a sestup miminka porodními cestami.
                 """)),
         .introText(IntroTextModel(title: "Když porod potřebuje pomoc", content: """
                 Co když plodová voda sama neodteče?
@@ -81,15 +79,15 @@ extension LocalRepository {
                 Může být podán Oxytocin – hormon, který podporuje účinné děložní stahy a pomáhá porodu postupovat.
                 """)),
         .stories(StoriesModel(title: "Monitorování během porodu", bannerName: "placeholder", stories: [
-            Story(type: .image, sourceName: "monitorovani-behem-porodu-1", text: "KTG monitor sleduje srdeční ozvy plodu a intenzitu kontrakcí"),
-            Story(type: .image, sourceName: "monitorovani-behem-porodu-2", text: "Pravidelná kontrola průběhu porodu porodní asistentkou a lékařem"),
+            Story(type: .image, sourceName: "monitorovani-behem-porodu-1", text: "Při porodu monitorujeme ženu i miminko pomocí kardiotokografie. Ta měří a graficky znázorňuje srdeční tep miminka a sílu a četnost děložních kontrakcí."),
+            Story(type: .image, sourceName: "monitorovani-behem-porodu-2", text: "Průběh porodu je monitorován pravidelnými návštěvami porodní asistenky nebo lékaře."),
         ])),
-        .introText(IntroTextModel(title: "Možnosti tlumení bolesti během porodu", content: "Kdykoliv máte možnost požádat o některou z forem tlumení bolesti. Metodu tlumení bolesti vybíráme podle vašich přání a doporučení zdravotnického personálu.")),
+        .introText(IntroTextModel(title: "Možnosti tlumení bolesti během porodu", content: "Pro tlumení bolesti u porodu nabízíme širokou škálu metod. Neváhejte se zeptat personálu, vybereme společně metodu tlumení dle vašich preferencí.")),
         .stories(StoriesModel(title: "Tlumení bolesti bez léků", bannerName: "placeholder", isHalf: true, stories: [
-            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-1", text: "Změny poloh u porodu můžou tlumit bolest."),
-            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-2", text: "K tomu můžete použít porodní lůžko, gymnastický míč, žíněnku, porodní závěs, polohovací pomůcky, porodní židličku apod."),
-            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-3", text: "Zaměření se na správnou techniku dýchání harmonizují celé tělo a pomáhá ovlivnit vnímání bolesti."),
-            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-4", text: "K vaší relaxaci může pomoci zahřívání určitých částí těla (bedra, podbříšek). Využíváme masáže, sprchu, termofor s teplou vodou baňkování a jiné."),
+            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-1", text: "Intenzitu porodních bolestí mohou pomoci tlumit změny poloh a pohyb."),
+            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-2", text: "U nás k tomu můžete použít porodní lůžko, gymnastický míč, žíněnku, porodní závěs, polohovací pomůcky, porodní židličku apod."),
+            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-3", text: "Vnímání bolesti může také pozitivně ovlivnit správná práce s dechem. S tím vám ráda pomůže porodní asistentka."),
+            Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-4", text: "K relaxaci a tlumení bolesti mohou přispět také masáže a zahřívání beder a podbřišku. V naší porodnici nabízíme masáž, sprchu, termofor s teplou vodou, baňkování a jiné."),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-5", text: "Rebozo šátek pomáhá podpořit správnou polohu miminka před porodem, ulevuje od bolesti zad. Rádi vám s tím pomůžeme."),
         ])),
         .stories(StoriesModel(title: "Tlumení bolesti s použitím léků", bannerName: "placeholder", isHalf: true, stories: [
@@ -98,32 +96,7 @@ extension LocalRepository {
             Story(type: .image, sourceName: "tlumeni-bolesti-s-pouzitim-leku-3", text: "Epidurální analgezie (aplikace léků do epidurálního prostoru páteřního kanálu"),
             
         ])),
-        .stories(StoriesModel(title: "Porodní závěs", stories: [
-            
-        ])),
-        .stories(StoriesModel(title: "Aromaterapie – masáže, aromalampa", stories: [
-            
-        ])),
-        .stories(StoriesModel(title: "Polohovací pomůcky", stories: [
-            
-        ])),
-        .stories(StoriesModel(title: "Porodní bazének", stories: [
-            
-        ])),
-        .stories(StoriesModel(title: "Vaginální bylinná napářka", stories: [
-            
-        ])),
-        .introText(IntroTextModel(title: "Možné komplikace", content: """
-                Nedostatek kyslíku pro plod (hypoxie)
-                
-                Problémy s pupečníkem (např. zauzlení)
-                
-                Předčasné odloučení placenty
-                
-                Vysoký krevní tlak, křečové stavy, embolie
-                
-                Pokud se vyskytne závažná komplikace, je nutné rychlé ukončení porodu císařským řezem.
-                """, isCollapsable: true))
+        .introText(IntroTextModel(title: "Možné komplikace", content: "Mezi závažné komplikace během porodu patří předčasné odlučování placenty, výhřez pupečníku a těžká preeklampsie. Tyto stavy mohou vážně ohrozit život matky i dítěte a často vyžadují okamžité ukončení porodu císařským řezem. Rychlý zásah lékařského týmu je v těchto situacích klíčový pro zajištění bezpečí obou", isCollapsable: true))
     ]
     
     // MARK: - II. doba
