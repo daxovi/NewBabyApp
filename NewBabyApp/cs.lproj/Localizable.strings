@@ -26,3 +26,313 @@
 
 "title_cekamemiminko" = "Čekáme miminko";
 "subtitle_cekamemiminko" = "Základní informace o těhotenství a porodu, které vám pomohou s přípravou na velký den.";
+
+
+
+"title_nls" = "Novorozenecký laboratorní screening";
+"title_cojenls" = "Co je novorozenecký screening?";
+"detail_cojenls" = "Novorozenecký screening je laboratorní test, který se provádí u všech novorozenců narozených v ČR. Pomáhá včas odhalit vážná dědičná onemocnění, která by mohla ohrozit zdraví dítěte.";
+"title_kdysenlsprovadi" = "Kdy se screening provádí?";
+"detail_kdysenlsprovadi" = "Odběr probíhá mezi 48. a 72. hodinou po porodu. Tato doba je klíčová pro včasnou diagnostiku možných onemocnění.";
+"title_jaksenlsprovadi" = "Jak se odběr provádí?";
+"novorozenecky_screening_1" = "Screening se provádí odebráním několika kapek krve z patičky novorozence.";
+"novorozenecky_screening_2" = "Krev se nanese na speciální papírovou kartičku (tzv. novorozeneckou screeningovou kartičku) a odešle se do laboratoře k analýze.";
+"title_jaksenlsvyhodnocuje" = "Jak se výsledky vyhodnocují?";
+"detail_jaksenlsvyhodnocuje" = "Negativní výsledek – Vše je v pořádku, laboratoř nekontaktuje rodiče ani lékaře\nPozitivní výsledek – Laboratoř kontaktuje rodiče nebo lékaře dítěte a doporučí další vyšetření na specializovaném pracovišti. Včasná léčba může zabránit rozvoji komplikací a zajistit dítěti co nejlepší kvalitu života.\nNejasný výsledek (Recall) – Screening se musí zopakovat, aby byl výsledek jednoznačný.";
+"title_muzebytmojeditenemocnenls" = "Může být moje dítě nemocné?";
+"detail_muzebytmojeditenemocnenls" = "Pravděpodobnost je velmi nízká – pouze 1 z 1150 dětí má některé z těchto onemocnění. Pokud ale screening odhalí problém, může to dítěti zachránit zdraví nebo dokonce život.";
+"title_jakenenemocilzenlsodhalit" = "Jaké nemoci lze screeningem odhalit?";
+"detail_jakenenemocilzenlsodhalit" = "Mezi onemocnění, která lze screeningem vyšetřit patří:\nvrozené poruchy štítné žlázy (hypotyreóza)\nporuchy hormonů nadledvin (adrenální hyperplazie)\ncystická fibróza\ndědičné metabolické poruchy\nspinální svalová atrofie (SMA)\ntěžké poruchy imunity (SCID)";
+"title_zloutenka" = "Novorozenecká žloutenka";
+"title_cojezloutenka" = "Co je novorozenecká žloutenka?";
+"detail_cojezloutenka" = "Novorozenecká žloutenka je stav, kdy dochází ke žlutému zbarvení kůže, sliznic a očního bělma. Způsobuje ji zvýšená hladina bilirubinu, který vzniká při rozpadu červených krvinek. Červené krvinky se po narození začínají rozpadat, aby jejich místo nahradily nové. Tyto nové krvinky již obsahují červené barvivo přizpůsobené na pobyt mimo dělohu. Játra bilirubin zpracují a následně ho tělo vyloučí močí a stolicí.";
+"title_jakejsoupriznakyzloutenky" = "Jaké jsou příznaky žloutenky?";
+"jake_jsou_priznaky_zloutenky_1" = "Žluté zbarvení kůže, sliznic a očního bělma.";
+"jake_jsou_priznaky_zloutenky_2" = "Zvýšená spavost.";
+"jake_jsou_priznaky_zloutenky_3" = "Obtíže s krmením (např. líné sání, delší intervaly mezi krmením). Pokud jsou hodnoty žloutenky extrémně vysoké, může být přítomná podrážděnost a vyšší tón pláče.";
+
+"title_kdysezloutenkaobjevuje" = "Kdy se žloutenka objevuje?";
+"detail_kdysezloutenkaobjevuje" = "U donošených miminek vrcholí hladina bilirubinu mezi 3. a 5. dnem života a obvykle klesá do dvou týdnů.\nU nedonošených dětí bývá nejvyšší hladina bilirubinu mezi 5. a 7. dnem života.";
+
+"title_jaksezloutenkavysetruje" = "Jak se žloutenka vyšetřuje?";
+"jak_se_zloutenka_vysetruje_1" = "Vyšetření se provádí pomocí přístroje, který měří hladinu bilirubinu přes kůži. Toto měření je bezbolestné a bezpečné.";
+"jak_se_zloutenka_vysetruje_2" = "Pokud jsou hodnoty vysoké, následuje odběr krve ze žíly pro přesnější hodnotu bilirubinu.";
+"title_jaksezloutenkaleci" = "Jak se žloutenka léčí?";
+"jak_se_zloutenka_leci_1" = "Fototerapie modrým světlem pomáhá přeměnit bilirubin na látky, které se snadno vyloučí žlučí a močí.";
+"jak_se_zloutenka_leci_2" = "Miminko stráví zhruba 3 hodiny pod modrým světlem (délka se přizpůsobuje kojení).";
+"jak_se_zloutenka_leci_3" = "Následná 1 hodina je pro kojení a kontakt s rodiči.";
+"jak_se_zloutenka_leci_4" = "Během terapie je nutné chránit oči miminka, aby nedošlo k poškození sítnice.";
+"jak_se_zloutenka_leci_5" = "Ve většině případů léčba trvá do dalšího dne, kdy se opět kontroluje hladina bilirubinu z krve. Fototerapie je ukončena, jakmile bilirubin klesne na bezpečnou úroveň.";
+"jak_se_zloutenka_leci_6" = "Lékař může tento režim upravit na základě aktuálních hodnot žloutenky a případně i s ohledem na přítomnost dalších rizikových faktorů, které by její průběh mohly zhoršit.";
+
+"title_screeningsrdecnichvad" = "Screening vrozených srdečních vad";
+"title_procseprovadisvsv" = "Proč se provádí screening?";
+"detail_procseprovadisvsv" = "Kritické srdeční vady se vyskytují přibližně u 2 novorozenců z 1000 živě narozených dětí. Pulzní oxymetrie pomáhá včas odhalit tyto vady tím, že měří okysličení krve v kombinaci s prokrvením končetiny.";
+"title_jakprobihamerenisvsv" = "Jak probíhá měření?";
+"srdecni_jak_probiha_mereni_1" = "Saturace kyslíkem se měří pomocí speciálního čidla na pravé ručičce a na jakékoliv dolní končetině.";
+"srdecni_jak_probiha_mereni_2" = "Vyšetření se doporučuje provést nejdříve po 6 hodinách života miminka.";
+"srdecni_jak_probiha_mereni_3" = "Následná 1 hodina je pro kojení a kontakt s rodiči.";
+"title_kdysedozvimvysledeksvsv" = "Kdy se dozvím výsledek?";
+"detail_kdysedozvimvysledeksvsv" = "Výsledek screeningu vám oznámí zdravotnický personál ihned po jeho provedení.";
+"title_jakemohoubytvysledkysvsv" = "Jaké mohou být výsledky?";
+"detail_jakemohoubytvysledkysvsv" = "Negativní screening – Srdeční vada je málo pravděpodobná.\nPozitivní screening – Miminko podstoupí ultrazvukové vyšetření srdce (echokardiografii).\nFalešně pozitivní screening – Srdeční vada není přítomná, ale naměřené hodnoty nejsou  v normě. Miminko bude podrobeno dalšímu vyšetření, aby se zjistila příčina odchylky.";
+"title_vysetrenisluchu" = "Vyšetření sluchu";
+"title_procseprovadivysetrenisluchu" = "Proč se provádí vyšetření sluchu?";
+"detail_procseprovadivysetrenisluchu" = "Cílem vyšetření sluchu je včasné odhalení vrozené sluchové vady. Díky tomu je možné zahájit rehabilitaci sluchu a zajistit správný rozvoj komunikačních schopností a řeči dítěte.";
+"title_jakprobihavysetrenisluchu" = "Jak probíhá vyšetření sluchu?";
+"vysetreni_sluchu_1" = "Vyšetření je bezbolestné a neinvazivní. Dítě při něm může klidně spát.";
+"vysetreni_sluchu_2" = "Zdravotnický personál zavede do zevního zvukovodu jemnou sondu, která vyšle slabý zvukový podnět.";
+"vysetreni_sluchu_3" = "Přístroj zaznamená odpovědi sluchového aparátu a vyhodnotí, zda sluch funguje správně.";
+
+"title_kdysevysetrenisluchuprovadi" = "Kdy se vyšetření provádí?";
+"vysetreni_sluchu_4" = "TEOAE (tranzientně evokované otoakustické emise)";
+"vysetreni_sluchu_5" = "TEOAE se používá u fyziologických novorozenců. Měří odpověď vláskových buněk v uchu na zvukové podněty.";
+"vysetreni_sluchu_6" = "AABR (automatic auditory brainstem responses)";
+"vysetreni_sluchu_7" = "AABR se používá u novorozenců s rizikem poruchy sluchu.Funguje na principu měření mozkových odpovědí na zvukové podněty pomocí elektrod.instem responses)";
+
+"title_kdysedozvimvysledekvysetrenisluchu" = "Kdy se dozvím výsledek?";
+"detail_kdysedozvimvysledekvysetrenisluchu" = "Výsledek se dozvíte ihned po vyšetření. Pokud bude nutné vyšetření opakovat, lékař (nebo zdravotní sestřička) vám sdělí další postup.";
+"title_jakemohoubytvysledkyvysetrenisluchu" = "Jaké mohou být výsledky?";
+"detail_jakemohoubytvysledkyvysetrenisluchu" = "• Negativní screening – Sluch dítěte je s největší pravděpodobností v pořádku.\n• Pozitivní screening – Vyšetření je nutné opakovat pro potvrzení výsledku.\n";
+"title_cokdyzsescreeningnepovedevysetrenisluchu" = "Co když se screening nepovede?";
+"detail_cokdyzsescreeningnepovedevysetrenisluchu" = "Pokud se nepodaří získat příznivý výsledek, vyšetření provádíme opakovaně. Teprve po několika testech lze vyslovit podezření na poruchu sluchu a dítě je odesláno na specializované vyšetření.";
+"title_procjevysetrenisluchudulezite" = "Proč je screening sluchu důležitý?";
+"detail_procjevysetrenisluchudulezite" = "Včasná diagnostika zabrání opoždění vývoje řeči nebo dokonce hluchoněmosti. Pokud se sluchová vada neodhalí včas, může mít dítě trvalé potíže s komunikací.";
+"title_muzemitmojediteporuchusluchu" = "Může mít moje dítě poruchu sluchu?";
+"detail_muzemitmojediteporuchusluchu" = "Závažná oboustranná ztráta sluchu je spíše vzácnější. Objevuje se u 1–3 dětí z 1000 narozených.";
+
+"title_screeningnavrozenysedyzakal" = "Screening na vrozený šedý zákal";
+"title_cojesedyzakal" = " Co je vrozený šedý zákal?";
+"detail_cojesedyzakal" = "Vrozený šedý zákal (kongenitální katarakta) je onemocnění, které narušuje průhlednost oční čočky v kritickém období vývoje zraku. Pokud se včas nezahájí léčba, může vést k trvalému zrakovému postižení.";
+"title_jakprobihavysetrenisedyzakal" = "Jak probíhá vyšetření?";
+"vysetreni_sedy_zakal_1" = "Vyšetření se provádí pomocí oftalmoskopu.";
+"vysetreni_sedy_zakal_2" = "Lékař nebo zdravotní sestra prosvítí oko novorozence a sleduje tzv. červený reflex.";
+"vysetreni_sedy_zakal_3" = "Pokud se reflex objeví, znamená to, že je čočka čirá a vyšetření je negativní (v pořádku).";
+"title_procjescreeningsedyzakaldulezity" = "Proč je screening důležitý?";
+"detail_procjescreeningsedyzakaldulezity" = "Včasné odhalení šedého zákalu je klíčové pro správný vývoj zraku. Pokud se problém neřeší včas, může dítě trpět trvalým poškozením zraku nebo dokonce slepotou.";
+"title_kdysescreeningsedyzakalprovadi" = "Kdy se screening provádí?";
+"detail_kdysescreeningsedyzakalprovadi" = "Vyšetření probíhá v prvních dnech po narození, nejpozději však do 4. týdne života.";
+"title_kdysedozvimvysledeksedyzakal" = "Kdy se dozvím výsledek vyšetření?";
+"detail_kdysedozvimvysledeksedyzakal" = "Výsledek se dozvíte ihned po vyšetření. Pokud bude nutné další vyšetření, lékař vám sdělí přesný postup.";
+"title_coznamenapozitivnivysledeksedyzakal" = "Co znamená pozitivní výsledek testu?";
+"detail_coznamenapozitivnivysledeksedyzakal" = "Pokud červený reflex není patrný nebo je oslabený, může to znamenat přítomnost šedého zákalu.V takovém případě dítě podstoupí další specializovaná vyšetření.";
+"title_jakcastosesedyzakalvyskytuje" = "Jak často se vrozený šedý zákal vyskytuje?";
+"detail_jakcastosesedyzakalvyskytuje" = "Toto onemocnění je spíše vzácnější. Vyskytuje se u 2–4 novorozenců z 10 000 narozených dětí. Může postihnout jedno oko nebo obě oči.";
+
+"title_screeningvrozenesyfilis" = "Screening vrozené syfilis";
+"title_jakprobihavysetrenisyfilis" = "Jak probíhá vyšetření?";
+"detail_jakprobihavysetrenisyfilis" = "Test na protilátky proti syfilis se provádí z pupečníkové krve, která je odebrána ihned po porodu z pupečníku.";
+"title_jakemohoubytvysledkysyfilis" = "Jaké mohou být výsledky?";
+"detail_jakemohoubytvysledkysyfilis" = "Negativní screening – Protilátky proti syfilis nebyly potvrzeny, laboratoř nikoho nekontaktuje.\nReaktivní screening – Pokud jsou protilátky přítomny, vzorek se odesílá k dalšímu testování do Národní referenční laboratoře v Praze.";
+"title_kdysedozvimvysledeksyfilis" = "Kdy se dozvím výsledek?";
+"detail_kdysedozvimvysledeksyfilis" = "Výsledek vyšetření vám oznámí zdravotnický personál pouze v případě pozitivního nálezu.";
+
+"title_vysetreniledvin" = "Vyšetření ledvin";
+"title_jakprobihavysetreniledvin" = "Jak probíhá vyšetření?";
+"vysetreni_ledvin_1" = "Závažné vrozené vady ledvin a močových cest se vyskytují u 2 novorozenců z 1000 živě narozených.";
+"vysetreni_ledvin_2" = "Ultrazvukové vyšetření pomáhá odhalit případné abnormality a umožňuje včasnou léčbu.";
+"vysetreni_ledvin_3" = "Pomocí ultrazvuku se hodnotí velikost, tvar a umístění ledvin, močovodů a močového měchýře.";
+"vysetreni_ledvin_4" = "Nejlepší čas pro vyšetření je těsně před propuštěním, obvykle v den závěrečné prohlídky novorozence.";
+"vysetreni_ledvin_5"  = "V případě, že je výsledek pozitivní, provádí se s odstupem času kontrolní ultrazvuk.";
+"vysetreni_ledvin_6" = "V případě vážnějšího nálezu je třeba provést další vyšetření během hospitalizace a nález konzultovat s urologem a nefrologem.";
+
+"title_jevysetreniledvinpovinne" = "Je toto vyšetření povinné?";
+"detail_jevysetreniledvinpovinne" = "Vyšetření ledvin a močových cest pomocí ultrazvuku není v ČR povinný a neprovádí se na všech odděleních. U nás ho provádíme standardně, protože přispívá k včasné diagnostice a péči o zdraví novorozenců.";
+
+"title_vysetrenidetskymortopedem" = "Vyšetření dětským ortopedem";
+"title_vysetrenikycliadolnichkoncetinortopedem" = "Vyšetření kyčlí a dolních končetin";
+"detail_vysetrenikycliadolnichkoncetinortopedem" = "Vyšetření kyčlí a dolních končetin se provádí klinicky a pomocí ultrazvuku. Cílem je včasné odhalení vývojové dysplazie kyčelního kloubu případně jiných odchylek v oblasti dolních končetin. Při vyšetření kyčlí se zjišťuje zda je hlavice stehenní kosti správně zakloubená v kyčelní jamce.";
+"title_jakprobihavysetreniortopedem" = "Jak probíhá vyšetření?";
+"vysetreni_detsky_ortoped_1" = "Vyšetření začíná pomocí ultrazvuku.";
+"vysetreni_detsky_ortoped_2" = "Následuje klinické vyšetření. Nedílnou součástí je vyšetření nožiček.";
+
+"title_procjevysetreniortopedemdulezite" = "Proč je vyšetření důležité";
+"detail_procjevysetreniortopedemdulezite" = "Včasná diagnostika umožňuje rychlou a efektivní léčbu, která zabrání budoucím problémům s chůzí nebo vývojem kyčlí. Screening probíhá v ortopedických ambulancích ve vaší spádové oblasti. Pediatr vám poradí, kam se objednat.";
+"title_kdyvysetreniortopedemprobiha" = "Kdy vyšetření probíhá?";
+"detail_kdyvysetreniortopedemprobiha" = "Každé miminko podstupuje tři ultrazvuková vyšetření. První vyšetření – do 3 týdnů od narození. Druhé vyšetření – mezi 6. až 8. týdnem a třetí vyšetření – kolem 3. měsíce věku.";
+"title_kdyznenivsechnojakmabytvysetreniortopedem" = "Když není všechno jak má být";
+"detail_kdyznenivsechnojakmabytvysetreniortopedem" = "Pokud je zjištěna dysplazie kyčlí nebo vykloubení, doporučuje se široké balení pomocí abdukčních kalhotek, které lze zakoupit v lékárně. Poté následuje pravidelná kontrola na ortopedické klinice a pokud problém přetrvává, nasazuje se speciální léčebná pomůcka.";
+"title_sirokebalenivysetreniortopedem" = "Široké balení";
+
+
+"title_prvnidencovasceka" = "Co vás čeká?";
+"detail_prvnidencovasceka" = "Všechny děti i maminky mají svůj vlastní rytmus. Pokud se vaše první dny budou odlišovat, je to naprosto v pořádku. Důležité je, že na to nejste sami.";
+"title_bonding" = "Bonding";
+"title_jakvypadamiminkopoporodu" = "Jak vypadá miminko po porodu";
+"jak_vypada_miminko_po_porodu_1" = "Mázek chrání kůži miminka v děloze a má důležitou roli i po porodu.";
+"jak_vypada_miminko_po_porodu_2" = "Když se vaše miminko narodí, jeho kůže může mít namodralý nádech. To je zcela normální a během prvních minut po porodu se barva kůže postupně změní na růžovou.";
+"jak_vypada_miminko_po_porodu_3" = "Plodová voda a mázek pomáhají novorozenci rozpoznat vůně a chutě, které zná z dělohy. Díky tomu se cítí bezpečně v novém prostředí.";
+
+"title_merenitelesneteploty" = "Měření tělesné teploty";
+"mereni_teploty_1" = "Pro nejpřesnější výsledek se teplota miminka měří v konečníku.";
+"mereni_teploty_2" = "Pokud je teplota příliš nízká, můžeme miminko uložit na vyhřívanou podložku.";
+"mereni_teploty_3" = "Ve zcela výjímečných případech je nutné dát miminko do inkubátoru nebo na vyhřívané lůžko.";
+
+"title_oznaceninovorozence" = "Označení novorozence";
+"oznaceni_novorozence_1" = "Po porodu dostane miminko na zápěstí papírový náramek s identifikačními údaji.";
+"oznaceni_novorozence_2" = "Při prvním ošetření po dvou hodinách je navíc označeno barvou na hrudníček a nožičku pro ještě větší bezpečnost.";
+
+"title_moceniaodchodstolicky" = "Močení a odchod stoličky";
+"moceni_a_odchod_stolicky_1" = "Většina miminek se během prvního dne po narození alespoň jednou vymočí.";
+"moceni_a_odchod_stolicky_2" = "První stolička - smolka - by měla odejít do 48 hodin po porodu. Má černou, mazlavou konzistenci.";
+
+"title_vahaadelkamiminka" = "Váha a délka miminka";
+"vaha_a_delka_miminka_1" = "Miminko vážíme až po ukončení bondingu, tedy přibližně 2 hodiny po narození.";
+"vaha_a_delka_miminka_2" = "V den porodu se délka určuje pouze odhadem na základě tělesné hmotnosti. Tento přístup minimalizuje zbytečnou manipulaci a zajišťuje miminku pohodlí.";
+
+"title_vitamink" = "Vitamin K";
+"vitamin_k_1" = "Při prvním ošetření po bondingu dostává miminko 2 kapky vitamínu K (Kanavit) přímo do pusinky. Tímto se předchází krvácivé nemoci novorozence.";
+
+"title_vysetrenikrevniskupiny" = "Vyšetření krevní skupiny novorozence";
+"vysetreni_krevni_skupiny_1" = "Krevní skupinu novorozence vyšetřujeme pouze v případě, že maminka má krevní skupinu 0 nebo Rh faktor negativní (_).";
+"vysetreni_krevni_skupiny_2" = "Vzorek se odebírá z pupečníkové krve, takže není potřeba odběr krve miminka.";
+
+"title_cojebonding" = "Co je bonding?";
+"detail_cojebonding" = "Bonding, neboli kontakt kůže na kůži (skin-to-skin je proces vytváření láskyplné vazby mezi rodičem a dítětem. Bezprostředně po porodu se miminko položí přímo na nahou hruď maminky, kde cítí její teplo, tlukot srdce a vůni.";
+"title_jakbondingprobiha" = "Jak bonding probíhá?";
+"jak_bonding_probiha_1" = "Po porodu je novorozenec položen na nahou hruď maminky.";
+"jak_bonding_probiha_2" = "Přikryje se vyhřátým ručníkem pro udržení tepla.";
+"jak_bonding_probiha_3" = "Kontakt kůže na kůži by měl trvat minimálně 2 hodiny.";
+"jak_bonding_probiha_4" = "Během bondingu se většinou miminko poprvé přisává k prsu.";
+"jak_bonding_probiha_5" = "Pomáhá miminku zklidnit se a adaptovat na novou situaci.";
+"jak_bonding_probiha_6" = "Miminko je během bondingu monitorováno pomocí čidla, které snímá okysličení krve a srdeční tep.";
+
+"title_procjebondingdulezity" = "Proč je bonding důležitý?";
+"proc_je_bonding_dulezity_1" = "Posiluje citové pouto mezi rodičem a dítětem.";
+"proc_je_bonding_dulezity_2" = "Podporuje úspěšný začátek kojení.";
+"proc_je_bonding_dulezity_3" = "Reguluje tělesnou teplotu, dech a srdeční rytmus miminka.";
+
+
+"title_bondingstatinkem" = "Bonding s tatínkem";
+"bonding_s_tatinkem_1" = "Pokud maminka nemůže bonding absolvovat, může tuto důležitou roli převzít tatínek.";
+"bonding_s_tatinkem_2" = "Jeho náruč poskytne miminku pocit bezpečí a jistoty.";
+
+
+"title_porod" = "Porod";
+"detail_porod" = "Naším posláním je respektovat přirozený průběh porodu a zároveň být připraveni na nečekané situace. Naším cílem je vždy zajistit bezpečí maminky i miminka.";
+
+"title_jaktounasvypadaporod" = "Jak to u nás vypadá?";
+"jak_to_u_nas_vypada_1" = "Velmi nás těší, že jste si pro narození svého miminka vybrala právě naši porodnici.";
+"jak_to_u_nas_vypada_2" = "Přejeme si společně s vámi, aby porod vašeho miminka proběhl hladce a podle vašich představ.";
+
+"title_vasecestaporodem" = "Vaše cesta porodem";
+"vase_cesta_porodem_2" = "Porod je přirozený proces, který probíhá ve čtyřech fázích.";
+"vase_cesta_porodem_3" = "Přibližně 85 % porodů proběhně bez komplikací, u zbývajících 15 % dochází k situacím, které vyžadují lékařský zásah.";
+"vase_cesta_porodem_4" = "Porodní asistentka vede samostatně porod u žen s nízkým rizikem komplikací, vždy s přihlédnutím ke stavu při příjmu. Lékař je přivolán, kdykoliv to vyžaduje situace.";
+"vase_cesta_porodem_5" = "U žen s vyšším rizikem komplikací vedou porod lékař společně s porodní asistentkou.";
+"vase_cesta_porodem_6" = "Během třetí fáze porodu je na sále přítomna i sestra z novorozeneckého oddělení, která zajišťuje navazující péči o miminko. V případě komplikací je přivolán neonatolog _ specialista na péči o novorozence.";
+
+
+"title_idobaporodniporod" = "I. doba porodní – otevírání porodních cest";
+"title_iidobaporodniporod" = "II. doba porodní";
+"title_iiidobaporodniporod" = "III. doba porodní";
+"title_ivdobaporodniporod" = "IV. doba porodní";
+
+"title_poroddovody" = "Porod do vody";
+
+"title_vyvolaniporodu" = "Vyvolání porodu";
+"preindukce_porodu_1" = "Vyvolání porodu je vždy indikováno lékařem. Vlastní formu nebo jeho kombinaci určuje lékař.";
+"preindukce_porodu_2" = "Mechanická forma kdy je katetr s balonkem, naplněným tekutinou, zavedený do oblasti děložního čípku. Tlakem balonku na čípek dochází k jeho otevírání";
+"preindukce_porodu_3" = "Chemická forma – většinou polknutím tablety dochází k vyvoláním děložních kontrakcí.";
+
+
+"title_akutnicisarskyrez" = "Akutní císařský řez";
+"akutni_cisarsky_rez_1" = "Při akutním císařském řezu je operace většinou vedena v celkové anestezii.";
+"akutni_cisarsky_rez_2" = "Pokud to stav vás i vašeho miminka dovoluje, snažíme se o časný bonding co nejdříve po operaci";
+"akutni_cisarsky_rez_3" = "Vašemu doprovodu /nejčastěji otci dítěte/ je umožněn bonding záhy po porodu";
+"akutni_cisarsky_rez_4" = "Většinou další péče o vás probíhá opět na porodním boxu nebo na intermediálním pokoji.";
+"akutni_cisarsky_rez_5" = "Ošetřující lékař pro Vás vybere nejvhodnější a nejbezpečnější variantu.";
+
+"title_planovanycisarskyrez" = "Plánovaný císařský řez";
+"planovany_cisarsky_rez_1" = "Většinou jsou pacientky přijímány v den operace. Komplikovanější pacientky přijímáme den předem.";
+"planovany_cisarsky_rez_2" = "Příjem posledního jídla je povolený maximálně 6 hodin před operací, příjem neslazených tekutin max. 2 hodiny před operací.";
+"planovany_cisarsky_rez_3" = "Před operací zavedeme do žíly kanylu k aplikaci léků a infuzí. Na operačním sále vám bude zaveden na nezbytně dlouhou dobu močová cévka.";
+"planovany_cisarsky_rez_4" = "Dle situace probíhá péče o maminku na porodním sále nebo intermediálním pokoji.";
+"planovany_cisarsky_rez_5" = "Při nekomplikovaném průběhu operace vedené ve svodné – spinální anestezii je možná přítomnost otce přímo na operačním sále.";
+"planovany_cisarsky_rez_6" = "Dovoluje_li to váš stav a stav vašeho dítěte následuje téměř okamžitý bonding ještě v průběhu operace.";
+
+
+"title_cosedejevprvnifaziporodu" = "Co se děje v první fázi porodu?";
+"detail_cosedejevprvnifaziporodu" = "Začínají pravidelné děložní kontrakce.\nTy mohou být zpočátku nepravidelné, postupně se zesilují a zkracuje se interval mezi nimi.\nMůže také spontánně odtéci plodová voda – ale nemusí.\nPorodní cesty se postupně otevírají.\nDěložní hrdlo se zkracuje a rozšiřuje – zhruba od 1 do 10 cm.\nPorodní tým průběžně sleduje polohu a sestup miminka porodními cestami.\n";
+
+"title_kdyzporodpotrebujepomoc" = "Když porod potřebuje pomoc";
+"detail_kdyzporodpotrebujepomoc" = "Co když plodová voda sama neodteče?\nLékař může provést tzv. dirupci – šetrné protržení plodových obalů, aby došlo k odtoku plodové vody.\n\nCo když kontrakce nejsou dostatečně silné?\nMůže být podán Oxytocin – hormon, který podporuje účinné děložní stahy a pomáhá porodu postupovat.";
+"title_monitorovanibehemporodu" = "Monitorování během porodu";
+"monitorovani_behem_porodu_1" = "Při porodu monitorujeme ženu i miminko pomocí kardiotokografie. Ta měří a graficky znázorňuje srdeční tep miminka a sílu a četnost děložních kontrakcí.";
+"monitorovani_behem_porodu_2" = "Průběh porodu je monitorován pravidelnými návštěvami porodní asistenky nebo lékaře.";
+
+"title_moznostitlumenibolestibehemporodu" = "Možnosti tlumení bolesti během porodu";
+"detail_moznostitlumenibolestibehemporodu" = "Pro tlumení bolesti u porodu nabízíme širokou škálu metod. Neváhejte se zeptat personálu, vybereme společně metodu tlumení dle vašich preferencí.";
+"title_tlumenibolestibezleku" = "Tlumení bolesti bez léků";
+"tlumeni_bolesti_bez_leku_1" = "Intenzitu porodních bolestí mohou pomoci tlumit změny poloh a pohyb.";
+"tlumeni_bolesti_bez_leku_2" = "U nás k tomu můžete použít porodní lůžko, gymnastický míč, žíněnku, porodní závěs, polohovací pomůcky, porodní židličku apod.";
+"tlumeni_bolesti_bez_leku_3" = "Vnímání bolesti může také pozitivně ovlivnit správná práce s dechem. S tím vám ráda pomůže porodní asistentka.";
+"tlumeni_bolesti_bez_leku_4" = "K relaxaci a tlumení bolesti mohou přispět také masáže a zahřívání beder a podbřišku. V naší porodnici nabízíme masáž, sprchu, termofor s teplou vodou, baňkování a jiné.";
+"tlumeni_bolesti_bez_leku_5" = "Rebozo šátek pomáhá podpořit správnou polohu miminka před porodem, ulevuje od bolesti zad. Rádi vám s tím pomůžeme.";
+
+"title_tlumenibolestispouzitimleku" = "Tlumení bolesti s použitím léků";
+"tlumeni_bolesti_s_pouzitim_leku_1" = "Entonox (inhalační analgezie) – tzv. rajský plyn";
+"tlumeni_bolesti_s_pouzitim_leku_2" = "Analgetická injekce – aplikovaná do svalu";
+"tlumeni_bolesti_s_pouzitim_leku_3" = "Epidurální analgezie (aplikace léků do epidurálního prostoru páteřního kanálu";
+
+
+"title_moznekomplikaceidobaporodni" = "Možné komplikace";
+"detail_moznekomplikaceidobaporodni" = "Mezi závažné komplikace během porodu patří předčasné odlučování placenty, výhřez pupečníku a těžká preeklampsie. Tyto stavy mohou vážně ohrozit život matky i dítěte a často vyžadují okamžité ukončení porodu císařským řezem. Rychlý zásah lékařského týmu je v těchto situacích klíčový pro zajištění bezpečí obou";
+
+
+
+
+"title_cosedejevedruhefaziporodu" = "Co se děje ve druhé fázi porodu?";
+"detail_cosedejevedruhefaziporodu" = "Děložní čípek je zcela otevřený, miminko začíná sestupovat porodními cestami.\nPocit silného tlaku na pánevní dno vyvolává nutkání tlačit.\nMezi kontrakcemi odpočívejte a nabírejte sílu";
+"title_kdyzporodpottrebujepomociifazeporodni" = "Když porod potřebuje pomoc";
+"detail_kdyzporodpottrebujepomociifazeporodni" = "Co když plodová voda sama neodteče?\nLékař může provést tzv. dirupci – šetrné protržení plodových obalů, aby došlo k odtoku plodové vody.\n\nCo když kontrakce nejsou dostatečně silné?\nMůže být podán Oxytocin – hormon, který podporuje účinné děložní stahy a pomáhá porodu postupovat.";
+"title_polohapritlaceni" = "Poloha při tlačení";
+"poloha_pri_tlaceni_1" = "Pokud vše probíhá fyziologicky, bude záležet na vás jakou polohu zvolíte.";
+"poloha_pri_tlaceni_2" = "Nejčastější polohy: polosed na porodním lůžku, poloha na boku, ve stoje, na čtyřech, v dřepu apod.";
+
+"title_chranenihrazebehemporodu" = "Chránění hráze během porodu";
+"chraneni_hraze_behem_porodu_1" = "Ve většině porodních poloh je možno aktivně chránit hráz porodní asistentkou/porodníkem během tlačení.";
+"chraneni_hraze_behem_porodu_2" = "Pokud hrozí ruptura hráze, může být provedeno nástřižení hráze (episiotomie).";
+"chraneni_hraze_behem_porodu_3" = "Episiotomie se provádí pouze v případě nutnosti – například při nedostatku kyslíku u plodu";
+
+"title_poporodu" = "Po porodu";
+"po_porodu_1" = "Pokud je vše v pořádku, může proběhnout okamžitý bonding, jen minimálně rušený ze strany zdravotníků";
+"po_porodu_2" = "Novorozenecká sestřička miminko u maminky lehce osuší a nasadí mu čepičku";
+"po_porodu_3" = "Na hlavičku dostane čepičku, na končetinu se připevní malé čidlo ke snímaní množství kyslíku v krvi a srdeční akce.";
+"po_porodu_4" = "Péči o miminko zajišťuje novorozenecká sestřička, event. společně s pediatrem";
+
+"title_moznekomplikaceiidobaporodni" = "Možné komplikace";
+"detail_" = "Během této fáze může dojít k ohrožení plodu nedostatkem kyslíku (hypoxií) nebo nepostupujícím porodem, což vede k vyčerpání maminky.\nCílem těchto metod je zabránit zhoršení nedostatku kyslíku u plodu a předejít možným komplikacím.\nV případě komplikací je nutné urychlené ukončení porodu pomocí vakuumextrakce nebo porodnických kleští.";
+"title_vakuumextrakce" = "Vakuumextrakce";
+"vakuumextrakce_1" = "Plastový zvon přisátý pod tlakem na hlavičku miminka pomůže s jeho vypuzením.";
+
+"title_porodnickekleste" = "Porodnické kleště";
+"porodnicke_kleste_1" = "Používají se zcela vyjímečně.";
+
+
+"title_cosedejevetretifaziporodu" = "Co se děje ve třetí fázi porodu?";
+"detail_cosedejevetretifaziporodu" = "Tato fáze začíná porodem miminka a končí porodem placenty.";
+"title_jakprobihaiiifazeporodu" = "Jak probíhá";
+"iii_doba_porodni_jak_probiha_1" = "Pokud s tím maminka souhlasí, volíme metodu aktivního vedení porodu placenty pomocí léků.";
+"iii_doba_porodni_jak_probiha_2" = "Podáme léky (např. Methergin, Oxytocin) do žíly maminky. Tyto léky urychluje odloučení placenty a minimalizují riziko krvácení.";
+"iii_doba_porodni_jak_probiha_3" = "Po porodu placenty porodní asistentka/lékař zkontroluje porodní cesty a ošetří případná poranění.";
+
+"title_moznekomplikaceiiifazeporodu" = "Možné komplikace";
+"detail_moznekomplikaceiiifazeporodu" = "Silné poporodní krvácení, způsobené: porodním poraněním, zadržením části nebo celé placenty v děloze nebo nedostatečným stažením dělohy po porodu";
+"title_moznostireseniiiifazeporodu" = "Možnosti řešení";
+"detail_moznostireseniiiifazeporodu" = "Ošetření porodního poranění – V případě většího poranění je nutné ošetření v celkové anestezii.\nOdstranění zadržené placenty – Lékař provede vyčištění dutiny děložní v celkové anestezii.\nŽivot ohrožující krvácení – Ve velmi vzácných případech, kdy není možné krvácení zastavit, je nutné operační odstranění dělohy.";
+
+"title_cosedejevectvrtefaziporodu" = "Co se děje ve čtvrté fázi porodu?";
+"detail_cosedejevectvrtefaziporodu" = "Toto období trvá 2 hodiny po porodu placenty.";
+"title_jakprobihaivfazeporodni" = "Jak probíhá";
+"iv_doba_porodni_jak_probiha_1" = "Odpočíváte a regenerujete v porodním pokoji.";
+"iv_doba_porodni_jak_probiha_2" = "Porodní asistentka monitoruje váš stav – kontroluje krevní tlak, zavinování dělohy a intenzitu krvácení.";
+"iv_doba_porodni_jak_probiha_3" = "Pokud je vše v pořádku, zůstáváte s miminkem a doprovodem (partnerem, blízkou osobou).";
+"iv_doba_porodni_jak_probiha_4" = "Během tohoto období byste neměla nic jíst, příjem tekutin je omezen na minimum";
+"iv_doba_porodni_jak_probiha_5" = "Po uplynutí této doby se můžete najíst a personál porodního sálu vás doprovodí do sprchy";
+"iv_doba_porodni_jak_probiha_6" = "Po skončení této fáze jste převezena na oddělení šestinedělí, kde budete společně s miminkem.";
+
+"title_moznekomplikaceivfazeporodu" = "Možné komplikace";
+"detail_moznekomplikaceivfazeporodu" = "Silné poporodní krvácení, způsobené: porodním poraněním nebo nedostatečným stažením dělohy po porodu";
+"title_moznostireseniivfazeporodu" = "Možnosti řešení";
+"detail_moznostireseniivfazeporodu" = "Ošetření porodního poranění – V případě většího poranění je nutné ošetření v celkové anestezii.\nŽivot ohrožující krvácení – Ve velmi vzácných případech, kdy není možné krvácení zastavit, je nutné operační odstranění dělohy.";
