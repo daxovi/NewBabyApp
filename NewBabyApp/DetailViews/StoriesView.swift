@@ -73,6 +73,22 @@ struct StoriesView: View {
                         .padding()
                         .padding(.top)
                 }
+                
+                #if DEBUG
+                HStack {
+                    VStack {
+                        Spacer()
+                        VStack {
+                            Text("image: \(storiesGroup.stories[safe: selectedStory]?.sourceName ?? "")")
+                                .font(.caption)
+                        }
+                        .padding(10)
+                        .background(Color.white.opacity(0.7))
+                        .padding(5)
+                    }
+                    Spacer()
+                }
+                #endif
             }
             
         }
