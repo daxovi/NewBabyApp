@@ -46,7 +46,6 @@
 		CF478D312DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C812DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg */; };
 		CF478D322DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C832DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg */; };
 		CF478D332DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C842DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg */; };
-		CF478D342DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C852DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-3.jpeg */; };
 		CF478D352DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C872DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg */; };
 		CF478D362DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C882DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg */; };
 		CF478D372DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C892DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg */; };
@@ -84,7 +83,6 @@
 		CF478D572DEF89E2003AE7D8 /* preindukce-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA92DEF89E2003AE7D8 /* preindukce-porodu-3.jpg */; };
 		CF478D582DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAA2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg */; };
 		CF478D592DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAB2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg */; };
-		CF478D5A2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAC2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-3.jpg */; };
 		CF478D5B2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAD2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg */; };
 		CF478D5C2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAE2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-5.jpg */; };
 		CF478D5D2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAF2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-1.jpg */; };
@@ -169,6 +167,14 @@
 		CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */; };
 		CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71A5A42DFC106C003AEDC0 /* String+localization.swift */; };
 		CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */; };
+		CFF992AA2DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */; };
+		CFF992B12DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AD2DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg */; };
+		CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AB2DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg */; };
+		CFF992B32DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AC2DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg */; };
+		CFF992B42DFD60F500859DC9 /* vitamin-k-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992B02DFD60F500859DC9 /* vitamin-k-1.jpg */; };
+		CFF992B52DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */; };
+		CFF992B62DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AE2DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg */; };
+		CFF992BA2DFD6B9900859DC9 /* AttributedString+splittoparagraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF992B92DFD6B8D00859DC9 /* AttributedString+splittoparagraphs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,7 +202,6 @@
 		CF478C812DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "proc-je-bonding-dulezity-3.jpeg"; sourceTree = "<group>"; };
 		CF478C832DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-vypada-miminko-po-porodu-1.jpeg"; sourceTree = "<group>"; };
 		CF478C842DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-vypada-miminko-po-porodu-2.jpeg"; sourceTree = "<group>"; };
-		CF478C852DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-vypada-miminko-po-porodu-3.jpeg"; sourceTree = "<group>"; };
 		CF478C872DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-1.jpg"; sourceTree = "<group>"; };
 		CF478C882DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-2.jpg"; sourceTree = "<group>"; };
 		CF478C892DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-3.jpg"; sourceTree = "<group>"; };
@@ -234,7 +239,6 @@
 		CF478CA92DEF89E2003AE7D8 /* preindukce-porodu-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preindukce-porodu-3.jpg"; sourceTree = "<group>"; };
 		CF478CAA2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-1.jpg"; sourceTree = "<group>"; };
 		CF478CAB2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-2.jpg"; sourceTree = "<group>"; };
-		CF478CAC2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-3.jpg"; sourceTree = "<group>"; };
 		CF478CAD2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-4.jpg"; sourceTree = "<group>"; };
 		CF478CAE2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-5.jpg"; sourceTree = "<group>"; };
 		CF478CAF2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-s-pouzitim-leku-1.jpg"; sourceTree = "<group>"; };
@@ -335,6 +339,14 @@
 		CF71A5A42DFC106C003AEDC0 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 		CFE57A252CBD6FA100C48924 /* NewBabyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBabyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
+		CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-3.jpg"; sourceTree = "<group>"; };
+		CFF992AB2DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-vypada-miminko-po-porodu-3.jpg"; sourceTree = "<group>"; };
+		CFF992AC2DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-1.jpg"; sourceTree = "<group>"; };
+		CFF992AD2DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-2.jpg"; sourceTree = "<group>"; };
+		CFF992AE2DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vaha-a-delka-miminka-1.jpg"; sourceTree = "<group>"; };
+		CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vaha-a-delka-miminka-2.jpg"; sourceTree = "<group>"; };
+		CFF992B02DFD60F500859DC9 /* vitamin-k-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vitamin-k-1.jpg"; sourceTree = "<group>"; };
+		CFF992B92DFD6B8D00859DC9 /* AttributedString+splittoparagraphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+splittoparagraphs.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,14 +403,19 @@
 			path = Bonding;
 			sourceTree = "<group>";
 		};
-		CF478C862DEF89E2003AE7D8 /* Jak vypadá miminko po porodu */ = {
+		CF478C862DEF89E2003AE7D8 /* Po porodu krok za krokem */ = {
 			isa = PBXGroup;
 			children = (
+				CFF992AC2DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg */,
+				CFF992AD2DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg */,
+				CFF992AE2DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg */,
+				CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */,
+				CFF992B02DFD60F500859DC9 /* vitamin-k-1.jpg */,
 				CF478C832DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg */,
 				CF478C842DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg */,
-				CF478C852DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-3.jpeg */,
+				CFF992AB2DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg */,
 			);
-			path = "Jak vypadá miminko po porodu";
+			path = "Po porodu krok za krokem";
 			sourceTree = "<group>";
 		};
 		CF478CB92DEF89E2003AE7D8 /* Porod */ = {
@@ -441,7 +458,7 @@
 				CF478CA92DEF89E2003AE7D8 /* preindukce-porodu-3.jpg */,
 				CF478CAA2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg */,
 				CF478CAB2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg */,
-				CF478CAC2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-3.jpg */,
+				CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */,
 				CF478CAD2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg */,
 				CF478CAE2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-5.jpg */,
 				CF478CAF2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-1.jpg */,
@@ -484,7 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				CF478C822DEF89E2003AE7D8 /* Bonding */,
-				CF478C862DEF89E2003AE7D8 /* Jak vypadá miminko po porodu */,
+				CF478C862DEF89E2003AE7D8 /* Po porodu krok za krokem */,
 				CF478CB92DEF89E2003AE7D8 /* Porod */,
 				CF478CC92DEF89E2003AE7D8 /* Zdravi pod kontrolou */,
 				CF478CCA2DEF89E2003AE7D8 /* otaceni01.png */,
@@ -623,6 +640,7 @@
 		CF71A5A62DFC10A0003AEDC0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CFF992B92DFD6B8D00859DC9 /* AttributedString+splittoparagraphs.swift */,
 				CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */,
 				CF71A5A42DFC106C003AEDC0 /* String+localization.swift */,
 			);
@@ -720,7 +738,6 @@
 				CF478D312DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg in Resources */,
 				CF478D322DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg in Resources */,
 				CF478D332DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg in Resources */,
-				CF478D342DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-3.jpeg in Resources */,
 				CF478D352DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg in Resources */,
 				CF478D362DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg in Resources */,
 				CF478D372DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg in Resources */,
@@ -758,7 +775,6 @@
 				CF478D572DEF89E2003AE7D8 /* preindukce-porodu-3.jpg in Resources */,
 				CF478D582DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg in Resources */,
 				CF478D592DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg in Resources */,
-				CF478D5A2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */,
 				CF478D5B2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg in Resources */,
 				CF478D5C2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-5.jpg in Resources */,
 				CF478D5D2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-1.jpg in Resources */,
@@ -782,10 +798,17 @@
 				CF478D6A2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-4.jpg in Resources */,
 				CF478D6B2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-5.jpg in Resources */,
 				CF478D6C2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-6.jpg in Resources */,
+				CFF992AA2DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */,
 				CF478D6D2DEF89E2003AE7D8 /* jak-se-zloutenka-vysetruje-1.jpg in Resources */,
 				CF478D6E2DEF89E2003AE7D8 /* jak-se-zloutenka-vysetruje-2.jpg in Resources */,
 				CF478D6F2DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-1.jpg in Resources */,
 				CF478D702DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-2.jpg in Resources */,
+				CFF992B12DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg in Resources */,
+				CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */,
+				CFF992B32DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg in Resources */,
+				CFF992B42DFD60F500859DC9 /* vitamin-k-1.jpg in Resources */,
+				CFF992B52DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg in Resources */,
+				CFF992B62DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg in Resources */,
 				CF478D712DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-3.jpg in Resources */,
 				CF478D722DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-4.jpg in Resources */,
 				CF478D732DEF89E2003AE7D8 /* srdecni-jak-probiha-mereni-1.jpg in Resources */,
@@ -852,6 +875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */,
+				CFF992BA2DFD6B9900859DC9 /* AttributedString+splittoparagraphs.swift in Sources */,
 				CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */,
 				CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */,
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,

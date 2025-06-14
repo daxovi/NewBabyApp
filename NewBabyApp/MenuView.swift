@@ -282,9 +282,14 @@ private struct IntroTextView: View {
             }
             if !model.isCollapsable || !isCollapsed {
                 Divider()
-                Text(model.content)
-                    .textStyle(.bodyPrimary)
-                    .multilineTextAlignment(.leading)
+                let textArray = model.content.splitToParagraphs()
+                VStack(alignment: .leading, spacing: 8) {
+                    ForEach(textArray, id: \.self) { paragraph in
+                        Text(paragraph)
+                            .textStyle(.bodyPrimary)
+                            .multilineTextAlignment(.leading)
+                    }
+                }
             }
         }
         .padding()

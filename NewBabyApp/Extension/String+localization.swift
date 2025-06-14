@@ -7,7 +7,6 @@
 
 import Foundation
 
-#if !BARTY_CROUCH
 extension String {
     /// Vrátí lokalizovaný řetězec podle klíče
     var localizedString: String {
@@ -38,9 +37,14 @@ extension String {
         let format = NSLocalizedString(self, comment: comment)
         return String(format: format, arguments: args)
     }
+    
+    /// Lokalizuje + naformátuje Markdown
+    var localizedStringMarkdown: AttributedString {
+            // Načtení lokalizovaného řetězce
+            let raw = NSLocalizedString(self, comment: "")
+            // Přidání dvou mezer před každé '\n' zajistí, že Markdown parser zachová nový řádek
+            let processed = raw.replacingOccurrences(of: "\n", with: "  \n")
+            // Vytvoření AttributedString s Markdown formátováním
+            return try! AttributedString(markdown: processed)
+        }
 }
-
-// Příklad použití:
-// let welcome = "welcome_message".localizedString
-// let logout  = "logout_button".localizedString(comment: "Tlačítko pro odhlášení")
-#endif

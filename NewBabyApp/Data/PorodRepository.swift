@@ -8,7 +8,7 @@
 extension LocalRepository {
     
     static let porod: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "title_porod".localizedString, content: "detail_porod".localizedString)),
+        .introText(IntroTextModel(title: "title_porod".localizedString, content: "detail_porod".localizedStringMarkdown)),
         
         .stories(StoriesModel(title: "title_jaktounasvypadaporod".localizedString, bannerName: "jak-to-u-nas-vypada-0", stories: [
                 Story(type: .image, sourceName: "jak-to-u-nas-vypada-1", text: "jak_to_u_nas_vypada_1".localizedString),
@@ -60,13 +60,13 @@ extension LocalRepository {
     
     // MARK: - I. doba
     static let iDobaPorodni: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "title_cosedejevprvnifaziporodu".localizedString, content: "detail_cosedejevprvnifaziporodu".localizedString)),
-        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpotrebujepomoc".localizedString)),
+        .introText(IntroTextModel(title: "title_cosedejevprvnifaziporodu".localizedString, content: "detail_cosedejevprvnifaziporodu".localizedStringMarkdown)),
+        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpotrebujepomoc".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_monitorovanibehemporodu".localizedString, bannerName: "placeholder", stories: [
             Story(type: .image, sourceName: "monitorovani-behem-porodu-1", text: "monitorovani_behem_porodu_1".localizedString),
             Story(type: .image, sourceName: "monitorovani-behem-porodu-2", text: "monitorovani_behem_porodu_2".localizedString),
         ])),
-        .introText(IntroTextModel(title: "title_moznostitlumenibolestibehemporodu".localizedString, content: "detail_moznostitlumenibolestibehemporodu".localizedString)),
+        .introText(IntroTextModel(title: "title_moznostitlumenibolestibehemporodu".localizedString, content: "detail_moznostitlumenibolestibehemporodu".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_tlumenibolestibezleku".localizedString, bannerName: "placeholder", isHalf: true, stories: [
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-1", text: "tlumeni_bolesti_bez_leku_1".localizedString),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-2", text: "tlumeni_bolesti_bez_leku_2".localizedString),
@@ -80,13 +80,13 @@ extension LocalRepository {
             Story(type: .image, sourceName: "tlumeni-bolesti-s-pouzitim-leku-3", text: "tlumeni_bolesti_s_pouzitim_leku_3".localizedString),
             
         ])),
-        .introText(IntroTextModel(title: "title_moznekomplikaceivfazeporodu".localizedString, content: "detail_moznekomplikaceidobaporodni".localizedString, isCollapsable: true))
+        .introText(IntroTextModel(title: "title_moznekomplikaceivfazeporodu".localizedString, content: "detail_moznekomplikaceidobaporodni".localizedStringMarkdown, isCollapsable: true))
     ]
     
     // MARK: - II. doba
     static let iiDobaPorodni: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "title_cosedejevedruhefaziporodu".localizedString, content: "detail_cosedejevedruhefaziporodu".localizedString)),
-        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpottrebujepomociifazeporodni".localizedString)),
+        .introText(IntroTextModel(title: "title_cosedejevedruhefaziporodu".localizedString, content: "detail_cosedejevedruhefaziporodu".localizedStringMarkdown)),
+        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpottrebujepomociifazeporodni".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_polohapritlaceni".localizedString, bannerName: "placeholder", stories: [
             Story(type: .image, sourceName: "poloha-pri-tlaceni-1", text: "poloha_pri_tlaceni_1".localizedString),
             Story(type: .image, sourceName: "poloha-pri-tlaceni-2", text: "poloha_pri_tlaceni_2".localizedString),
@@ -102,7 +102,7 @@ extension LocalRepository {
             Story(type: .image, sourceName: "po-porodu-3", text: "po_porodu_3".localizedString),
             Story(type: .image, sourceName: "po-porodu-4", text: "po_porodu_4".localizedString)
         ])),
-        .introText(IntroTextModel(title: "title_moznekomplikaceiidobaporodni".localizedString, content: "detail_moznekomplikaceiidobaporodni".localizedString)),
+        .introText(IntroTextModel(title: "title_moznekomplikaceiidobaporodni".localizedString, content: "detail_moznekomplikaceiidobaporodni".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_vakuumextrakce".localizedString, bannerName: "placeholder", isHalf: true, stories: [
             Story(type: .image, sourceName: "vakuumextrakce-1", text: "vakuumextrakce_1".localizedString),
         ])),
@@ -113,19 +113,19 @@ extension LocalRepository {
     
     // MARK: - III. doba
     static let iiiDobaPorodni: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "title_cosedejevetretifaziporodu".localizedString, content: "detail_cosedejevetretifaziporodu".localizedString)),
+        .introText(IntroTextModel(title: "title_cosedejevetretifaziporodu".localizedString, content: "detail_cosedejevetretifaziporodu".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_jakprobihaivfazeporodni".localizedString, bannerName: "placeholder", stories: [
             Story(type: .image, sourceName: "iii-doba-porodni-jak-probiha-1", text: "iii_doba_porodni_jak_probiha_1".localizedString),
             Story(type: .image, sourceName: "iii-doba-porodni-jak-probiha-2", text: "iii_doba_porodni_jak_probiha_2".localizedString),
             Story(type: .image, sourceName: "iii-doba-porodni-jak-probiha-3", text: "iii_doba_porodni_jak_probiha_3".localizedString)
         ])),
-        .introText(IntroTextModel(title: "title_moznekomplikaceivfazeporodu".localizedString, content: "detail_moznekomplikaceiiifazeporodu".localizedString)),
-        .introText(IntroTextModel(title: "title_moznostireseniiiifazeporodu".localizedString, content: "detail_moznostireseniiiifazeporodu".localizedString))
+        .introText(IntroTextModel(title: "title_moznekomplikaceivfazeporodu".localizedString, content: "detail_moznekomplikaceiiifazeporodu".localizedStringMarkdown)),
+        .introText(IntroTextModel(title: "title_moznostireseniiiifazeporodu".localizedString, content: "detail_moznostireseniiiifazeporodu".localizedStringMarkdown))
     ]
     
     // MARK: - IV. doba
     static let ivDobaPorodni: [NavigationDestination] = [
-        .introText(IntroTextModel(title: "title_cosedejevectvrtefaziporodu".localizedString, content: "detail_cosedejevectvrtefaziporodu".localizedString)),
+        .introText(IntroTextModel(title: "title_cosedejevectvrtefaziporodu".localizedString, content: "detail_cosedejevectvrtefaziporodu".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_jakprobihaivfazeporodni".localizedString, bannerName: "placeholder", stories: [
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-1", text: "iv_doba_porodni_jak_probiha_1".localizedString),
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-2", text: "iv_doba_porodni_jak_probiha_2".localizedString),
@@ -134,8 +134,8 @@ extension LocalRepository {
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-5", text: "iv_doba_porodni_jak_probiha_5".localizedString),
             Story(type: .image, sourceName: "iv-doba-porodni-jak-probiha-6", text: "iv_doba_porodni_jak_probiha_6".localizedString)
         ])),
-        .introText(IntroTextModel(title: "title_moznekomplikaceivfazeporodu".localizedString, content: "detail_moznekomplikaceivfazeporodu".localizedString)),
-        .introText(IntroTextModel(title: "title_moznostireseniivfazeporodu".localizedString, content: "detail_moznostireseniivfazeporodu".localizedString))
+        .introText(IntroTextModel(title: "title_moznekomplikaceivfazeporodu".localizedString, content: "detail_moznekomplikaceivfazeporodu".localizedStringMarkdown)),
+        .introText(IntroTextModel(title: "title_moznostireseniivfazeporodu".localizedString, content: "detail_moznostireseniivfazeporodu".localizedStringMarkdown))
     ]
     
 }

@@ -11,7 +11,7 @@ struct IntroTextModel: Identifiable, Hashable, MenuItemModel {
     var id = UUID()
     // data pro zobrazení v menu aplikace
     var title: String
-    var content: String
+    var content: AttributedString
     var isCollapsable: Bool = false
     
     let bannerName: String? = nil
