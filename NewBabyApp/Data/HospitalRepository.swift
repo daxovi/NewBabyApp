@@ -75,12 +75,12 @@ extension LocalRepository {
         // MARK: - vyšetření sluchu
         .menu(MenuModel(title: "title_vysetrenisluchu".localizedString, menuItems: [
             .introText(IntroTextModel(title: "title_procseprovadivysetrenisluchu".localizedString, content: "detail_procseprovadivysetrenisluchu".localizedStringMarkdown)),
-            .stories(StoriesModel(title: "title_jakprobihavysetrenisluchu".localizedString, bannerName: "placeholder", stories: [
+            .stories(StoriesModel(title: "title_jakprobihavysetrenisluchu".localizedString, bannerName: "jakprobihavysetrenisluchu-0", stories: [
                 Story(type: .video, sourceName: "vysetreni-sluchu-1", text: "vysetreni_sluchu_1".localizedString),
                 Story(type: .video, sourceName: "vysetreni-sluchu-2", text: "vysetreni_sluchu_2".localizedString),
                 Story(type: .video, sourceName: "vysetreni-sluchu-3", text: "vysetreni_sluchu_3".localizedString)
                 ])),
-            .stories(StoriesModel(title: "title_kdysevysetrenisluchuprovadi".localizedString, bannerName: "placeholder", stories: [
+            .stories(StoriesModel(title: "title_kdysevysetrenisluchuprovadi".localizedString, bannerName: "kdysevysetrenisluchuprovadi-0", stories: [
                 Story(type: .image, sourceName: "vysetreni-sluchu-4", text: "vysetreni_sluchu_4".localizedString),
                 Story(type: .image, sourceName: "vysetreni-sluchu-5", text: "vysetreni_sluchu_5".localizedString),
                 Story(type: .image, sourceName: "vysetreni-sluchu-6", text: "vysetreni_sluchu_6".localizedString),
@@ -96,7 +96,7 @@ extension LocalRepository {
         // MARK: - Šedý zákal
         .menu(MenuModel(title: "title_screeningnavrozenysedyzakal".localizedString, menuItems: [
             .introText(IntroTextModel(title: "title_cojesedyzakal".localizedString, content: "detail_cojesedyzakal".localizedStringMarkdown)),
-            .stories(StoriesModel(title: "title_jakprobihavysetrenisedyzakal".localizedString, bannerName: "placeholder", stories: [
+            .stories(StoriesModel(title: "title_jakprobihavysetrenisedyzakal".localizedString, bannerName: "jakprobihavysetrenisedyzakal-0", stories: [
                 Story(type: .image, sourceName: "vysetreni-sedy-zakal-1", text: "vysetreni_sedy_zakal_1".localizedString),
                 Story(type: .image, sourceName: "vysetreni-sedy-zakal-2", text: "vysetreni_sedy_zakal_2".localizedString),
                 Story(type: .image, sourceName: "vysetreni-sedy-zakal-3", text: "vysetreni_sedy_zakal_3".localizedString)])),
@@ -116,13 +116,13 @@ extension LocalRepository {
         
         // MARK: - Vyšetření ledvin
         .menu(MenuModel(title: "title_vysetreniledvin".localizedString, menuItems: [
-            .stories(StoriesModel(title: "title_jakprobihavysetreniortopedem".localizedString, bannerName: "placeholder", stories: [
-                Story(type: .image, sourceName: "vysetreni-ledvin-1", text: "vysetreni_ledvin_1".localizedString),
-                Story(type: .image, sourceName: "vysetreni-ledvin-2", text: "vysetreni_ledvin_2".localizedString),
-                Story(type: .image, sourceName: "vysetreni-ledvin-3", text: "vysetreni_ledvin_3".localizedString),
-                Story(type: .image, sourceName: "vysetreni-ledvin-4", text: "vysetreni_ledvin_4".localizedString),
-                Story(type: .image, sourceName: "vysetreni-ledvin-5" , text: "vysetreni_ledvin_5".localizedString),
-                Story(type: .image, sourceName: "vysetreni-ledvin-6", text: "vysetreni_ledvin_6".localizedString),
+            .stories(StoriesModel(title: "title_jakprobihavysetreniledvin".localizedString, bannerName: "jakprobihavysetreniledvin-0", stories: [
+                Story(type: .video, sourceName: "vysetreni-ledvin-1", text: "vysetreni_ledvin_1".localizedString),
+                Story(type: .video, sourceName: "vysetreni-ledvin-2", text: "vysetreni_ledvin_2".localizedString),
+                Story(type: .video, sourceName: "vysetreni-ledvin-3", text: "vysetreni_ledvin_3".localizedString),
+                Story(type: .video, sourceName: "vysetreni-ledvin-4", text: "vysetreni_ledvin_4".localizedString),
+                Story(type: .video, sourceName: "vysetreni-ledvin-5" , text: "vysetreni_ledvin_5".localizedString),
+                Story(type: .video, sourceName: "vysetreni-ledvin-6", text: "vysetreni_ledvin_6".localizedString),
             ])),
             .introText(IntroTextModel(title: "title_jevysetreniledvinpovinne".localizedString, content: "detail_jevysetreniledvinpovinne".localizedStringMarkdown))
             ])),
@@ -130,7 +130,7 @@ extension LocalRepository {
         // MARK: - Vyšetření dětským ortopedem
         .menu(MenuModel(title: "title_vysetrenidetskymortopedem".localizedString, menuItems: [
             .introText(IntroTextModel(title: "title_vysetrenikycliadolnichkoncetinortopedem".localizedString, content: "detail_vysetrenikycliadolnichkoncetinortopedem".localizedStringMarkdown)),
-            .stories(StoriesModel(title: "title_jakprobihavysetreniortopedem".localizedString, bannerName: "placeholder", stories: [
+            .stories(StoriesModel(title: "title_jakprobihavysetreniortopedem".localizedString, bannerName: "jakprobihavysetreniortopedem-0", stories: [
                 Story(type: .video, sourceName: "vysetreni-detsky-ortoped-1", text: "vysetreni_detsky_ortoped_1".localizedString),
                 Story(type: .video, sourceName: "vysetreni-detsky-ortoped-2", text: "vysetreni_detsky_ortoped_2".localizedString),
                 ])),
@@ -165,31 +165,52 @@ extension LocalRepository {
                 Story(type: .image, sourceName: "bonding-s-tatinkem-1", text: "bonding_s_tatinkem_1".localizedString),
                 Story(type: .image, sourceName: "bonding-s-tatinkem-2", text: "bonding_s_tatinkem_2".localizedString),
             ]))])),
+        
+        // MARK: - Jak vypadá miminko po poro=du
         .stories(StoriesModel(title: "title_jakvypadamiminkopoporodu".localizedString, stories: [
             Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-1", text: "jak_vypada_miminko_po_porodu_1".localizedString),
             Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-2", text: "jak_vypada_miminko_po_porodu_2".localizedString),
             Story(type: .image, sourceName: "jak-vypada-miminko-po-porodu-3", text: "jak_vypada_miminko_po_porodu_3".localizedString),
         ])),
+        
+        // MARK: - Měření tělesné teploty
         .stories(StoriesModel(title: "title_merenitelesneteploty".localizedString, stories: [
             Story(type: .video, sourceName: "mereni-teploty-1", text: "mereni_teploty_1".localizedString),
             Story(type: .video, sourceName: "mereni-teploty-2", text: "mereni_teploty_2".localizedString),
             Story(type: .video, sourceName: "mereni-teploty-3", text: "mereni_teploty_3".localizedString),
         ])),
+        
+        // MARK: - Označení novorozence
         .stories(StoriesModel(title: "title_oznaceninovorozence".localizedString, stories: [
             Story(type: .image, sourceName: "oznaceni-novorozence-1", text: "oznaceni_novorozence_1".localizedString),
             Story(type: .image, sourceName: "oznaceni-novorozence-2", text: "oznaceni_novorozence_2".localizedString)
         ])),
+        
+        // MARK: - Močení
         .stories(StoriesModel(title: "title_moceniaodchodstolicky".localizedString, stories: [
             Story(type: .image, sourceName: "moceni-a-odchod-stolicky-1", text: "moceni_a_odchod_stolicky_1".localizedString),
             Story(type: .image, sourceName: "moceni-a-odchod-stolicky-2", text: "moceni_a_odchod_stolicky_2".localizedString),
         ])),
+        
+        // MARK: - Váha a délka miminka
         .stories(StoriesModel(title: "title_vahaadelkamiminka".localizedString, stories: [
             Story(type: .image, sourceName: "vaha-a-delka-miminka-1", text: "vaha_a_delka_miminka_1".localizedString),
             Story(type: .image, sourceName: "vaha-a-delka-miminka-2", text: "vaha_a_delka_miminka_2".localizedString),
         ])),
-        .stories(StoriesModel(title: "title_vitamink".localizedString, stories: [
-            Story(type: .image, sourceName: "vitamin-k-1", text: "vitamin_k_1".localizedString),
+        
+        // MARK: - Vitamín K
+        .menu(MenuModel(title: "title_vitamink".localizedString, menuItems: [
+            .introText(IntroTextModel(title: "title_ochranaprednecekanymkrvacenimvitamink".localizedString, content: "detail_ochranaprednecekanymkrvacenimvitamink".localizedStringMarkdown)),
+            .introText(IntroTextModel(title: "title_cojekrvacinanemocvitamink".localizedString, content: "detail_cojekrvacinanemocvitamink".localizedStringMarkdown, isCollapsable: true)),
+            .stories(StoriesModel(title: "title_jaksekrvacinemocipredchazivitamink".localizedString, bannerName: "placeholder", stories: [
+                Story(type: .image, sourceName: "vitamin-k-1", text: "vitamin_k_1".localizedString),
+                Story(type: .image, sourceName: "vitamin-k-2", text: "vitamin_k_2".localizedString),
+                Story(type: .image, sourceName: "vitamin-k-3", text: "vitamin_k_3".localizedString)
+            ])),
+            .introText(IntroTextModel(title: "title_procjevitaminkdoporuceny".localizedString, content: "detail_procjevitaminkdoporuceny".localizedStringMarkdown, isCollapsable: true))
         ])),
+        
+        // MARK: - Vyšetření krtevní skupiny
         .stories(StoriesModel(title: "title_vysetrenikrevniskupiny".localizedString, stories: [
             Story(type: .image, sourceName: "vysetreni-krevni-skupiny-1", text: "vysetreni_krevni_skupiny_1".localizedString),
             Story(type: .image, sourceName: "vysetreni-krevni-skupiny-2", text: "vysetreni_krevni_skupiny_2".localizedString)

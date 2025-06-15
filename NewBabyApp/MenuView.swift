@@ -158,15 +158,19 @@ private struct MenuBackground: View {
                 Image(imageName)
                     .resizable()
                     .scaledToFit()
-                    .overlay(
-                        LinearGradient(colors: [Color.background.opacity(0.0), Color.background.opacity(0.0), Color.background], startPoint: .center, endPoint: .bottom)
-                    )
-                    .blur(radius: (300 - scrollPosition) * 0.1)
+                    .opacity(Double(scrollPosition - 100) * 0.01)
+//                    .blur(radius: (300 - scrollPosition) * 0.1)
                 
                 Spacer()
             }
         }
         .ignoresSafeArea()
+        #if DEBUG
+        .onChange(of: scrollPosition) { _, _ in
+                print("DEBUG: Scroll position changed: \(scrollPosition)")
+            print("DEBUG: Opacity changed: \(Double(scrollPosition - 100) * 0.01)")
+        }
+        #endif
     }
 }
 

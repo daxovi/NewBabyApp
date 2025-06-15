@@ -149,7 +149,7 @@
 		CF478D9A2DEF89E2003AE7D8 /* zvedani01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478CEF2DEF89E2003AE7D8 /* zvedani01.mp4 */; };
 		CF478D9B2DEF89E2003AE7D8 /* zvedani02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478CF02DEF89E2003AE7D8 /* zvedani02.mp4 */; };
 		CF478D9C2DEF89E2003AE7D8 /* zvedani03.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478CF12DEF89E2003AE7D8 /* zvedani03.mp4 */; };
-		CF478D9D2DEF89E2003AE7D8 /* placeholer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CF32DEF89E2003AE7D8 /* placeholer.jpg */; };
+		CF478D9D2DEF89E2003AE7D8 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CF32DEF89E2003AE7D8 /* placeholder.jpg */; };
 		CF478D9E2DEF89E2003AE7D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF478CFD2DEF89E2003AE7D8 /* Preview Assets.xcassets */; };
 		CF478D9F2DEF89E2003AE7D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF478D042DEF89E2003AE7D8 /* Assets.xcassets */; };
 		CF478DA72DEF8D9F003AE7D8 /* test-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478DA62DEF8D9F003AE7D8 /* test-1.jpeg */; };
@@ -175,6 +175,14 @@
 		CFF992B52DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */; };
 		CFF992B62DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AE2DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg */; };
 		CFF992BA2DFD6B9900859DC9 /* AttributedString+splittoparagraphs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF992B92DFD6B8D00859DC9 /* AttributedString+splittoparagraphs.swift */; };
+		CFF992BD2DFECF8100859DC9 /* jak-to-u-nas-vypada-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992BB2DFECF8100859DC9 /* jak-to-u-nas-vypada-1.mp4 */; };
+		CFF992BE2DFECF8100859DC9 /* jak-to-u-nas-vypada-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992BC2DFECF8100859DC9 /* jak-to-u-nas-vypada-2.mp4 */; };
+		CFF992C52DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992BF2DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 */; };
+		CFF992C62DFED31D00859DC9 /* vysetreni-ledvin-6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992C42DFED31D00859DC9 /* vysetreni-ledvin-6.mp4 */; };
+		CFF992C72DFED31D00859DC9 /* vysetreni-ledvin-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992C12DFED31D00859DC9 /* vysetreni-ledvin-3.mp4 */; };
+		CFF992C82DFED31D00859DC9 /* vysetreni-ledvin-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992C32DFED31D00859DC9 /* vysetreni-ledvin-5.mp4 */; };
+		CFF992C92DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992C02DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 */; };
+		CFF992CA2DFED31D00859DC9 /* vysetreni-ledvin-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFF992C22DFED31D00859DC9 /* vysetreni-ledvin-4.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -305,7 +313,7 @@
 		CF478CEF2DEF89E2003AE7D8 /* zvedani01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zvedani01.mp4; sourceTree = "<group>"; };
 		CF478CF02DEF89E2003AE7D8 /* zvedani02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zvedani02.mp4; sourceTree = "<group>"; };
 		CF478CF12DEF89E2003AE7D8 /* zvedani03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zvedani03.mp4; sourceTree = "<group>"; };
-		CF478CF32DEF89E2003AE7D8 /* placeholer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholer.jpg; sourceTree = "<group>"; };
+		CF478CF32DEF89E2003AE7D8 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		CF478CF52DEF89E2003AE7D8 /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
 		CF478CF62DEF89E2003AE7D8 /* IntroTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTextModel.swift; sourceTree = "<group>"; };
 		CF478CF72DEF89E2003AE7D8 /* MenuItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
@@ -347,6 +355,14 @@
 		CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vaha-a-delka-miminka-2.jpg"; sourceTree = "<group>"; };
 		CFF992B02DFD60F500859DC9 /* vitamin-k-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vitamin-k-1.jpg"; sourceTree = "<group>"; };
 		CFF992B92DFD6B8D00859DC9 /* AttributedString+splittoparagraphs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+splittoparagraphs.swift"; sourceTree = "<group>"; };
+		CFF992BB2DFECF8100859DC9 /* jak-to-u-nas-vypada-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jak-to-u-nas-vypada-1.mp4"; sourceTree = "<group>"; };
+		CFF992BC2DFECF8100859DC9 /* jak-to-u-nas-vypada-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "jak-to-u-nas-vypada-2.mp4"; sourceTree = "<group>"; };
+		CFF992BF2DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-ledvin-1.mp4"; sourceTree = "<group>"; };
+		CFF992C02DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-ledvin-2.mp4"; sourceTree = "<group>"; };
+		CFF992C12DFED31D00859DC9 /* vysetreni-ledvin-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-ledvin-3.mp4"; sourceTree = "<group>"; };
+		CFF992C22DFED31D00859DC9 /* vysetreni-ledvin-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-ledvin-4.mp4"; sourceTree = "<group>"; };
+		CFF992C32DFED31D00859DC9 /* vysetreni-ledvin-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-ledvin-5.mp4"; sourceTree = "<group>"; };
+		CFF992C42DFED31D00859DC9 /* vysetreni-ledvin-6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-ledvin-6.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -528,6 +544,14 @@
 		CF478CF22DEF89E2003AE7D8 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				CFF992BF2DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 */,
+				CFF992C02DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 */,
+				CFF992C12DFED31D00859DC9 /* vysetreni-ledvin-3.mp4 */,
+				CFF992C22DFED31D00859DC9 /* vysetreni-ledvin-4.mp4 */,
+				CFF992C32DFED31D00859DC9 /* vysetreni-ledvin-5.mp4 */,
+				CFF992C42DFED31D00859DC9 /* vysetreni-ledvin-6.mp4 */,
+				CFF992BB2DFECF8100859DC9 /* jak-to-u-nas-vypada-1.mp4 */,
+				CFF992BC2DFECF8100859DC9 /* jak-to-u-nas-vypada-2.mp4 */,
 				CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */,
 				CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */,
 				CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */,
@@ -571,7 +595,7 @@
 			children = (
 				CF478CDA2DEF89E2003AE7D8 /* Image */,
 				CF478CF22DEF89E2003AE7D8 /* Video */,
-				CF478CF32DEF89E2003AE7D8 /* placeholer.jpg */,
+				CF478CF32DEF89E2003AE7D8 /* placeholder.jpg */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -729,6 +753,8 @@
 				CF478D282DEF89E2003AE7D8 /* jak-bonding-probiha-1.jpeg in Resources */,
 				CF478D292DEF89E2003AE7D8 /* jak-bonding-probiha-2.jpeg in Resources */,
 				CF478D2A2DEF89E2003AE7D8 /* jak-bonding-probiha-3.jpeg in Resources */,
+				CFF992BD2DFECF8100859DC9 /* jak-to-u-nas-vypada-1.mp4 in Resources */,
+				CFF992BE2DFECF8100859DC9 /* jak-to-u-nas-vypada-2.mp4 in Resources */,
 				CF478D2B2DEF89E2003AE7D8 /* jak-bonding-probiha-4.jpeg in Resources */,
 				CF478D2C2DEF89E2003AE7D8 /* jak-bonding-probiha-5.jpeg in Resources */,
 				CF478D2D2DEF89E2003AE7D8 /* jak-bonding-probiha-6.jpeg in Resources */,
@@ -755,6 +781,12 @@
 				CF478D432DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-4.jpg in Resources */,
 				CF478D442DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg in Resources */,
 				CF478D452DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-6.jpg in Resources */,
+				CFF992C52DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 in Resources */,
+				CFF992C62DFED31D00859DC9 /* vysetreni-ledvin-6.mp4 in Resources */,
+				CFF992C72DFED31D00859DC9 /* vysetreni-ledvin-3.mp4 in Resources */,
+				CFF992C82DFED31D00859DC9 /* vysetreni-ledvin-5.mp4 in Resources */,
+				CFF992C92DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 in Resources */,
+				CFF992CA2DFED31D00859DC9 /* vysetreni-ledvin-4.mp4 in Resources */,
 				CF478D462DEF89E2003AE7D8 /* jak-to-u-nas-vypada-1.jpg in Resources */,
 				CF478D472DEF89E2003AE7D8 /* jak-to-u-nas-vypada-2.jpg in Resources */,
 				CF478D482DEF89E2003AE7D8 /* planovany-cisarsky-rez-1.jpg in Resources */,
@@ -861,7 +893,7 @@
 				CF478DA72DEF8D9F003AE7D8 /* test-1.jpeg in Resources */,
 				CF478D9B2DEF89E2003AE7D8 /* zvedani02.mp4 in Resources */,
 				CF478D9C2DEF89E2003AE7D8 /* zvedani03.mp4 in Resources */,
-				CF478D9D2DEF89E2003AE7D8 /* placeholer.jpg in Resources */,
+				CF478D9D2DEF89E2003AE7D8 /* placeholder.jpg in Resources */,
 				CF478D9E2DEF89E2003AE7D8 /* Preview Assets.xcassets in Resources */,
 				CF478D9F2DEF89E2003AE7D8 /* Assets.xcassets in Resources */,
 			);
@@ -1041,10 +1073,10 @@
 		CFE57A342CBD6FA200C48924 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDebug;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"NewBabyApp/Preview Content\"";
 				DEVELOPMENT_TEAM = BY8G7HDNPV;
 				ENABLE_PREVIEWS = YES;
@@ -1078,7 +1110,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"NewBabyApp/Preview Content\"";
 				DEVELOPMENT_TEAM = BY8G7HDNPV;
 				ENABLE_PREVIEWS = YES;

@@ -11,8 +11,8 @@ extension LocalRepository {
         .introText(IntroTextModel(title: "title_porod".localizedString, content: "detail_porod".localizedStringMarkdown)),
         
         .stories(StoriesModel(title: "title_jaktounasvypadaporod".localizedString, bannerName: "jak-to-u-nas-vypada-0", stories: [
-                Story(type: .image, sourceName: "jak-to-u-nas-vypada-1", text: "jak_to_u_nas_vypada_1".localizedString),
-                Story(type: .image, sourceName: "jak-to-u-nas-vypada-2", text: "jak_to_u_nas_vypada_2".localizedString),
+                Story(type: .video, sourceName: "jak-to-u-nas-vypada-1", text: "jak_to_u_nas_vypada_1".localizedString),
+                Story(type: .video, sourceName: "jak-to-u-nas-vypada-2", text: "jak_to_u_nas_vypada_2".localizedString),
             ])),
         .stories(StoriesModel(title: "title_vasecestaporodem".localizedString, bannerName: "vase-cesta-porodem-0", stories: [
             Story(type: .image, sourceName: "vase-cesta-porodem-2", text: "Pvase_cesta_porodem_2".localizedString),
@@ -67,14 +67,14 @@ extension LocalRepository {
             Story(type: .image, sourceName: "monitorovani-behem-porodu-2", text: "monitorovani_behem_porodu_2".localizedString),
         ])),
         .introText(IntroTextModel(title: "title_moznostitlumenibolestibehemporodu".localizedString, content: "detail_moznostitlumenibolestibehemporodu".localizedStringMarkdown)),
-        .stories(StoriesModel(title: "title_tlumenibolestibezleku".localizedString, bannerName: "placeholder", isHalf: true, stories: [
+        .stories(StoriesModel(title: "title_tlumenibolestibezleku".localizedString, bannerName: "tlumenibolestibezleku-0", isHalf: true, stories: [
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-1", text: "tlumeni_bolesti_bez_leku_1".localizedString),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-2", text: "tlumeni_bolesti_bez_leku_2".localizedString),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-3", text: "tlumeni_bolesti_bez_leku_3".localizedString),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-4", text: "tlumeni_bolesti_bez_leku_4".localizedString),
             Story(type: .image, sourceName: "tlumeni-bolesti-bez-leku-5", text: "tlumeni_bolesti_bez_leku_5".localizedString),
         ])),
-        .stories(StoriesModel(title: "title_tlumenibolestispouzitimleku".localizedString, bannerName: "placeholder", isHalf: true, stories: [
+        .stories(StoriesModel(title: "title_tlumenibolestispouzitimleku".localizedString, bannerName: "tlumenibolestispouzitimleku-0", isHalf: true, stories: [
             Story(type: .image, sourceName: "tlumeni-bolesti-s-pouzitim-leku-1", text: "tlumeni_bolesti_s_pouzitim_leku_1".localizedString),
             Story(type: .image, sourceName: "tlumeni-bolesti-s-pouzitim-leku-2", text: "tlumeni_bolesti_s_pouzitim_leku_2".localizedString),
             Story(type: .image, sourceName: "tlumeni-bolesti-s-pouzitim-leku-3", text: "tlumeni_bolesti_s_pouzitim_leku_3".localizedString),
