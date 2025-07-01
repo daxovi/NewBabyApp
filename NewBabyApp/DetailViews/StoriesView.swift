@@ -28,10 +28,11 @@ struct StoriesView: View {
     } }
     
     var body: some View {
-        if storiesGroup.stories.isEmpty {
-            Text("Tady není nic k vidění") // TODO: dodělat vtipný emptyview
-        } else {
-            ZStack (alignment: .topTrailing) {
+        Group {
+            if storiesGroup.stories.isEmpty {
+                Text("Tady není nic k vidění") // TODO: dodělat vtipný emptyview
+            } else {
+                ZStack (alignment: .topTrailing) {
                 if let story = storiesGroup.stories[safe: selectedStory] {
                     GeometryReader { proxy in
                         VStack(spacing: 8) {
@@ -90,8 +91,9 @@ struct StoriesView: View {
                 }
                 #endif
             }
-            
+
         }
+        .navigationBarHidden(true)
     }
     
     func resetProgress() {
