@@ -20,12 +20,16 @@ struct SearchView: View {
             List {
                 ForEach(filteredResults) { item in
                     NavigationLink(value: item.destination) {
-                        VStack(alignment: .leading) {
-                            Text(item.destination.title)
-                                .font(.headline)
-                            Text(repo.subtitle(for: item.destination))
-                                .font(.subheadline)
-                                .lineLimit(2)
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: item.destination.iconName)
+                                .frame(width: 20)
+                            VStack(alignment: .leading) {
+                                Text(item.destination.title)
+                                    .font(.headline)
+                                Text(repo.subtitle(for: item.destination))
+                                    .font(.subheadline)
+                                    .lineLimit(2)
+                            }
                         }
                     }
                 }
