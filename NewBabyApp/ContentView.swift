@@ -25,7 +25,7 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $selected) {
             NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
+                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $navigationPath, heartTapAction: showOnboarding)
                     .navigationDestination(for: NavigationDestination.self) { destination in
                         switch destination {
                         case .stories(let model):
@@ -48,7 +48,7 @@ struct ContentView: View {
                 .tag(0)
             
             NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
+                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $navigationPath, heartTapAction: showOnboarding)
                     .navigationDestination(for: NavigationDestination.self) { destination in
                         switch destination {
                         case .stories(let model):
@@ -73,7 +73,7 @@ struct ContentView: View {
                 .tag(1)
             
             NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $navigationPath, heartTapAction: showOnbording)
+                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $navigationPath, heartTapAction: showOnboarding)
                     .navigationDestination(for: NavigationDestination.self) { destination in
                         switch destination {
                         case .stories(let model):
@@ -102,7 +102,7 @@ struct ContentView: View {
         .background(Color.black)
     }
     
-    func showOnbording() {
+    func showOnboarding() {
         self.firstLaunch.toggle()
     }
 }
