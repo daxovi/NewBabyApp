@@ -25,7 +25,7 @@ struct VideoPlayerView: View {
             .onReceive(videoPlayerViewModel.$currentProgress) { newProgress in
                 progress = newProgress // Aktualizace bindingu v ContentView
             }
-            .onChange(of: videoName) { oldValue, newValue in
+            .onChange(of: videoName) { newValue in
                 videoPlayerViewModel.updateVideoName(newValue)
             }
     }
