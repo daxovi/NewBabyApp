@@ -17,18 +17,30 @@ struct SearchView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(filteredResults) { item in
-                    NavigationLink(value: item.destination) {
-                        HStack(alignment: .top, spacing: 8) {
-                            Image(systemName: item.destination.iconName)
-                                .frame(width: 20)
-                            VStack(alignment: .leading) {
-                                Text(item.destination.title)
-                                    .font(.headline)
-                                Text(repo.subtitle(for: item.destination))
-                                    .font(.subheadline)
-                                    .lineLimit(2)
+            Group {
+                if searchText.isEmpty {
+                    VStack {
+                        Spacer()
+                        Label("Zadejte hledaný text", systemImage: "magnifyingglass")
+                            .foregroundColor(.secondary)
+                        Spacer()
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                } else {
+                    List {
+                        ForEach(filteredResults) { item in
+                            NavigationLink(value: item.destination) {
+                                HStack(alignment: .top, spacing: 8) {
+                                    Image(systemName: item.destination.iconName)
+                                        .frame(width: 20)
+                                    VStack(alignment: .leading) {
+                                        Text(item.destination.title)
+                                            .font(.headline)
+                                        Text(repo.subtitle(for: item.destination))
+                                            .font(.subheadline)
+                                            .lineLimit(2)
+                                    }
+                                }
                             }
                         }
                     }
