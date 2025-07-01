@@ -81,8 +81,6 @@ struct MenuItem: View {
             return .text(textItem)
         } else if let menuItem = item as? MenuModel {
             return .menu(menuItem)
-        } else if let detailItem = item as? DetailModel {
-            return .detail(detailItem)
         } else {
             fatalError("Neznámý typ MenuItemModel")
         }

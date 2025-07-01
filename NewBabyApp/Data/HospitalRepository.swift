@@ -22,7 +22,7 @@ extension LocalRepository {
         ]
     )
     
-    private static let zdraviPodKontrolou: [NavigationDestination] = [
+    static let zdraviPodKontrolou: [NavigationDestination] = [
         
         // MARK: - Novorozenecký laboratorní screening
         .menu(MenuModel(title: "title_nls".localizedString, bannerName: "novorozenecky-laboratorni-screening-0", menuItems: [
@@ -141,7 +141,7 @@ extension LocalRepository {
     ])),
     ]
     
-    private static let prvniden: [NavigationDestination] = [
+    static let prvniden: [NavigationDestination] = [
         .introText(IntroTextModel(title: "title_prvnidencovasceka".localizedString, content: "detail_prvnidencovasceka".localizedStringMarkdown)),
         
         // MARK: - Bonding

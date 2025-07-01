@@ -15,7 +15,7 @@ extension LocalRepository {
                 Story(type: .video, sourceName: "jak-to-u-nas-vypada-2", text: "jak_to_u_nas_vypada_2".localizedString),
             ])),
         .stories(StoriesModel(title: "title_vasecestaporodem".localizedString, bannerName: "vase-cesta-porodem-0", stories: [
-            Story(type: .image, sourceName: "vase-cesta-porodem-2", text: "Pvase_cesta_porodem_2".localizedString),
+            Story(type: .image, sourceName: "vase-cesta-porodem-2", text: "vase_cesta_porodem_2".localizedString),
             Story(type: .image, sourceName: "vase-cesta-porodem-3", text: "vase_cesta_porodem_3".localizedString),
             Story(type: .image, sourceName: "vase-cesta-porodem-4", text: "vase_cesta_porodem_4".localizedString),
             Story(type: .image, sourceName: "vase-cesta-porodem-5", text: "vase_cesta_porodem_5".localizedString),
@@ -61,7 +61,7 @@ extension LocalRepository {
     // MARK: - I. doba
     static let iDobaPorodni: [NavigationDestination] = [
         .introText(IntroTextModel(title: "title_cosedejevprvnifaziporodu".localizedString, content: "detail_cosedejevprvnifaziporodu".localizedStringMarkdown)),
-        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpotrebujepomoc".localizedStringMarkdown)),
+        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpotrebujepomocifazeporodni".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_monitorovanibehemporodu".localizedString, bannerName: "placeholder", stories: [
             Story(type: .image, sourceName: "monitorovani-behem-porodu-1", text: "monitorovani_behem_porodu_1".localizedString),
             Story(type: .image, sourceName: "monitorovani-behem-porodu-2", text: "monitorovani_behem_porodu_2".localizedString),
@@ -86,7 +86,7 @@ extension LocalRepository {
     // MARK: - II. doba
     static let iiDobaPorodni: [NavigationDestination] = [
         .introText(IntroTextModel(title: "title_cosedejevedruhefaziporodu".localizedString, content: "detail_cosedejevedruhefaziporodu".localizedStringMarkdown)),
-        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpottrebujepomociifazeporodni".localizedStringMarkdown)),
+        .introText(IntroTextModel(title: "title_kdyzporodpottrebujepomociifazeporodni".localizedString, content: "detail_kdyzporodpotrebujepomociifazeporodni".localizedStringMarkdown)),
         .stories(StoriesModel(title: "title_polohapritlaceni".localizedString, bannerName: "placeholder", stories: [
             Story(type: .image, sourceName: "poloha-pri-tlaceni-1", text: "poloha_pri_tlaceni_1".localizedString),
             Story(type: .image, sourceName: "poloha-pri-tlaceni-2", text: "poloha_pri_tlaceni_2".localizedString),

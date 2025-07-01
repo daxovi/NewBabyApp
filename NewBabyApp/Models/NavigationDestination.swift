@@ -11,7 +11,6 @@ enum NavigationDestination: Hashable {
     case stories(StoriesModel)
     case text(TextModel)
     case menu(MenuModel)
-    case detail(DetailModel)
     case introText(IntroTextModel)
 
     func hash(into hasher: inout Hasher) {
@@ -21,8 +20,6 @@ enum NavigationDestination: Hashable {
         case .text(let model):
             hasher.combine(model.id)
         case .menu(let model):
-            hasher.combine(model.id)
-        case .detail(let model):
             hasher.combine(model.id)
         case .introText(let model):
             hasher.combine(model.id)
@@ -37,8 +34,6 @@ enum NavigationDestination: Hashable {
             return model.bannerName != nil
         case .menu(let model):
             return model.bannerName != nil
-        case .detail(let model):
-            return model.bannerName != nil
         case .introText(_):
             return true
         }
@@ -52,8 +47,6 @@ enum NavigationDestination: Hashable {
             return model.needSpace
         case .menu(let model):
             return model.needSpace
-        case .detail(let model):
-            return model.needSpace
         case .introText(_):
             return true
         }
@@ -64,7 +57,6 @@ enum NavigationDestination: Hashable {
             case .stories(let model): return model.isHalf
             case .text(let model): return model.isHalf
             case .menu(let model): return model.isHalf
-            case .detail(let model): return model.isHalf
             case .introText(_): return false
             }
         }
@@ -77,12 +69,95 @@ enum NavigationDestination: Hashable {
             return lhsModel == rhsModel
         case (.menu(let lhsModel), .menu(let rhsModel)):
             return lhsModel.id == rhsModel.id
-        case (.detail(let lhsModel), .detail(let rhsModel)):
-            return lhsModel.id == rhsModel.id
         case (.introText(let lhsModel), .introText(let rhsModel)):
             return lhsModel.id == rhsModel.id
         default:
             return false
         }
+    }
+}
+
+// MARK: - Search
+extension NavigationDestination {
+    
+    var searchableFulltext: String {
+        switch self {
+        case .introText(let model):
+            return String(model.title + " " + model.content.characters)
+        case .stories(let model):
+            var text: String = ""
+            for story in model.stories {
+                text.append(contentsOf: story.text)
+            }
+            return model.title + " " + text
+//        case .menu(let menuModel):
+//            return menuModel.title
+        default:
+            return ""
+        }
+    }
+    
+    var searchableText: String {
+        switch self {
+        case .introText(let model):
+            return String(model.content.characters)
+        case .stories(let model):
+            var text: String = ""
+            for story in model.stories {
+                text.append(contentsOf: story.text + " ")
+            }
+            return text
+        default:
+            return ""
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .introText(let model):
+            return model.title
+        case .stories(let model):
+            return model.title
+//        case .menu(let menuModel):
+//            return menuModel.title
+        default:
+            return ""
+        }
+    }
+}
+
+extension NavigationDestination {
+    
+    @ViewBuilder
+    func getSwiftUIView() -> some View {
+        switch self {
+        case .stories(let group):
+            StoriesView(storiesGroup: group)
+        case .introText(let intro):
+            findParent(for: intro)
+            
+        default:
+            EmptyView()
+        }
+    }
+    
+    func findParent(for introText: IntroTextModel) -> AnyView {
+        for repository in LocalRepository.menuHospital.menuItems {
+            if case let .menu(menuIModel) = repository {
+                for item in menuIModel.menuItems {
+                    if case let .introText(introTextModel) = item, introTextModel.id == introText.id {
+                        return AnyView(MenuView(model: menuIModel, clientName: "", path: .constant(NavigationPath())))
+                    }
+                if case let .menu(menuModel) = item {
+                    for menuItem in menuModel.menuItems {
+                        if case let .introText(infoTextModel) = menuItem, infoTextModel.id == introText.id {
+                            return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
+                        }
+                    }
+                }
+            }
+            }
+        }
+        return AnyView(EmptyView())
     }
 }

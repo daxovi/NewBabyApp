@@ -12,11 +12,7 @@ extension LocalRepository {
         title: "title_cekamemiminko".localizedString,
         subtitle: "subtitle_cekamemiminko".localizedString,
         backgroundImageName: "title-pregnant",
-        menuItems: [
-            .detail(DetailModel(title: "title_predporodnikurzy".localizedString, bannerName: "predporodni-kurzy")),
-            .detail(DetailModel(title: "title_screeningy".localizedString, bannerName: "screeningy")),
-            .detail(DetailModel(title: "title_nastandardnikurzy".localizedString, bannerName: "sluzby")),
-            .detail(DetailModel(title: "title_porod".localizedString, bannerName: "porod"))
+        menuItems: [ 
         ]
     )
 }

@@ -34,8 +34,6 @@ struct ContentView: View {
                             TextView(model: model)
                         case .menu(let model):
                             MenuView(model: model, clientName: clientName, path: $navigationPath)
-                        case .detail(let model):
-                            DetailView(model: model)
                         case .introText(_):
                             EmptyView()
                         }
@@ -59,8 +57,6 @@ struct ContentView: View {
                             TextView(model: model)
                         case .menu(let model):
                             MenuView(model: model, clientName: clientName, path: $navigationPath)
-                        case .detail(let model):
-                            DetailView(model: model)
                         case .introText(_):
                             EmptyView()
                         }
@@ -86,8 +82,6 @@ struct ContentView: View {
                             TextView(model: model)
                         case .menu(let model):
                             MenuView(model: model, clientName: clientName, path: $navigationPath)
-                        case .detail(let model):
-                            DetailView(model: model)
                         case .introText(_):
                             EmptyView()
                         }

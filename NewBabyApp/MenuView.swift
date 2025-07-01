@@ -180,6 +180,8 @@ private struct MenuHeader: View {
     var heartTapAction: (() -> Void)? = nil
     @Binding var scrollPosition: CGFloat
     
+    @State var isSearchActive: Bool = false
+    
     var body: some View {
         VStack(alignment: .leading){
             HStack {
@@ -192,6 +194,16 @@ private struct MenuHeader: View {
                         heartTapAction?()
                     }
                 Spacer()
+                Image(systemName: "magnifyingglass")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(10)
+                    .background(Color.white.opacity(0.6))
+                    .clipShape(Circle())
+                    .padding(6)
+                    .onTapGesture {
+                        isSearchActive = true
+                    }
             }
             .frame(height: 50)
             
@@ -221,6 +233,10 @@ private struct MenuHeader: View {
             )
         }
         .padding(.horizontal)
+        .sheet(isPresented: $isSearchActive, content: {
+            SearchView()
+
+        })
     }
 }
 
@@ -235,8 +251,6 @@ private struct MenuItemView: View {
             case .text(let model):
                 MenuItem(item: model)
             case .menu(let model):
-                MenuItem(item: model)
-            case .detail(let model):
                 MenuItem(item: model)
             case .introText(let model):
                 IntroTextView(model: model)
