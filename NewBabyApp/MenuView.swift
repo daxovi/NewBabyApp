@@ -142,7 +142,7 @@ struct MenuView: View {
             title: "První den",
             subtitle: "",
             backgroundImageName: "title-baby",
-            menuItems: LocalRepository.porod
+            menuItems: PorodRepository.porod
         ),
         clientName: "Name",
         path: .constant(NavigationPath()))

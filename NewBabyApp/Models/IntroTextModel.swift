@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IntroTextModel: Identifiable, Hashable, MenuItemModel {
+struct IntroTextModel: Identifiable, Hashable, MenuItemModel, Decodable {
     var id = UUID()
     // data pro zobrazení v menu aplikace
     var title: String
@@ -20,6 +20,21 @@ struct IntroTextModel: Identifiable, Hashable, MenuItemModel {
 
     func getBanner() -> Image? {
         return nil
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case titleKey
+        case contentKey
+        case isCollapsable
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let titleKey = try container.decode(String.self, forKey: .titleKey)
+        title = titleKey.localizedString
+        let contentKey = try container.decode(String.self, forKey: .contentKey)
+        content = contentKey.localizedStringMarkdown
+        isCollapsable = try container.decodeIfPresent(Bool.self, forKey: .isCollapsable) ?? false
     }
     
 

@@ -6,14 +6,11 @@
 //
 import SwiftUI
 
-extension LocalRepository {
-    
-    static let menuHome = MenuModel(
-        title: "title_jsmedoma".localizedString,
-        subtitle: "subtitle_jsmedoma".localizedString,
-        backgroundImageName: "title-home".localizedString,
-        menuItems: [
+struct HomeRepository: RepositorySection {
 
-        ]
-    )
+    let menu: MenuModel
+
+    init() {
+        self.menu = Bundle.main.decode(MenuModel.self, from: "home.json")
+    }
 }

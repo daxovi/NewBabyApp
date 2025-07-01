@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-enum NavigationDestination: Hashable {
+enum NavigationDestination: Hashable, Decodable {
+
     case stories(StoriesModel)
     case text(TextModel)
     case menu(MenuModel)
@@ -73,6 +74,42 @@ enum NavigationDestination: Hashable {
             return lhsModel.id == rhsModel.id
         default:
             return false
+        }
+    }
+}
+
+extension NavigationDestination {
+    enum CodingKeys: String, CodingKey {
+        case type
+        case stories
+        case text
+        case menu
+        case introText
+    }
+
+    enum DestinationType: String, Decodable {
+        case stories
+        case text
+        case menu
+        case introText
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(DestinationType.self, forKey: .type)
+        switch type {
+        case .stories:
+            let model = try container.decode(StoriesModel.self, forKey: .stories)
+            self = .stories(model)
+        case .text:
+            let model = try container.decode(TextModel.self, forKey: .text)
+            self = .text(model)
+        case .menu:
+            let model = try container.decode(MenuModel.self, forKey: .menu)
+            self = .menu(model)
+        case .introText:
+            let model = try container.decode(IntroTextModel.self, forKey: .introText)
+            self = .introText(model)
         }
     }
 }

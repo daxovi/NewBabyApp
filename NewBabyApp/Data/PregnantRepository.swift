@@ -6,13 +6,11 @@
 //
 import SwiftUI
 
-extension LocalRepository {
-    
-    static let menuPregnant = MenuModel(
-        title: "title_cekamemiminko".localizedString,
-        subtitle: "subtitle_cekamemiminko".localizedString,
-        backgroundImageName: "title-pregnant",
-        menuItems: [ 
-        ]
-    )
+struct PregnantRepository: RepositorySection {
+
+    let menu: MenuModel
+
+    init() {
+        self.menu = Bundle.main.decode(MenuModel.self, from: "pregnant.json")
+    }
 }

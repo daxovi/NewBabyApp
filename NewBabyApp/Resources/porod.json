@@ -1,0 +1,19 @@
+[
+  {
+    "type": "introText",
+    "introText": {
+      "titleKey": "title_porod",
+      "contentKey": "detail_porod"
+    }
+  },
+  {
+    "type": "stories",
+    "stories": {
+      "titleKey": "title_jaktounasvypadaporod",
+      "bannerName": "jak-to-u-nas-vypada-0",
+      "stories": [
+        {"type": "video", "sourceName": "jak-to-u-nas-vypada-1", "textKey": "jak_to_u_nas_vypada_1"}
+      ]
+    }
+  }
+]
