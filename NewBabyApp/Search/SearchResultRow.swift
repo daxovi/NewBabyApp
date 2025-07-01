@@ -21,12 +21,33 @@ struct SearchResultRow: View {
 
 #Preview {
     NavigationStack {
-        let item = NavigationSearchItem(
-            destination: .introText(IntroTextModel(title: "Ukázka", content: AttributedString("Jakmile bude třeba přidat či upravit položky, změní se jen JSON soubor(y), nikoli zdrojový kód.")))
-        )
+        let repo = SearchRepository()
+        let items: [NavigationSearchItem] = [
+            .init(destination: .introText(
+                IntroTextModel(title: "Intro", content: AttributedString("Intro text"))
+            )),
+            .init(destination: .text(
+                TextModel(title: "Text", text: "Sample text")
+            )),
+            .init(destination: .stories(
+                StoriesModel(title: "Video stories", stories: [
+                    Story(type: .video, sourceName: "video.mp4", text: "Video")
+                ])
+            )),
+            .init(destination: .stories(
+                StoriesModel(title: "Image stories", stories: [
+                    Story(type: .image, sourceName: "image.png", text: "Image")
+                ])
+            )),
+            .init(destination: .menu(
+                MenuModel(title: "Menu", menuItems: [])
+            ))
+        ]
         List {
-            NavigationLink(value: item.destination) {
-                SearchResultRow(item: item, repo: SearchRepository())
+            ForEach(items) { item in
+                NavigationLink(value: item.destination) {
+                    SearchResultRow(item: item, repo: repo)
+                }
             }
         }
         .navigationDestination(for: NavigationDestination.self) { destination in
