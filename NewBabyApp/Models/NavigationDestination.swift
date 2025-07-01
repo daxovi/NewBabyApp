@@ -84,8 +84,12 @@ extension NavigationDestination {
             return "list.bullet"
         case .introText:
             return "text.justify"
-        case .stories:
-            return "photo.on.rectangle"
+        case .stories(let model):
+            if model.stories.contains(where: { $0.type == .video }) {
+                return "play.rectangle"
+            } else {
+                return "photo.on.rectangle"
+            }
         case .text:
             return "doc.text"
         }
