@@ -23,9 +23,16 @@ struct SearchView: View {
                         VStack(alignment: .leading) {
                             Text(item.destination.title)
                                 .font(.headline)
-                            Text(item.destination.searchableText)
-                                .font(.subheadline)
-                                .lineLimit(2)
+                            if case .menu(let menuModel) = item.destination {
+                                // Zobraz pouze obsah podmenu bez titulku
+                                Text(menuModel.menuItems.map { $0.searchableText }.joined(separator: " "))
+                                    .font(.subheadline)
+                                    .lineLimit(2)
+                            } else {
+                                Text(item.destination.searchableText)
+                                    .font(.subheadline)
+                                    .lineLimit(2)
+                            }
                         }
                     }
                 }

@@ -90,8 +90,8 @@ extension NavigationDestination {
                 text.append(contentsOf: story.text)
             }
             return model.title + " " + text
-//        case .menu(let menuModel):
-//            return menuModel.title
+        case .menu(let menuModel):
+            return menuModel.title + " " + (menuModel.menuItems.map { $0.searchableFulltext }.joined(separator: " "))
         default:
             return ""
         }
@@ -107,6 +107,8 @@ extension NavigationDestination {
                 text.append(contentsOf: story.text + " ")
             }
             return text
+        case .menu(let menuModel):
+            return menuModel.title + " " + (menuModel.menuItems.map { $0.searchableText }.joined(separator: " "))
         default:
             return ""
         }
@@ -118,8 +120,8 @@ extension NavigationDestination {
             return model.title
         case .stories(let model):
             return model.title
-//        case .menu(let menuModel):
-//            return menuModel.title
+        case .menu(let menuModel):
+            return menuModel.title
         default:
             return ""
         }
@@ -135,9 +137,10 @@ extension NavigationDestination {
             StoriesView(storiesGroup: group)
         case .introText(let intro):
             findParent(for: intro)
-            
-        default:
-            EmptyView()
+        case .menu(let menuModel):
+            MenuView(model: menuModel, clientName: nil, path: .constant(NavigationPath()))
+        case .text(let model):
+            TextView(model: model)
         }
     }
     

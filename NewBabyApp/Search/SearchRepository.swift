@@ -70,9 +70,22 @@ final class SearchRepository {
 
     func filteredItems(for query: String) -> [NavigationSearchItem] {
         guard !query.isEmpty else { return [] }
-
-        return allSearchItems().filter {
-            $0.destination.searchableFulltext.containsFolded(query)
+        let allItems = allSearchItems()
+        let lowercasedQuery = query.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+        // 1. Přesná shoda v title
+        let exactTitleMatches = allItems.filter {
+            $0.destination.title.folding(options: .diacriticInsensitive, locale: .current).lowercased() == lowercasedQuery
         }
+        // 2. Title obsahuje hledaný výraz (ale není přesná shoda)
+        let partialTitleMatches = allItems.filter {
+            $0.destination.title.folding(options: .diacriticInsensitive, locale: .current).lowercased().contains(lowercasedQuery)
+            && $0.destination.title.folding(options: .diacriticInsensitive, locale: .current).lowercased() != lowercasedQuery
+        }
+        // 3. Ostatní (fulltext)
+        let otherMatches = allItems.filter {
+            !$0.destination.title.folding(options: .diacriticInsensitive, locale: .current).lowercased().contains(lowercasedQuery)
+            && $0.destination.searchableFulltext.folding(options: .diacriticInsensitive, locale: .current).lowercased().contains(lowercasedQuery)
+        }
+        return exactTitleMatches + partialTitleMatches + otherMatches
     }
 }
