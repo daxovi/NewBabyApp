@@ -26,9 +26,6 @@ struct SearchResultRow: View {
             .init(destination: .introText(
                 IntroTextModel(title: "Intro", content: AttributedString("Intro text"))
             )),
-            .init(destination: .text(
-                TextModel(title: "Text", text: "Sample text")
-            )),
             .init(destination: .stories(
                 StoriesModel(title: "Video stories", stories: [
                     Story(type: .video, sourceName: "video.mp4", text: "Video")
@@ -40,7 +37,9 @@ struct SearchResultRow: View {
                 ])
             )),
             .init(destination: .menu(
-                MenuModel(title: "Menu", menuItems: [])
+                MenuModel(title: "Menu", menuItems: [
+                    .introText(IntroTextModel(title: "Intro", content: AttributedString("Intro text"))),
+                ])
             ))
         ]
         List {
