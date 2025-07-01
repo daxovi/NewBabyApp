@@ -166,7 +166,7 @@ private struct MenuBackground: View {
         }
         .ignoresSafeArea()
         #if DEBUG
-        .onChange(of: scrollPosition) { _, _ in
+        .onChange(of: scrollPosition) { _ in
                 print("DEBUG: Scroll position changed: \(scrollPosition)")
             print("DEBUG: Opacity changed: \(Double(scrollPosition - 100) * 0.01)")
         }
@@ -226,7 +226,7 @@ private struct MenuHeader: View {
             .background(
                 GeometryReader { geo in
                     Color.clear
-                        .onChange(of: geo.frame(in: .global).minY) { oldValue, newValue in
+                        .onChange(of: geo.frame(in: .global).minY) { newValue in
                             scrollPosition = newValue
                         }
                 }
