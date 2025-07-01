@@ -77,6 +77,25 @@ enum NavigationDestination: Hashable {
     }
 }
 
+extension NavigationDestination {
+    var iconName: String {
+        switch self {
+        case .menu:
+            return "list.bullet"
+        case .introText:
+            return "text.justify"
+        case .stories(let model):
+            if model.stories.contains(where: { $0.type == .video }) {
+                return "play.rectangle"
+            } else {
+                return "photo.on.rectangle"
+            }
+        case .text:
+            return "doc.text"
+        }
+    }
+}
+
 // MARK: - Search
 extension NavigationDestination {
     
