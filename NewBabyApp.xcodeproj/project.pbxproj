@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173C22E1438C800D6F11E /* SearchResultRow.swift */; };
 		CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */; };
 		CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */; };
 		CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */; };
@@ -187,6 +188,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF4173C22E1438C800D6F11E /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
 		CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepository.swift; sourceTree = "<group>"; };
 		CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 		CFF992CB2DFF164E00859DC9 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				CF4173C22E1438C800D6F11E /* SearchResultRow.swift */,
 				CFF992CE2DFF169300859DC9 /* SearchRepository.swift */,
 				CFF992D12DFF19FD00859DC9 /* SearchView.swift */,
 			);
@@ -928,6 +931,7 @@
 				CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */,
 				CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */,
 				CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */,
+				CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */,
 				CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */,
 				CF478D142DEF89E2003AE7D8 /* VideoPlayerView.swift in Sources */,
 				CF478D172DEF89E2003AE7D8 /* IntroTextModel.swift in Sources */,

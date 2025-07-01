@@ -20,8 +20,17 @@ struct SearchResultRow: View {
 }
 
 #Preview {
-    SearchResultRow(
-        item: NavigationSearchItem(destination: .introText(IntroTextModel(title: "Ukázka", content: AttributedString("Text"))),
-        repo: SearchRepository()
-    )
+    NavigationStack {
+        let item = NavigationSearchItem(
+            destination: .introText(IntroTextModel(title: "Ukázka", content: AttributedString("Jakmile bude třeba přidat či upravit položky, změní se jen JSON soubor(y), nikoli zdrojový kód.")))
+        )
+        List {
+            NavigationLink(value: item.destination) {
+                SearchResultRow(item: item, repo: SearchRepository())
+            }
+        }
+        .navigationDestination(for: NavigationDestination.self) { destination in
+            destination.getSwiftUIView()
+        }
+    }
 }
