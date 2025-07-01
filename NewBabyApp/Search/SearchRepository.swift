@@ -88,4 +88,12 @@ final class SearchRepository {
         }
         return exactTitleMatches + partialTitleMatches + otherMatches
     }
+
+    func subtitle(for destination: NavigationDestination) -> String {
+        if case let .menu(menuModel) = destination {
+            return menuModel.menuItems.map { $0.searchableText }.joined(separator: " ")
+        } else {
+            return destination.searchableText
+        }
+    }
 }
