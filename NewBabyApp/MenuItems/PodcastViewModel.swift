@@ -12,6 +12,7 @@ import SwiftUI
 class PodcastViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
     @Published var isPlaying: Bool = false
     @Published var progress: Double = 0
+    @Published var waveformSamples: [Float] = []
     @Published var isSeeking: Bool = false
 
     private var player: AVAudioPlayer?
@@ -32,6 +33,7 @@ class PodcastViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
             player = try? AVAudioPlayer(contentsOf: url)
             player?.delegate = self
             player?.prepareToPlay()
+            self.waveformSamples = Self.loadWaveformSamples(url: url, samplesCount: 100)
         }
         setupRemoteTransportControls()
         updateNowPlaying()
@@ -116,5 +118,38 @@ class PodcastViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         player.currentTime = newTime
         self.progress = player.currentTime / player.duration
         updateNowPlaying(playbackRate: player.isPlaying ? 1 : 0)
+    }
+
+    static func loadWaveformSamples(url: URL, samplesCount: Int) -> [Float] {
+        let asset = AVAsset(url: url)
+        guard let track = asset.tracks(withMediaType: .audio).first else { return Array(repeating: 0.1, count: samplesCount) }
+        let assetReader = try? AVAssetReader(asset: asset)
+        let outputSettings: [String: Any] = [AVFormatIDKey: kAudioFormatLinearPCM,
+                                             AVLinearPCMIsBigEndianKey: false,
+                                             AVLinearPCMIsFloatKey: true,
+                                             AVLinearPCMBitDepthKey: 32]
+        let output = AVAssetReaderTrackOutput(track: track, outputSettings: outputSettings)
+        assetReader?.add(output)
+        assetReader?.startReading()
+        var sampleData = [Float]()
+        while let buffer = output.copyNextSampleBuffer(),
+              let blockBuffer = CMSampleBufferGetDataBuffer(buffer) {
+            let length = CMBlockBufferGetDataLength(blockBuffer)
+            var data = [Float](repeating: 0, count: length/4)
+            CMBlockBufferCopyDataBytes(blockBuffer, atOffset: 0, dataLength: length, destination: &data)
+            sampleData.append(contentsOf: data)
+        }
+        if sampleData.isEmpty { return Array(repeating: 0.1, count: samplesCount) }
+        let chunkSize = max(1, sampleData.count / samplesCount)
+        var result = [Float]()
+        for i in 0..<samplesCount {
+            let start = i * chunkSize
+            let end = min(start + chunkSize, sampleData.count)
+            let chunk = sampleData[start..<end]
+            let maxVal = chunk.map { abs($0) }.max() ?? 0
+            result.append(maxVal)
+        }
+        let maxSample = result.max() ?? 1
+        return result.map { max(0.05, $0 / maxSample) }
     }
 }

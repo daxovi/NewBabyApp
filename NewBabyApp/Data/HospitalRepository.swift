@@ -147,6 +147,7 @@ extension LocalRepository {
         // MARK: - Bonding
         .menu(MenuModel(title: "title_bonding".localizedString, bannerName: "bonding", menuItems: [
             .introText(IntroTextModel(title: "title_cojebonding".localizedString, content: "detail_cojebonding".localizedStringMarkdown)),
+            .podcast(PodcastModel(title: "title_bonding".localizedString, fileName: "bonding")),
             .stories(StoriesModel(title: "title_jakbondingprobiha".localizedString, bannerName: "jak_bonding_probiha", stories: [
                 Story(type: .image, sourceName: "jak-bonding-probiha-1", text: "jak_bonding_probiha_1".localizedString),
                 Story(type: .image, sourceName: "jak-bonding-probiha-2", text: "jak_bonding_probiha_2".localizedString),

@@ -21,7 +21,7 @@ extension LocalRepository {
             Story(type: .image, sourceName: "vase-cesta-porodem-5", text: "vase_cesta_porodem_5".localizedString),
             Story(type: .image, sourceName: "vase-cesta-porodem-6", text: "vase_cesta_porodem_6".localizedString),
         ])),
-        .podcast(PodcastModel(title: "title_podcast_porod".localizedString, fileName: "sample")),
+        .podcast(PodcastModel(title: "title_poroddovody".localizedString, fileName: "poroddovody")),
         
         .menu(MenuModel(title: "title_idobaporodniporod".localizedString, menuItems: iDobaPorodni)),
         .menu(MenuModel(title: "title_iidobaporodniporod".localizedString, menuItems: iiDobaPorodni)),

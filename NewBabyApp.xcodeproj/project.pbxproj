@@ -11,12 +11,14 @@
 		CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */; };
 		CF4173DE2E15029700D6F11E /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */; };
 		CF4173E02E1502B600D6F11E /* PodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DF2E1502B300D6F11E /* PodcastView.swift */; };
-		CF4173E42E15039F00D6F11E /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4173E32E15039F00D6F11E /* sample.mp3 */; };
+		CF4173E42E15039F00D6F11E /* poroddovody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4173E32E15039F00D6F11E /* poroddovody.mp3 */; };
 		CF4173E72E150DA500D6F11E /* IntroTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173E62E150D9F00D6F11E /* IntroTextView.swift */; };
 		CF4173E92E150E1700D6F11E /* DoubleMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173E82E150E1200D6F11E /* DoubleMenuItemView.swift */; };
 		CF4173EB2E150E3800D6F11E /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173EA2E150E3500D6F11E /* MenuItemView.swift */; };
 		CF4173ED2E150E6100D6F11E /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173EC2E150E5E00D6F11E /* MenuHeader.swift */; };
 		CF4173EF2E150E7B00D6F11E /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173EE2E150E7800D6F11E /* MenuBackground.swift */; };
+		CF4173F12E15148300D6F11E /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173F02E15148300D6F11E /* WaveformView.swift */; };
+		CF4173F32E15194E00D6F11E /* bonding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4173F22E15194E00D6F11E /* bonding.mp3 */; };
 		CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */; };
 		CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */; };
 		CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */; };
@@ -201,12 +203,14 @@
 		CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastModel.swift; sourceTree = "<group>"; };
 		CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
 		CF4173DF2E1502B300D6F11E /* PodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastView.swift; sourceTree = "<group>"; };
-		CF4173E32E15039F00D6F11E /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		CF4173E32E15039F00D6F11E /* poroddovody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poroddovody.mp3; sourceTree = "<group>"; };
 		CF4173E62E150D9F00D6F11E /* IntroTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTextView.swift; sourceTree = "<group>"; };
 		CF4173E82E150E1200D6F11E /* DoubleMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleMenuItemView.swift; sourceTree = "<group>"; };
 		CF4173EA2E150E3500D6F11E /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		CF4173EC2E150E5E00D6F11E /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
 		CF4173EE2E150E7800D6F11E /* MenuBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackground.swift; sourceTree = "<group>"; };
+		CF4173F02E15148300D6F11E /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		CF4173F22E15194E00D6F11E /* bonding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bonding.mp3; sourceTree = "<group>"; };
 		CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepository.swift; sourceTree = "<group>"; };
 		CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
@@ -401,7 +405,8 @@
 		CF4173E22E15038C00D6F11E /* Podcast */ = {
 			isa = PBXGroup;
 			children = (
-				CF4173E32E15039F00D6F11E /* sample.mp3 */,
+				CF4173F22E15194E00D6F11E /* bonding.mp3 */,
+				CF4173E32E15039F00D6F11E /* poroddovody.mp3 */,
 			);
 			path = Podcast;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 		CF4173E52E150D6500D6F11E /* MenuItems */ = {
 			isa = PBXGroup;
 			children = (
+				CF4173F02E15148300D6F11E /* WaveformView.swift */,
 				CF478D012DEF89E2003AE7D8 /* MenuItem.swift */,
 				CF4173EA2E150E3500D6F11E /* MenuItemView.swift */,
 				CF4173E82E150E1200D6F11E /* DoubleMenuItemView.swift */,
@@ -911,7 +917,7 @@
 				CF478D7A2DEF89E2003AE7D8 /* otaceni05.png in Resources */,
 				CF478D7B2DEF89E2003AE7D8 /* otaceni06.png in Resources */,
 				CF478D7C2DEF89E2003AE7D8 /* otaceni07.png in Resources */,
-				CF4173E42E15039F00D6F11E /* sample.mp3 in Resources */,
+				CF4173E42E15039F00D6F11E /* poroddovody.mp3 in Resources */,
 				CF478D7D2DEF89E2003AE7D8 /* testclip2.jpg in Resources */,
 				CF478D7E2DEF89E2003AE7D8 /* testclip3.jpg in Resources */,
 				CF478D7F2DEF89E2003AE7D8 /* zabaleni01.png in Resources */,
@@ -940,6 +946,7 @@
 				CF478D902DEF89E2003AE7D8 /* tygrik01.mp4 in Resources */,
 				CF478D912DEF89E2003AE7D8 /* tygrik02.mp4 in Resources */,
 				CF478D922DEF89E2003AE7D8 /* tygrik03.mp4 in Resources */,
+				CF4173F32E15194E00D6F11E /* bonding.mp3 in Resources */,
 				CF478D932DEF89E2003AE7D8 /* tygrik04.mp4 in Resources */,
 				CF478D942DEF89E2003AE7D8 /* tygrik05.mp4 in Resources */,
 				CF478D952DEF89E2003AE7D8 /* tygrik06.mp4 in Resources */,
@@ -999,6 +1006,7 @@
 				CF478D212DEF89E2003AE7D8 /* MenuView.swift in Sources */,
 				CF478D222DEF89E2003AE7D8 /* NewBabyAppApp.swift in Sources */,
 				CF4173EF2E150E7B00D6F11E /* MenuBackground.swift in Sources */,
+				CF4173F12E15148300D6F11E /* WaveformView.swift in Sources */,
 				CFF992CF2DFF169600859DC9 /* SearchRepository.swift in Sources */,
 				CF478D232DEF89E2003AE7D8 /* OnboardingView.swift in Sources */,
 				CF478D242DEF89E2003AE7D8 /* Utils.swift in Sources */,

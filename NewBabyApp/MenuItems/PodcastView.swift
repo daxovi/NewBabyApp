@@ -10,25 +10,30 @@ import SwiftUI
 struct PodcastView: View {
     let model: PodcastModel
     @StateObject private var viewModel: PodcastViewModel
-
+    
     init(model: PodcastModel) {
         self.model = model
         _viewModel = StateObject(wrappedValue: PodcastViewModel(fileName: model.fileName, title: model.title))
     }
-
+    
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(alignment: .leading, spacing: 20) {
             Text(model.title)
-                .font(.title2)
-            Slider(value: $viewModel.progress, onEditingChanged: { editing in
-                viewModel.isSeeking = editing
-                if !editing {
-                    viewModel.seekToProgress(viewModel.progress)
+                .textStyle(.smallTitle)
+            HStack(spacing: 20) {
+                Button(action: { viewModel.togglePlay() }) {
+                    Image(systemName: viewModel.isPlaying ? "pause.circle" : "play.circle")
+                        .font(.largeTitle)
                 }
-            })
-            Button(action: { viewModel.togglePlay() }) {
-                Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
-                    .font(.largeTitle)
+                WaveformView(
+                    samples: viewModel.waveformSamples,
+                    progress: viewModel.progress,
+                    onSeek: { rel in
+                        viewModel.isSeeking = false
+                        viewModel.seekToProgress(rel)
+                    }
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 15))
             }
         }
         .padding()
