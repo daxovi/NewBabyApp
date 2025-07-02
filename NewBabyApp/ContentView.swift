@@ -11,7 +11,9 @@ struct ContentView: View {
     @State var selected: Int = 0
     @AppStorage("clientName") var clientName: String = ""
     @AppStorage("firstLaunch") var firstLaunch: Bool = true
-    @State private var navigationPath = NavigationPath()
+    @State private var pregnantPath = NavigationPath()
+    @State private var hospitalPath = NavigationPath()
+    @State private var homePath = NavigationPath()
     
     init() {
             let appearance = UITabBarAppearance()
@@ -24,8 +26,8 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selected) {
-            NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $navigationPath, heartTapAction: showOnboarding)
+            NavigationStack(path: $pregnantPath) {
+                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $pregnantPath, heartTapAction: showOnboarding)
                     .navigationDestination(for: NavigationDestination.self) { destination in
                         switch destination {
                         case .stories(let model):
@@ -33,8 +35,10 @@ struct ContentView: View {
                         case .text(let model):
                             TextView(model: model)
                         case .menu(let model):
-                            MenuView(model: model, clientName: clientName, path: $navigationPath)
+                            MenuView(model: model, clientName: clientName, path: $pregnantPath)
                         case .introText(_):
+                            EmptyView()
+                        case .podcast(_):
                             EmptyView()
                         }
                     }
@@ -47,8 +51,8 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $navigationPath, heartTapAction: showOnboarding)
+            NavigationStack(path: $hospitalPath) {
+                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $hospitalPath, heartTapAction: showOnboarding)
                     .navigationDestination(for: NavigationDestination.self) { destination in
                         switch destination {
                         case .stories(let model):
@@ -56,8 +60,10 @@ struct ContentView: View {
                         case .text(let model):
                             TextView(model: model)
                         case .menu(let model):
-                            MenuView(model: model, clientName: clientName, path: $navigationPath)
+                            MenuView(model: model, clientName: clientName, path: $hospitalPath)
                         case .introText(_):
+                            EmptyView()
+                        case .podcast(_):
                             EmptyView()
                         }
                     }
@@ -72,8 +78,8 @@ struct ContentView: View {
                 }
                 .tag(1)
             
-            NavigationStack(path: $navigationPath) {
-                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $navigationPath, heartTapAction: showOnboarding)
+            NavigationStack(path: $homePath) {
+                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $homePath, heartTapAction: showOnboarding)
                     .navigationDestination(for: NavigationDestination.self) { destination in
                         switch destination {
                         case .stories(let model):
@@ -81,8 +87,10 @@ struct ContentView: View {
                         case .text(let model):
                             TextView(model: model)
                         case .menu(let model):
-                            MenuView(model: model, clientName: clientName, path: $navigationPath)
+                            MenuView(model: model, clientName: clientName, path: $homePath)
                         case .introText(_):
+                            EmptyView()
+                        case .podcast(_):
                             EmptyView()
                         }
                     }

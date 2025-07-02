@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173C22E1438C800D6F11E /* SearchResultRow.swift */; };
+		CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */; };
+		CF4173DE2E15029700D6F11E /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */; };
+		CF4173E02E1502B600D6F11E /* PodcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DF2E1502B300D6F11E /* PodcastView.swift */; };
+		CF4173E42E15039F00D6F11E /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4173E32E15039F00D6F11E /* sample.mp3 */; };
+		CF4173E72E150DA500D6F11E /* IntroTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173E62E150D9F00D6F11E /* IntroTextView.swift */; };
+		CF4173E92E150E1700D6F11E /* DoubleMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173E82E150E1200D6F11E /* DoubleMenuItemView.swift */; };
+		CF4173EB2E150E3800D6F11E /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173EA2E150E3500D6F11E /* MenuItemView.swift */; };
+		CF4173ED2E150E6100D6F11E /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173EC2E150E5E00D6F11E /* MenuHeader.swift */; };
+		CF4173EF2E150E7B00D6F11E /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173EE2E150E7800D6F11E /* MenuBackground.swift */; };
 		CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */; };
 		CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */; };
 		CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */; };
@@ -189,6 +198,15 @@
 
 /* Begin PBXFileReference section */
 		CF4173C22E1438C800D6F11E /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
+		CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastModel.swift; sourceTree = "<group>"; };
+		CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
+		CF4173DF2E1502B300D6F11E /* PodcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastView.swift; sourceTree = "<group>"; };
+		CF4173E32E15039F00D6F11E /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		CF4173E62E150D9F00D6F11E /* IntroTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTextView.swift; sourceTree = "<group>"; };
+		CF4173E82E150E1200D6F11E /* DoubleMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleMenuItemView.swift; sourceTree = "<group>"; };
+		CF4173EA2E150E3500D6F11E /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		CF4173EC2E150E5E00D6F11E /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
+		CF4173EE2E150E7800D6F11E /* MenuBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackground.swift; sourceTree = "<group>"; };
 		CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepository.swift; sourceTree = "<group>"; };
 		CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
@@ -380,6 +398,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF4173E22E15038C00D6F11E /* Podcast */ = {
+			isa = PBXGroup;
+			children = (
+				CF4173E32E15039F00D6F11E /* sample.mp3 */,
+			);
+			path = Podcast;
+			sourceTree = "<group>";
+		};
+		CF4173E52E150D6500D6F11E /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				CF478D012DEF89E2003AE7D8 /* MenuItem.swift */,
+				CF4173EA2E150E3500D6F11E /* MenuItemView.swift */,
+				CF4173E82E150E1200D6F11E /* DoubleMenuItemView.swift */,
+				CF4173E62E150D9F00D6F11E /* IntroTextView.swift */,
+				CF4173DF2E1502B300D6F11E /* PodcastView.swift */,
+				CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */,
+			);
+			path = MenuItems;
+			sourceTree = "<group>";
+		};
 		CF478C6C2DEF89E2003AE7D8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +635,7 @@
 		CF478CF42DEF89E2003AE7D8 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				CF4173E22E15038C00D6F11E /* Podcast */,
 				CF478CDA2DEF89E2003AE7D8 /* Image */,
 				CF478CF22DEF89E2003AE7D8 /* Video */,
 				CF478CF32DEF89E2003AE7D8 /* placeholder.jpg */,
@@ -606,6 +646,7 @@
 		CF478CFC2DEF89E2003AE7D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */,
 				CF478CF62DEF89E2003AE7D8 /* IntroTextModel.swift */,
 				CF478CF72DEF89E2003AE7D8 /* MenuItemModel.swift */,
 				CF478CF82DEF89E2003AE7D8 /* MenuModel.swift */,
@@ -635,7 +676,8 @@
 		CF478D032DEF89E2003AE7D8 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
-				CF478D012DEF89E2003AE7D8 /* MenuItem.swift */,
+				CF4173EE2E150E7800D6F11E /* MenuBackground.swift */,
+				CF4173EC2E150E5E00D6F11E /* MenuHeader.swift */,
 				CF478D022DEF89E2003AE7D8 /* VideoPlayerFullscreen.swift */,
 			);
 			path = SubViews;
@@ -644,6 +686,7 @@
 		CF478D0A2DEF89E2003AE7D8 /* NewBabyApp */ = {
 			isa = PBXGroup;
 			children = (
+				CF4173E52E150D6500D6F11E /* MenuItems */,
 				CFF992CB2DFF164E00859DC9 /* Search */,
 				CF71A5A62DFC10A0003AEDC0 /* Extension */,
 				CF478C6C2DEF89E2003AE7D8 /* Data */,
@@ -868,6 +911,7 @@
 				CF478D7A2DEF89E2003AE7D8 /* otaceni05.png in Resources */,
 				CF478D7B2DEF89E2003AE7D8 /* otaceni06.png in Resources */,
 				CF478D7C2DEF89E2003AE7D8 /* otaceni07.png in Resources */,
+				CF4173E42E15039F00D6F11E /* sample.mp3 in Resources */,
 				CF478D7D2DEF89E2003AE7D8 /* testclip2.jpg in Resources */,
 				CF478D7E2DEF89E2003AE7D8 /* testclip3.jpg in Resources */,
 				CF478D7F2DEF89E2003AE7D8 /* zabaleni01.png in Resources */,
@@ -928,10 +972,16 @@
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,
 				CF478D0E2DEF89E2003AE7D8 /* PorodRepository.swift in Sources */,
 				CF478D0F2DEF89E2003AE7D8 /* PregnantRepository.swift in Sources */,
+				CF4173E72E150DA500D6F11E /* IntroTextView.swift in Sources */,
 				CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */,
 				CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */,
 				CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */,
+				CF4173DE2E15029700D6F11E /* PodcastViewModel.swift in Sources */,
 				CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */,
+				CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */,
+				CF4173E92E150E1700D6F11E /* DoubleMenuItemView.swift in Sources */,
+				CF4173EB2E150E3800D6F11E /* MenuItemView.swift in Sources */,
+				CF4173E02E1502B600D6F11E /* PodcastView.swift in Sources */,
 				CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */,
 				CF478D142DEF89E2003AE7D8 /* VideoPlayerView.swift in Sources */,
 				CF478D172DEF89E2003AE7D8 /* IntroTextModel.swift in Sources */,
@@ -939,6 +989,7 @@
 				CF478D182DEF89E2003AE7D8 /* MenuItemModel.swift in Sources */,
 				CF478D192DEF89E2003AE7D8 /* MenuModel.swift in Sources */,
 				CF478D1A2DEF89E2003AE7D8 /* NavigationDestination.swift in Sources */,
+				CF4173ED2E150E6100D6F11E /* MenuHeader.swift in Sources */,
 				CF478D1B2DEF89E2003AE7D8 /* StoriesModel.swift in Sources */,
 				CF478D1C2DEF89E2003AE7D8 /* TextModel.swift in Sources */,
 				CF478D1D2DEF89E2003AE7D8 /* TextStyling.swift in Sources */,
@@ -947,6 +998,7 @@
 				CF478D202DEF89E2003AE7D8 /* ContentView.swift in Sources */,
 				CF478D212DEF89E2003AE7D8 /* MenuView.swift in Sources */,
 				CF478D222DEF89E2003AE7D8 /* NewBabyAppApp.swift in Sources */,
+				CF4173EF2E150E7B00D6F11E /* MenuBackground.swift in Sources */,
 				CFF992CF2DFF169600859DC9 /* SearchRepository.swift in Sources */,
 				CF478D232DEF89E2003AE7D8 /* OnboardingView.swift in Sources */,
 				CF478D242DEF89E2003AE7D8 /* Utils.swift in Sources */,
@@ -1019,7 +1071,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-                               IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1076,7 +1128,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-                           IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1102,7 +1154,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-                           IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1136,7 +1188,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-                           IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

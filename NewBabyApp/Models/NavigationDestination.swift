@@ -12,6 +12,7 @@ enum NavigationDestination: Hashable {
     case text(TextModel)
     case menu(MenuModel)
     case introText(IntroTextModel)
+    case podcast(PodcastModel)
 
     func hash(into hasher: inout Hasher) {
         switch self {
@@ -22,6 +23,8 @@ enum NavigationDestination: Hashable {
         case .menu(let model):
             hasher.combine(model.id)
         case .introText(let model):
+            hasher.combine(model.id)
+        case .podcast(let model):
             hasher.combine(model.id)
         }
     }
@@ -36,6 +39,10 @@ enum NavigationDestination: Hashable {
             return model.bannerName != nil
         case .introText(_):
             return true
+        case .podcast(let model):
+            return true
+        case .podcast(let model):
+            return true
         }
     }
     
@@ -49,6 +56,8 @@ enum NavigationDestination: Hashable {
             return model.needSpace
         case .introText(_):
             return true
+        case .podcast(let model):
+            return true
         }
     }
     
@@ -58,9 +67,10 @@ enum NavigationDestination: Hashable {
             case .text(let model): return model.isHalf
             case .menu(let model): return model.isHalf
             case .introText(_): return false
+            case .podcast(_): return false
             }
-        }
-
+    }
+    
     static func == (lhs: NavigationDestination, rhs: NavigationDestination) -> Bool {
         switch (lhs, rhs) {
         case (.stories(let lhsModel), .stories(let rhsModel)):
@@ -70,6 +80,8 @@ enum NavigationDestination: Hashable {
         case (.menu(let lhsModel), .menu(let rhsModel)):
             return lhsModel.id == rhsModel.id
         case (.introText(let lhsModel), .introText(let rhsModel)):
+            return lhsModel.id == rhsModel.id
+        case (.podcast(let lhsModel), .podcast(let rhsModel)):
             return lhsModel.id == rhsModel.id
         default:
             return false
@@ -90,6 +102,8 @@ extension NavigationDestination {
             } else {
                 return "photo.on.rectangle"
             }
+        case .podcast:
+                    return "headphones"
         case .text:
             return "doc.text"
         }
@@ -111,6 +125,8 @@ extension NavigationDestination {
             return model.title + " " + text
         case .menu(let menuModel):
             return menuModel.title + " " + (menuModel.menuItems.map { $0.searchableFulltext }.joined(separator: " "))
+        case .podcast(let model):
+                    return model.title
         default:
             return ""
         }
@@ -128,6 +144,8 @@ extension NavigationDestination {
             return text
         case .menu(let menuModel):
             return menuModel.title + " " + (menuModel.menuItems.map { $0.searchableText }.joined(separator: " "))
+        case .podcast(let model):
+                    return model.title
         default:
             return ""
         }
@@ -141,6 +159,8 @@ extension NavigationDestination {
             return model.title
         case .menu(let menuModel):
             return menuModel.title
+        case .podcast(let model):
+                    return model.title
         default:
             return ""
         }
@@ -160,19 +180,27 @@ extension NavigationDestination {
             MenuView(model: menuModel, clientName: nil, path: .constant(NavigationPath()))
         case .text(let model):
             TextView(model: model)
+        case .podcast(let model):
+            findParent(for: model)
         }
     }
     
-    func findParent(for introText: IntroTextModel) -> AnyView {
+    func findParent(for model: any MenuItemModel) -> AnyView {
         for repository in LocalRepository.menuHospital.menuItems {
             if case let .menu(menuIModel) = repository {
                 for item in menuIModel.menuItems {
-                    if case let .introText(introTextModel) = item, introTextModel.id == introText.id {
+                    if case let .introText(introTextModel) = item, introTextModel.id == model.id {
+                        return AnyView(MenuView(model: menuIModel, clientName: "", path: .constant(NavigationPath())))
+                    }
+                    if case let .podcast(podcastModel) = item, podcastModel.id == model.id {
                         return AnyView(MenuView(model: menuIModel, clientName: "", path: .constant(NavigationPath())))
                     }
                 if case let .menu(menuModel) = item {
                     for menuItem in menuModel.menuItems {
-                        if case let .introText(infoTextModel) = menuItem, infoTextModel.id == introText.id {
+                        if case let .introText(infoTextModel) = menuItem, infoTextModel.id == model.id {
+                            return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
+                        }
+                        if case let .podcast(podcastModel) = menuItem, podcastModel.id == model.id {
                             return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
                         }
                     }
