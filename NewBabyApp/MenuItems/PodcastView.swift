@@ -30,9 +30,8 @@ struct PodcastView: View {
                 Text(model.title)
                     .textStyle(.smallTitle)
                 Spacer()
-                Text("\(PodcastView.formatTime(viewModel.audioManager.currentTime))/\(PodcastView.formatTime(viewModel.audioManager.duration))")
+                Text("\(PodcastView.formatTime(viewModel.progress * viewModel.duration))/\(PodcastView.formatTime(viewModel.duration))")
                     .textStyle(.bodyPrimary)
-                
             }
             HStack(spacing: 20) {
                 Button(action: { viewModel.togglePlay() }) {
@@ -50,6 +49,9 @@ struct PodcastView: View {
                         onSeek: { rel in
                             viewModel.isSeeking = false
                             viewModel.seekToProgress(rel)
+                        },
+                        onSeekUpdate: { rel in
+                            viewModel.updateCurrentTime(rel)
                         }
                     )
                     .clipShape(RoundedRectangle(cornerRadius: 15))

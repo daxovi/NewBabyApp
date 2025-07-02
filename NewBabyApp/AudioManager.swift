@@ -110,12 +110,21 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
 
     private func updateNowPlaying(playbackRate: Float = 0) {
         guard let player else { return }
-        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+
+        var nowPlayingInfo: [String: Any] = [
             MPMediaItemPropertyTitle: currentTitle,
             MPNowPlayingInfoPropertyElapsedPlaybackTime: player.currentTime,
             MPMediaItemPropertyPlaybackDuration: player.duration,
             MPNowPlayingInfoPropertyPlaybackRate: playbackRate
         ]
+
+        // Nastavení stejného obrázku alba pro všechny podcasty
+        if let albumImage = UIImage(named: "podcast") {
+            let artwork = MPMediaItemArtwork(boundsSize: albumImage.size) { _ in albumImage }
+            nowPlayingInfo[MPMediaItemPropertyArtwork] = artwork
+        }
+
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
     }
 
     // MARK: - AVAudioPlayerDelegate

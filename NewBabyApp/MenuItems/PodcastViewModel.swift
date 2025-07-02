@@ -16,6 +16,8 @@ class PodcastViewModel: NSObject, ObservableObject {
     @Published var waveformSamples: [Float] = []
     @Published var isSeeking: Bool = false
     @Published var isLoadingWaveform: Bool = false
+    @Published var currentTime: TimeInterval = 0
+    @Published var duration: TimeInterval = 0
 
     let audioManager = AudioManager.shared
     private var cancellables = Set<AnyCancellable>()
@@ -30,6 +32,11 @@ class PodcastViewModel: NSObject, ObservableObject {
         bindToAudioManager()
     }
 
+    func updateCurrentTime(_ relativeProgress: Double) {
+        guard duration > 0 else { return }
+        currentTime = relativeProgress * duration
+    }
+
     func setup() {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "mp3") {
             isLoadingWaveform = true
@@ -39,6 +46,11 @@ class PodcastViewModel: NSObject, ObservableObject {
                     self.waveformSamples = samples
                     self.isLoadingWaveform = false
                 }
+            }
+
+            // Load duration
+            if let asset = try? AVAudioPlayer(contentsOf: url) {
+                self.duration = asset.duration
             }
         }
     }

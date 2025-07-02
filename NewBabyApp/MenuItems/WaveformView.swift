@@ -5,6 +5,7 @@ struct WaveformView: View {
     let samples: [Float] // Normalizované hodnoty 0...1
     let progress: Double // 0...1
     let onSeek: (Double) -> Void
+    let onSeekUpdate: (Double) -> Void // Přidána closure pro aktualizaci času během tažení
     
     @GestureState private var dragLocation: CGFloat? = nil
     @State private var localProgress: Double? = nil
@@ -23,6 +24,7 @@ struct WaveformView: View {
                     .onChanged { value in
                         let rel = min(max(0, value.location.x / geo.size.width), 1)
                         localProgress = Double(rel)
+                        onSeekUpdate(Double(rel)) // Aktualizace času během tažení
                     }
                     .onEnded { value in
                         let rel = min(max(0, value.location.x / geo.size.width), 1)
