@@ -25,15 +25,21 @@ struct PodcastView: View {
                     Image(systemName: viewModel.isPlaying ? "pause.circle" : "play.circle")
                         .font(.largeTitle)
                 }
-                WaveformView(
-                    samples: viewModel.waveformSamples,
-                    progress: viewModel.progress,
-                    onSeek: { rel in
-                        viewModel.isSeeking = false
-                        viewModel.seekToProgress(rel)
-                    }
-                )
-                .clipShape(RoundedRectangle(cornerRadius: 15))
+                if viewModel.isLoadingWaveform {
+                    ProgressView()
+                        .frame(height: 48)
+                        .frame(maxWidth: .infinity)
+                } else {
+                    WaveformView(
+                        samples: viewModel.waveformSamples,
+                        progress: viewModel.progress,
+                        onSeek: { rel in
+                            viewModel.isSeeking = false
+                            viewModel.seekToProgress(rel)
+                        }
+                    )
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                }
             }
         }
         .padding()

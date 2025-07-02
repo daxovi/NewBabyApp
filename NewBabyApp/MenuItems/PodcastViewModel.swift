@@ -15,6 +15,7 @@ class PodcastViewModel: NSObject, ObservableObject {
     @Published var progress: Double = 0
     @Published var waveformSamples: [Float] = []
     @Published var isSeeking: Bool = false
+    @Published var isLoadingWaveform: Bool = false
 
     private let audioManager = AudioManager.shared
     private var cancellables = Set<AnyCancellable>()
@@ -31,7 +32,14 @@ class PodcastViewModel: NSObject, ObservableObject {
 
     func setup() {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "mp3") {
-            self.waveformSamples = Self.loadWaveformSamples(url: url, samplesCount: 100)
+            isLoadingWaveform = true
+            DispatchQueue.global(qos: .userInitiated).async {
+                let samples = Self.loadWaveformSamples(url: url, samplesCount: 100)
+                DispatchQueue.main.async {
+                    self.waveformSamples = samples
+                    self.isLoadingWaveform = false
+                }
+            }
         }
     }
 
