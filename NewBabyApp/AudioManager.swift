@@ -92,6 +92,12 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         commandCenter.pauseCommand.addTarget { [weak self] _ in
             self?.pause(); return .success
         }
+        commandCenter.changePlaybackPositionCommand.addTarget { [weak self] event in
+            guard let self = self, let event = event as? MPChangePlaybackPositionCommandEvent else { return .commandFailed }
+            let newProgress = event.positionTime / self.duration
+            self.seek(to: newProgress)
+            return .success
+        }
     }
 
     private func startTimer() {
@@ -118,7 +124,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
             MPNowPlayingInfoPropertyPlaybackRate: playbackRate
         ]
 
-        // Nastavení stejného obrázku alba pro všechny podcasty
+        // Přidání obrázku alba, pokud existuje
         if let albumImage = UIImage(named: "podcast") {
             let artwork = MPMediaItemArtwork(boundsSize: albumImage.size) { _ in albumImage }
             nowPlayingInfo[MPMediaItemPropertyArtwork] = artwork
