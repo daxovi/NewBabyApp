@@ -17,7 +17,7 @@ class PodcastViewModel: NSObject, ObservableObject {
     @Published var isSeeking: Bool = false
     @Published var isLoadingWaveform: Bool = false
 
-    private let audioManager = AudioManager.shared
+    let audioManager = AudioManager.shared
     private var cancellables = Set<AnyCancellable>()
 
     private let fileName: String

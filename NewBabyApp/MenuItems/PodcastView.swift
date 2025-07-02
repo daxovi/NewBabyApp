@@ -16,10 +16,24 @@ struct PodcastView: View {
         _viewModel = StateObject(wrappedValue: PodcastViewModel(fileName: model.fileName, title: model.title))
     }
     
+    private var timeText: String = "" // Added to store formatted time
+
+    static func formatTime(_ time: TimeInterval) -> String {
+        let minutes = Int(time) / 60
+        let seconds = Int(time) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            Text(model.title)
-                .textStyle(.smallTitle)
+            HStack{
+                Text(model.title)
+                    .textStyle(.smallTitle)
+                Spacer()
+                Text("\(PodcastView.formatTime(viewModel.audioManager.currentTime))/\(PodcastView.formatTime(viewModel.audioManager.duration))")
+                    .textStyle(.bodyPrimary)
+                
+            }
             HStack(spacing: 20) {
                 Button(action: { viewModel.togglePlay() }) {
                     Image(systemName: viewModel.isPlaying ? "pause.circle" : "play.circle")
@@ -60,7 +74,7 @@ struct PodcastView: View {
                 MenuItem(item: StoriesModel(title: "Ahoj", stories: []))
             }
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-            MenuItemView(menuItem: .podcast(PodcastModel(title: "Ukázkový podcast", fileName: "sample")))
+            MenuItemView(menuItem: .podcast(PodcastModel(title: "Ukázkový podcast", fileName: "bonding")))
 
         }
         .padding()
