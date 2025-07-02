@@ -3,7 +3,10 @@ import MediaPlayer
 import Combine
 import UIKit
 
-class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
+/// Global audio manager that keeps playback alive even when the app
+/// goes to the background. Uses `AVPlayer` so we can display system
+/// media controls on the lock screen.
+class AudioManager: NSObject, ObservableObject {
     static let shared = AudioManager()
 
     @Published var isPlaying: Bool = false
@@ -11,11 +14,18 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     @Published var currentTitle: String = ""
     @Published var currentFile: String? = nil
 
-    var currentTime: TimeInterval { player?.currentTime ?? 0 }
-    var duration: TimeInterval { player?.duration ?? 0 }
+    var currentTime: TimeInterval {
+        guard let player else { return 0 }
+        return CMTimeGetSeconds(player.currentTime())
+    }
 
-    private var player: AVAudioPlayer?
-    private var timer: Timer?
+    var duration: TimeInterval {
+        guard let item = player?.currentItem else { return 0 }
+        return CMTimeGetSeconds(item.asset.duration)
+    }
+
+    private var player: AVPlayer?
+    private var timeObserver: Any?
 
     private override init() {
         super.init()
@@ -24,12 +34,17 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         observeLifecycle()
     }
 
+    deinit {
+        removeTimeObserver()
+        NotificationCenter.default.removeObserver(self)
+    }
+
     func togglePlay(fileName: String, title: String) {
         if currentFile != fileName {
             load(fileName: fileName, title: title)
         }
-        guard let player else { return }
-        if player.isPlaying {
+        guard player != nil else { return }
+        if isPlaying {
             pause()
         } else {
             play()
@@ -40,7 +55,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         guard let player else { return }
         player.play()
         isPlaying = true
-        startTimer()
+        if timeObserver == nil { startTimer() }
         updateNowPlaying(playbackRate: 1)
     }
 
@@ -48,28 +63,34 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         guard let player else { return }
         player.pause()
         isPlaying = false
-        stopTimer()
         updateNowPlaying(playbackRate: 0)
     }
 
     func seek(to progress: Double) {
-        guard let player else { return }
+        guard let player = player, let item = player.currentItem else { return }
         let clamped = max(0, min(progress, 1))
-        player.currentTime = clamped * player.duration
+        let newTime = clamped * CMTimeGetSeconds(item.asset.duration)
+        player.seek(to: CMTime(seconds: newTime, preferredTimescale: 600))
         self.progress = clamped
-        updateNowPlaying(playbackRate: player.isPlaying ? 1 : 0)
+        updateNowPlaying(playbackRate: isPlaying ? 1 : 0)
     }
 
     // MARK: - Private
 
     private func load(fileName: String, title: String) {
         if let url = Bundle.main.url(forResource: fileName, withExtension: "mp3") {
-            player = try? AVAudioPlayer(contentsOf: url)
-            player?.delegate = self
-            player?.prepareToPlay()
+            removeTimeObserver()
+            let item = AVPlayerItem(url: url)
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(playerDidFinishPlaying),
+                                                   name: .AVPlayerItemDidPlayToEndTime,
+                                                   object: item)
+            player = AVPlayer(playerItem: item)
             currentFile = fileName
             currentTitle = title
             progress = 0
+            startTimer()
+            updateNowPlaying()
         }
     }
 
@@ -110,35 +131,46 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     }
 
     private func startTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
-            guard let self, let player = self.player else { return }
-            self.progress = player.duration > 0 ? player.currentTime / player.duration : 0
-            self.updateNowPlaying(playbackRate: player.isPlaying ? 1 : 0)
+        guard let player else { return }
+        removeTimeObserver()
+        let interval = CMTime(seconds: 0.5, preferredTimescale: 600)
+        timeObserver = player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] time in
+            guard let self, let item = player.currentItem else { return }
+            let duration = CMTimeGetSeconds(item.asset.duration)
+            if duration > 0 {
+                self.progress = CMTimeGetSeconds(time) / duration
+            } else {
+                self.progress = 0
+            }
+            self.updateNowPlaying(playbackRate: self.isPlaying ? 1 : 0)
         }
     }
 
-    private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
+    private func removeTimeObserver() {
+        if let observer = timeObserver, let player = player {
+            player.removeTimeObserver(observer)
+            timeObserver = nil
+        }
     }
 
     private func updateNowPlaying(playbackRate: Float = 0) {
-        guard let player else { return }
+        guard let player = player, let item = player.currentItem else { return }
+        let elapsed = CMTimeGetSeconds(player.currentTime())
+        let duration = CMTimeGetSeconds(item.asset.duration)
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyTitle: currentTitle,
-            MPNowPlayingInfoPropertyElapsedPlaybackTime: player.currentTime,
-            MPMediaItemPropertyPlaybackDuration: player.duration,
+            MPNowPlayingInfoPropertyElapsedPlaybackTime: elapsed,
+            MPMediaItemPropertyPlaybackDuration: duration,
             MPNowPlayingInfoPropertyPlaybackRate: playbackRate
         ]
     }
 
-    // MARK: - AVAudioPlayerDelegate
+    // MARK: - Player Notifications
 
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+    @objc private func playerDidFinishPlaying() {
         isPlaying = false
         progress = 0
-        stopTimer()
+        removeTimeObserver()
         updateNowPlaying(playbackRate: 0)
     }
 }
