@@ -19,6 +19,7 @@
 		CF4173EF2E150E7B00D6F11E /* MenuBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173EE2E150E7800D6F11E /* MenuBackground.swift */; };
 		CF4173F12E15148300D6F11E /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173F02E15148300D6F11E /* WaveformView.swift */; };
 		CF4173F32E15194E00D6F11E /* bonding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4173F22E15194E00D6F11E /* bonding.mp3 */; };
+		CF4173F52E15320400D6F11E /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173F42E15320400D6F11E /* AudioManager.swift */; };
 		CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */; };
 		CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */; };
 		CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */; };
@@ -211,6 +212,7 @@
 		CF4173EE2E150E7800D6F11E /* MenuBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackground.swift; sourceTree = "<group>"; };
 		CF4173F02E15148300D6F11E /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
 		CF4173F22E15194E00D6F11E /* bonding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bonding.mp3; sourceTree = "<group>"; };
+		CF4173F42E15320400D6F11E /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepository.swift; sourceTree = "<group>"; };
 		CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
@@ -692,6 +694,7 @@
 		CF478D0A2DEF89E2003AE7D8 /* NewBabyApp */ = {
 			isa = PBXGroup;
 			children = (
+				CF4173F42E15320400D6F11E /* AudioManager.swift */,
 				CF4173E52E150D6500D6F11E /* MenuItems */,
 				CFF992CB2DFF164E00859DC9 /* Search */,
 				CF71A5A62DFC10A0003AEDC0 /* Extension */,
@@ -989,6 +992,7 @@
 				CF4173E92E150E1700D6F11E /* DoubleMenuItemView.swift in Sources */,
 				CF4173EB2E150E3800D6F11E /* MenuItemView.swift in Sources */,
 				CF4173E02E1502B600D6F11E /* PodcastView.swift in Sources */,
+				CF4173F52E15320400D6F11E /* AudioManager.swift in Sources */,
 				CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */,
 				CF478D142DEF89E2003AE7D8 /* VideoPlayerView.swift in Sources */,
 				CF478D172DEF89E2003AE7D8 /* IntroTextModel.swift in Sources */,

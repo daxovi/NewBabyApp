@@ -8,15 +8,16 @@
 import AVFoundation
 import MediaPlayer
 import SwiftUI
+import Combine
 
-class PodcastViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
+class PodcastViewModel: NSObject, ObservableObject {
     @Published var isPlaying: Bool = false
     @Published var progress: Double = 0
     @Published var waveformSamples: [Float] = []
     @Published var isSeeking: Bool = false
 
-    private var player: AVAudioPlayer?
-    private var timer: Timer?
+    private let audioManager = AudioManager.shared
+    private var cancellables = Set<AnyCancellable>()
 
     private let fileName: String
     private let title: String
@@ -25,99 +26,46 @@ class PodcastViewModel: NSObject, ObservableObject, AVAudioPlayerDelegate {
         self.fileName = fileName
         self.title = title
         super.init()
+        bindToAudioManager()
     }
 
     func setup() {
-        configureAudioSession()
         if let url = Bundle.main.url(forResource: fileName, withExtension: "mp3") {
-            player = try? AVAudioPlayer(contentsOf: url)
-            player?.delegate = self
-            player?.prepareToPlay()
             self.waveformSamples = Self.loadWaveformSamples(url: url, samplesCount: 100)
         }
-        setupRemoteTransportControls()
-        updateNowPlaying()
     }
 
     func togglePlay() {
-        guard let player else { return }
-        if player.isPlaying {
-            pause()
-        } else {
-            play()
-        }
-    }
-
-    func play() {
-        guard let player else { return }
-        player.play()
-        isPlaying = true
-        startTimer()
-        updateNowPlaying(playbackRate: 1)
-    }
-
-    func pause() {
-        guard let player else { return }
-        player.pause()
-        isPlaying = false
-        stopTimer()
-        updateNowPlaying(playbackRate: 0)
+        audioManager.togglePlay(fileName: fileName, title: title)
     }
 
     func teardown() {
-        pause()
-        MPNowPlayingInfoCenter.default().nowPlayingInfo = nil
-        try? AVAudioSession.sharedInstance().setActive(false)
+        // intentionally left blank so audio can continue playing
     }
-
-    private func configureAudioSession() {
-        let session = AVAudioSession.sharedInstance()
-        try? session.setCategory(.playback, mode: .default)
-        try? session.setActive(true)
-    }
-
-    private func startTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
-            guard let self, let player = self.player else { return }
-            if !self.isSeeking {
-                self.progress = player.currentTime / player.duration
+    private func bindToAudioManager() {
+        audioManager.$isPlaying
+            .combineLatest(audioManager.$currentFile)
+            .sink { [weak self] playing, file in
+                guard let self else { return }
+                self.isPlaying = playing && file == self.fileName
             }
-            self.updateNowPlaying(playbackRate: player.isPlaying ? 1 : 0)
-        }
-    }
+            .store(in: &cancellables)
 
-    private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-
-    private func setupRemoteTransportControls() {
-        let commandCenter = MPRemoteCommandCenter.shared()
-        commandCenter.playCommand.addTarget { [weak self] _ in
-            self?.play(); return .success
-        }
-        commandCenter.pauseCommand.addTarget { [weak self] _ in
-            self?.pause(); return .success
-        }
-    }
-
-    private func updateNowPlaying(playbackRate: Float = 0) {
-        guard let player else { return }
-        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
-            MPMediaItemPropertyTitle: title,
-            MPNowPlayingInfoPropertyElapsedPlaybackTime: player.currentTime,
-            MPMediaItemPropertyPlaybackDuration: player.duration,
-            MPNowPlayingInfoPropertyPlaybackRate: playbackRate
-        ]
+        audioManager.$progress
+            .sink { [weak self] value in
+                guard let self else { return }
+                if self.audioManager.currentFile == self.fileName && !self.isSeeking {
+                    self.progress = value
+                } else if self.audioManager.currentFile != self.fileName {
+                    self.progress = 0
+                }
+            }
+            .store(in: &cancellables)
     }
 
     func seekToProgress(_ progress: Double) {
-        guard let player = player, player.duration > 0 else { return }
-        let newTime = progress * player.duration
-        player.currentTime = newTime
-        self.progress = player.currentTime / player.duration
-        updateNowPlaying(playbackRate: player.isPlaying ? 1 : 0)
+        guard audioManager.currentFile == fileName else { return }
+        audioManager.seek(to: progress)
     }
 
     static func loadWaveformSamples(url: URL, samplesCount: Int) -> [Float] {
