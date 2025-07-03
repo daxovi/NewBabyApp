@@ -168,6 +168,7 @@
 		CF6D13F22E16AF7E0030BA12 /* HomeRepository.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F12E16AF750030BA12 /* HomeRepository.json */; };
 		CF6D13F42E16AF930030BA12 /* HospitalRepository.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F32E16AF810030BA12 /* HospitalRepository.json */; };
 		CF6D13F82E16AFB90030BA12 /* PregnantRepository.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F72E16AFB30030BA12 /* PregnantRepository.json */; };
+		CF6D13FA2E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */; };
 		CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */; };
 		CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71A5A42DFC106C003AEDC0 /* String+localization.swift */; };
 		CFB8E8842DFFFE1900689C2A /* String+folded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8E8832DFFFE1300689C2A /* String+folded.swift */; };
@@ -199,7 +200,6 @@
 		CFDAE4952E16A20C008F5105 /* vysetreni-sluchu-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48E2E16A20C008F5105 /* vysetreni-sluchu-4.jpg */; };
 		CFDAE4982E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */; };
 		CFDAE4992E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */; };
-		CFDAE49B2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */; };
 		CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */; };
 		CFF992AA2DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */; };
 		CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AB2DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg */; };
@@ -382,6 +382,7 @@
 		CF6D13F12E16AF750030BA12 /* HomeRepository.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeRepository.json; sourceTree = "<group>"; };
 		CF6D13F32E16AF810030BA12 /* HospitalRepository.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HospitalRepository.json; sourceTree = "<group>"; };
 		CF6D13F72E16AFB30030BA12 /* PregnantRepository.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PregnantRepository.json; sourceTree = "<group>"; };
+		CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sedy-zakal-2.mp4"; sourceTree = "<group>"; };
 		CF71A5A22DFC0E87003AEDC0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF71A5A42DFC106C003AEDC0 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 		CFB8E8832DFFFE1300689C2A /* String+folded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+folded.swift"; sourceTree = "<group>"; };
@@ -413,7 +414,6 @@
 		CFDAE4912E16A20C008F5105 /* vysetreni-sluchu-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sluchu-7.jpg"; sourceTree = "<group>"; };
 		CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-1.jpg"; sourceTree = "<group>"; };
 		CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-3.jpg"; sourceTree = "<group>"; };
-		CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "vysetreni-sedy-zakal-2.mov"; sourceTree = "<group>"; };
 		CFE57A252CBD6FA100C48924 /* NewBabyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBabyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-3.jpg"; sourceTree = "<group>"; };
@@ -640,7 +640,7 @@
 		CF478CF22DEF89E2003AE7D8 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */,
+				CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */,
 				CFF992BF2DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 */,
 				CFF992C02DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 */,
 				CFF992C12DFED31D00859DC9 /* vysetreni-ledvin-3.mp4 */,
@@ -879,6 +879,7 @@
 				CF478D262DEF89E2003AE7D8 /* bonding-s-tatinkem-1.jpg in Resources */,
 				CF478D272DEF89E2003AE7D8 /* bonding-s-tatinkem-2.jpg in Resources */,
 				CF478D282DEF89E2003AE7D8 /* jak-bonding-probiha-1.jpeg in Resources */,
+				CF6D13FA2E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 in Resources */,
 				CF478D292DEF89E2003AE7D8 /* jak-bonding-probiha-2.jpeg in Resources */,
 				CF478D2A2DEF89E2003AE7D8 /* jak-bonding-probiha-3.jpeg in Resources */,
 				CFF992BD2DFECF8100859DC9 /* jak-to-u-nas-vypada-1.mp4 in Resources */,
@@ -971,7 +972,6 @@
 				CF478D6B2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-5.jpg in Resources */,
 				CF478D6C2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-6.jpg in Resources */,
 				CFF992AA2DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */,
-				CFDAE49B2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov in Resources */,
 				CFDAE4732E1696B3008F5105 /* poloha-pri-tlaceni-1.mp4 in Resources */,
 				CF478D6D2DEF89E2003AE7D8 /* jak-se-zloutenka-vysetruje-1.jpg in Resources */,
 				CF4174172E15492B00D6F11E /* poroddovody.mp3 in Resources */,
