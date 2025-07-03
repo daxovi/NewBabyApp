@@ -1,0 +1,12 @@
+{
+  "title": "Pregnant",
+  "subtitle": "Info for pregnant",
+  "backgroundImageName": "title-pregnant",
+  "menuItems": [
+    {
+      "type": "text",
+      "title": "Preparation",
+      "text": "Be prepared."
+    }
+  ]
+}

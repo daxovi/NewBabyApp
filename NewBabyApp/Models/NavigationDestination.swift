@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum NavigationDestination: Hashable {
+enum NavigationDestination: Hashable, Codable {
     case stories(StoriesModel)
     case text(TextModel)
     case menu(MenuModel)
@@ -26,6 +26,47 @@ enum NavigationDestination: Hashable {
             hasher.combine(model.id)
         case .podcast(let model):
             hasher.combine(model.id)
+        }
+    }
+
+    enum CodingKeys: String, CodingKey { case type }
+    enum DestinationType: String, Codable { case stories, text, menu, introText, podcast }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(DestinationType.self, forKey: .type)
+        switch type {
+        case .stories:
+            self = .stories(try StoriesModel(from: decoder))
+        case .text:
+            self = .text(try TextModel(from: decoder))
+        case .menu:
+            self = .menu(try MenuModel(from: decoder))
+        case .introText:
+            self = .introText(try IntroTextModel(from: decoder))
+        case .podcast:
+            self = .podcast(try PodcastModel(from: decoder))
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch self {
+        case .stories(let model):
+            try container.encode(DestinationType.stories, forKey: .type)
+            try model.encode(to: encoder)
+        case .text(let model):
+            try container.encode(DestinationType.text, forKey: .type)
+            try model.encode(to: encoder)
+        case .menu(let model):
+            try container.encode(DestinationType.menu, forKey: .type)
+            try model.encode(to: encoder)
+        case .introText(let model):
+            try container.encode(DestinationType.introText, forKey: .type)
+            try model.encode(to: encoder)
+        case .podcast(let model):
+            try container.encode(DestinationType.podcast, forKey: .type)
+            try model.encode(to: encoder)
         }
     }
     

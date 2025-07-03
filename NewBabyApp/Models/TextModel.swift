@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TextModel: Identifiable, Hashable, MenuItemModel {
+struct TextModel: Identifiable, Hashable, MenuItemModel, Codable {
     var id = UUID()
     // data pro zobrazení v menu aplikace
     var title: String

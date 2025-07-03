@@ -1,0 +1,12 @@
+{
+  "title": "Home",
+  "subtitle": "Welcome home",
+  "backgroundImageName": "title-home",
+  "menuItems": [
+    {
+      "type": "introText",
+      "title": "Home intro",
+      "content": "This is home."
+    }
+  ]
+}

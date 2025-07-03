@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct MenuModel: Identifiable, Hashable, MenuItemModel {
+struct MenuModel: Identifiable, Hashable, MenuItemModel, Codable {
 
     var id = UUID()
     var title: String

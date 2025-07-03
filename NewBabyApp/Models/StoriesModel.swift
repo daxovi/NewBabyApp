@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel {
+struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel, Codable {
     var id = UUID()
 
     var title: String
@@ -31,7 +31,7 @@ struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel {
     }
 }
 
-struct Story: Identifiable, Equatable, Hashable {
+struct Story: Identifiable, Equatable, Hashable, Codable {
     var id = UUID()
     var type: StoryType
     var sourceName: String
@@ -41,7 +41,7 @@ struct Story: Identifiable, Equatable, Hashable {
         return lhs.sourceName == rhs.sourceName
     }
 
-    enum StoryType {
+    enum StoryType: String, Codable {
         case image, video
     }
 }

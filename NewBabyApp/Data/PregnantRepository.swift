@@ -6,13 +6,4 @@
 //
 import SwiftUI
 
-extension LocalRepository {
-    
-    static let menuPregnant = MenuModel(
-        title: "title_cekamemiminko".localizedString,
-        subtitle: "subtitle_cekamemiminko".localizedString,
-        backgroundImageName: "title-pregnant",
-        menuItems: [ 
-        ]
-    )
-}
+// Data are loaded from PregnantRepository.json via LocalRepository

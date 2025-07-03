@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PodcastModel: Identifiable, Hashable, MenuItemModel {
+struct PodcastModel: Identifiable, Hashable, MenuItemModel, Codable {
     var id = UUID()
     /// Title visible in menu and now playing info
     var title: String
