@@ -98,7 +98,7 @@ extension LocalRepository {
             .introText(IntroTextModel(title: "title_cojesedyzakal".localizedString, content: "detail_cojesedyzakal".localizedStringMarkdown)),
             .stories(StoriesModel(title: "title_jakprobihavysetrenisedyzakal".localizedString, bannerName: "jakprobihavysetrenisedyzakal-0", stories: [
                 Story(type: .image, sourceName: "vysetreni-sedy-zakal-1", text: "vysetreni_sedy_zakal_1".localizedString),
-                Story(type: .image, sourceName: "vysetreni-sedy-zakal-2", text: "vysetreni_sedy_zakal_2".localizedString),
+                Story(type: .video, sourceName: "vysetreni-sedy-zakal-2", text: "vysetreni_sedy_zakal_2".localizedString),
                 Story(type: .image, sourceName: "vysetreni-sedy-zakal-3", text: "vysetreni_sedy_zakal_3".localizedString)])),
             .introText(IntroTextModel(title: "title_procjescreeningsedyzakaldulezity".localizedString, content: "detail_procjescreeningsedyzakaldulezity".localizedStringMarkdown)),
             .introText(IntroTextModel(title: "title_kdysescreeningsedyzakalprovadi".localizedString, content: "detail_kdysescreeningsedyzakalprovadi".localizedStringMarkdown, isCollapsable: true)),

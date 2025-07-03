@@ -57,7 +57,6 @@
 		CF478D312DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C812DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg */; };
 		CF478D322DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C832DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg */; };
 		CF478D332DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C842DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg */; };
-		CF478D352DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C872DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg */; };
 		CF478D362DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C882DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg */; };
 		CF478D372DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C892DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg */; };
 		CF478D382DEF89E2003AE7D8 /* akutni-cisarsky-rez-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C8A2DEF89E2003AE7D8 /* akutni-cisarsky-rez-4.jpg */; };
@@ -68,10 +67,7 @@
 		CF478D3D2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C8F2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-1.jpg */; };
 		CF478D3E2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C902DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-2.jpg */; };
 		CF478D3F2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C912DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-3.jpg */; };
-		CF478D402DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C922DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-1.jpg */; };
 		CF478D412DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C932DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-2.jpg */; };
-		CF478D422DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C942DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-3.jpg */; };
-		CF478D432DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C952DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-4.jpg */; };
 		CF478D442DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C962DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg */; };
 		CF478D452DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C972DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-6.jpg */; };
 		CF478D462DEF89E2003AE7D8 /* jak-to-u-nas-vypada-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C982DEF89E2003AE7D8 /* jak-to-u-nas-vypada-1.jpg */; };
@@ -84,14 +80,12 @@
 		CF478D4D2DEF89E2003AE7D8 /* planovany-cisarsky-rez-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478C9F2DEF89E2003AE7D8 /* planovany-cisarsky-rez-6.jpg */; };
 		CF478D4E2DEF89E2003AE7D8 /* po-porodu-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA02DEF89E2003AE7D8 /* po-porodu-1.jpg */; };
 		CF478D4F2DEF89E2003AE7D8 /* po-porodu-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA12DEF89E2003AE7D8 /* po-porodu-2.jpg */; };
-		CF478D502DEF89E2003AE7D8 /* po-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA22DEF89E2003AE7D8 /* po-porodu-3.jpg */; };
 		CF478D512DEF89E2003AE7D8 /* po-porodu-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA32DEF89E2003AE7D8 /* po-porodu-4.jpg */; };
 		CF478D522DEF89E2003AE7D8 /* poloha-pri-tlaceni-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA42DEF89E2003AE7D8 /* poloha-pri-tlaceni-1.jpg */; };
 		CF478D532DEF89E2003AE7D8 /* poloha-pri-tlaceni-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA52DEF89E2003AE7D8 /* poloha-pri-tlaceni-2.jpg */; };
 		CF478D542DEF89E2003AE7D8 /* porodnicke-kleste-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA62DEF89E2003AE7D8 /* porodnicke-kleste-1.jpg */; };
 		CF478D552DEF89E2003AE7D8 /* preindukce-porodu-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA72DEF89E2003AE7D8 /* preindukce-porodu-1.jpg */; };
 		CF478D562DEF89E2003AE7D8 /* preindukce-porodu-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA82DEF89E2003AE7D8 /* preindukce-porodu-2.jpg */; };
-		CF478D572DEF89E2003AE7D8 /* preindukce-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CA92DEF89E2003AE7D8 /* preindukce-porodu-3.jpg */; };
 		CF478D582DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAA2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg */; };
 		CF478D592DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAB2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg */; };
 		CF478D5B2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF478CAD2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg */; };
@@ -178,11 +172,38 @@
 		CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */; };
 		CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71A5A42DFC106C003AEDC0 /* String+localization.swift */; };
 		CFB8E8842DFFFE1900689C2A /* String+folded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8E8832DFFFE1300689C2A /* String+folded.swift */; };
+		CFDAE4632E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */; };
+		CFDAE4652E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4642E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 */; };
+		CFDAE4672E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4662E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 */; };
+		CFDAE4692E169548008F5105 /* tlumeni-bolesti-bez-leku-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4682E169548008F5105 /* tlumeni-bolesti-bez-leku-1.mp4 */; };
+		CFDAE46B2E169578008F5105 /* tlumeni-bolesti-bez-leku-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE46A2E169578008F5105 /* tlumeni-bolesti-bez-leku-2.mp4 */; };
+		CFDAE46D2E1695A1008F5105 /* monitorovani-behem-porodu-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE46C2E1695A1008F5105 /* monitorovani-behem-porodu-1.mp4 */; };
+		CFDAE46F2E1695D9008F5105 /* monitorovani-behem-porodu-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE46E2E1695D9008F5105 /* monitorovani-behem-porodu-2.mp4 */; };
+		CFDAE4712E1695F6008F5105 /* monitorovani-behem-porodu-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4702E1695F6008F5105 /* monitorovani-behem-porodu-3.mp4 */; };
+		CFDAE4732E1696B3008F5105 /* poloha-pri-tlaceni-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4722E1696B3008F5105 /* poloha-pri-tlaceni-1.mp4 */; };
+		CFDAE4752E1696C7008F5105 /* poloha-pri-tlaceni-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4742E1696C7008F5105 /* poloha-pri-tlaceni-2.mp4 */; };
+		CFDAE4772E1696DB008F5105 /* poloha-pri-tlaceni-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4762E1696DB008F5105 /* poloha-pri-tlaceni-3.mp4 */; };
+		CFDAE4792E16970C008F5105 /* poloha-pri-tlaceni-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4782E16970C008F5105 /* poloha-pri-tlaceni-4.mp4 */; };
+		CFDAE47B2E169728008F5105 /* poloha-pri-tlaceni-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE47A2E169728008F5105 /* poloha-pri-tlaceni-5.mp4 */; };
+		CFDAE47D2E16974C008F5105 /* poloha-pri-tlaceni-6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE47C2E16974C008F5105 /* poloha-pri-tlaceni-6.mp4 */; };
+		CFDAE47F2E1699F6008F5105 /* po-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE47E2E1699F6008F5105 /* po-porodu-3.jpg */; };
+		CFDAE4812E169D4E008F5105 /* iv-doba-porodni-jak-probiha-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4802E169D4E008F5105 /* iv-doba-porodni-jak-probiha-1.jpg */; };
+		CFDAE4832E169DB2008F5105 /* iv-doba-porodni-jak-probiha-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4822E169DB2008F5105 /* iv-doba-porodni-jak-probiha-3.jpg */; };
+		CFDAE4852E169DEB008F5105 /* iv-doba-porodni-jak-probiha-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4842E169DEB008F5105 /* iv-doba-porodni-jak-probiha-4.jpg */; };
+		CFDAE4872E169E59008F5105 /* preindukce-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4862E169E59008F5105 /* preindukce-porodu-3.jpg */; };
+		CFDAE4892E169F11008F5105 /* akutni-cisarsky-rez-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4882E169F11008F5105 /* akutni-cisarsky-rez-1.jpg */; };
+		CFDAE48C2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48A2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg */; };
+		CFDAE48D2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48B2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg */; };
+		CFDAE4922E16A20C008F5105 /* vysetreni_sluchu_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48F2E16A20C008F5105 /* vysetreni_sluchu_5.jpg */; };
+		CFDAE4932E16A20C008F5105 /* vysetreni_sluchu_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4912E16A20C008F5105 /* vysetreni_sluchu_7.jpg */; };
+		CFDAE4942E16A20C008F5105 /* vysetreni_sluchu_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4902E16A20C008F5105 /* vysetreni_sluchu_6.jpg */; };
+		CFDAE4952E16A20C008F5105 /* vysetreni_sluchu_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48E2E16A20C008F5105 /* vysetreni_sluchu_4.jpg */; };
+		CFDAE4982E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */; };
+		CFDAE4992E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */; };
+		CFDAE49B2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */; };
 		CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */; };
 		CFF992AA2DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */; };
-		CFF992B12DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AD2DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg */; };
 		CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AB2DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg */; };
-		CFF992B32DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AC2DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg */; };
 		CFF992B42DFD60F500859DC9 /* vitamin-k-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992B02DFD60F500859DC9 /* vitamin-k-1.jpg */; };
 		CFF992B52DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */; };
 		CFF992B62DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AE2DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg */; };
@@ -237,7 +258,6 @@
 		CF478C812DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "proc-je-bonding-dulezity-3.jpeg"; sourceTree = "<group>"; };
 		CF478C832DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-vypada-miminko-po-porodu-1.jpeg"; sourceTree = "<group>"; };
 		CF478C842DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-vypada-miminko-po-porodu-2.jpeg"; sourceTree = "<group>"; };
-		CF478C872DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-1.jpg"; sourceTree = "<group>"; };
 		CF478C882DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-2.jpg"; sourceTree = "<group>"; };
 		CF478C892DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-3.jpg"; sourceTree = "<group>"; };
 		CF478C8A2DEF89E2003AE7D8 /* akutni-cisarsky-rez-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-4.jpg"; sourceTree = "<group>"; };
@@ -248,10 +268,7 @@
 		CF478C8F2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iii-doba-porodni-jak-probiha-1.jpg"; sourceTree = "<group>"; };
 		CF478C902DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iii-doba-porodni-jak-probiha-2.jpg"; sourceTree = "<group>"; };
 		CF478C912DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iii-doba-porodni-jak-probiha-3.jpg"; sourceTree = "<group>"; };
-		CF478C922DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-1.jpg"; sourceTree = "<group>"; };
 		CF478C932DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-2.jpg"; sourceTree = "<group>"; };
-		CF478C942DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-3.jpg"; sourceTree = "<group>"; };
-		CF478C952DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-4.jpg"; sourceTree = "<group>"; };
 		CF478C962DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-5.jpg"; sourceTree = "<group>"; };
 		CF478C972DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-6.jpg"; sourceTree = "<group>"; };
 		CF478C982DEF89E2003AE7D8 /* jak-to-u-nas-vypada-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-to-u-nas-vypada-1.jpg"; sourceTree = "<group>"; };
@@ -264,14 +281,12 @@
 		CF478C9F2DEF89E2003AE7D8 /* planovany-cisarsky-rez-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "planovany-cisarsky-rez-6.jpg"; sourceTree = "<group>"; };
 		CF478CA02DEF89E2003AE7D8 /* po-porodu-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "po-porodu-1.jpg"; sourceTree = "<group>"; };
 		CF478CA12DEF89E2003AE7D8 /* po-porodu-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "po-porodu-2.jpg"; sourceTree = "<group>"; };
-		CF478CA22DEF89E2003AE7D8 /* po-porodu-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "po-porodu-3.jpg"; sourceTree = "<group>"; };
 		CF478CA32DEF89E2003AE7D8 /* po-porodu-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "po-porodu-4.jpg"; sourceTree = "<group>"; };
 		CF478CA42DEF89E2003AE7D8 /* poloha-pri-tlaceni-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "poloha-pri-tlaceni-1.jpg"; sourceTree = "<group>"; };
 		CF478CA52DEF89E2003AE7D8 /* poloha-pri-tlaceni-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "poloha-pri-tlaceni-2.jpg"; sourceTree = "<group>"; };
 		CF478CA62DEF89E2003AE7D8 /* porodnicke-kleste-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "porodnicke-kleste-1.jpg"; sourceTree = "<group>"; };
 		CF478CA72DEF89E2003AE7D8 /* preindukce-porodu-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preindukce-porodu-1.jpg"; sourceTree = "<group>"; };
 		CF478CA82DEF89E2003AE7D8 /* preindukce-porodu-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preindukce-porodu-2.jpg"; sourceTree = "<group>"; };
-		CF478CA92DEF89E2003AE7D8 /* preindukce-porodu-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preindukce-porodu-3.jpg"; sourceTree = "<group>"; };
 		CF478CAA2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-1.jpg"; sourceTree = "<group>"; };
 		CF478CAB2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-2.jpg"; sourceTree = "<group>"; };
 		CF478CAD2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-4.jpg"; sourceTree = "<group>"; };
@@ -372,12 +387,39 @@
 		CF71A5A22DFC0E87003AEDC0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF71A5A42DFC106C003AEDC0 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 		CFB8E8832DFFFE1300689C2A /* String+folded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+folded.swift"; sourceTree = "<group>"; };
+		CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-3.mp4"; sourceTree = "<group>"; };
+		CFDAE4642E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-5.mp4"; sourceTree = "<group>"; };
+		CFDAE4662E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-4.mp4"; sourceTree = "<group>"; };
+		CFDAE4682E169548008F5105 /* tlumeni-bolesti-bez-leku-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-1.mp4"; sourceTree = "<group>"; };
+		CFDAE46A2E169578008F5105 /* tlumeni-bolesti-bez-leku-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-2.mp4"; sourceTree = "<group>"; };
+		CFDAE46C2E1695A1008F5105 /* monitorovani-behem-porodu-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "monitorovani-behem-porodu-1.mp4"; sourceTree = "<group>"; };
+		CFDAE46E2E1695D9008F5105 /* monitorovani-behem-porodu-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "monitorovani-behem-porodu-2.mp4"; sourceTree = "<group>"; };
+		CFDAE4702E1695F6008F5105 /* monitorovani-behem-porodu-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "monitorovani-behem-porodu-3.mp4"; sourceTree = "<group>"; };
+		CFDAE4722E1696B3008F5105 /* poloha-pri-tlaceni-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poloha-pri-tlaceni-1.mp4"; sourceTree = "<group>"; };
+		CFDAE4742E1696C7008F5105 /* poloha-pri-tlaceni-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poloha-pri-tlaceni-2.mp4"; sourceTree = "<group>"; };
+		CFDAE4762E1696DB008F5105 /* poloha-pri-tlaceni-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poloha-pri-tlaceni-3.mp4"; sourceTree = "<group>"; };
+		CFDAE4782E16970C008F5105 /* poloha-pri-tlaceni-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poloha-pri-tlaceni-4.mp4"; sourceTree = "<group>"; };
+		CFDAE47A2E169728008F5105 /* poloha-pri-tlaceni-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poloha-pri-tlaceni-5.mp4"; sourceTree = "<group>"; };
+		CFDAE47C2E16974C008F5105 /* poloha-pri-tlaceni-6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "poloha-pri-tlaceni-6.mp4"; sourceTree = "<group>"; };
+		CFDAE47E2E1699F6008F5105 /* po-porodu-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "po-porodu-3.jpg"; sourceTree = "<group>"; };
+		CFDAE4802E169D4E008F5105 /* iv-doba-porodni-jak-probiha-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-1.jpg"; sourceTree = "<group>"; };
+		CFDAE4822E169DB2008F5105 /* iv-doba-porodni-jak-probiha-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-3.jpg"; sourceTree = "<group>"; };
+		CFDAE4842E169DEB008F5105 /* iv-doba-porodni-jak-probiha-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "iv-doba-porodni-jak-probiha-4.jpg"; sourceTree = "<group>"; };
+		CFDAE4862E169E59008F5105 /* preindukce-porodu-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "preindukce-porodu-3.jpg"; sourceTree = "<group>"; };
+		CFDAE4882E169F11008F5105 /* akutni-cisarsky-rez-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-1.jpg"; sourceTree = "<group>"; };
+		CFDAE48A2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-1.jpg"; sourceTree = "<group>"; };
+		CFDAE48B2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-2.jpg"; sourceTree = "<group>"; };
+		CFDAE48E2E16A20C008F5105 /* vysetreni_sluchu_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_4.jpg; sourceTree = "<group>"; };
+		CFDAE48F2E16A20C008F5105 /* vysetreni_sluchu_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_5.jpg; sourceTree = "<group>"; };
+		CFDAE4902E16A20C008F5105 /* vysetreni_sluchu_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_6.jpg; sourceTree = "<group>"; };
+		CFDAE4912E16A20C008F5105 /* vysetreni_sluchu_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_7.jpg; sourceTree = "<group>"; };
+		CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-1.jpg"; sourceTree = "<group>"; };
+		CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-3.jpg"; sourceTree = "<group>"; };
+		CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "vysetreni-sedy-zakal-2.mov"; sourceTree = "<group>"; };
 		CFE57A252CBD6FA100C48924 /* NewBabyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBabyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-3.jpg"; sourceTree = "<group>"; };
 		CFF992AB2DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jak-vypada-miminko-po-porodu-3.jpg"; sourceTree = "<group>"; };
-		CFF992AC2DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-1.jpg"; sourceTree = "<group>"; };
-		CFF992AD2DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-2.jpg"; sourceTree = "<group>"; };
 		CFF992AE2DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vaha-a-delka-miminka-1.jpg"; sourceTree = "<group>"; };
 		CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vaha-a-delka-miminka-2.jpg"; sourceTree = "<group>"; };
 		CFF992B02DFD60F500859DC9 /* vitamin-k-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vitamin-k-1.jpg"; sourceTree = "<group>"; };
@@ -473,8 +515,8 @@
 		CF478C862DEF89E2003AE7D8 /* Po porodu krok za krokem */ = {
 			isa = PBXGroup;
 			children = (
-				CFF992AC2DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg */,
-				CFF992AD2DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg */,
+				CFDAE48A2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg */,
+				CFDAE48B2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg */,
 				CFF992AE2DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg */,
 				CFF992AF2DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg */,
 				CFF992B02DFD60F500859DC9 /* vitamin-k-1.jpg */,
@@ -488,7 +530,7 @@
 		CF478CB92DEF89E2003AE7D8 /* Porod */ = {
 			isa = PBXGroup;
 			children = (
-				CF478C872DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg */,
+				CFDAE4882E169F11008F5105 /* akutni-cisarsky-rez-1.jpg */,
 				CF478C882DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg */,
 				CF478C892DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg */,
 				CF478C8A2DEF89E2003AE7D8 /* akutni-cisarsky-rez-4.jpg */,
@@ -499,10 +541,10 @@
 				CF478C8F2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-1.jpg */,
 				CF478C902DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-2.jpg */,
 				CF478C912DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-3.jpg */,
-				CF478C922DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-1.jpg */,
+				CFDAE4802E169D4E008F5105 /* iv-doba-porodni-jak-probiha-1.jpg */,
 				CF478C932DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-2.jpg */,
-				CF478C942DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-3.jpg */,
-				CF478C952DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-4.jpg */,
+				CFDAE4822E169DB2008F5105 /* iv-doba-porodni-jak-probiha-3.jpg */,
+				CFDAE4842E169DEB008F5105 /* iv-doba-porodni-jak-probiha-4.jpg */,
 				CF478C962DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg */,
 				CF478C972DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-6.jpg */,
 				CF478C982DEF89E2003AE7D8 /* jak-to-u-nas-vypada-1.jpg */,
@@ -515,14 +557,14 @@
 				CF478C9F2DEF89E2003AE7D8 /* planovany-cisarsky-rez-6.jpg */,
 				CF478CA02DEF89E2003AE7D8 /* po-porodu-1.jpg */,
 				CF478CA12DEF89E2003AE7D8 /* po-porodu-2.jpg */,
-				CF478CA22DEF89E2003AE7D8 /* po-porodu-3.jpg */,
+				CFDAE47E2E1699F6008F5105 /* po-porodu-3.jpg */,
 				CF478CA32DEF89E2003AE7D8 /* po-porodu-4.jpg */,
 				CF478CA42DEF89E2003AE7D8 /* poloha-pri-tlaceni-1.jpg */,
 				CF478CA52DEF89E2003AE7D8 /* poloha-pri-tlaceni-2.jpg */,
 				CF478CA62DEF89E2003AE7D8 /* porodnicke-kleste-1.jpg */,
 				CF478CA72DEF89E2003AE7D8 /* preindukce-porodu-1.jpg */,
 				CF478CA82DEF89E2003AE7D8 /* preindukce-porodu-2.jpg */,
-				CF478CA92DEF89E2003AE7D8 /* preindukce-porodu-3.jpg */,
+				CFDAE4862E169E59008F5105 /* preindukce-porodu-3.jpg */,
 				CF478CAA2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg */,
 				CF478CAB2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg */,
 				CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */,
@@ -545,6 +587,12 @@
 		CF478CC92DEF89E2003AE7D8 /* Zdravi pod kontrolou */ = {
 			isa = PBXGroup;
 			children = (
+				CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */,
+				CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */,
+				CFDAE48E2E16A20C008F5105 /* vysetreni_sluchu_4.jpg */,
+				CFDAE48F2E16A20C008F5105 /* vysetreni_sluchu_5.jpg */,
+				CFDAE4902E16A20C008F5105 /* vysetreni_sluchu_6.jpg */,
+				CFDAE4912E16A20C008F5105 /* vysetreni_sluchu_7.jpg */,
 				CF478CBA2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-1.jpg */,
 				CF478CBB2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-2.jpg */,
 				CF478CBC2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-3.jpg */,
@@ -595,6 +643,7 @@
 		CF478CF22DEF89E2003AE7D8 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */,
 				CFF992BF2DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 */,
 				CFF992C02DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 */,
 				CFF992C12DFED31D00859DC9 /* vysetreni-ledvin-3.mp4 */,
@@ -605,15 +654,29 @@
 				CFF992BC2DFECF8100859DC9 /* jak-to-u-nas-vypada-2.mp4 */,
 				CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */,
 				CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */,
+				CFDAE46C2E1695A1008F5105 /* monitorovani-behem-porodu-1.mp4 */,
 				CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */,
+				CFDAE4722E1696B3008F5105 /* poloha-pri-tlaceni-1.mp4 */,
+				CFDAE47A2E169728008F5105 /* poloha-pri-tlaceni-5.mp4 */,
+				CFDAE47C2E16974C008F5105 /* poloha-pri-tlaceni-6.mp4 */,
+				CFDAE4782E16970C008F5105 /* poloha-pri-tlaceni-4.mp4 */,
+				CFDAE4702E1695F6008F5105 /* monitorovani-behem-porodu-3.mp4 */,
 				CF478DB42DEF9763003AE7D8 /* novorozenecky-screening-1.mp4 */,
+				CFDAE4762E1696DB008F5105 /* poloha-pri-tlaceni-3.mp4 */,
+				CFDAE4742E1696C7008F5105 /* poloha-pri-tlaceni-2.mp4 */,
+				CFDAE46E2E1695D9008F5105 /* monitorovani-behem-porodu-2.mp4 */,
 				CF478DB52DEF9763003AE7D8 /* novorozenecky-screening-2.mp4 */,
+				CFDAE4642E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 */,
+				CFDAE46A2E169578008F5105 /* tlumeni-bolesti-bez-leku-2.mp4 */,
 				CF478DB02DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-1.mp4 */,
+				CFDAE4682E169548008F5105 /* tlumeni-bolesti-bez-leku-1.mp4 */,
 				CF478DB12DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-2.mp4 */,
 				CF478DAA2DEF942C003AE7D8 /* mereni-teploty-1.mp4 */,
+				CFDAE4662E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 */,
 				CF478DAB2DEF942C003AE7D8 /* mereni-teploty-2.mp4 */,
 				CF478DAC2DEF942C003AE7D8 /* mereni-teploty-3.mp4 */,
 				CF478DA82DEF8E13003AE7D8 /* test-1.mp4 */,
+				CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */,
 				CF478CDB2DEF89E2003AE7D8 /* animace.mp4 */,
 				CF478CDC2DEF89E2003AE7D8 /* cliptest.mp4 */,
 				CF478CDD2DEF89E2003AE7D8 /* otaceni01.mp4 */,
@@ -832,22 +895,22 @@
 				CF478D312DEF89E2003AE7D8 /* proc-je-bonding-dulezity-3.jpeg in Resources */,
 				CF478D322DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-1.jpeg in Resources */,
 				CF478D332DEF89E2003AE7D8 /* jak-vypada-miminko-po-porodu-2.jpeg in Resources */,
-				CF478D352DEF89E2003AE7D8 /* akutni-cisarsky-rez-1.jpg in Resources */,
 				CF478D362DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg in Resources */,
 				CF478D372DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg in Resources */,
 				CF478D382DEF89E2003AE7D8 /* akutni-cisarsky-rez-4.jpg in Resources */,
+				CFDAE46B2E169578008F5105 /* tlumeni-bolesti-bez-leku-2.mp4 in Resources */,
 				CF478D392DEF89E2003AE7D8 /* akutni-cisarsky-rez-5.jpg in Resources */,
 				CF478D3A2DEF89E2003AE7D8 /* chraneni-hraze-behem-porodu-1.jpg in Resources */,
 				CF478D3B2DEF89E2003AE7D8 /* chraneni-hraze-behem-porodu-2.jpg in Resources */,
 				CF478D3C2DEF89E2003AE7D8 /* chraneni-hraze-behem-porodu-3.jpg in Resources */,
 				CF478D3D2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-1.jpg in Resources */,
+				CFDAE4632E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 in Resources */,
 				CF478D3E2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-2.jpg in Resources */,
 				CF478D3F2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-3.jpg in Resources */,
-				CF478D402DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-1.jpg in Resources */,
 				CF478D412DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-2.jpg in Resources */,
-				CF478D422DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-3.jpg in Resources */,
-				CF478D432DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-4.jpg in Resources */,
+				CFDAE47B2E169728008F5105 /* poloha-pri-tlaceni-5.mp4 in Resources */,
 				CF478D442DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg in Resources */,
+				CFDAE4792E16970C008F5105 /* poloha-pri-tlaceni-4.mp4 in Resources */,
 				CF478D452DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-6.jpg in Resources */,
 				CFF992C52DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 in Resources */,
 				CFF992C62DFED31D00859DC9 /* vysetreni-ledvin-6.mp4 in Resources */,
@@ -856,23 +919,28 @@
 				CFF992C92DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 in Resources */,
 				CFF992CA2DFED31D00859DC9 /* vysetreni-ledvin-4.mp4 in Resources */,
 				CF478D462DEF89E2003AE7D8 /* jak-to-u-nas-vypada-1.jpg in Resources */,
+				CFDAE4872E169E59008F5105 /* preindukce-porodu-3.jpg in Resources */,
 				CF478D472DEF89E2003AE7D8 /* jak-to-u-nas-vypada-2.jpg in Resources */,
 				CF478D482DEF89E2003AE7D8 /* planovany-cisarsky-rez-1.jpg in Resources */,
 				CF478D492DEF89E2003AE7D8 /* planovany-cisarsky-rez-2.jpg in Resources */,
+				CFDAE47F2E1699F6008F5105 /* po-porodu-3.jpg in Resources */,
+				CFDAE4982E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg in Resources */,
+				CFDAE4992E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg in Resources */,
 				CF478D4A2DEF89E2003AE7D8 /* planovany-cisarsky-rez-3.jpg in Resources */,
 				CF478D4B2DEF89E2003AE7D8 /* planovany-cisarsky-rez-4.jpg in Resources */,
 				CF478D4C2DEF89E2003AE7D8 /* planovany-cisarsky-rez-5.jpg in Resources */,
 				CF478D4D2DEF89E2003AE7D8 /* planovany-cisarsky-rez-6.jpg in Resources */,
 				CF478D4E2DEF89E2003AE7D8 /* po-porodu-1.jpg in Resources */,
 				CF478D4F2DEF89E2003AE7D8 /* po-porodu-2.jpg in Resources */,
-				CF478D502DEF89E2003AE7D8 /* po-porodu-3.jpg in Resources */,
 				CF478D512DEF89E2003AE7D8 /* po-porodu-4.jpg in Resources */,
+				CFDAE4832E169DB2008F5105 /* iv-doba-porodni-jak-probiha-3.jpg in Resources */,
+				CFDAE4772E1696DB008F5105 /* poloha-pri-tlaceni-3.mp4 in Resources */,
 				CF478D522DEF89E2003AE7D8 /* poloha-pri-tlaceni-1.jpg in Resources */,
 				CF478D532DEF89E2003AE7D8 /* poloha-pri-tlaceni-2.jpg in Resources */,
 				CF478D542DEF89E2003AE7D8 /* porodnicke-kleste-1.jpg in Resources */,
 				CF478D552DEF89E2003AE7D8 /* preindukce-porodu-1.jpg in Resources */,
 				CF478D562DEF89E2003AE7D8 /* preindukce-porodu-2.jpg in Resources */,
-				CF478D572DEF89E2003AE7D8 /* preindukce-porodu-3.jpg in Resources */,
+				CFDAE46F2E1695D9008F5105 /* monitorovani-behem-porodu-2.mp4 in Resources */,
 				CF478D582DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-1.jpg in Resources */,
 				CF478D592DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-2.jpg in Resources */,
 				CF478D5B2DEF89E2003AE7D8 /* tlumeni-bolesti-bez-leku-4.jpg in Resources */,
@@ -882,10 +950,16 @@
 				CF478D5F2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-3.jpg in Resources */,
 				CF478DB22DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-1.mp4 in Resources */,
 				CF478DB32DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-2.mp4 in Resources */,
+				CFDAE4712E1695F6008F5105 /* monitorovani-behem-porodu-3.mp4 in Resources */,
 				CF478D602DEF89E2003AE7D8 /* vakuumextrakce-1.jpg in Resources */,
 				CF478D612DEF89E2003AE7D8 /* vase-cesta-porodem-1.jpg in Resources */,
+				CFDAE4892E169F11008F5105 /* akutni-cisarsky-rez-1.jpg in Resources */,
 				CF478D622DEF89E2003AE7D8 /* vase-cesta-porodem-2.jpg in Resources */,
 				CF478D632DEF89E2003AE7D8 /* vase-cesta-porodem-3.jpg in Resources */,
+				CFDAE4922E16A20C008F5105 /* vysetreni_sluchu_5.jpg in Resources */,
+				CFDAE4932E16A20C008F5105 /* vysetreni_sluchu_7.jpg in Resources */,
+				CFDAE4942E16A20C008F5105 /* vysetreni_sluchu_6.jpg in Resources */,
+				CFDAE4952E16A20C008F5105 /* vysetreni_sluchu_4.jpg in Resources */,
 				CF478D642DEF89E2003AE7D8 /* vase-cesta-porodem-4.jpg in Resources */,
 				CF478D652DEF89E2003AE7D8 /* vase-cesta-porodem-5.jpg in Resources */,
 				CF478D662DEF89E2003AE7D8 /* vase-cesta-porodem-6.jpg in Resources */,
@@ -895,28 +969,32 @@
 				CF478DBC2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 in Resources */,
 				CF478DBD2DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 in Resources */,
 				CF478D692DEF89E2003AE7D8 /* jak-se-zloutenka-leci-3.jpg in Resources */,
+				CFDAE4692E169548008F5105 /* tlumeni-bolesti-bez-leku-1.mp4 in Resources */,
 				CF478D6A2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-4.jpg in Resources */,
 				CF478D6B2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-5.jpg in Resources */,
 				CF478D6C2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-6.jpg in Resources */,
 				CFF992AA2DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */,
+				CFDAE49B2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov in Resources */,
+				CFDAE4732E1696B3008F5105 /* poloha-pri-tlaceni-1.mp4 in Resources */,
 				CF478D6D2DEF89E2003AE7D8 /* jak-se-zloutenka-vysetruje-1.jpg in Resources */,
 				CF4174172E15492B00D6F11E /* poroddovody.mp3 in Resources */,
 				CF4174182E15492B00D6F11E /* bonding.mp3 in Resources */,
 				CF478D6E2DEF89E2003AE7D8 /* jak-se-zloutenka-vysetruje-2.jpg in Resources */,
+				CFDAE4672E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 in Resources */,
 				CF478D6F2DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-1.jpg in Resources */,
 				CF478D702DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-2.jpg in Resources */,
-				CFF992B12DFD60F500859DC9 /* moceni-a-odchod-stolicky-2.jpg in Resources */,
 				CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */,
-				CFF992B32DFD60F500859DC9 /* moceni-a-odchod-stolicky-1.jpg in Resources */,
 				CFF992B42DFD60F500859DC9 /* vitamin-k-1.jpg in Resources */,
 				CFF992B52DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg in Resources */,
 				CFF992B62DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg in Resources */,
+				CFDAE4652E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 in Resources */,
 				CF478D712DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-3.jpg in Resources */,
 				CF478D722DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-4.jpg in Resources */,
 				CF478D732DEF89E2003AE7D8 /* srdecni-jak-probiha-mereni-1.jpg in Resources */,
 				CF478D742DEF89E2003AE7D8 /* srdecni-jak-probiha-mereni-2.jpg in Resources */,
 				CF478D752DEF89E2003AE7D8 /* srdecni-jak-probiha-mereni-3.jpg in Resources */,
 				CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */,
+				CFDAE4812E169D4E008F5105 /* iv-doba-porodni-jak-probiha-1.jpg in Resources */,
 				CF478D762DEF89E2003AE7D8 /* otaceni01.png in Resources */,
 				CF478D772DEF89E2003AE7D8 /* otaceni02.png in Resources */,
 				CF478D782DEF89E2003AE7D8 /* otaceni03.png in Resources */,
@@ -927,6 +1005,7 @@
 				CF478D7D2DEF89E2003AE7D8 /* testclip2.jpg in Resources */,
 				CF478D7E2DEF89E2003AE7D8 /* testclip3.jpg in Resources */,
 				CF478D7F2DEF89E2003AE7D8 /* zabaleni01.png in Resources */,
+				CFDAE4852E169DEB008F5105 /* iv-doba-porodni-jak-probiha-4.jpg in Resources */,
 				CF478D802DEF89E2003AE7D8 /* zabaleni02.png in Resources */,
 				CF478D812DEF89E2003AE7D8 /* zabaleni03.png in Resources */,
 				CF478D822DEF89E2003AE7D8 /* zabaleni04.png in Resources */,
@@ -934,10 +1013,12 @@
 				CF478D842DEF89E2003AE7D8 /* zvedani02.png in Resources */,
 				CF478D852DEF89E2003AE7D8 /* zvedani03.png in Resources */,
 				CF478D862DEF89E2003AE7D8 /* animace.mp4 in Resources */,
+				CFDAE4752E1696C7008F5105 /* poloha-pri-tlaceni-2.mp4 in Resources */,
 				CF478D872DEF89E2003AE7D8 /* cliptest.mp4 in Resources */,
 				CF478D882DEF89E2003AE7D8 /* otaceni01.mp4 in Resources */,
 				CF478D892DEF89E2003AE7D8 /* otaceni02.mp4 in Resources */,
 				CF478DAD2DEF942C003AE7D8 /* mereni-teploty-1.mp4 in Resources */,
+				CFDAE47D2E16974C008F5105 /* poloha-pri-tlaceni-6.mp4 in Resources */,
 				CF478DAE2DEF942C003AE7D8 /* mereni-teploty-2.mp4 in Resources */,
 				CF478DAF2DEF942C003AE7D8 /* mereni-teploty-3.mp4 in Resources */,
 				CF478D8A2DEF89E2003AE7D8 /* otaceni03.mp4 in Resources */,
@@ -959,7 +1040,10 @@
 				CF478D972DEF89E2003AE7D8 /* zabaleni02.mp4 in Resources */,
 				CF478D982DEF89E2003AE7D8 /* zabaleni03.mp4 in Resources */,
 				CF478D992DEF89E2003AE7D8 /* zabaleni04.mp4 in Resources */,
+				CFDAE48C2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg in Resources */,
+				CFDAE48D2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg in Resources */,
 				CF478D9A2DEF89E2003AE7D8 /* zvedani01.mp4 in Resources */,
+				CFDAE46D2E1695A1008F5105 /* monitorovani-behem-porodu-1.mp4 in Resources */,
 				CF478DA72DEF8D9F003AE7D8 /* test-1.jpeg in Resources */,
 				CF478D9B2DEF89E2003AE7D8 /* zvedani02.mp4 in Resources */,
 				CF478D9C2DEF89E2003AE7D8 /* zvedani03.mp4 in Resources */,
