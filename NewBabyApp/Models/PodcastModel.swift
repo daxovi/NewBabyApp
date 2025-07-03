@@ -27,7 +27,7 @@ struct PodcastModel: Identifiable, Hashable, MenuItemModel, Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
-        title = try container.decode(String.self, forKey: .title)
+        title = try container.decode(String.self, forKey: .title).localizedString
         fileName = try container.decode(String.self, forKey: .fileName)
         bannerName = try container.decodeIfPresent(String.self, forKey: .bannerName)
         isHalf = try container.decodeIfPresent(Bool.self, forKey: .isHalf) ?? false

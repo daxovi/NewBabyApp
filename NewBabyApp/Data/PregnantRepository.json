@@ -1,12 +1,8 @@
 {
-  "title": "Pregnant",
-  "subtitle": "Info for pregnant",
+  "title": "title_cekamemiminko",
+  "subtitle": "subtitle_cekamemiminko",
   "backgroundImageName": "title-pregnant",
   "menuItems": [
-    {
-      "type": "text",
-      "title": "Preparation",
-      "text": "Be prepared."
-    }
+
   ]
 }

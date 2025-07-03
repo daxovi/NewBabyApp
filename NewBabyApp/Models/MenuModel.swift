@@ -33,10 +33,10 @@ struct MenuModel: Identifiable, Hashable, MenuItemModel, Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
-        title = try container.decode(String.self, forKey: .title)
+        title = try container.decode(String.self, forKey: .title).localizedString
         bannerName = try container.decodeIfPresent(String.self, forKey: .bannerName)
         isHalf = try container.decodeIfPresent(Bool.self, forKey: .isHalf) ?? false
-        subtitle = try container.decodeIfPresent(String.self, forKey: .subtitle)
+        subtitle = try container.decodeIfPresent(String.self, forKey: .subtitle)?.localizedString
         backgroundImageName = try container.decodeIfPresent(String.self, forKey: .backgroundImageName)
         menuItems = try container.decode([NavigationDestination].self, forKey: .menuItems)
     }

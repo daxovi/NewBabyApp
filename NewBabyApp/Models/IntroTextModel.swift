@@ -29,10 +29,8 @@ struct IntroTextModel: Identifiable, Hashable, MenuItemModel, Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
-        title = try container.decode(String.self, forKey: .title)
-        let markdown = try container.decode(String.self, forKey: .content)
-        let processed = markdown.replacingOccurrences(of: "\n", with: "  \n")
-        content = try AttributedString(markdown: processed)
+        title = try container.decode(String.self, forKey: .title).localizedString
+        content = try container.decode(String.self, forKey: .content).localizedStringMarkdown
         isCollapsable = try container.decodeIfPresent(Bool.self, forKey: .isCollapsable) ?? false
     }
 

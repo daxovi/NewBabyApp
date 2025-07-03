@@ -270,13 +270,13 @@ private struct StoriesMediaView: View {
     }
 }
 
-
-#Preview {
-    StoriesView(storiesGroup:
-                    StoriesModel(title: "title_planovanycisarskyrez".localizedString, bannerName: "planovany-cisarsky-rez-0", isHalf: true, stories: [
-                        Story(type: .video, sourceName: "test-1", text: "video kjsdhf dvdkvj vjev qef efkdcnrefv fvkkjdv jenfn kfvnj kjvn ffv fvdfv dfvefš fvef nv ac cercacd ffvdavkvš elve ava vevvnnieu vceavkv vvakaev"),
-                        Story(type: .image, sourceName: "test-1", text: "fotka kjsdhf dvdkvj vjev qef efkdcnrefv fvkkjdv jenfn kfvnj kjvn ffv fvdfv dfvefš fvef nv ac cercacd ffvdavkvš elve ava vevvnnieu vceavkv vvakaev"),
-                        Story(type: .video, sourceName: "test-1", text: "v"),
-                    ])
-    )
-}
+//
+//#Preview {
+//    StoriesView(storiesGroup:
+//                    StoriesModel(title: "title_planovanycisarskyrez".localizedString, bannerName: "planovany-cisarsky-rez-0", isHalf: true, stories: [
+//                        Story(type: .video, sourceName: "test-1", text: "video kjsdhf dvdkvj vjev qef efkdcnrefv fvkkjdv jenfn kfvnj kjvn ffv fvdfv dfvefš fvef nv ac cercacd ffvdavkvš elve ava vevvnnieu vceavkv vvakaev"),
+//                        Story(type: .image, sourceName: "test-1", text: "fotka kjsdhf dvdkvj vjev qef efkdcnrefv fvkkjdv jenfn kfvnj kjvn ffv fvdfv dfvefš fvef nv ac cercacd ffvdavkvš elve ava vevvnnieu vceavkv vvakaev"),
+//                        Story(type: .video, sourceName: "test-1", text: "v"),
+//                    ])
+//    )
+//}

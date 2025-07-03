@@ -20,10 +20,7 @@
 		CF4173FB2E153C1E00D6F11E /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173FA2E153C1E00D6F11E /* AudioManager.swift */; };
 		CF4174172E15492B00D6F11E /* poroddovody.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4174162E15492B00D6F11E /* poroddovody.mp3 */; };
 		CF4174182E15492B00D6F11E /* bonding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF4174152E15492B00D6F11E /* bonding.mp3 */; };
-		CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */; };
-		CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */; };
 		CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */; };
-		CF478D0F2DEF89E2003AE7D8 /* PregnantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6B2DEF89E2003AE7D8 /* PregnantRepository.swift */; };
 		CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6E2DEF89E2003AE7D8 /* StoriesView.swift */; };
 		CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6F2DEF89E2003AE7D8 /* TextView.swift */; };
 		CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C702DEF89E2003AE7D8 /* VideoPlayerViewModel.swift */; };
@@ -196,10 +193,10 @@
 		CFDAE4892E169F11008F5105 /* akutni-cisarsky-rez-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4882E169F11008F5105 /* akutni-cisarsky-rez-1.jpg */; };
 		CFDAE48C2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48A2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg */; };
 		CFDAE48D2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48B2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg */; };
-		CFDAE4922E16A20C008F5105 /* vysetreni_sluchu_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48F2E16A20C008F5105 /* vysetreni_sluchu_5.jpg */; };
-		CFDAE4932E16A20C008F5105 /* vysetreni_sluchu_7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4912E16A20C008F5105 /* vysetreni_sluchu_7.jpg */; };
-		CFDAE4942E16A20C008F5105 /* vysetreni_sluchu_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4902E16A20C008F5105 /* vysetreni_sluchu_6.jpg */; };
-		CFDAE4952E16A20C008F5105 /* vysetreni_sluchu_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48E2E16A20C008F5105 /* vysetreni_sluchu_4.jpg */; };
+		CFDAE4922E16A20C008F5105 /* vysetreni-sluchu-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48F2E16A20C008F5105 /* vysetreni-sluchu-5.jpg */; };
+		CFDAE4932E16A20C008F5105 /* vysetreni-sluchu-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4912E16A20C008F5105 /* vysetreni-sluchu-7.jpg */; };
+		CFDAE4942E16A20C008F5105 /* vysetreni-sluchu-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4902E16A20C008F5105 /* vysetreni-sluchu-6.jpg */; };
+		CFDAE4952E16A20C008F5105 /* vysetreni-sluchu-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48E2E16A20C008F5105 /* vysetreni-sluchu-4.jpg */; };
 		CFDAE4982E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */; };
 		CFDAE4992E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */; };
 		CFDAE49B2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */; };
@@ -237,10 +234,7 @@
 		CF4173FC2E153CA700D6F11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CF4174152E15492B00D6F11E /* bonding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bonding.mp3; sourceTree = "<group>"; };
 		CF4174162E15492B00D6F11E /* poroddovody.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = poroddovody.mp3; sourceTree = "<group>"; };
-		CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepository.swift; sourceTree = "<group>"; };
 		CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
-		CF478C6B2DEF89E2003AE7D8 /* PregnantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnantRepository.swift; sourceTree = "<group>"; };
 		CF478C6E2DEF89E2003AE7D8 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		CF478C6F2DEF89E2003AE7D8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		CF478C702DEF89E2003AE7D8 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
@@ -413,10 +407,10 @@
 		CFDAE4882E169F11008F5105 /* akutni-cisarsky-rez-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-1.jpg"; sourceTree = "<group>"; };
 		CFDAE48A2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-1.jpg"; sourceTree = "<group>"; };
 		CFDAE48B2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "moceni-a-odchod-stolicky-2.jpg"; sourceTree = "<group>"; };
-		CFDAE48E2E16A20C008F5105 /* vysetreni_sluchu_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_4.jpg; sourceTree = "<group>"; };
-		CFDAE48F2E16A20C008F5105 /* vysetreni_sluchu_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_5.jpg; sourceTree = "<group>"; };
-		CFDAE4902E16A20C008F5105 /* vysetreni_sluchu_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_6.jpg; sourceTree = "<group>"; };
-		CFDAE4912E16A20C008F5105 /* vysetreni_sluchu_7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vysetreni_sluchu_7.jpg; sourceTree = "<group>"; };
+		CFDAE48E2E16A20C008F5105 /* vysetreni-sluchu-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sluchu-4.jpg"; sourceTree = "<group>"; };
+		CFDAE48F2E16A20C008F5105 /* vysetreni-sluchu-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sluchu-5.jpg"; sourceTree = "<group>"; };
+		CFDAE4902E16A20C008F5105 /* vysetreni-sluchu-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sluchu-6.jpg"; sourceTree = "<group>"; };
+		CFDAE4912E16A20C008F5105 /* vysetreni-sluchu-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sluchu-7.jpg"; sourceTree = "<group>"; };
 		CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-1.jpg"; sourceTree = "<group>"; };
 		CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-3.jpg"; sourceTree = "<group>"; };
 		CFDAE49A2E16A2CB008F5105 /* vysetreni-sedy-zakal-2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "vysetreni-sedy-zakal-2.mov"; sourceTree = "<group>"; };
@@ -480,10 +474,7 @@
 				CF6D13F72E16AFB30030BA12 /* PregnantRepository.json */,
 				CF6D13F32E16AF810030BA12 /* HospitalRepository.json */,
 				CF6D13F12E16AF750030BA12 /* HomeRepository.json */,
-				CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */,
-				CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */,
 				CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */,
-				CF478C6B2DEF89E2003AE7D8 /* PregnantRepository.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -595,10 +586,10 @@
 			children = (
 				CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */,
 				CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */,
-				CFDAE48E2E16A20C008F5105 /* vysetreni_sluchu_4.jpg */,
-				CFDAE48F2E16A20C008F5105 /* vysetreni_sluchu_5.jpg */,
-				CFDAE4902E16A20C008F5105 /* vysetreni_sluchu_6.jpg */,
-				CFDAE4912E16A20C008F5105 /* vysetreni_sluchu_7.jpg */,
+				CFDAE48E2E16A20C008F5105 /* vysetreni-sluchu-4.jpg */,
+				CFDAE48F2E16A20C008F5105 /* vysetreni-sluchu-5.jpg */,
+				CFDAE4902E16A20C008F5105 /* vysetreni-sluchu-6.jpg */,
+				CFDAE4912E16A20C008F5105 /* vysetreni-sluchu-7.jpg */,
 				CF478CBA2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-1.jpg */,
 				CF478CBB2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-2.jpg */,
 				CF478CBC2DEF89E2003AE7D8 /* jak-se-zloutenka-leci-3.jpg */,
@@ -962,10 +953,10 @@
 				CFDAE4892E169F11008F5105 /* akutni-cisarsky-rez-1.jpg in Resources */,
 				CF478D622DEF89E2003AE7D8 /* vase-cesta-porodem-2.jpg in Resources */,
 				CF478D632DEF89E2003AE7D8 /* vase-cesta-porodem-3.jpg in Resources */,
-				CFDAE4922E16A20C008F5105 /* vysetreni_sluchu_5.jpg in Resources */,
-				CFDAE4932E16A20C008F5105 /* vysetreni_sluchu_7.jpg in Resources */,
-				CFDAE4942E16A20C008F5105 /* vysetreni_sluchu_6.jpg in Resources */,
-				CFDAE4952E16A20C008F5105 /* vysetreni_sluchu_4.jpg in Resources */,
+				CFDAE4922E16A20C008F5105 /* vysetreni-sluchu-5.jpg in Resources */,
+				CFDAE4932E16A20C008F5105 /* vysetreni-sluchu-7.jpg in Resources */,
+				CFDAE4942E16A20C008F5105 /* vysetreni-sluchu-6.jpg in Resources */,
+				CFDAE4952E16A20C008F5105 /* vysetreni-sluchu-4.jpg in Resources */,
 				CF478D642DEF89E2003AE7D8 /* vase-cesta-porodem-4.jpg in Resources */,
 				CF478D652DEF89E2003AE7D8 /* vase-cesta-porodem-5.jpg in Resources */,
 				CF478D662DEF89E2003AE7D8 /* vase-cesta-porodem-6.jpg in Resources */,
@@ -1069,13 +1060,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */,
 				CFF992BA2DFD6B9900859DC9 /* AttributedString+splittoparagraphs.swift in Sources */,
 				CFB8E8842DFFFE1900689C2A /* String+folded.swift in Sources */,
-				CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */,
 				CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */,
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,
-				CF478D0F2DEF89E2003AE7D8 /* PregnantRepository.swift in Sources */,
 				CF4173E72E150DA500D6F11E /* IntroTextView.swift in Sources */,
 				CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */,
 				CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */,

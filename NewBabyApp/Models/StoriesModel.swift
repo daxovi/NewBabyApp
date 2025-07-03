@@ -35,7 +35,7 @@ struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel, Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
-        title = try container.decode(String.self, forKey: .title)
+        title = try container.decode(String.self, forKey: .title).localizedString
         bannerName = try container.decodeIfPresent(String.self, forKey: .bannerName)
         isHalf = try container.decodeIfPresent(Bool.self, forKey: .isHalf) ?? false
         stories = try container.decode([Story].self, forKey: .stories)
@@ -72,7 +72,7 @@ struct Story: Identifiable, Equatable, Hashable, Codable {
         id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
         type = try container.decode(StoryType.self, forKey: .type)
         sourceName = try container.decode(String.self, forKey: .sourceName)
-        text = try container.decode(String.self, forKey: .text)
+        text = try container.decode(String.self, forKey: .text).localizedString
     }
 
     func encode(to encoder: Encoder) throws {
