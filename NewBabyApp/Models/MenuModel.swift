@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct MenuModel: Identifiable, Hashable, MenuItemModel {
+struct MenuModel: Identifiable, Hashable, MenuItemModel, Codable {
 
     var id = UUID()
     var title: String
@@ -23,6 +23,32 @@ struct MenuModel: Identifiable, Hashable, MenuItemModel {
 
     var subtitle: String?
     var backgroundImageName: String?
-    
+
     var menuItems: [NavigationDestination]
+
+    enum CodingKeys: String, CodingKey {
+        case id, title, bannerName, isHalf, subtitle, backgroundImageName, menuItems
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        title = try container.decode(String.self, forKey: .title).localizedString
+        bannerName = try container.decodeIfPresent(String.self, forKey: .bannerName)
+        isHalf = try container.decodeIfPresent(Bool.self, forKey: .isHalf) ?? false
+        subtitle = try container.decodeIfPresent(String.self, forKey: .subtitle)?.localizedString
+        backgroundImageName = try container.decodeIfPresent(String.self, forKey: .backgroundImageName)
+        menuItems = try container.decode([NavigationDestination].self, forKey: .menuItems)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(title, forKey: .title)
+        try container.encodeIfPresent(bannerName, forKey: .bannerName)
+        try container.encode(isHalf, forKey: .isHalf)
+        try container.encodeIfPresent(subtitle, forKey: .subtitle)
+        try container.encodeIfPresent(backgroundImageName, forKey: .backgroundImageName)
+        try container.encode(menuItems, forKey: .menuItems)
+    }
 }

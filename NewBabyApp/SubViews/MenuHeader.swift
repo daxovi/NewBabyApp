@@ -51,7 +51,7 @@ struct MenuHeader: View {
                             .font(.title)
                     }
                     if let subtitle, subtitle.count > 0 {
-                        Text(subtitle)
+                        Text(subtitle.localizedString)
                     }
                 }
                 Spacer()

@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel {
+struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel, Codable {
     var id = UUID()
 
     var title: String
@@ -29,9 +29,29 @@ struct StoriesModel: Identifiable, Hashable, Equatable, MenuItemModel {
     static func == (lhs: StoriesModel, rhs: StoriesModel) -> Bool {
         return lhs.stories == rhs.stories
     }
+
+    enum CodingKeys: String, CodingKey { case id, title, bannerName, isHalf, stories }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        title = try container.decode(String.self, forKey: .title).localizedString
+        bannerName = try container.decodeIfPresent(String.self, forKey: .bannerName)
+        isHalf = try container.decodeIfPresent(Bool.self, forKey: .isHalf) ?? false
+        stories = try container.decode([Story].self, forKey: .stories)
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(title, forKey: .title)
+        try container.encodeIfPresent(bannerName, forKey: .bannerName)
+        try container.encode(isHalf, forKey: .isHalf)
+        try container.encode(stories, forKey: .stories)
+    }
 }
 
-struct Story: Identifiable, Equatable, Hashable {
+struct Story: Identifiable, Equatable, Hashable, Codable {
     var id = UUID()
     var type: StoryType
     var sourceName: String
@@ -41,7 +61,25 @@ struct Story: Identifiable, Equatable, Hashable {
         return lhs.sourceName == rhs.sourceName
     }
 
-    enum StoryType {
+    enum StoryType: String, Codable {
         case image, video
+    }
+
+    enum CodingKeys: String, CodingKey { case id, type, sourceName, text }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decodeIfPresent(UUID.self, forKey: .id) ?? UUID()
+        type = try container.decode(StoryType.self, forKey: .type)
+        sourceName = try container.decode(String.self, forKey: .sourceName)
+        text = try container.decode(String.self, forKey: .text).localizedString
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(type, forKey: .type)
+        try container.encode(sourceName, forKey: .sourceName)
+        try container.encode(text, forKey: .text)
     }
 }

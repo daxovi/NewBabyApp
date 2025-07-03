@@ -32,7 +32,8 @@ struct IntroTextView: View {
             }
             if !model.isCollapsable || !isCollapsed {
                 Divider()
-                let textArray = model.content.splitToParagraphs()
+                let content = model.content
+                let textArray = content.splitToParagraphs()
                 VStack(alignment: .leading, spacing: 8) {
                     ForEach(textArray, id: \.self) { paragraph in
                         Text(paragraph)
@@ -49,12 +50,12 @@ struct IntroTextView: View {
     }
 }
 
-#Preview {
-    VStack {
-        Spacer()
-        IntroTextView(model: IntroTextModel(title: "Úvodní text", content: "Toto je obsah úvodního textu, který může být delší a obsahovat více informací.", isCollapsable: true))
-        Spacer()
-    }
-    .padding()
-    .background(Color.background)
-}
+//#Preview {
+//    VStack {
+//        Spacer()
+//        IntroTextView(model: IntroTextModel(title: "Úvodní text", content: "Toto je obsah úvodního textu, který může být delší a obsahovat více informací.", isCollapsable: true))
+//        Spacer()
+//    }
+//    .padding()
+//    .background(Color.background)
+//}

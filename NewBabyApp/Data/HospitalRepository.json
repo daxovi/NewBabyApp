@@ -1,0 +1,1281 @@
+{
+  "title" : "title_jsmevporodnici",
+  "isHalf" : false,
+  "backgroundImageName" : "title-baby",
+  "menuItems" : [
+    {
+      "bannerName" : "prvni-den",
+      "title" : "title_poporodukrokzakrokem",
+      "isHalf" : false,
+      "type" : "menu",
+      "menuItems" : [
+        {
+          "title" : "title_prvnidencovasceka",
+          "content" : "detail_prvnidencovasceka",
+          "isCollapsable" : false,
+          "type" : "introText"
+        },
+        {
+          "bannerName" : "bonding",
+          "title" : "title_bonding",
+          "menuItems" : [
+            {
+              "content" : "detail_cojebonding",
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_cojebonding"
+            },
+            {
+              "fileName" : "bonding",
+              "isHalf" : false,
+              "type" : "podcast",
+              "title" : "title_bonding"
+            },
+            {
+              "stories" : [
+                {
+                  "text" : "jak_bonding_probiha_1",
+                  "type" : "image",
+                  "sourceName" : "jak-bonding-probiha-1"
+                },
+                {
+                  "text" : "jak_bonding_probiha_2",
+                  "type" : "image",
+                  "sourceName" : "jak-bonding-probiha-2"
+                },
+                {
+                  "text" : "jak_bonding_probiha_3",
+                  "type" : "image",
+                  "sourceName" : "jak-bonding-probiha-3"
+                },
+                {
+                  "text" : "jak_bonding_probiha_4",
+                  "type" : "image",
+                  "sourceName" : "jak-bonding-probiha-4"
+                },
+                {
+                  "text" : "jak_bonding_probiha_5",
+                  "type" : "image",
+                  "sourceName" : "jak-bonding-probiha-5"
+                },
+                {
+                  "text" : "jak_bonding_probiha_6",
+                  "type" : "image",
+                  "sourceName" : "jak-bonding-probiha-6"
+                }
+              ],
+              "isHalf" : false,
+              "bannerName" : "jak_bonding_probiha",
+              "type" : "stories",
+              "title" : "title_jakbondingprobiha"
+            },
+            {
+              "stories" : [
+                {
+                  "type" : "image",
+                  "sourceName" : "proc-je-bonding-dulezity-1",
+                  "text" : "proc_je_bonding_dulezity_1"
+                },
+                {
+                  "type" : "image",
+                  "sourceName" : "proc-je-bonding-dulezity-2",
+                  "text" : "proc_je_bonding_dulezity_2"
+                },
+                {
+                  "type" : "image",
+                  "sourceName" : "proc-je-bonding-dulezity-3",
+                  "text" : "proc_je_bonding_dulezity_3"
+                }
+              ],
+              "isHalf" : true,
+              "bannerName" : "proc_je_bonding_dulezity",
+              "type" : "stories",
+              "title" : "title_procjebondingdulezity"
+            },
+            {
+              "stories" : [
+                {
+                  "text" : "bonding_s_tatinkem_1",
+                  "sourceName" : "bonding-s-tatinkem-1",
+                  "type" : "image"
+                },
+                {
+                  "text" : "bonding_s_tatinkem_2",
+                  "sourceName" : "bonding-s-tatinkem-2",
+                  "type" : "image"
+                }
+              ],
+              "isHalf" : true,
+              "bannerName" : "bonding_s_tatinkem",
+              "type" : "stories",
+              "title" : "title_bondingstatinkem"
+            }
+          ],
+          "type" : "menu",
+          "isHalf" : false
+        },
+        {
+          "stories" : [
+            {
+              "sourceName" : "jak-vypada-miminko-po-porodu-1",
+              "type" : "image",
+              "text" : "jak_vypada_miminko_po_porodu_1"
+            },
+            {
+              "sourceName" : "jak-vypada-miminko-po-porodu-2",
+              "type" : "image",
+              "text" : "jak_vypada_miminko_po_porodu_2"
+            },
+            {
+              "sourceName" : "jak-vypada-miminko-po-porodu-3",
+              "type" : "image",
+              "text" : "jak_vypada_miminko_po_porodu_3"
+            }
+          ],
+          "title" : "title_jakvypadamiminkopoporodu",
+          "type" : "stories",
+          "isHalf" : false
+        },
+        {
+          "stories" : [
+            {
+              "sourceName" : "mereni-teploty-1",
+              "text" : "mereni_teploty_1",
+              "type" : "video"
+            },
+            {
+              "sourceName" : "mereni-teploty-2",
+              "text" : "mereni_teploty_2",
+              "type" : "video"
+            },
+            {
+              "sourceName" : "mereni-teploty-3",
+              "text" : "mereni_teploty_3",
+              "type" : "video"
+            }
+          ],
+          "title" : "title_merenitelesneteploty",
+          "type" : "stories",
+          "isHalf" : false
+        },
+        {
+          "stories" : [
+            {
+              "type" : "image",
+              "sourceName" : "oznaceni-novorozence-1",
+              "text" : "oznaceni_novorozence_1"
+            },
+            {
+              "type" : "image",
+              "sourceName" : "oznaceni-novorozence-2",
+              "text" : "oznaceni_novorozence_2"
+            }
+          ],
+          "title" : "title_oznaceninovorozence",
+          "type" : "stories",
+          "isHalf" : false
+        },
+        {
+          "stories" : [
+            {
+              "sourceName" : "moceni-a-odchod-stolicky-1",
+              "type" : "image",
+              "text" : "moceni_a_odchod_stolicky_1"
+            },
+            {
+              "sourceName" : "moceni-a-odchod-stolicky-2",
+              "type" : "image",
+              "text" : "moceni_a_odchod_stolicky_2"
+            }
+          ],
+          "title" : "title_moceniaodchodstolicky",
+          "type" : "stories",
+          "isHalf" : false
+        },
+        {
+          "stories" : [
+            {
+              "text" : "vaha_a_delka_miminka_1",
+              "sourceName" : "vaha-a-delka-miminka-1",
+              "type" : "image"
+            },
+            {
+              "text" : "vaha_a_delka_miminka_2",
+              "sourceName" : "vaha-a-delka-miminka-2",
+              "type" : "image"
+            }
+          ],
+          "title" : "title_vahaadelkamiminka",
+          "type" : "stories",
+          "isHalf" : false
+        },
+        {
+          "menuItems" : [
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_ochranaprednecekanymkrvacenimvitamink",
+              "content" : "detail_ochranaprednecekanymkrvacenimvitamink"
+            },
+            {
+              "isCollapsable" : true,
+              "type" : "introText",
+              "title" : "title_cojekrvacinanemocvitamink",
+              "content" : "detail_cojekrvacinanemocvitamink"
+            },
+            {
+              "stories" : [
+                {
+                  "sourceName" : "vitamin-k-1",
+                  "text" : "vitamin_k_1",
+                  "type" : "image"
+                },
+                {
+                  "sourceName" : "vitamin-k-2",
+                  "text" : "vitamin_k_2",
+                  "type" : "image"
+                },
+                {
+                  "sourceName" : "vitamin-k-3",
+                  "text" : "vitamin_k_3",
+                  "type" : "image"
+                }
+              ],
+              "type" : "stories",
+              "bannerName" : "placeholder",
+              "title" : "title_jaksekrvacinemocipredchazivitamink",
+              "isHalf" : false
+            },
+            {
+              "isCollapsable" : true,
+              "type" : "introText",
+              "title" : "title_procjevitaminkdoporuceny",
+              "content" : "detail_procjevitaminkdoporuceny"
+            }
+          ],
+          "title" : "title_vitamink",
+          "type" : "menu",
+          "isHalf" : false
+        },
+        {
+          "stories" : [
+            {
+              "sourceName" : "vysetreni-krevni-skupiny-1",
+              "type" : "image",
+              "text" : "vysetreni_krevni_skupiny_1"
+            },
+            {
+              "sourceName" : "vysetreni-krevni-skupiny-2",
+              "type" : "image",
+              "text" : "vysetreni_krevni_skupiny_2"
+            }
+          ],
+          "title" : "title_vysetrenikrevniskupiny",
+          "type" : "stories",
+          "isHalf" : false
+        }
+      ]
+    },
+    {
+      "bannerName" : "zdravi-pod-kontrolou",
+      "title" : "title_zdravipodkontrolou",
+      "isHalf" : false,
+      "type" : "menu",
+      "menuItems" : [
+        {
+          "title" : "title_nls",
+          "bannerName" : "novorozenecky-laboratorni-screening-0",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "content" : "detail_cojenls",
+              "title" : "title_cojenls",
+              "isCollapsable" : false,
+              "type" : "introText"
+            },
+            {
+              "content" : "detail_kdysenlsprovadi",
+              "title" : "title_kdysescreeningsedyzakalprovadi",
+              "isCollapsable" : false,
+              "type" : "introText"
+            },
+            {
+              "title" : "title_jaksenlsprovadi",
+              "stories" : [
+                {
+                  "text" : "novorozenecky_screening_1",
+                  "sourceName" : "novorozenecky-screening-1",
+                  "type" : "video"
+                },
+                {
+                  "text" : "novorozenecky_screening_2",
+                  "sourceName" : "novorozenecky-screening-2",
+                  "type" : "video"
+                }
+              ],
+              "bannerName" : "nls-jak-se-odber-provadi-0",
+              "isHalf" : false,
+              "type" : "stories"
+            },
+            {
+              "content" : "detail_jaksenlsvyhodnocuje",
+              "title" : "title_jaksenlsvyhodnocuje",
+              "isCollapsable" : true,
+              "type" : "introText"
+            },
+            {
+              "content" : "detail_muzebytmojeditenemocnenls",
+              "title" : "title_muzebytmojeditenemocnenls",
+              "isCollapsable" : false,
+              "type" : "introText"
+            },
+            {
+              "content" : "detail_jakenenemocilzenlsodhalit",
+              "title" : "title_jakenenemocilzenlsodhalit",
+              "isCollapsable" : true,
+              "type" : "introText"
+            }
+          ],
+          "type" : "menu"
+        },
+        {
+          "title" : "title_zloutenka",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_cojezloutenka",
+              "content" : "detail_cojezloutenka"
+            },
+            {
+              "isHalf" : false,
+              "stories" : [
+                {
+                  "type" : "image",
+                  "text" : "jake_jsou_priznaky_zloutenky_1",
+                  "sourceName" : "jake-jsou-priznaky-zloutenky-1"
+                },
+                {
+                  "type" : "image",
+                  "text" : "jake_jsou_priznaky_zloutenky_2",
+                  "sourceName" : "jake-jsou-priznaky-zloutenky-2"
+                },
+                {
+                  "type" : "image",
+                  "text" : "jake_jsou_priznaky_zloutenky_3",
+                  "sourceName" : "jake-jsou-priznaky-zloutenky-3"
+                }
+              ],
+              "bannerName" : "jake-jsou-priznaky-zloutenky-0",
+              "type" : "stories",
+              "title" : "title_jakejsoupriznakyzloutenky"
+            },
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_kdysezloutenkaobjevuje",
+              "content" : "detail_kdysezloutenkaobjevuje"
+            },
+            {
+              "isHalf" : false,
+              "stories" : [
+                {
+                  "sourceName" : "jak-se-zloutenka-vysetruje-1",
+                  "type" : "image",
+                  "text" : "jak_se_zloutenka_vysetruje_1"
+                },
+                {
+                  "sourceName" : "jak-se-zloutenka-vysetruje-2",
+                  "type" : "image",
+                  "text" : "jak_se_zloutenka_vysetruje_2"
+                }
+              ],
+              "type" : "stories",
+              "title" : "title_jaksezloutenkavysetruje"
+            },
+            {
+              "isHalf" : false,
+              "stories" : [
+                {
+                  "type" : "image",
+                  "sourceName" : "jak-se-zloutenka-leci-1",
+                  "text" : "jak_se_zloutenka_leci_1"
+                },
+                {
+                  "type" : "image",
+                  "sourceName" : "jak-se-zloutenka-leci-2",
+                  "text" : "jak_se_zloutenka_leci_2"
+                },
+                {
+                  "type" : "image",
+                  "sourceName" : "jak-se-zloutenka-leci-3",
+                  "text" : "srdecni_jak_probiha_mereni_3"
+                },
+                {
+                  "type" : "image",
+                  "sourceName" : "jak-se-zloutenka-leci-4",
+                  "text" : "jak_se_zloutenka_leci_4"
+                },
+                {
+                  "type" : "image",
+                  "sourceName" : "jak-se-zloutenka-leci-5",
+                  "text" : "jak_se_zloutenka_leci_5"
+                },
+                {
+                  "type" : "image",
+                  "sourceName" : "jak-se-zloutenka-leci-6",
+                  "text" : "jak_se_zloutenka_leci_6"
+                }
+              ],
+              "type" : "stories",
+              "title" : "title_jaksezloutenkaleci"
+            }
+          ],
+          "type" : "menu"
+        },
+        {
+          "title" : "title_screeningsrdecnichvad",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "content" : "detail_procseprovadisvsv",
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_procseprovadisvsv"
+            },
+            {
+              "bannerName" : "srdecni-vady-jak-probiha-mereni-0",
+              "isHalf" : false,
+              "stories" : [
+                {
+                  "text" : "srdecni_jak_probiha_mereni_1",
+                  "type" : "image",
+                  "sourceName" : "srdecni-jak-probiha-mereni-1"
+                },
+                {
+                  "text" : "srdecni_jak_probiha_mereni_2",
+                  "type" : "image",
+                  "sourceName" : "srdecni-jak-probiha-mereni-2"
+                },
+                {
+                  "text" : "srdecni_jak_probiha_mereni_3",
+                  "type" : "image",
+                  "sourceName" : "srdecni-jak-probiha-mereni-3"
+                }
+              ],
+              "type" : "stories",
+              "title" : "title_jakprobihamerenisvsv"
+            },
+            {
+              "content" : "detail_kdysedozvimvysledeksvsv",
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_kdysedozvimvysledeksvsv"
+            },
+            {
+              "content" : "detail_jakemohoubytvysledkysvsv",
+              "isCollapsable" : true,
+              "type" : "introText",
+              "title" : "title_jakemohoubytvysledkysvsv"
+            }
+          ],
+          "type" : "menu"
+        },
+        {
+          "title" : "title_vysetrenisluchu",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_procseprovadivysetrenisluchu",
+              "content" : "detail_procseprovadivysetrenisluchu"
+            },
+            {
+              "isHalf" : false,
+              "stories" : [
+                {
+                  "sourceName" : "vysetreni-sluchu-1",
+                  "text" : "vysetreni_sluchu_1",
+                  "type" : "video"
+                },
+                {
+                  "sourceName" : "vysetreni-sluchu-2",
+                  "text" : "vysetreni_sluchu_2",
+                  "type" : "video"
+                },
+                {
+                  "sourceName" : "vysetreni-sluchu-3",
+                  "text" : "vysetreni_sluchu_3",
+                  "type" : "video"
+                }
+              ],
+              "bannerName" : "jakprobihavysetrenisluchu-0",
+              "type" : "stories",
+              "title" : "title_jakprobihavysetrenisluchu"
+            },
+            {
+              "isHalf" : false,
+              "stories" : [
+                {
+                  "type" : "image",
+                  "text" : "vysetreni_sluchu_4",
+                  "sourceName" : "vysetreni-sluchu-4"
+                },
+                {
+                  "type" : "image",
+                  "text" : "vysetreni_sluchu_5",
+                  "sourceName" : "vysetreni-sluchu-5"
+                },
+                {
+                  "type" : "image",
+                  "text" : "vysetreni_sluchu_6",
+                  "sourceName" : "vysetreni-sluchu-6"
+                },
+                {
+                  "type" : "image",
+                  "text" : "vysetreni_sluchu_7",
+                  "sourceName" : "vysetreni-sluchu-7"
+                }
+              ],
+              "bannerName" : "kdysevysetrenisluchuprovadi-0",
+              "type" : "stories",
+              "title" : "title_kdysevysetrenisluchuprovadi"
+            },
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_kdysedozvimvysledekvysetrenisluchu",
+              "content" : "detail_kdysedozvimvysledekvysetrenisluchu"
+            },
+            {
+              "isCollapsable" : true,
+              "type" : "introText",
+              "title" : "title_jakemohoubytvysledkyvysetrenisluchu",
+              "content" : "detail_jakemohoubytvysledkyvysetrenisluchu"
+            },
+            {
+              "isCollapsable" : true,
+              "type" : "introText",
+              "title" : "title_cokdyzsescreeningnepovedevysetrenisluchu",
+              "content" : "detail_cokdyzsescreeningnepovedevysetrenisluchu"
+            },
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_procjevysetrenisluchudulezite",
+              "content" : "detail_procjevysetrenisluchudulezite"
+            },
+            {
+              "isCollapsable" : true,
+              "type" : "introText",
+              "title" : "title_muzemitmojediteporuchusluchu",
+              "content" : "detail_muzemitmojediteporuchusluchu"
+            }
+          ],
+          "type" : "menu"
+        },
+        {
+          "title" : "title_screeningnavrozenysedyzakal",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "type" : "introText",
+              "isCollapsable" : false,
+              "content" : "detail_cojesedyzakal",
+              "title" : "title_cojesedyzakal"
+            },
+            {
+              "type" : "stories",
+              "bannerName" : "jakprobihavysetrenisedyzakal-0",
+              "isHalf" : false,
+              "title" : "title_jakprobihavysetrenisedyzakal",
+              "stories" : [
+                {
+                  "sourceName" : "vysetreni-sedy-zakal-1",
+                  "type" : "image",
+                  "text" : "vysetreni_sedy_zakal_1"
+                },
+                {
+                  "sourceName" : "vysetreni-sedy-zakal-2",
+                  "type" : "video",
+                  "text" : "vysetreni_sedy_zakal_2"
+                },
+                {
+                  "sourceName" : "vysetreni-sedy-zakal-3",
+                  "type" : "image",
+                  "text" : "vysetreni_sedy_zakal_3"
+                }
+              ]
+            },
+            {
+              "type" : "introText",
+              "isCollapsable" : false,
+              "content" : "detail_procjescreeningsedyzakaldulezity",
+              "title" : "title_procjescreeningsedyzakaldulezity"
+            },
+            {
+              "type" : "introText",
+              "isCollapsable" : true,
+              "content" : "detail_kdysescreeningsedyzakalprovadi",
+              "title" : "title_kdysescreeningsedyzakalprovadi"
+            },
+            {
+              "type" : "introText",
+              "isCollapsable" : true,
+              "content" : "detail_kdysedozvimvysledeksedyzakal",
+              "title" : "title_kdysedozvimvysledeksedyzakal"
+            },
+            {
+              "type" : "introText",
+              "isCollapsable" : true,
+              "content" : "detail_coznamenapozitivnivysledeksedyzakal",
+              "title" : "title_coznamenapozitivnivysledeksedyzakal"
+            },
+            {
+              "type" : "introText",
+              "isCollapsable" : true,
+              "content" : "detail_jakcastosesedyzakalvyskytuje",
+              "title" : "title_jakcastosesedyzakalvyskytuje"
+            }
+          ],
+          "type" : "menu"
+        },
+        {
+          "title" : "title_screeningvrozenesyfilis",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_jakprobihavysetrenisyfilis",
+              "content" : "detail_jakprobihavysetrenisyfilis"
+            },
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_jakemohoubytvysledkysyfilis",
+              "content" : "detail_jakemohoubytvysledkysyfilis"
+            },
+            {
+              "isCollapsable" : false,
+              "type" : "introText",
+              "title" : "title_kdysedozvimvysledeksyfilis",
+              "content" : "detail_kdysedozvimvysledeksyfilis"
+            }
+          ],
+          "type" : "menu"
+        },
+        {
+          "title" : "title_vysetreniledvin",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "title" : "title_jakprobihavysetreniledvin",
+              "bannerName" : "jakprobihavysetreniledvin-0",
+              "stories" : [
+                {
+                  "type" : "video",
+                  "sourceName" : "vysetreni-ledvin-1",
+                  "text" : "vysetreni_ledvin_1"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "vysetreni-ledvin-2",
+                  "text" : "vysetreni_ledvin_2"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "vysetreni-ledvin-3",
+                  "text" : "vysetreni_ledvin_3"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "vysetreni-ledvin-4",
+                  "text" : "vysetreni_ledvin_4"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "vysetreni-ledvin-5",
+                  "text" : "vysetreni_ledvin_5"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "vysetreni-ledvin-6",
+                  "text" : "vysetreni_ledvin_6"
+                }
+              ],
+              "isHalf" : false,
+              "type" : "stories"
+            },
+            {
+              "title" : "title_jevysetreniledvinpovinne",
+              "content" : "detail_jevysetreniledvinpovinne",
+              "isCollapsable" : false,
+              "type" : "introText"
+            }
+          ],
+          "type" : "menu"
+        },
+        {
+          "title" : "title_vysetrenidetskymortopedem",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "title" : "title_vysetrenikycliadolnichkoncetinortopedem",
+              "isCollapsable" : false,
+              "type" : "introText",
+              "content" : "detail_vysetrenikycliadolnichkoncetinortopedem"
+            },
+            {
+              "title" : "title_jakprobihavysetreniortopedem",
+              "isHalf" : false,
+              "type" : "stories",
+              "bannerName" : "jakprobihavysetreniortopedem-0",
+              "stories" : [
+                {
+                  "type" : "video",
+                  "text" : "vysetreni_detsky_ortoped_1",
+                  "sourceName" : "vysetreni-detsky-ortoped-1"
+                },
+                {
+                  "type" : "video",
+                  "text" : "vysetreni_detsky_ortoped_2",
+                  "sourceName" : "vysetreni-detsky-ortoped-2"
+                }
+              ]
+            },
+            {
+              "title" : "title_procjevysetreniortopedemdulezite",
+              "isCollapsable" : false,
+              "type" : "introText",
+              "content" : "detail_procjevysetreniortopedemdulezite"
+            },
+            {
+              "title" : "title_kdyvysetreniortopedemprobiha",
+              "isCollapsable" : false,
+              "type" : "introText",
+              "content" : "detail_kdyvysetreniortopedemprobiha"
+            },
+            {
+              "title" : "title_kdyznenivsechnojakmabytvysetreniortopedem",
+              "isCollapsable" : true,
+              "type" : "introText",
+              "content" : "detail_kdyznenivsechnojakmabytvysetreniortopedem"
+            },
+            {
+              "title" : "title_sirokebalenivysetreniortopedem",
+              "isHalf" : false,
+              "type" : "stories",
+              "bannerName" : "placeholder",
+              "stories" : [
+
+              ]
+            }
+          ],
+          "type" : "menu"
+        }
+      ]
+    },
+    {
+      "bannerName" : "porod",
+      "title" : "title_porod",
+      "isHalf" : false,
+      "type" : "menu",
+      "menuItems" : [
+        {
+          "content" : "detail_porod",
+          "isCollapsable" : false,
+          "type" : "introText",
+          "title" : "title_porod"
+        },
+        {
+          "bannerName" : "jak-to-u-nas-vypada-0",
+          "isHalf" : false,
+          "stories" : [
+            {
+              "type" : "video",
+              "text" : "jak_to_u_nas_vypada_1",
+              "sourceName" : "jak-to-u-nas-vypada-1"
+            },
+            {
+              "type" : "video",
+              "text" : "jak_to_u_nas_vypada_2",
+              "sourceName" : "jak-to-u-nas-vypada-2"
+            }
+          ],
+          "type" : "stories",
+          "title" : "title_jaktounasvypadaporod"
+        },
+        {
+          "bannerName" : "vase-cesta-porodem-0",
+          "isHalf" : false,
+          "stories" : [
+            {
+              "sourceName" : "vase-cesta-porodem-2",
+              "text" : "vase_cesta_porodem_2",
+              "type" : "image"
+            },
+            {
+              "sourceName" : "vase-cesta-porodem-3",
+              "text" : "vase_cesta_porodem_3",
+              "type" : "image"
+            },
+            {
+              "sourceName" : "vase-cesta-porodem-4",
+              "text" : "vase_cesta_porodem_4",
+              "type" : "image"
+            },
+            {
+              "sourceName" : "vase-cesta-porodem-5",
+              "text" : "vase_cesta_porodem_5",
+              "type" : "image"
+            },
+            {
+              "sourceName" : "vase-cesta-porodem-6",
+              "text" : "vase_cesta_porodem_6",
+              "type" : "image"
+            }
+          ],
+          "type" : "stories",
+          "title" : "title_vasecestaporodem"
+        },
+        {
+          "fileName" : "poroddovody",
+          "isHalf" : false,
+          "type" : "podcast",
+          "title" : "title_poroddovody"
+        },
+        {
+          "bannerName" : "placeholder",
+          "isHalf" : false,
+          "menuItems" : [
+            {
+              "content" : "detail_jakejsoufazeporodu",
+              "title" : "title_jakejsoufazeporodu",
+              "isCollapsable" : false,
+              "type" : "introText"
+            },
+            {
+              "title" : "title_idobaporodniporod",
+              "menuItems" : [
+                {
+                  "isCollapsable" : false,
+                  "content" : "detail_cosedejevprvnifaziporodu",
+                  "title" : "title_cosedejevprvnifaziporodu",
+                  "type" : "introText"
+                },
+                {
+                  "stories" : [
+                    {
+                      "type" : "video",
+                      "text" : "monitorovani_behem_porodu_1",
+                      "sourceName" : "monitorovani-behem-porodu-1"
+                    },
+                    {
+                      "type" : "video",
+                      "text" : "monitorovani_behem_porodu_2",
+                      "sourceName" : "monitorovani-behem-porodu-2"
+                    },
+                    {
+                      "type" : "video",
+                      "text" : "monitorovani_behem_porodu_3",
+                      "sourceName" : "monitorovani-behem-porodu-3"
+                    }
+                  ],
+                  "bannerName" : "placeholder",
+                  "isHalf" : false,
+                  "title" : "title_monitorovanibehemporodu",
+                  "type" : "stories"
+                },
+                {
+                  "isCollapsable" : false,
+                  "content" : "detail_moznostitlumenibolestibehemporodu",
+                  "title" : "title_moznostitlumenibolestibehemporodu",
+                  "type" : "introText"
+                },
+                {
+                  "stories" : [
+                    {
+                      "text" : "tlumeni_bolesti_bez_leku_1",
+                      "type" : "video",
+                      "sourceName" : "tlumeni-bolesti-bez-leku-1"
+                    },
+                    {
+                      "text" : "tlumeni_bolesti_bez_leku_2",
+                      "type" : "video",
+                      "sourceName" : "tlumeni-bolesti-bez-leku-2"
+                    },
+                    {
+                      "text" : "tlumeni_bolesti_bez_leku_3",
+                      "type" : "video",
+                      "sourceName" : "tlumeni-bolesti-bez-leku-3"
+                    },
+                    {
+                      "text" : "tlumeni_bolesti_bez_leku_4",
+                      "type" : "video",
+                      "sourceName" : "tlumeni-bolesti-bez-leku-4"
+                    },
+                    {
+                      "text" : "tlumeni_bolesti_bez_leku_5",
+                      "type" : "video",
+                      "sourceName" : "tlumeni-bolesti-bez-leku-5"
+                    }
+                  ],
+                  "bannerName" : "tlumenibolestibezleku-0",
+                  "isHalf" : true,
+                  "title" : "title_tlumenibolestibezleku",
+                  "type" : "stories"
+                },
+                {
+                  "stories" : [
+                    {
+                      "type" : "image",
+                      "sourceName" : "tlumeni-bolesti-s-pouzitim-leku-1",
+                      "text" : "tlumeni_bolesti_s_pouzitim_leku_1"
+                    },
+                    {
+                      "type" : "image",
+                      "sourceName" : "tlumeni-bolesti-s-pouzitim-leku-2",
+                      "text" : "tlumeni_bolesti_s_pouzitim_leku_2"
+                    },
+                    {
+                      "type" : "image",
+                      "sourceName" : "tlumeni-bolesti-s-pouzitim-leku-3",
+                      "text" : "tlumeni_bolesti_s_pouzitim_leku_3"
+                    }
+                  ],
+                  "bannerName" : "tlumenibolestispouzitimleku-0",
+                  "isHalf" : true,
+                  "title" : "title_tlumenibolestispouzitimleku",
+                  "type" : "stories"
+                },
+                {
+                  "isCollapsable" : false,
+                  "content" : "detail_kdyzporodpotrebujepomocifazeporodni",
+                  "title" : "title_kdyzporodpottrebujepomociifazeporodni",
+                  "type" : "introText"
+                },
+                {
+                  "isCollapsable" : true,
+                  "content" : "detail_moznekomplikaceidobaporodni",
+                  "title" : "title_moznekomplikaceivfazeporodu",
+                  "type" : "introText"
+                }
+              ],
+              "isHalf" : false,
+              "type" : "menu"
+            },
+            {
+              "title" : "title_iidobaporodniporod",
+              "menuItems" : [
+                {
+                  "type" : "introText",
+                  "title" : "title_cosedejevedruhefaziporodu",
+                  "isCollapsable" : false,
+                  "content" : "detail_cosedejevedruhefaziporodu"
+                },
+                {
+                  "type" : "introText",
+                  "title" : "title_kdyzporodpottrebujepomociifazeporodni",
+                  "isCollapsable" : false,
+                  "content" : "detail_kdyzporodpotrebujepomociifazeporodni"
+                },
+                {
+                  "type" : "stories",
+                  "title" : "title_polohapritlaceni",
+                  "bannerName" : "placeholder",
+                  "isHalf" : false,
+                  "stories" : [
+                    {
+                      "sourceName" : "poloha-pri-tlaceni-1",
+                      "type" : "video",
+                      "text" : "poloha_pri_tlaceni_1"
+                    },
+                    {
+                      "sourceName" : "poloha-pri-tlaceni-2",
+                      "type" : "video",
+                      "text" : "poloha_pri_tlaceni_2"
+                    },
+                    {
+                      "sourceName" : "poloha-pri-tlaceni-3",
+                      "type" : "video",
+                      "text" : "poloha_pri_tlaceni_3"
+                    },
+                    {
+                      "sourceName" : "poloha-pri-tlaceni-4",
+                      "type" : "video",
+                      "text" : "poloha_pri_tlaceni_4"
+                    },
+                    {
+                      "sourceName" : "poloha-pri-tlaceni-5",
+                      "type" : "video",
+                      "text" : "poloha_pri_tlaceni_5"
+                    },
+                    {
+                      "sourceName" : "poloha-pri-tlaceni-6",
+                      "type" : "video",
+                      "text" : "poloha_pri_tlaceni_6"
+                    }
+                  ]
+                },
+                {
+                  "type" : "introText",
+                  "title" : "title_chranenihrazebehemporodu",
+                  "isCollapsable" : false,
+                  "content" : "detail_chranenihrazebehemporodu"
+                },
+                {
+                  "type" : "stories",
+                  "title" : "title_poporodu",
+                  "bannerName" : "placeholder",
+                  "isHalf" : false,
+                  "stories" : [
+                    {
+                      "sourceName" : "po-porodu-1",
+                      "type" : "image",
+                      "text" : "po_porodu_1"
+                    },
+                    {
+                      "sourceName" : "po-porodu-2",
+                      "type" : "image",
+                      "text" : "po_porodu_2"
+                    },
+                    {
+                      "sourceName" : "po-porodu-3",
+                      "type" : "image",
+                      "text" : "po_porodu_3"
+                    }
+                  ]
+                },
+                {
+                  "type" : "introText",
+                  "title" : "title_moznekomplikaceiidobaporodni",
+                  "isCollapsable" : false,
+                  "content" : "detail_moznekomplikaceiidobaporodni"
+                },
+                {
+                  "type" : "introText",
+                  "title" : "title_vakuumextrakce",
+                  "isCollapsable" : true,
+                  "content" : "vakuumextrakce_1"
+                },
+                {
+                  "type" : "introText",
+                  "title" : "title_porodnickekleste",
+                  "isCollapsable" : true,
+                  "content" : "porodnicke_kleste_1"
+                }
+              ],
+              "isHalf" : false,
+              "type" : "menu"
+            },
+            {
+              "title" : "title_iiidobaporodniporod",
+              "menuItems" : [
+                {
+                  "title" : "title_cosedejevetretifaziporodu",
+                  "content" : "detail_cosedejevetretifaziporodu",
+                  "type" : "introText",
+                  "isCollapsable" : false
+                },
+                {
+                  "title" : "title_jakprobihaiiifazeporodu",
+                  "content" : "detail_jakprobihaiiifazeporodu",
+                  "type" : "introText",
+                  "isCollapsable" : false
+                },
+                {
+                  "title" : "title_placentajakoodkaz",
+                  "isHalf" : false,
+                  "stories" : [
+                    {
+                      "sourceName" : "iii-doba-porodni-placenta-jako-odkaz-1",
+                      "text" : "iii_doba_porodni_placenta_jako_odkaz_1",
+                      "type" : "image"
+                    }
+                  ],
+                  "type" : "stories",
+                  "bannerName" : "placeholder"
+                },
+                {
+                  "title" : "title_moznekomplikaceivfazeporodu",
+                  "content" : "detail_moznekomplikaceiiifazeporodu",
+                  "type" : "introText",
+                  "isCollapsable" : true
+                },
+                {
+                  "title" : "title_moznostireseniiiifazeporodu",
+                  "content" : "detail_moznostireseniiiifazeporodu",
+                  "type" : "introText",
+                  "isCollapsable" : true
+                }
+              ],
+              "isHalf" : false,
+              "type" : "menu"
+            },
+            {
+              "title" : "title_ivdobaporodniporod",
+              "menuItems" : [
+                {
+                  "title" : "title_cosedejevectvrtefaziporodu",
+                  "content" : "detail_cosedejevectvrtefaziporodu",
+                  "type" : "introText",
+                  "isCollapsable" : false
+                },
+                {
+                  "title" : "title_jakprobihaivfazeporodni",
+                  "bannerName" : "placeholder",
+                  "type" : "stories",
+                  "isHalf" : false,
+                  "stories" : [
+                    {
+                      "type" : "image",
+                      "text" : "iv_doba_porodni_jak_probiha_1",
+                      "sourceName" : "iv-doba-porodni-jak-probiha-1"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "iv_doba_porodni_jak_probiha_2",
+                      "sourceName" : "iv-doba-porodni-jak-probiha-2"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "iv_doba_porodni_jak_probiha_3",
+                      "sourceName" : "iv-doba-porodni-jak-probiha-3"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "iv_doba_porodni_jak_probiha_4",
+                      "sourceName" : "iv-doba-porodni-jak-probiha-4"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "iv_doba_porodni_jak_probiha_5",
+                      "sourceName" : "iv-doba-porodni-jak-probiha-5"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "iv_doba_porodni_jak_probiha_6",
+                      "sourceName" : "iv-doba-porodni-jak-probiha-6"
+                    }
+                  ]
+                },
+                {
+                  "title" : "title_moznostireseniivfazeporodu",
+                  "content" : "detail_moznostireseniivfazeporodu",
+                  "type" : "introText",
+                  "isCollapsable" : false
+                }
+              ],
+              "isHalf" : false,
+              "type" : "menu"
+            }
+          ],
+          "type" : "menu",
+          "title" : "title_fazeporodu"
+        },
+        {
+          "bannerName" : "vyvolani-porodu-0",
+          "isHalf" : false,
+          "stories" : [
+            {
+              "type" : "image",
+              "sourceName" : "preindukce-porodu-1",
+              "text" : "preindukce_porodu_1"
+            },
+            {
+              "type" : "image",
+              "sourceName" : "preindukce-porodu-2",
+              "text" : "preindukce_porodu_2"
+            },
+            {
+              "type" : "image",
+              "sourceName" : "preindukce-porodu-3",
+              "text" : "preindukce_porodu_3"
+            }
+          ],
+          "type" : "stories",
+          "title" : "title_vyvolaniporodu"
+        },
+        {
+          "bannerName" : "akutni-cisarsky-rez-0",
+          "isHalf" : true,
+          "stories" : [
+            {
+              "type" : "image",
+              "text" : "akutni_cisarsky_rez_1",
+              "sourceName" : "akutni-cisarsky-rez-1"
+            },
+            {
+              "type" : "image",
+              "text" : "akutni_cisarsky_rez_2",
+              "sourceName" : "akutni-cisarsky-rez-2"
+            },
+            {
+              "type" : "image",
+              "text" : "akutni_cisarsky_rez_3",
+              "sourceName" : "akutni-cisarsky-rez-3"
+            },
+            {
+              "type" : "image",
+              "text" : "akutni_cisarsky_rez_4",
+              "sourceName" : "akutni-cisarsky-rez-4"
+            }
+          ],
+          "type" : "stories",
+          "title" : "title_akutnicisarskyrez"
+        },
+        {
+          "bannerName" : "planovany-cisarsky-rez-0",
+          "isHalf" : true,
+          "stories" : [
+            {
+              "type" : "image",
+              "text" : "planovany_cisarsky_rez_1",
+              "sourceName" : "planovany-cisarsky-rez-1"
+            },
+            {
+              "type" : "image",
+              "text" : "planovany_cisarsky_rez_2",
+              "sourceName" : "planovany-cisarsky-rez-2"
+            },
+            {
+              "type" : "image",
+              "text" : "planovany_cisarsky_rez_3",
+              "sourceName" : "planovany-cisarsky-rez-3"
+            },
+            {
+              "type" : "image",
+              "text" : "planovany_cisarsky_rez_4",
+              "sourceName" : "planovany-cisarsky-rez-4"
+            },
+            {
+              "type" : "image",
+              "text" : "planovany_cisarsky_rez_5",
+              "sourceName" : "planovany-cisarsky-rez-5"
+            },
+            {
+              "type" : "image",
+              "text" : "planovany_cisarsky_rez_6",
+              "sourceName" : "planovany-cisarsky-rez-6"
+            }
+          ],
+          "type" : "stories",
+          "title" : "title_planovanycisarskyrez"
+        },
+        {
+          "bannerName" : "porod-do-vody-0",
+          "isHalf" : false,
+          "stories" : [
+
+          ],
+          "type" : "stories",
+          "title" : "title_poroddovody"
+        }
+      ]
+    }
+  ],
+  "subtitle" : "subtitle_jsmevporodnici"
+}

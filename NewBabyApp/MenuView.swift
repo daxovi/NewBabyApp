@@ -135,15 +135,15 @@ struct MenuView: View {
         return result
     }
 }
-
-#Preview {
-    MenuView(
-        model: MenuModel(
-            title: "První den",
-            subtitle: "",
-            backgroundImageName: "title-baby",
-            menuItems: LocalRepository.menuHospital.menuItems
-        ),
-        clientName: "Name",
-        path: .constant(NavigationPath()))
-}
+//
+//#Preview {
+//    MenuView(
+//        model: MenuModel(
+//            title: "První den",
+//            subtitle: "",
+//            backgroundImageName: "title-baby",
+//            menuItems: LocalRepository.menuHospital.menuItems
+//        ),
+//        clientName: "Name",
+//        path: .constant(NavigationPath()))
+//}

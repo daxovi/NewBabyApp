@@ -56,7 +56,7 @@ class PodcastViewModel: NSObject, ObservableObject {
     }
 
     func togglePlay() {
-        audioManager.togglePlay(fileName: fileName, title: title)
+        audioManager.togglePlay(fileName: fileName, title: title.localizedString)
     }
 
     func teardown() {
