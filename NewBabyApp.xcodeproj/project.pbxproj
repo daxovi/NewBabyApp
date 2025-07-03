@@ -168,6 +168,9 @@
 		CF478DBB2DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */; };
 		CF478DBC2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */; };
 		CF478DBD2DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */; };
+		CF6D13F22E16AF7E0030BA12 /* HomeRepository.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F12E16AF750030BA12 /* HomeRepository.json */; };
+		CF6D13F42E16AF930030BA12 /* HospitalRepository.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F32E16AF810030BA12 /* HospitalRepository.json */; };
+		CF6D13F82E16AFB90030BA12 /* PregnantRepository.json in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F72E16AFB30030BA12 /* PregnantRepository.json */; };
 		CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */; };
 		CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71A5A42DFC106C003AEDC0 /* String+localization.swift */; };
 		CFB8E8842DFFFE1900689C2A /* String+folded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8E8832DFFFE1300689C2A /* String+folded.swift */; };
@@ -382,6 +385,9 @@
 		CF478DB82DEF98CC003AE7D8 /* vysetreni-sluchu-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-1.mp4"; sourceTree = "<group>"; };
 		CF478DB92DEF98CC003AE7D8 /* vysetreni-sluchu-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-2.mp4"; sourceTree = "<group>"; };
 		CF478DBA2DEF98CC003AE7D8 /* vysetreni-sluchu-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sluchu-3.mp4"; sourceTree = "<group>"; };
+		CF6D13F12E16AF750030BA12 /* HomeRepository.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HomeRepository.json; sourceTree = "<group>"; };
+		CF6D13F32E16AF810030BA12 /* HospitalRepository.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HospitalRepository.json; sourceTree = "<group>"; };
+		CF6D13F72E16AFB30030BA12 /* PregnantRepository.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PregnantRepository.json; sourceTree = "<group>"; };
 		CF71A5A22DFC0E87003AEDC0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF71A5A42DFC106C003AEDC0 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
 		CFB8E8832DFFFE1300689C2A /* String+folded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+folded.swift"; sourceTree = "<group>"; };
@@ -471,6 +477,9 @@
 		CF478C6C2DEF89E2003AE7D8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CF6D13F72E16AFB30030BA12 /* PregnantRepository.json */,
+				CF6D13F32E16AF810030BA12 /* HospitalRepository.json */,
+				CF6D13F12E16AF750030BA12 /* HomeRepository.json */,
 				CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */,
 				CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */,
 				CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */,
@@ -996,6 +1005,7 @@
 				CF478D772DEF89E2003AE7D8 /* otaceni02.png in Resources */,
 				CF478D782DEF89E2003AE7D8 /* otaceni03.png in Resources */,
 				CF478D792DEF89E2003AE7D8 /* otaceni04.png in Resources */,
+				CF6D13F82E16AFB90030BA12 /* PregnantRepository.json in Resources */,
 				CF478D7A2DEF89E2003AE7D8 /* otaceni05.png in Resources */,
 				CF478D7B2DEF89E2003AE7D8 /* otaceni06.png in Resources */,
 				CF478D7C2DEF89E2003AE7D8 /* otaceni07.png in Resources */,
@@ -1036,6 +1046,7 @@
 				CF478D962DEF89E2003AE7D8 /* zabaleni01.mp4 in Resources */,
 				CF478D972DEF89E2003AE7D8 /* zabaleni02.mp4 in Resources */,
 				CF478D982DEF89E2003AE7D8 /* zabaleni03.mp4 in Resources */,
+				CF6D13F22E16AF7E0030BA12 /* HomeRepository.json in Resources */,
 				CF478D992DEF89E2003AE7D8 /* zabaleni04.mp4 in Resources */,
 				CFDAE48C2E169FB4008F5105 /* moceni-a-odchod-stolicky-1.jpg in Resources */,
 				CFDAE48D2E169FB4008F5105 /* moceni-a-odchod-stolicky-2.jpg in Resources */,
@@ -1047,6 +1058,7 @@
 				CF478D9D2DEF89E2003AE7D8 /* placeholder.jpg in Resources */,
 				CF478D9E2DEF89E2003AE7D8 /* Preview Assets.xcassets in Resources */,
 				CF478D9F2DEF89E2003AE7D8 /* Assets.xcassets in Resources */,
+				CF6D13F42E16AF930030BA12 /* HospitalRepository.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
