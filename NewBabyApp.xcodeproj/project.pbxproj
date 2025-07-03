@@ -23,7 +23,6 @@
 		CF478D0B2DEF89E2003AE7D8 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */; };
 		CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */; };
 		CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */; };
-		CF478D0E2DEF89E2003AE7D8 /* PorodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6A2DEF89E2003AE7D8 /* PorodRepository.swift */; };
 		CF478D0F2DEF89E2003AE7D8 /* PregnantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6B2DEF89E2003AE7D8 /* PregnantRepository.swift */; };
 		CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6E2DEF89E2003AE7D8 /* StoriesView.swift */; };
 		CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF478C6F2DEF89E2003AE7D8 /* TextView.swift */; };
@@ -238,7 +237,6 @@
 		CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalRepository.swift; sourceTree = "<group>"; };
 		CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRepository.swift; sourceTree = "<group>"; };
-		CF478C6A2DEF89E2003AE7D8 /* PorodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorodRepository.swift; sourceTree = "<group>"; };
 		CF478C6B2DEF89E2003AE7D8 /* PregnantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregnantRepository.swift; sourceTree = "<group>"; };
 		CF478C6E2DEF89E2003AE7D8 /* StoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesView.swift; sourceTree = "<group>"; };
 		CF478C6F2DEF89E2003AE7D8 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
@@ -476,7 +474,6 @@
 				CF478C672DEF89E2003AE7D8 /* HomeRepository.swift */,
 				CF478C682DEF89E2003AE7D8 /* HospitalRepository.swift */,
 				CF478C692DEF89E2003AE7D8 /* LocalRepository.swift */,
-				CF478C6A2DEF89E2003AE7D8 /* PorodRepository.swift */,
 				CF478C6B2DEF89E2003AE7D8 /* PregnantRepository.swift */,
 			);
 			path = Data;
@@ -1066,7 +1063,6 @@
 				CF478D0C2DEF89E2003AE7D8 /* HospitalRepository.swift in Sources */,
 				CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */,
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,
-				CF478D0E2DEF89E2003AE7D8 /* PorodRepository.swift in Sources */,
 				CF478D0F2DEF89E2003AE7D8 /* PregnantRepository.swift in Sources */,
 				CF4173E72E150DA500D6F11E /* IntroTextView.swift in Sources */,
 				CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */,
