@@ -6,13 +6,20 @@
 //
 import SwiftUI
 
+/// Základní velikosti písma, ke kterým se vztahuje dynamická velikost textu
 enum FontSize {
+    /// Největší nadpis
     case largeTitle
+    /// Běžný nadpis
     case title
+    /// Podnadpis
     case subtitle
+    /// Základní text
     case body
+    /// Malý popisek
     case caption
 
+    /// Výchozí velikost v bodech
     var value: CGFloat {
         switch self {
         case .largeTitle: return 32
@@ -23,7 +30,7 @@ enum FontSize {
         }
     }
 
-    /// Corresponding `Font.TextStyle` used for Dynamic Type scaling
+    /// Systémový `Font.TextStyle` používaný pro dynamické škálování
     var textStyle: Font.TextStyle {
         switch self {
         case .largeTitle: return .largeTitle
@@ -35,9 +42,11 @@ enum FontSize {
     }
 }
 
+/// Váha písma
 enum FontWeight {
     case light, regular, medium, semibold, bold
 
+    /// Systémová hodnota váhy písma
     var value: Font.Weight {
         switch self {
         case .light: return .light
@@ -49,9 +58,11 @@ enum FontWeight {
     }
 }
 
+/// Barvy textů používané v aplikaci
 enum TextColor {
     case primary, secondary, danger, inverted
 
+    /// Hodnota barvy pro SwiftUI
     var value: Color {
         switch self {
         case .primary: return .black
@@ -62,14 +73,22 @@ enum TextColor {
     }
 }
 
+/// Spojuje velikost, váhu a barvu do konkrétního vzhledu textu
 enum TextStyle {
+    /// Nadpis na hlavní obrazovce
     case titlePrimary
+    /// Vedlejší nadpis nebo popisek
     case subtitleSecondary
+    /// Běžný text
     case bodyPrimary
+    /// Menší nadpis použitý v menu
     case smallTitle
+    /// Výrazný text signalizující chybu
     case boldDanger
+    /// Text zobrazený přes obrázek
     case bannerOverlay
 
+    /// Přiřazená velikost písma
     var fontSize: FontSize {
         switch self {
         case .titlePrimary: return .title
@@ -80,6 +99,7 @@ enum TextStyle {
         }
     }
 
+    /// Přiřazená váha písma
     var fontWeight: FontWeight {
         switch self {
         case .titlePrimary: return .semibold
@@ -91,6 +111,7 @@ enum TextStyle {
         }
     }
 
+    /// Přiřazená barva textu
     var textColor: TextColor {
         switch self {
         case .titlePrimary, .bodyPrimary, .smallTitle: return .primary
@@ -101,7 +122,9 @@ enum TextStyle {
     }
 }
 
+/// Modifikátor aplikující styl na textové prvky
 struct TextStyling: ViewModifier {
+    /// Zvolený styl textu
     let style: TextStyle
 
     func body(content: Content) -> some View {
@@ -119,6 +142,7 @@ struct TextStyling: ViewModifier {
 }
 
 extension View {
+    /// Jednoduché použití modifikátoru přes View extension
     func textStyle(_ style: TextStyle) -> some View {
         self.modifier(TextStyling(style: style))
     }
