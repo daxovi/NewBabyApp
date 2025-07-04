@@ -22,6 +22,17 @@ enum FontSize {
         case .caption: return 13
         }
     }
+
+    /// Corresponding `Font.TextStyle` used for Dynamic Type scaling
+    var textStyle: Font.TextStyle {
+        switch self {
+        case .largeTitle: return .largeTitle
+        case .title: return .title
+        case .subtitle: return .headline
+        case .body: return .body
+        case .caption: return .caption
+        }
+    }
 }
 
 enum FontWeight {
@@ -95,7 +106,14 @@ struct TextStyling: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .font(.system(size: style.fontSize.value, weight: style.fontWeight.value))
+            .font(
+                .system(
+                    size: style.fontSize.value,
+                    weight: style.fontWeight.value,
+                    design: .default,
+                    relativeTo: style.fontSize.textStyle
+                )
+            )
             .foregroundColor(style.textColor.value)
     }
 }
