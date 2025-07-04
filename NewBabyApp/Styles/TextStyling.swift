@@ -58,7 +58,7 @@ enum TextStyle {
     case smallTitle
     case boldDanger
     case bannerOverlay
-
+    
     var fontSize: FontSize {
         switch self {
         case .titlePrimary: return .title
@@ -68,7 +68,7 @@ enum TextStyle {
         case .smallTitle: return .body
         }
     }
-
+    
     var fontWeight: FontWeight {
         switch self {
         case .titlePrimary: return .semibold
@@ -79,13 +79,24 @@ enum TextStyle {
         case .smallTitle: return .semibold
         }
     }
-
+    
     var textColor: TextColor {
         switch self {
         case .titlePrimary, .bodyPrimary, .smallTitle: return .primary
         case .subtitleSecondary: return .secondary
         case .boldDanger: return .danger
         case .bannerOverlay: return .primary
+        }
+    }
+    
+    var font: Font {
+        switch self {
+        case .titlePrimary: return .title
+        case .subtitleSecondary: return .title3
+        case .bodyPrimary: return .body
+        case .smallTitle: return .headline
+        case .boldDanger: return .body.bold()
+        case .bannerOverlay: return .headline
         }
     }
 }
@@ -95,7 +106,8 @@ struct TextStyling: ViewModifier {
 
     func body(content: Content) -> some View {
         content
-            .font(.system(size: style.fontSize.value, weight: style.fontWeight.value))
+//            .font(.system(size: style.fontSize.value, weight: style.fontWeight.value))
+            .font(style.font)
             .foregroundColor(style.textColor.value)
     }
 }

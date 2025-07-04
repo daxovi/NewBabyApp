@@ -46,6 +46,7 @@ struct ContentView: View {
                 .tabItem{
                     VStack {
                         Text("title_cekamemiminko".localizedString.lowercased())
+                            .textStyle(.bodyPrimary)
                         Image(.pregnant).renderingMode(.template)
                     }
                 }
@@ -72,6 +73,7 @@ struct ContentView: View {
                     VStack {
                         Spacer(minLength: 10)
                         Text("title_jsmevporodnici".localizedString.lowercased())
+                            .textStyle(.bodyPrimary)
                         Image(.babyboy)
                             .renderingMode(.template)
                     }
@@ -98,6 +100,7 @@ struct ContentView: View {
                 .tabItem{
                     VStack {
                         Text("title_jsmedoma".localizedString.lowercased())
+                            .textStyle(.bodyPrimary)
                         Image(.seatchair).renderingMode(.template)
                     }
                 }
