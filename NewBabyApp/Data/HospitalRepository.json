@@ -70,7 +70,8 @@
             "fileName" : "poroddovody",
             "isHalf" : false,
             "type" : "podcast",
-            "title" : "title_poroddovody"
+            "title" : "title_poroddovody",
+            "source" : ""
           },
           {
             "bannerName" : "placeholder",
@@ -427,29 +428,48 @@
           {
             "bannerName" : "akutni-cisarsky-rez-0",
             "isHalf" : true,
-            "stories" : [
+            "menuItems" : [
               {
-                "type" : "image",
-                "text" : "akutni_cisarsky_rez_1",
-                "sourceName" : "akutni-cisarsky-rez-1"
+                "title" : "title_aktunicisarskyrez",
+                "content" : "detail_aktunicisarskyrez",
+                "type" : "introText",
+                "isCollapsable" : false
               },
               {
-                "type" : "image",
-                "text" : "akutni_cisarsky_rez_2",
-                "sourceName" : "akutni-cisarsky-rez-2"
-              },
-              {
-                "type" : "image",
-                "text" : "akutni_cisarsky_rez_3",
-                "sourceName" : "akutni-cisarsky-rez-3"
-              },
-              {
-                "type" : "image",
-                "text" : "akutni_cisarsky_rez_4",
-                "sourceName" : "akutni-cisarsky-rez-4"
+                "title" : "title_jakprobihaakutnicisarskyrez",
+                "bannerName" : "jak-probiha-akutni-cisarsky-rez-0",
+                "type" : "stories",
+                "isHalf" : false,
+                "stories" : [
+                    {
+                      "type" : "image",
+                      "text" : "akutni_cisarsky_rez_1",
+                      "sourceName" : "akutni-cisarsky-rez-1"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "akutni_cisarsky_rez_1_5",
+                      "sourceName" : "akutni-cisarsky-rez-1_5"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "akutni_cisarsky_rez_2",
+                      "sourceName" : "akutni-cisarsky-rez-2"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "akutni_cisarsky_rez_3",
+                      "sourceName" : "akutni-cisarsky-rez-3"
+                    },
+                    {
+                      "type" : "image",
+                      "text" : "akutni_cisarsky_rez_4",
+                      "sourceName" : "akutni-cisarsky-rez-4"
+                    }
+                ]
               }
             ],
-            "type" : "stories",
+            "type" : "menu",
             "title" : "title_akutnicisarskyrez"
           },
           {
@@ -527,7 +547,8 @@
               "fileName" : "bonding",
               "isHalf" : false,
               "type" : "podcast",
-              "title" : "title_bonding"
+              "title" : "title_bonding",
+              "source" : ""
             },
             {
               "stories" : [
@@ -1275,7 +1296,22 @@
           "type" : "menu"
         }
       ]
-    }
+    },
+    {
+        "bannerName" : "kojeni-a-vyziva",
+        "title" : "title_kojeniavyziva",
+        "isHalf" : false,
+        "type" : "menu",
+        "menuItems" : [
+            {
+              "fileName" : "kojeni",
+              "isHalf" : false,
+              "type" : "podcast",
+              "title" : "title_podcast_kojeni",
+              "source" : "Zdroj: Český rozhlas Olomouc"
+            }
+            ]
+      }
   ],
   "subtitle" : "subtitle_jsmevporodnici"
 }

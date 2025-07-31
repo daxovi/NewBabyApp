@@ -57,6 +57,10 @@ struct PodcastView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
             }
+            if !model.source.isEmpty {
+                Text(model.source)
+                    .font(.callout)
+            }
         }
         .padding()
         .onAppear { viewModel.setup() }

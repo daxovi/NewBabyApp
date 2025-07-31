@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF0E61442E3B67420014A616 /* AudioPlayerOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */; };
+		CF0E61462E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF0E61452E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg */; };
+		CF0E61482E3BA00F0014A616 /* kojeni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF0E61472E3BA00F0014A616 /* kojeni.mp3 */; };
 		CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173C22E1438C800D6F11E /* SearchResultRow.swift */; };
 		CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */; };
 		CF4173DE2E15029700D6F11E /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */; };
@@ -222,6 +224,8 @@
 
 /* Begin PBXFileReference section */
 		CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerOverlay.swift; sourceTree = "<group>"; };
+		CF0E61452E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-1_5.jpg"; sourceTree = "<group>"; };
+		CF0E61472E3BA00F0014A616 /* kojeni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kojeni.mp3; sourceTree = "<group>"; };
 		CF4173C22E1438C800D6F11E /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
 		CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastModel.swift; sourceTree = "<group>"; };
 		CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
@@ -452,6 +456,7 @@
 			children = (
 				CF4174152E15492B00D6F11E /* bonding.mp3 */,
 				CF4174162E15492B00D6F11E /* poroddovody.mp3 */,
+				CF0E61472E3BA00F0014A616 /* kojeni.mp3 */,
 			);
 			path = Podcast;
 			sourceTree = "<group>";
@@ -459,7 +464,6 @@
 		CF4173E52E150D6500D6F11E /* MenuItems */ = {
 			isa = PBXGroup;
 			children = (
-				CF4173F02E15148300D6F11E /* WaveformView.swift */,
 				CF478D012DEF89E2003AE7D8 /* MenuItem.swift */,
 				CF4173EA2E150E3500D6F11E /* MenuItemView.swift */,
 				CF4173E82E150E1200D6F11E /* DoubleMenuItemView.swift */,
@@ -530,6 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				CFDAE4882E169F11008F5105 /* akutni-cisarsky-rez-1.jpg */,
+				CF0E61452E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg */,
 				CF478C882DEF89E2003AE7D8 /* akutni-cisarsky-rez-2.jpg */,
 				CF478C892DEF89E2003AE7D8 /* akutni-cisarsky-rez-3.jpg */,
 				CF478C8A2DEF89E2003AE7D8 /* akutni-cisarsky-rez-4.jpg */,
@@ -747,6 +752,7 @@
 		CF478D032DEF89E2003AE7D8 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				CF4173F02E15148300D6F11E /* WaveformView.swift */,
 				CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */,
 				CF4173EE2E150E7800D6F11E /* MenuBackground.swift */,
 				CF4173EC2E150E5E00D6F11E /* MenuHeader.swift */,
@@ -924,6 +930,7 @@
 				CF478D472DEF89E2003AE7D8 /* jak-to-u-nas-vypada-2.jpg in Resources */,
 				CF478D482DEF89E2003AE7D8 /* planovany-cisarsky-rez-1.jpg in Resources */,
 				CF478D492DEF89E2003AE7D8 /* planovany-cisarsky-rez-2.jpg in Resources */,
+				CF0E61462E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg in Resources */,
 				CFDAE47F2E1699F6008F5105 /* po-porodu-3.jpg in Resources */,
 				CFDAE4982E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg in Resources */,
 				CFDAE4992E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg in Resources */,
@@ -949,6 +956,7 @@
 				CF478D5D2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-1.jpg in Resources */,
 				CF478D5E2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-2.jpg in Resources */,
 				CF478D5F2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-3.jpg in Resources */,
+				CF0E61482E3BA00F0014A616 /* kojeni.mp3 in Resources */,
 				CF478DB22DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-1.mp4 in Resources */,
 				CF478DB32DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-2.mp4 in Resources */,
 				CFDAE4712E1695F6008F5105 /* monitorovani-behem-porodu-3.mp4 in Resources */,
