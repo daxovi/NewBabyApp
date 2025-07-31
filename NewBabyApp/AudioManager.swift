@@ -1,6 +1,7 @@
 import AVFoundation
 import MediaPlayer
 import Combine
+import SwiftUI
 
 class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     static let shared = AudioManager()
@@ -9,6 +10,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
     @Published var progress: Double = 0
     @Published var currentTitle: String = ""
     @Published var currentFile: String? = nil
+    @Published var isOverlayPlayerVisible: Bool = false
 
     var currentTime: TimeInterval { player?.currentTime ?? 0 }
     var duration: TimeInterval {
@@ -43,6 +45,7 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
 
     func play() {
         guard let player else { return }
+        isOverlayPlayerVisible = true
         player.play()
         isPlaying = true
         startTimer()
@@ -55,6 +58,13 @@ class AudioManager: NSObject, ObservableObject, AVAudioPlayerDelegate {
         isPlaying = false
         stopTimer()
         updateNowPlaying(playbackRate: 0)
+    }
+    
+    func stop() {
+        pause()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            self.isOverlayPlayerVisible = false
+        }
     }
 
     func seek(to progress: Double) {

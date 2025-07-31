@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0E61442E3B67420014A616 /* AudioPlayerOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */; };
 		CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173C22E1438C800D6F11E /* SearchResultRow.swift */; };
 		CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */; };
 		CF4173DE2E15029700D6F11E /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */; };
@@ -220,6 +221,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerOverlay.swift; sourceTree = "<group>"; };
 		CF4173C22E1438C800D6F11E /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
 		CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastModel.swift; sourceTree = "<group>"; };
 		CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
@@ -745,6 +747,7 @@
 		CF478D032DEF89E2003AE7D8 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */,
 				CF4173EE2E150E7800D6F11E /* MenuBackground.swift */,
 				CF4173EC2E150E5E00D6F11E /* MenuHeader.swift */,
 				CF478D022DEF89E2003AE7D8 /* VideoPlayerFullscreen.swift */,
@@ -1065,6 +1068,7 @@
 				CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */,
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,
 				CF4173E72E150DA500D6F11E /* IntroTextView.swift in Sources */,
+				CF0E61442E3B67420014A616 /* AudioPlayerOverlay.swift in Sources */,
 				CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */,
 				CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */,
 				CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */,

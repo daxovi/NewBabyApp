@@ -7,7 +7,6 @@ struct WaveformView: View {
     let onSeek: (Double) -> Void
     let onSeekUpdate: (Double) -> Void // Přidána closure pro aktualizaci času během tažení
     
-    @GestureState private var dragLocation: CGFloat? = nil
     @State private var localProgress: Double? = nil
     
     var body: some View {
