@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+struct TabItem {
+    let title: String
+    let image: ImageResource
+    let model: MenuModel
+    let tag: Int
+}
+
 struct ContentView: View {
     @State var selected: Int = 0
     @AppStorage("clientName") var clientName: String = ""
@@ -15,96 +22,52 @@ struct ContentView: View {
     @State private var hospitalPath = NavigationPath()
     @State private var homePath = NavigationPath()
     
+    private let tabItems = [
+        TabItem(title: "title_cekamemiminko", image: .pregnant, model: LocalRepository.menuPregnant, tag: 0),
+        TabItem(title: "title_jsmevporodnici", image: .babyboy, model: LocalRepository.menuHospital, tag: 1),
+        TabItem(title: "title_jsmedoma", image: .seatchair, model: LocalRepository.menuHome, tag: 2)
+    ]
+    
     init() {
-            let appearance = UITabBarAppearance()
-            appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor.white // Barva tab baru
-            
-            UITabBar.appearance().standardAppearance = appearance
-            UITabBar.appearance().scrollEdgeAppearance = appearance
-        }
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.white
+        
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+    }
     
     var body: some View {
         TabView(selection: $selected) {
-            NavigationStack(path: $pregnantPath) {
-                MenuView(model: LocalRepository.menuPregnant, clientName: clientName, path: $pregnantPath, heartTapAction: showOnboarding)
+            ForEach(Array(tabItems.enumerated()), id: \.offset) { index, item in
+                NavigationStack(path: pathBinding(for: index)) {
+                    MenuView(
+                        model: item.model,
+                        clientName: clientName,
+                        path: pathBinding(for: index),
+                        heartTapAction: showOnboarding
+                    )
                     .navigationDestination(for: NavigationDestination.self) { destination in
-                        switch destination {
-                        case .stories(let model):
-                            StoriesView(storiesGroup: model)
-                        case .text(let model):
-                            TextView(model: model)
-                        case .menu(let model):
-                            MenuView(model: model, clientName: clientName, path: $pregnantPath)
-                        case .introText(_):
-                            EmptyView()
-                        case .podcast(_):
-                            EmptyView()
-                        }
-                    }
-            }
-                .tabItem{
-                    VStack {
-                        Text("title_cekamemiminko".localizedString.lowercased())
-                            .textStyle(.bodyPrimary)
-                        Image(.pregnant).renderingMode(.template)
+                        navigationDestination(for: destination, at: index)
                     }
                 }
-                .tag(0)
-            
-            NavigationStack(path: $hospitalPath) {
-                MenuView(model: LocalRepository.menuHospital, clientName: clientName, path: $hospitalPath, heartTapAction: showOnboarding)
-                    .navigationDestination(for: NavigationDestination.self) { destination in
-                        switch destination {
-                        case .stories(let model):
-                            StoriesView(storiesGroup: model)
-                        case .text(let model):
-                            TextView(model: model)
-                        case .menu(let model):
-                            MenuView(model: model, clientName: clientName, path: $hospitalPath)
-                        case .introText(_):
-                            EmptyView()
-                        case .podcast(_):
-                            EmptyView()
-                        }
-                    }
-            }
-                .tabItem{
+                .tabItem {
                     VStack {
-                        Spacer(minLength: 10)
-                        Text("title_jsmevporodnici".localizedString.lowercased())
+                        if index == 1 {
+                            Spacer(minLength: 10)
+                        }
+                        Text(item.title.localizedString.lowercased())
                             .textStyle(.bodyPrimary)
-                        Image(.babyboy)
+                        Image(item.image)
                             .renderingMode(.template)
                     }
                 }
-                .tag(1)
-            
-            NavigationStack(path: $homePath) {
-                MenuView(model: LocalRepository.menuHome, clientName: clientName, path: $homePath, heartTapAction: showOnboarding)
-                    .navigationDestination(for: NavigationDestination.self) { destination in
-                        switch destination {
-                        case .stories(let model):
-                            StoriesView(storiesGroup: model)
-                        case .text(let model):
-                            TextView(model: model)
-                        case .menu(let model):
-                            MenuView(model: model, clientName: clientName, path: $homePath)
-                        case .introText(_):
-                            EmptyView()
-                        case .podcast(_):
-                            EmptyView()
-                        }
-                    }
-            }
-                .tabItem{
-                    VStack {
-                        Text("title_jsmedoma".localizedString.lowercased())
-                            .textStyle(.bodyPrimary)
-                        Image(.seatchair).renderingMode(.template)
-                    }
+                .tag(item.tag)
+                .overlay(alignment: .bottom) {
+                    AudioPlayerOverlay()
+                        .padding(6)
                 }
-                .tag(2)
+            }
         }
         .accentColor(.accentColor)
         .sheet(isPresented: $firstLaunch) {
@@ -113,8 +76,33 @@ struct ContentView: View {
         .background(Color.black)
     }
     
+    private func pathBinding(for index: Int) -> Binding<NavigationPath> {
+        switch index {
+        case 0: return $pregnantPath
+        case 1: return $hospitalPath
+        case 2: return $homePath
+        default: return $pregnantPath
+        }
+    }
+    
+    @ViewBuilder
+    private func navigationDestination(for destination: NavigationDestination, at index: Int) -> some View {
+        switch destination {
+        case .stories(let model):
+            StoriesView(storiesGroup: model)
+        case .text(let model):
+            TextView(model: model)
+        case .menu(let model):
+            MenuView(model: model, clientName: clientName, path: pathBinding(for: index))
+        case .introText(_):
+            EmptyView()
+        case .podcast(_):
+            EmptyView()
+        }
+    }
+    
     func showOnboarding() {
-        self.firstLaunch.toggle()
+        firstLaunch.toggle()
     }
 }
 
