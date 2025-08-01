@@ -83,3 +83,24 @@ struct Story: Identifiable, Equatable, Hashable, Codable {
         try container.encode(text, forKey: .text)
     }
 }
+
+// MARK: - Direct Initializers for Preview
+
+extension StoriesModel {
+    init(title: String, bannerName: String? = nil, isHalf: Bool = false, stories: [Story]) {
+        self.id = UUID()
+        self.title = title
+        self.bannerName = bannerName
+        self.isHalf = isHalf
+        self.stories = stories
+    }
+}
+
+extension Story {
+    init(type: StoryType, sourceName: String, text: String) {
+        self.id = UUID()
+        self.type = type
+        self.sourceName = sourceName
+        self.text = text
+    }
+}

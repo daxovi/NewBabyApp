@@ -10,6 +10,8 @@
 		CF0E61442E3B67420014A616 /* AudioPlayerOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */; };
 		CF0E61462E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF0E61452E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg */; };
 		CF0E61482E3BA00F0014A616 /* kojeni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF0E61472E3BA00F0014A616 /* kojeni.mp3 */; };
+		CF0E61922E3BD45A0014A616 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61912E3BD4510014A616 /* StoriesViewModel.swift */; };
+		CF0E61952E3C91120014A616 /* StoriesProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61942E3C91100014A616 /* StoriesProgressBar.swift */; };
 		CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173C22E1438C800D6F11E /* SearchResultRow.swift */; };
 		CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */; };
 		CF4173DE2E15029700D6F11E /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */; };
@@ -174,7 +176,12 @@
 		CF6D13FA2E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */; };
 		CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */; };
 		CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71A5A42DFC106C003AEDC0 /* String+localization.swift */; };
+		CFABC4F12E3C91A400A66E4E /* StoriesMediaContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F02E3C91A400A66E4E /* StoriesMediaContainer.swift */; };
+		CFABC4F32E3C91E300A66E4E /* StoriesControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F22E3C91E300A66E4E /* StoriesControls.swift */; };
+		CFABC4F52E3C920300A66E4E /* StoriesEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F42E3C920300A66E4E /* StoriesEmptyView.swift */; };
+		CFABC4F72E3C922800A66E4E /* StoriesDebugOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F62E3C922800A66E4E /* StoriesDebugOverlay.swift */; };
 		CFB8E8842DFFFE1900689C2A /* String+folded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8E8832DFFFE1300689C2A /* String+folded.swift */; };
+		CFC6C3DC2E3C940900FD04B8 /* StoriesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6C3DB2E3C940900FD04B8 /* StoriesHeader.swift */; };
 		CFDAE4632E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */; };
 		CFDAE4652E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4642E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 */; };
 		CFDAE4672E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4662E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 */; };
@@ -226,6 +233,8 @@
 		CF0E61432E3B67370014A616 /* AudioPlayerOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerOverlay.swift; sourceTree = "<group>"; };
 		CF0E61452E3B9AE00014A616 /* akutni-cisarsky-rez-1_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "akutni-cisarsky-rez-1_5.jpg"; sourceTree = "<group>"; };
 		CF0E61472E3BA00F0014A616 /* kojeni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kojeni.mp3; sourceTree = "<group>"; };
+		CF0E61912E3BD4510014A616 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
+		CF0E61942E3C91100014A616 /* StoriesProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesProgressBar.swift; sourceTree = "<group>"; };
 		CF4173C22E1438C800D6F11E /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
 		CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastModel.swift; sourceTree = "<group>"; };
 		CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
@@ -391,7 +400,12 @@
 		CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sedy-zakal-2.mp4"; sourceTree = "<group>"; };
 		CF71A5A22DFC0E87003AEDC0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF71A5A42DFC106C003AEDC0 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
+		CFABC4F02E3C91A400A66E4E /* StoriesMediaContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesMediaContainer.swift; sourceTree = "<group>"; };
+		CFABC4F22E3C91E300A66E4E /* StoriesControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesControls.swift; sourceTree = "<group>"; };
+		CFABC4F42E3C920300A66E4E /* StoriesEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesEmptyView.swift; sourceTree = "<group>"; };
+		CFABC4F62E3C922800A66E4E /* StoriesDebugOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesDebugOverlay.swift; sourceTree = "<group>"; };
 		CFB8E8832DFFFE1300689C2A /* String+folded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+folded.swift"; sourceTree = "<group>"; };
+		CFC6C3DB2E3C940900FD04B8 /* StoriesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesHeader.swift; sourceTree = "<group>"; };
 		CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-3.mp4"; sourceTree = "<group>"; };
 		CFDAE4642E1694EA008F5105 /* tlumeni-bolesti-bez-leku-5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-5.mp4"; sourceTree = "<group>"; };
 		CFDAE4662E169525008F5105 /* tlumeni-bolesti-bez-leku-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-4.mp4"; sourceTree = "<group>"; };
@@ -451,6 +465,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF0E61932E3C91090014A616 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				CFC6C3DB2E3C940900FD04B8 /* StoriesHeader.swift */,
+				CFABC4F62E3C922800A66E4E /* StoriesDebugOverlay.swift */,
+				CFABC4F42E3C920300A66E4E /* StoriesEmptyView.swift */,
+				CFABC4F22E3C91E300A66E4E /* StoriesControls.swift */,
+				CFABC4F02E3C91A400A66E4E /* StoriesMediaContainer.swift */,
+				CF0E61942E3C91100014A616 /* StoriesProgressBar.swift */,
+				CF478C702DEF89E2003AE7D8 /* VideoPlayerViewModel.swift */,
+				CF478C712DEF89E2003AE7D8 /* VideoPlayerView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		CF4173E22E15038C00D6F11E /* Podcast */ = {
 			isa = PBXGroup;
 			children = (
@@ -485,15 +514,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		CF478C722DEF89E2003AE7D8 /* DetailViews */ = {
+		CF478C722DEF89E2003AE7D8 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
+				CF0E61932E3C91090014A616 /* SubViews */,
+				CF0E61912E3BD4510014A616 /* StoriesViewModel.swift */,
 				CF478C6E2DEF89E2003AE7D8 /* StoriesView.swift */,
 				CF478C6F2DEF89E2003AE7D8 /* TextView.swift */,
-				CF478C702DEF89E2003AE7D8 /* VideoPlayerViewModel.swift */,
-				CF478C712DEF89E2003AE7D8 /* VideoPlayerView.swift */,
 			);
-			path = DetailViews;
+			path = Stories;
 			sourceTree = "<group>";
 		};
 		CF478C822DEF89E2003AE7D8 /* Bonding */ = {
@@ -770,7 +799,7 @@
 				CFF992CB2DFF164E00859DC9 /* Search */,
 				CF71A5A62DFC10A0003AEDC0 /* Extension */,
 				CF478C6C2DEF89E2003AE7D8 /* Data */,
-				CF478C722DEF89E2003AE7D8 /* DetailViews */,
+				CF478C722DEF89E2003AE7D8 /* Stories */,
 				CF478CF42DEF89E2003AE7D8 /* Media */,
 				CF478CFC2DEF89E2003AE7D8 /* Models */,
 				CF478CFE2DEF89E2003AE7D8 /* Preview Content */,
@@ -1077,6 +1106,7 @@
 				CF478D0D2DEF89E2003AE7D8 /* LocalRepository.swift in Sources */,
 				CF4173E72E150DA500D6F11E /* IntroTextView.swift in Sources */,
 				CF0E61442E3B67420014A616 /* AudioPlayerOverlay.swift in Sources */,
+				CFABC4F52E3C920300A66E4E /* StoriesEmptyView.swift in Sources */,
 				CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */,
 				CF478D112DEF89E2003AE7D8 /* StoriesView.swift in Sources */,
 				CF478D122DEF89E2003AE7D8 /* TextView.swift in Sources */,
@@ -1087,6 +1117,7 @@
 				CF4173EB2E150E3800D6F11E /* MenuItemView.swift in Sources */,
 				CF4173E02E1502B600D6F11E /* PodcastView.swift in Sources */,
 				CF4173FB2E153C1E00D6F11E /* AudioManager.swift in Sources */,
+				CF0E61922E3BD45A0014A616 /* StoriesViewModel.swift in Sources */,
 				CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */,
 				CF478D142DEF89E2003AE7D8 /* VideoPlayerView.swift in Sources */,
 				CF478D172DEF89E2003AE7D8 /* IntroTextModel.swift in Sources */,
@@ -1096,15 +1127,20 @@
 				CF478D1A2DEF89E2003AE7D8 /* NavigationDestination.swift in Sources */,
 				CF4173ED2E150E6100D6F11E /* MenuHeader.swift in Sources */,
 				CF478D1B2DEF89E2003AE7D8 /* StoriesModel.swift in Sources */,
+				CFABC4F12E3C91A400A66E4E /* StoriesMediaContainer.swift in Sources */,
+				CFABC4F32E3C91E300A66E4E /* StoriesControls.swift in Sources */,
 				CF478D1C2DEF89E2003AE7D8 /* TextModel.swift in Sources */,
 				CF478D1D2DEF89E2003AE7D8 /* TextStyling.swift in Sources */,
+				CF0E61952E3C91120014A616 /* StoriesProgressBar.swift in Sources */,
 				CF478D1E2DEF89E2003AE7D8 /* MenuItem.swift in Sources */,
 				CF478D1F2DEF89E2003AE7D8 /* VideoPlayerFullscreen.swift in Sources */,
 				CF478D202DEF89E2003AE7D8 /* ContentView.swift in Sources */,
 				CF478D212DEF89E2003AE7D8 /* MenuView.swift in Sources */,
+				CFC6C3DC2E3C940900FD04B8 /* StoriesHeader.swift in Sources */,
 				CF478D222DEF89E2003AE7D8 /* NewBabyAppApp.swift in Sources */,
 				CF4173EF2E150E7B00D6F11E /* MenuBackground.swift in Sources */,
 				CF4173F12E15148300D6F11E /* WaveformView.swift in Sources */,
+				CFABC4F72E3C922800A66E4E /* StoriesDebugOverlay.swift in Sources */,
 				CFF992CF2DFF169600859DC9 /* SearchRepository.swift in Sources */,
 				CF478D232DEF89E2003AE7D8 /* OnboardingView.swift in Sources */,
 				CF478D242DEF89E2003AE7D8 /* Utils.swift in Sources */,
