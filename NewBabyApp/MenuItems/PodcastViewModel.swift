@@ -117,7 +117,24 @@ class PodcastViewModel: NSObject, ObservableObject {
             let maxVal = chunk.map { abs($0) }.max() ?? 0
             result.append(maxVal)
         }
+        
+        // Vylepšený algoritmus pro lepší kontrast
         let maxSample = result.max() ?? 1
-        return result.map { max(0.05, $0 / maxSample) }
+        let threshold = maxSample * 0.15 // Práh pro slabé signály
+        
+        return result.map { sample in
+            let normalized = sample / maxSample
+            
+            // Aplikujeme logaritmickou křivku pro lepší kontrast
+            let logarithmic = log10(normalized * 9 + 1) // log10(1) = 0, log10(10) = 1
+            
+            // Zvýšíme kontrast pomocí power funkce
+            let enhanced = pow(logarithmic, 0.7)
+            
+            // Minimální výška pro velmi slabé signály
+            let minHeight: Float = sample < threshold ? 0.05 : 0.15
+            
+            return max(minHeight, min(1.0, enhanced))
+        }
     }
 }

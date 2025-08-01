@@ -38,24 +38,20 @@ struct PodcastView: View {
                     Image(systemName: viewModel.isPlaying ? "pause.circle" : "play.circle")
                         .font(.largeTitle)
                 }
-                if viewModel.isLoadingWaveform {
-                    ProgressView()
-                        .frame(height: 48)
-                        .frame(maxWidth: .infinity)
-                } else {
-                    WaveformView(
-                        samples: viewModel.waveformSamples,
-                        progress: viewModel.progress,
-                        onSeek: { rel in
-                            viewModel.isSeeking = false
-                            viewModel.seekToProgress(rel)
-                        },
-                        onSeekUpdate: { rel in
-                            viewModel.updateCurrentTime(rel)
-                        }
-                    )
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                }
+                WaveformView(
+                    samples: viewModel.waveformSamples,
+                    progress: viewModel.progress,
+                    onSeek: { rel in
+                        viewModel.isSeeking = false
+                        viewModel.seekToProgress(rel)
+                    },
+                    onSeekUpdate: { rel in
+                        viewModel.updateCurrentTime(rel)
+                    },
+                    isPlaceholder: viewModel.isLoadingWaveform,
+                    numberOfBars: 60
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 15))
             }
             if !model.source.isEmpty {
                 Text(model.source)
@@ -70,21 +66,13 @@ struct PodcastView: View {
     }
 }
 
-//#Preview {
-//    ScrollView {
-//        VStack(spacing: 20) {
-//            MenuItem(item: StoriesModel(title: "Ahoj", bannerName: "vase-cesta-porodem-0", stories: []))
-//            VStack (spacing: 0) {
-//                MenuItem(item: StoriesModel(title: "Ahoj", stories: []))
-//                MenuItem(item: StoriesModel(title: "Ahoj", stories: []))
-//                MenuItem(item: StoriesModel(title: "Ahoj", stories: []))
-//            }
-//                .clipShape(RoundedRectangle(cornerRadius: 10))
-//            MenuItemView(menuItem: .podcast(PodcastModel(title: "Ukázkový podcast", fileName: "bonding")))
-//
-//        }
-//        .padding()
-//    }
-//    .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 1)
-//    .background(Color.background)
-//}
+#Preview {
+    ScrollView {
+        VStack(spacing: 20) {
+            MenuItemView(menuItem: .podcast(PodcastModel(title: "Ukázkový podcast", source: "Zdroj", fileName: "kojeni")))
+        }
+        .padding()
+    }
+    .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 1)
+    .background(Color.background)
+}
