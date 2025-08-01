@@ -26,3 +26,12 @@ struct StoriesHeader: View {
         }
     }
 }
+
+#Preview {
+    VStack{
+        StoriesHeader(text: "Quisque imperdiet diam ut pretium pellentesque. Duis accumsan nec ipsum in varius. Etiam et eleifend elit. Nulla ut dignissim lorem.", onDismiss: {})
+            .padding()
+        UnevenRoundedRectangle(topLeadingRadius: 30, bottomLeadingRadius: 0, bottomTrailingRadius: 0, topTrailingRadius: 30, style: .circular)
+            .ignoresSafeArea()
+    }
+}
