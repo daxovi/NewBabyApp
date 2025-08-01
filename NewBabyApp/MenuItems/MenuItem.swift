@@ -29,6 +29,7 @@ struct MenuItem: View {
                             .padding()
                         Spacer(minLength: 0)
                         Image(systemName: "chevron.right")
+                            .foregroundStyle(ColorStyling.uiColor)
                             .padding()
                     }
                 }
@@ -42,6 +43,7 @@ struct MenuItem: View {
                             .lineLimit(1)
                         Spacer()
                         Image(systemName: "chevron.right")
+                            .foregroundStyle(ColorStyling.uiColor)
                     }
                     .padding()
                     Divider()

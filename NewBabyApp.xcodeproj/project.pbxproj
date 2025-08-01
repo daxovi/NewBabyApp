@@ -210,6 +210,7 @@
 		CFDAE4952E16A20C008F5105 /* vysetreni-sluchu-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE48E2E16A20C008F5105 /* vysetreni-sluchu-4.jpg */; };
 		CFDAE4982E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */; };
 		CFDAE4992E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */; };
+		CFE40D232E3CF2B20048D026 /* ColorStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE40D222E3CF2AC0048D026 /* ColorStyling.swift */; };
 		CFF992A82DFC1E6300859DC9 /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */; };
 		CFF992AA2DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */; };
 		CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CFF992AB2DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg */; };
@@ -434,6 +435,7 @@
 		CFDAE4912E16A20C008F5105 /* vysetreni-sluchu-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sluchu-7.jpg"; sourceTree = "<group>"; };
 		CFDAE4962E16A28A008F5105 /* vysetreni-sedy-zakal-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-1.jpg"; sourceTree = "<group>"; };
 		CFDAE4972E16A28A008F5105 /* vysetreni-sedy-zakal-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "vysetreni-sedy-zakal-3.jpg"; sourceTree = "<group>"; };
+		CFE40D222E3CF2AC0048D026 /* ColorStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorStyling.swift; sourceTree = "<group>"; };
 		CFE57A252CBD6FA100C48924 /* NewBabyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBabyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF992A72DFC1E5E00859DC9 /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		CFF992A92DFD609B00859DC9 /* tlumeni-bolesti-bez-leku-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tlumeni-bolesti-bez-leku-3.jpg"; sourceTree = "<group>"; };
@@ -773,6 +775,7 @@
 		CF478D002DEF89E2003AE7D8 /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				CFE40D222E3CF2AC0048D026 /* ColorStyling.swift */,
 				CF478CFF2DEF89E2003AE7D8 /* TextStyling.swift */,
 			);
 			path = Styles;
@@ -1120,6 +1123,7 @@
 				CF0E61922E3BD45A0014A616 /* StoriesViewModel.swift in Sources */,
 				CF478D132DEF89E2003AE7D8 /* VideoPlayerViewModel.swift in Sources */,
 				CF478D142DEF89E2003AE7D8 /* VideoPlayerView.swift in Sources */,
+				CFE40D232E3CF2B20048D026 /* ColorStyling.swift in Sources */,
 				CF478D172DEF89E2003AE7D8 /* IntroTextModel.swift in Sources */,
 				CFF992D22DFF19FD00859DC9 /* SearchView.swift in Sources */,
 				CF478D182DEF89E2003AE7D8 /* MenuItemModel.swift in Sources */,

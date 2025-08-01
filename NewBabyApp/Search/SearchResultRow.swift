@@ -12,7 +12,7 @@ struct SearchResultRow: View {
                 Text(item.destination.title)
                     .font(.headline)
                 Text(repo.subtitle(for: item.destination))
-                    .font(.subheadline)
+                    .textStyle(.textContent)
                     .lineLimit(2)
             }
         }

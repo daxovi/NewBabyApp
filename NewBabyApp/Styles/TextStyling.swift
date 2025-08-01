@@ -44,7 +44,7 @@ enum TextColor {
     var value: Color {
         switch self {
         case .primary: return .black
-        case .secondary: return .lightGray
+        case .secondary: return ColorStyling.secondaryColor
         case .danger: return .red
         case .inverted: return .white
         }
@@ -94,7 +94,8 @@ enum TextStyle {
         switch self {
         case .titlePrimary: return .title
         case .subtitleSecondary: return .title3
-        case .bodyPrimary, .textContent: return .body
+        case .bodyPrimary: return .body
+        case .textContent: return .callout
         case .smallTitle: return .body
         case .boldDanger: return .body.bold()
         case .bannerOverlay: return .headline

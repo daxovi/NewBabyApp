@@ -35,6 +35,7 @@ struct AudioPlayerOverlay: View {
                     Spacer()
                     Text("\(PodcastView.formatTime(audioManager.progress * audioManager.duration))/\(PodcastView.formatTime(audioManager.duration))")
                         .font(.callout)
+                        .textStyle(.textContent)
                     Image(systemName: "xmark")
                         .onTapGesture {
                             audioManager.stop()

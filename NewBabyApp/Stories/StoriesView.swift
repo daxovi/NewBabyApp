@@ -12,8 +12,11 @@ struct StoriesView: View {
     @StateObject private var viewModel: StoriesViewModel
     @Environment(\.dismiss) var dismiss
     
-    init(storiesGroup: StoriesModel) {
+    var isShownInModal: Bool
+    
+    init(storiesGroup: StoriesModel, isShownInModal: Bool = false) {
         _viewModel = StateObject(wrappedValue: StoriesViewModel(storiesGroup: storiesGroup))
+        self.isShownInModal = isShownInModal
     }
     
     var body: some View {

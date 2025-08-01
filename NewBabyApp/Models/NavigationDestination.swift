@@ -228,11 +228,13 @@ extension NavigationDestination {
     
     func findParent(for model: any MenuItemModel) -> AnyView {
         for repository in LocalRepository.menuHospital.menuItems {
-            return findParentView(for: model, at: repository) ?? AnyView(EmptyView())
+            if let result = findParentView(for: model, at: repository) {
+                return result
+            }
         }
-        return AnyView(EmptyView())
+        return AnyView(Text("Parent not found for \(model.title)"))
     }
-    
+
     func findParentView(for model: any MenuItemModel, at navigationDestination: NavigationDestination) -> AnyView? {
         if case let .menu(menuModel) = navigationDestination {
             for menuItem in menuModel.menuItems {
@@ -240,11 +242,8 @@ extension NavigationDestination {
                     return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
                 } else if case let .podcast(podcastModel) = menuItem, podcastModel.id == model.id {
                     return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
-                } else {
-                    let result = findParentView(for: model, at: menuItem)
-                    if let result {
-                        return result
-                    }
+                } else if let result = findParentView(for: model, at: menuItem) {
+                    return result
                 }
             }
         }

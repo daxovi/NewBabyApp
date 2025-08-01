@@ -31,7 +31,7 @@ struct PodcastView: View {
                     .textStyle(.smallTitle)
                 Spacer()
                 Text("\(PodcastView.formatTime(viewModel.progress * viewModel.duration))/\(PodcastView.formatTime(viewModel.duration))")
-                    .textStyle(.bodyPrimary)
+                    .textStyle(.textContent)
             }
             Divider()
             HStack(spacing: 20) {

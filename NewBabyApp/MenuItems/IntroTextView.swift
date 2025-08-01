@@ -19,6 +19,7 @@ struct IntroTextView: View {
                 Spacer()
                 if model.isCollapsable {
                     Image(systemName: "chevron.down")
+                        .foregroundStyle(ColorStyling.uiColor)
                         .rotationEffect(Angle(degrees: isCollapsed ? 0 : -180))
                 }
             }
