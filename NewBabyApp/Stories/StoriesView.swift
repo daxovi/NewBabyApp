@@ -10,7 +10,7 @@ import SwiftUI
 
 struct StoriesView: View {
     @StateObject private var viewModel: StoriesViewModel
-    @Environment(\.dismiss) private var dismiss
+    @Environment(\.dismiss) var dismiss
     
     init(storiesGroup: StoriesModel) {
         _viewModel = StateObject(wrappedValue: StoriesViewModel(storiesGroup: storiesGroup))
@@ -25,10 +25,20 @@ struct StoriesView: View {
                     StoriesProgressBar(viewModel: viewModel)
                         .padding(.top, 6)
                     
-                    StoriesHeader(
-                        text: viewModel.currentStory?.text ?? "",
-                        onDismiss: { dismiss() }
-                    )
+                    HStack(alignment: .top) {
+                        Text(viewModel.currentStory?.text ?? "")
+                            .textStyle(.bodyPrimary)
+                        
+                        Spacer(minLength: 24)
+                        
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .font(.title2)
+                                .foregroundColor(.black)
+                        }
+                    }
                     
                     .padding()
                     

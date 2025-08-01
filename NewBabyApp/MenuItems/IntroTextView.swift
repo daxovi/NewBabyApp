@@ -15,11 +15,11 @@ struct IntroTextView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
                 Text(model.title)
-                    .textStyle(.smallTitle)
+//                    .textStyle(.smallTitle)
                 Spacer()
                 if model.isCollapsable {
-                    Image(systemName: "chevron.right")
-                        .rotationEffect(Angle(degrees: isCollapsed ? 0 : 90))
+                    Image(systemName: "chevron.down")
+                        .rotationEffect(Angle(degrees: isCollapsed ? 0 : -180))
                 }
             }
             .contentShape(Rectangle())
@@ -37,7 +37,8 @@ struct IntroTextView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     ForEach(textArray, id: \.self) { paragraph in
                         Text(paragraph)
-                            .textStyle(.bodyPrimary)
+                            .textStyle(.textContent)
+                            .foregroundStyle(.gray)
                             .multilineTextAlignment(.leading)
                     }
                 }

@@ -11,65 +11,55 @@ struct MenuHeader: View {
     var clientName: String?
     var subtitle: String?
     var heartTapAction: (() -> Void)? = nil
-    @Binding var scrollPosition: CGFloat
     
     @State var isSearchActive: Bool = false
     
     var body: some View {
         VStack(alignment: .leading){
             HStack {
-                Image(.fnolHeart)
-                    .resizable()
-                    .renderingMode(.template)
-                    .scaledToFit()
-                    .foregroundStyle(Color.accent)
-                    .onTapGesture(count: 5) {
-                        heartTapAction?()
-                    }
-                Spacer()
-                Image(systemName: "magnifyingglass")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(10)
-                    .background(Color.white.opacity(0.6))
-                    .clipShape(Circle())
-                    .padding(6)
-                    .onTapGesture {
-                        isSearchActive = true
-                    }
-            }
-            .frame(height: 50)
-            
-            Spacer(minLength: 250)
-            HStack {
                 VStack(alignment: .leading, spacing: 10) {
-                    if let clientName = clientName, clientName.count > 0 {
-                        Text("welcome_name".localizedString(clientName))
-                            .font(.title)
-                    } else {
-                        Text("welcome_user".localizedString)
-                            .font(.title)
-                    }
                     if let subtitle, subtitle.count > 0 {
                         Text(subtitle.localizedString)
+                            .textStyle(.textContent)
                     }
                 }
                 Spacer()
             }
-            .background(
-                GeometryReader { geo in
-                    Color.clear
-                        .onChange(of: geo.frame(in: .global).minY) { newValue in
-                            scrollPosition = newValue
-                        }
-                }
-            )
         }
         .padding(.horizontal)
-        .sheet(isPresented: $isSearchActive, content: {
-            SearchView()
-
-        })
     }
 }
 
+#Preview {
+    NavigationStack {
+        MenuView(
+            model: MenuModel(
+                title: "První den",
+                subtitle: "Váš průvodce prvními okamžiky",
+                backgroundImageName: "title-baby",
+                menuItems: [
+                    .introText(IntroTextModel(
+                        title: "Vítejte",
+                        content: try! AttributedString(markdown: "Vítejte v aplikaci pro nové rodiče!"),
+                        isCollapsable: false
+                    )),
+                    .stories(StoriesModel(
+                        title: "První kroky",
+                        bannerName: "banner-bonding",
+                        isHalf: true,
+                        stories: []
+                    )),
+                    .podcast(PodcastModel(
+                        title: "Podcast pro rodiče",
+                        source: "Ukázkový podcast pro nové rodiče",
+                        fileName: "sample-audio",
+                        bannerName: nil,
+                        isHalf: true
+                    ))
+                ]
+            ),
+            clientName: "Anna Nováková",
+            path: .constant(NavigationPath())
+        )
+    }
+}

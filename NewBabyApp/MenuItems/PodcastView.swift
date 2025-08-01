@@ -25,7 +25,7 @@ struct PodcastView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: 16) {
             HStack{
                 Text(model.title)
                     .textStyle(.smallTitle)
@@ -33,6 +33,7 @@ struct PodcastView: View {
                 Text("\(PodcastView.formatTime(viewModel.progress * viewModel.duration))/\(PodcastView.formatTime(viewModel.duration))")
                     .textStyle(.bodyPrimary)
             }
+            Divider()
             HStack(spacing: 20) {
                 Button(action: { viewModel.togglePlay() }) {
                     Image(systemName: viewModel.isPlaying ? "pause.circle" : "play.circle")

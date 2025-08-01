@@ -18,7 +18,9 @@ struct StoriesHeader: View {
             
             Spacer(minLength: 24)
             
-            Button(action: onDismiss) {
+            Button {
+                onDismiss()
+            } label: {
                 Image(systemName: "xmark")
                     .font(.title2)
                     .foregroundColor(.black)

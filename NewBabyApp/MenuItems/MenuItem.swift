@@ -13,48 +13,27 @@ struct MenuItem: View {
     var body: some View {
         NavigationLink(value: mapToDestination(item)) {
             if let image = item.getBanner() {
-                ZStack {
-                    Color.bannerBlurPink
+                VStack(spacing: 0) {
+                    Rectangle()
+                        .fill(.clear)
+                        .background{
+                            image
+                                .resizable()
+                                .scaledToFill()
+                        }
+                        .clipped()
 
-                    image
-                        .resizable()
-                        .scaledToFill()
-                    
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Text(item.title)
-                                .textStyle(.bannerOverlay)
-                                .multilineTextAlignment(.leading)
-                                .padding()
-                            Spacer()
-                        }
-                        .padding(.top, 50)
-                        .background {
-                            ZStack {
-                                
-                                Rectangle()
-                                    .fill(.ultraThinMaterial)
-                                    .mask {
-                                        LinearGradient(colors: [
-                                            .white.opacity(0),
-                                            .white.opacity(0.8),
-                                            .white
-                                        ], startPoint: .top, endPoint: .bottom)
-                                    }
-                                LinearGradient(colors: [
-                                    .bannerBlurPink.opacity(0),
-//                                    .bannerBlurPink.opacity(0.8),
-                                    .bannerBlurPink.opacity(1)
-                                ], startPoint: .top, endPoint: .bottom)
-                                .padding(.top, 0)
-                                .blendMode(.overlay)
-                            }
-                        }
+                    HStack {
+                        Text(item.title)
+                            .multilineTextAlignment(.leading)
+                            .padding()
+                        Spacer(minLength: 0)
+                        Image(systemName: "chevron.right")
+                            .padding()
                     }
-
                 }
-                .background(.bannerBlurPink)
+                .background(.white)
+                .frame(height: item.isHalf ? 170 : 220)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             } else {
                 VStack(spacing: 0) {

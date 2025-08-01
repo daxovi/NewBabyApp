@@ -22,7 +22,7 @@ struct MenuModel: Identifiable, Hashable, MenuItemModel, Codable {
     }
 
     var subtitle: String?
-    var backgroundImageName: String?
+    var headerImageString: String?
 
     var menuItems: [NavigationDestination]
 
@@ -37,7 +37,7 @@ struct MenuModel: Identifiable, Hashable, MenuItemModel, Codable {
         bannerName = try container.decodeIfPresent(String.self, forKey: .bannerName)
         isHalf = try container.decodeIfPresent(Bool.self, forKey: .isHalf) ?? false
         subtitle = try container.decodeIfPresent(String.self, forKey: .subtitle)?.localizedString
-        backgroundImageName = try container.decodeIfPresent(String.self, forKey: .backgroundImageName)
+        headerImageString = try container.decodeIfPresent(String.self, forKey: .backgroundImageName)
         menuItems = try container.decode([NavigationDestination].self, forKey: .menuItems)
     }
 
@@ -48,7 +48,7 @@ struct MenuModel: Identifiable, Hashable, MenuItemModel, Codable {
         try container.encodeIfPresent(bannerName, forKey: .bannerName)
         try container.encode(isHalf, forKey: .isHalf)
         try container.encodeIfPresent(subtitle, forKey: .subtitle)
-        try container.encodeIfPresent(backgroundImageName, forKey: .backgroundImageName)
+        try container.encodeIfPresent(headerImageString, forKey: .backgroundImageName)
         try container.encode(menuItems, forKey: .menuItems)
     }
 }
