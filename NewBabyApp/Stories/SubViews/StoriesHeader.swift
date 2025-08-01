@@ -19,12 +19,14 @@ struct StoriesHeader: View {
             Spacer(minLength: 24)
             
             Button {
+                print("DEBUG: dismiss tapped")
                 onDismiss()
             } label: {
                 Image(systemName: "xmark")
                     .font(.title2)
                     .foregroundColor(.black)
             }
+            .containerShape(Rectangle())
         }
     }
 }

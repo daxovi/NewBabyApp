@@ -25,21 +25,10 @@ struct StoriesView: View {
                     StoriesProgressBar(viewModel: viewModel)
                         .padding(.top, 6)
                     
-                    HStack(alignment: .top) {
-                        Text(viewModel.currentStory?.text ?? "")
-                            .textStyle(.bodyPrimary)
-                        
-                        Spacer(minLength: 24)
-                        
-                        Button {
-                            dismiss()
-                        } label: {
-                            Image(systemName: "xmark")
-                                .font(.title2)
-                                .foregroundColor(.black)
-                        }
-                    }
-                    
+                    StoriesHeader(
+                        text: viewModel.currentStory?.text ?? "",
+                        onDismiss: { dismiss() }
+                    )
                     .padding()
                     
                     if let story = viewModel.currentStory {

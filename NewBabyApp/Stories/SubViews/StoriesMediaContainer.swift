@@ -30,6 +30,7 @@ struct StoriesMediaContainer: View {
                     }
                 )
             )
+            .allowsHitTesting(false)
             
             StoriesControls(
                 onTapPrevious: { viewModel.handleTapPrevious() },
