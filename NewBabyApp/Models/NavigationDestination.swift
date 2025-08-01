@@ -228,27 +228,26 @@ extension NavigationDestination {
     
     func findParent(for model: any MenuItemModel) -> AnyView {
         for repository in LocalRepository.menuHospital.menuItems {
-            if case let .menu(menuIModel) = repository {
-                for item in menuIModel.menuItems {
-                    if case let .introText(introTextModel) = item, introTextModel.id == model.id {
-                        return AnyView(MenuView(model: menuIModel, clientName: "", path: .constant(NavigationPath())))
-                    }
-                    if case let .podcast(podcastModel) = item, podcastModel.id == model.id {
-                        return AnyView(MenuView(model: menuIModel, clientName: "", path: .constant(NavigationPath())))
-                    }
-                if case let .menu(menuModel) = item {
-                    for menuItem in menuModel.menuItems {
-                        if case let .introText(infoTextModel) = menuItem, infoTextModel.id == model.id {
-                            return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
-                        }
-                        if case let .podcast(podcastModel) = menuItem, podcastModel.id == model.id {
-                            return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
-                        }
+            return findParentView(for: model, at: repository) ?? AnyView(EmptyView())
+        }
+        return AnyView(EmptyView())
+    }
+    
+    func findParentView(for model: any MenuItemModel, at navigationDestination: NavigationDestination) -> AnyView? {
+        if case let .menu(menuModel) = navigationDestination {
+            for menuItem in menuModel.menuItems {
+                if case let .introText(infoTextModel) = menuItem, infoTextModel.id == model.id {
+                    return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
+                } else if case let .podcast(podcastModel) = menuItem, podcastModel.id == model.id {
+                    return AnyView(MenuView(model: menuModel, clientName: "", path: .constant(NavigationPath())))
+                } else {
+                    let result = findParentView(for: model, at: menuItem)
+                    if let result {
+                        return result
                     }
                 }
             }
-            }
         }
-        return AnyView(EmptyView())
+        return nil
     }
 }
