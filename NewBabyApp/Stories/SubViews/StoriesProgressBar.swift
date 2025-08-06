@@ -18,6 +18,9 @@ struct StoriesProgressBar: View {
                     isActive: index == viewModel.selectedStory,
                     progress: viewModel.timerProgress
                 )
+                .onTapGesture {
+                    viewModel.jumpToStory(at: index)
+                }
             }
         }
         .frame(height: 2.4)
