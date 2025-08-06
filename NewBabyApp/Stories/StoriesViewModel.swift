@@ -129,6 +129,8 @@ class StoriesViewModel: ObservableObject {
         }
     }
     
+    /// Jumps to a specific story by index
+    /// Used when user taps on a progress bar segment
     func jumpToStory(at index: Int) {
         // Validate index is within bounds
         guard index >= 0 && index < storiesGroup.stories.count else { return }
