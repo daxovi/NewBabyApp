@@ -28,14 +28,17 @@ struct StoriesMediaContainer: View {
                         guard viewModel.selectedStory < viewModel.videoProgressGroup.count else { return }
                         viewModel.videoProgressGroup[viewModel.selectedStory] = newValue
                     }
-                )
+                ),
+                shouldRestart: $viewModel.shouldRestartVideo,
+                isPaused: $viewModel.isPaused
             )
             .allowsHitTesting(false)
             
             StoriesControls(
                 onTapPrevious: { viewModel.handleTapPrevious() },
                 onTapNext: { viewModel.advanceToNextStory() },
-                onTapAndHold: { viewModel.togglePause() }
+                onLongPressStart: { viewModel.startPause() },
+                onLongPressEnd: { viewModel.endPause() }
             )
         }
     }
@@ -45,12 +48,19 @@ private struct StoriesMediaView: View {
     var story: Story
     var proxy: GeometryProxy
     @Binding var progress: Double
+    @Binding var shouldRestart: Bool
+    @Binding var isPaused: Bool
     
     var body: some View {
         if story.type == .video {
             Color.clear
                 .overlay(
-                    VideoPlayerView(videoName: story.sourceName, progress: $progress)
+                    VideoPlayerView(
+                        videoName: story.sourceName, 
+                        progress: $progress,
+                        shouldRestart: $shouldRestart,
+                        isPaused: $isPaused
+                    )
                         .scaledToFill()
                         .ignoresSafeArea()
                         .frame(
