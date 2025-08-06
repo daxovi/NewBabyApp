@@ -16,6 +16,7 @@ class StoriesViewModel: ObservableObject {
     @Published var videoProgressGroup: [Double] = []
     @Published var isPaused: Bool = false
     @Published var shouldRestartVideo: Bool = false
+    @Published var isFirstLaunch: Bool = true
     
     private var timer: Timer?
     private let timerInterval: TimeInterval = 0.02
@@ -94,6 +95,8 @@ class StoriesViewModel: ObservableObject {
     // MARK: - Navigation
     
     func advanceToNextStory() {
+        isFirstLaunch = false  // Mark as no longer first launch when advancing
+        
         if selectedStory < storiesGroup.stories.count - 1 {
             selectedStory += 1
             timerProgress = 0.0
@@ -103,6 +106,8 @@ class StoriesViewModel: ObservableObject {
     }
     
     func handleTapPrevious() {
+        isFirstLaunch = false  // Mark as no longer first launch when navigating
+        
         if timerProgress > 0.1 {
             // Restart current story
             timerProgress = 0.0
@@ -127,5 +132,19 @@ class StoriesViewModel: ObservableObject {
                 shouldRestartVideo = true
             }
         }
+    }
+    
+    // MARK: - Help Overlay Management
+    
+    func shouldShowHelpOverlay() -> Bool {
+        guard isFirstLaunch else { return false }
+        
+        let overlayCount = UserDefaults.standard.integer(forKey: "storiesHelpOverlayCount")
+        return overlayCount < 3
+    }
+    
+    func markHelpOverlayShown() {
+        let currentCount = UserDefaults.standard.integer(forKey: "storiesHelpOverlayCount")
+        UserDefaults.standard.set(currentCount + 1, forKey: "storiesHelpOverlayCount")
     }
 }
