@@ -176,6 +176,17 @@
 		CF6D13FA2E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */; };
 		CF71A5A32DFC0E87003AEDC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF71A5A12DFC0E87003AEDC0 /* Localizable.strings */; };
 		CF71A5A52DFC107E003AEDC0 /* String+localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF71A5A42DFC106C003AEDC0 /* String+localization.swift */; };
+		CF9279252E43C8E0008A6A3F /* kojeni-01b.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF92791E2E43C8E0008A6A3F /* kojeni-01b.mp4 */; };
+		CF9279262E43C8E0008A6A3F /* kojeni-04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF9279212E43C8E0008A6A3F /* kojeni-04.mp4 */; };
+		CF9279272E43C8E0008A6A3F /* kojeni-03.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF9279202E43C8E0008A6A3F /* kojeni-03.mp4 */; };
+		CF9279282E43C8E0008A6A3F /* kojeni-06.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF9279232E43C8E0008A6A3F /* kojeni-06.mp4 */; };
+		CF9279292E43C8E0008A6A3F /* kojeni-02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF92791F2E43C8E0008A6A3F /* kojeni-02.mp4 */; };
+		CF92792A2E43C8E0008A6A3F /* kojeni-01a.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF92791D2E43C8E0008A6A3F /* kojeni-01a.mp4 */; };
+		CF92792B2E43C8E0008A6A3F /* kojeni-05.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF9279222E43C8E0008A6A3F /* kojeni-05.mp4 */; };
+		CF9279312E43CA3E008A6A3F /* nutricni-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF92792D2E43CA3E008A6A3F /* nutricni-1.mp4 */; };
+		CF9279322E43CA3E008A6A3F /* nutricni-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF92792E2E43CA3E008A6A3F /* nutricni-2.mp4 */; };
+		CF9279332E43CA3E008A6A3F /* nutricni-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF92792F2E43CA3E008A6A3F /* nutricni-3.mp4 */; };
+		CF9279342E43CA3E008A6A3F /* nutricni-4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF9279302E43CA3E008A6A3F /* nutricni-4.mp4 */; };
 		CFABC4F12E3C91A400A66E4E /* StoriesMediaContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F02E3C91A400A66E4E /* StoriesMediaContainer.swift */; };
 		CFABC4F32E3C91E300A66E4E /* StoriesControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F22E3C91E300A66E4E /* StoriesControls.swift */; };
 		CFABC4F52E3C920300A66E4E /* StoriesEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F42E3C920300A66E4E /* StoriesEmptyView.swift */; };
@@ -401,6 +412,17 @@
 		CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vysetreni-sedy-zakal-2.mp4"; sourceTree = "<group>"; };
 		CF71A5A22DFC0E87003AEDC0 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CF71A5A42DFC106C003AEDC0 /* String+localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localization.swift"; sourceTree = "<group>"; };
+		CF92791D2E43C8E0008A6A3F /* kojeni-01a.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kojeni-01a.mp4"; sourceTree = "<group>"; };
+		CF92791E2E43C8E0008A6A3F /* kojeni-01b.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kojeni-01b.mp4"; sourceTree = "<group>"; };
+		CF92791F2E43C8E0008A6A3F /* kojeni-02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kojeni-02.mp4"; sourceTree = "<group>"; };
+		CF9279202E43C8E0008A6A3F /* kojeni-03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kojeni-03.mp4"; sourceTree = "<group>"; };
+		CF9279212E43C8E0008A6A3F /* kojeni-04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kojeni-04.mp4"; sourceTree = "<group>"; };
+		CF9279222E43C8E0008A6A3F /* kojeni-05.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kojeni-05.mp4"; sourceTree = "<group>"; };
+		CF9279232E43C8E0008A6A3F /* kojeni-06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kojeni-06.mp4"; sourceTree = "<group>"; };
+		CF92792D2E43CA3E008A6A3F /* nutricni-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nutricni-1.mp4"; sourceTree = "<group>"; };
+		CF92792E2E43CA3E008A6A3F /* nutricni-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nutricni-2.mp4"; sourceTree = "<group>"; };
+		CF92792F2E43CA3E008A6A3F /* nutricni-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nutricni-3.mp4"; sourceTree = "<group>"; };
+		CF9279302E43CA3E008A6A3F /* nutricni-4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nutricni-4.mp4"; sourceTree = "<group>"; };
 		CFABC4F02E3C91A400A66E4E /* StoriesMediaContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesMediaContainer.swift; sourceTree = "<group>"; };
 		CFABC4F22E3C91E300A66E4E /* StoriesControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesControls.swift; sourceTree = "<group>"; };
 		CFABC4F42E3C920300A66E4E /* StoriesEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesEmptyView.swift; sourceTree = "<group>"; };
@@ -678,6 +700,8 @@
 		CF478CF22DEF89E2003AE7D8 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				CF92792C2E43CA25008A6A3F /* nutricni */,
+				CF9279242E43C8E0008A6A3F /* kojeni */,
 				CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */,
 				CFF992BF2DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 */,
 				CFF992C02DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 */,
@@ -828,6 +852,31 @@
 				CF71A5A42DFC106C003AEDC0 /* String+localization.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CF9279242E43C8E0008A6A3F /* kojeni */ = {
+			isa = PBXGroup;
+			children = (
+				CF92791D2E43C8E0008A6A3F /* kojeni-01a.mp4 */,
+				CF92791E2E43C8E0008A6A3F /* kojeni-01b.mp4 */,
+				CF92791F2E43C8E0008A6A3F /* kojeni-02.mp4 */,
+				CF9279202E43C8E0008A6A3F /* kojeni-03.mp4 */,
+				CF9279212E43C8E0008A6A3F /* kojeni-04.mp4 */,
+				CF9279222E43C8E0008A6A3F /* kojeni-05.mp4 */,
+				CF9279232E43C8E0008A6A3F /* kojeni-06.mp4 */,
+			);
+			path = kojeni;
+			sourceTree = "<group>";
+		};
+		CF92792C2E43CA25008A6A3F /* nutricni */ = {
+			isa = PBXGroup;
+			children = (
+				CF92792D2E43CA3E008A6A3F /* nutricni-1.mp4 */,
+				CF92792E2E43CA3E008A6A3F /* nutricni-2.mp4 */,
+				CF92792F2E43CA3E008A6A3F /* nutricni-3.mp4 */,
+				CF9279302E43CA3E008A6A3F /* nutricni-4.mp4 */,
+			);
+			path = nutricni;
 			sourceTree = "<group>";
 		};
 		CFE57A1C2CBD6FA100C48924 = {
@@ -989,6 +1038,13 @@
 				CF478D5E2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-2.jpg in Resources */,
 				CF478D5F2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-3.jpg in Resources */,
 				CF0E61482E3BA00F0014A616 /* kojeni.mp3 in Resources */,
+				CF9279252E43C8E0008A6A3F /* kojeni-01b.mp4 in Resources */,
+				CF9279262E43C8E0008A6A3F /* kojeni-04.mp4 in Resources */,
+				CF9279272E43C8E0008A6A3F /* kojeni-03.mp4 in Resources */,
+				CF9279282E43C8E0008A6A3F /* kojeni-06.mp4 in Resources */,
+				CF9279292E43C8E0008A6A3F /* kojeni-02.mp4 in Resources */,
+				CF92792A2E43C8E0008A6A3F /* kojeni-01a.mp4 in Resources */,
+				CF92792B2E43C8E0008A6A3F /* kojeni-05.mp4 in Resources */,
 				CF478DB22DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-1.mp4 in Resources */,
 				CF478DB32DEF95B6003AE7D8 /* vysetreni-detsky-ortoped-2.mp4 in Resources */,
 				CFDAE4712E1695F6008F5105 /* monitorovani-behem-porodu-3.mp4 in Resources */,
@@ -1024,6 +1080,10 @@
 				CF478D6F2DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-1.jpg in Resources */,
 				CF478D702DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-2.jpg in Resources */,
 				CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */,
+				CF9279312E43CA3E008A6A3F /* nutricni-1.mp4 in Resources */,
+				CF9279322E43CA3E008A6A3F /* nutricni-2.mp4 in Resources */,
+				CF9279332E43CA3E008A6A3F /* nutricni-3.mp4 in Resources */,
+				CF9279342E43CA3E008A6A3F /* nutricni-4.mp4 in Resources */,
 				CFF992B42DFD60F500859DC9 /* vitamin-k-1.jpg in Resources */,
 				CFF992B52DFD60F500859DC9 /* vaha-a-delka-miminka-2.jpg in Resources */,
 				CFF992B62DFD60F500859DC9 /* vaha-a-delka-miminka-1.jpg in Resources */,

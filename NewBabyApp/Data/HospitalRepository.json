@@ -1309,7 +1309,78 @@
               "type" : "podcast",
               "title" : "title_podcast_kojeni",
               "source" : "Zdroj: Český rozhlas Olomouc"
-            }
+            },
+            {
+              "title" : "placeholder_kojeni_video",
+              "bannerName" : "placeholder",
+              "stories" : [
+                {
+                  "type" : "video",
+                  "sourceName" : "kojeni-01a",
+                  "text" : "kojeni_01a"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "kojeni-01b",
+                  "text" : "kojeni_01b"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "kojeni-02",
+                  "text" : "kojeni_02"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "kojeni-03",
+                  "text" : "kojeni_03"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "kojeni-04",
+                  "text" : "kojeni_04"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "kojeni-05",
+                  "text" : "kojeni_05"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "kojeni-06",
+                  "text" : "kojeni_06"
+                }
+              ],
+              "isHalf" : false,
+              "type" : "stories"
+            },
+            {
+              "title" : "placeholder_nutrice",
+              "bannerName" : "placeholder",
+              "stories" : [
+                {
+                  "type" : "video",
+                  "sourceName" : "nutricni-1",
+                  "text" : "nutricni_1"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "nutricni-2",
+                  "text" : "nutricni_2"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "nutricni-3",
+                  "text" : "nutricni_3"
+                },
+                {
+                  "type" : "video",
+                  "sourceName" : "nutricni-4",
+                  "text" : "nutricni_4"
+                }
+              ],
+              "isHalf" : false,
+              "type" : "stories"
+            },
             ]
       }
   ],
