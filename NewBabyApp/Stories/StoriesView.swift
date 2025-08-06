@@ -11,6 +11,7 @@ import SwiftUI
 struct StoriesView: View {
     @StateObject private var viewModel: StoriesViewModel
     @Environment(\.dismiss) var dismiss
+    @State private var showHelpOverlay = false
     
     var isShownInModal: Bool
     
@@ -23,32 +24,49 @@ struct StoriesView: View {
         if viewModel.storiesGroup.stories.isEmpty {
             StoriesEmptyView()
         } else {
-            GeometryReader { proxy in
-                VStack(spacing: 8) {
-                    StoriesProgressBar(viewModel: viewModel)
-                        .padding(.top, 6)
-                    
-                    StoriesHeader(
-                        text: viewModel.currentStory?.text ?? "",
-                        onDismiss: { dismiss() }
-                    )
-                    .padding()
-                    
-                    if let story = viewModel.currentStory {
-                        StoriesMediaContainer(
-                            story: story,
-                            proxy: proxy,
-                            viewModel: viewModel
+            ZStack {
+                GeometryReader { proxy in
+                    VStack(spacing: 8) {
+                        StoriesProgressBar(viewModel: viewModel)
+                            .padding(.top, 6)
+                        
+                        StoriesHeader(
+                            text: viewModel.currentStory?.text ?? "",
+                            onDismiss: { dismiss() }
                         )
+                        .padding()
+                        
+                        if let story = viewModel.currentStory {
+                            StoriesMediaContainer(
+                                story: story,
+                                proxy: proxy,
+                                viewModel: viewModel
+                            )
+                        }
+                    }
+                    .background(Color.background)
+                    
+                    #if DEBUG
+                    StoriesDebugOverlay(currentStory: viewModel.currentStory)
+                    #endif
+                }
+                
+                // Help overlay
+                if showHelpOverlay {
+                    StoriesHelpOverlay {
+                        showHelpOverlay = false
                     }
                 }
-                .background(Color.background)
-                
-                #if DEBUG
-                StoriesDebugOverlay(currentStory: viewModel.currentStory)
-                #endif
             }
-            .onAppear { viewModel.startTimer() }
+            .onAppear { 
+                viewModel.startTimer()
+                
+                // Check if we should show help overlay
+                if viewModel.shouldShowHelpOverlay() {
+                    showHelpOverlay = true
+                    viewModel.markHelpOverlayShown()
+                }
+            }
             .onDisappear { viewModel.stopTimer() }
             .onChange(of: viewModel.shouldDismiss) { newValue in
                 if newValue {
