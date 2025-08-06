@@ -87,9 +87,9 @@ struct StoriesView: View {
                     text: "První story s obrázkem - ukázka toho, jak funguje progress bar a navigace mezi jednotlivými stories."
                 ),
                 Story(
-                    type: .image,
-                    sourceName: "placeholder",
-                    text: "Druhá story také s obrázkem - můžete kliknout na levou nebo pravou stranu obrazovky pro navigaci."
+                    type: .video,
+                    sourceName: "test-1",
+                    text: "Druhá story s videem - test funkcí restartu na levé tapnutí a pauza na tap and hold."
                 ),
                 Story(
                     type: .image,

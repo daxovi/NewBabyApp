@@ -13,6 +13,8 @@ struct StoriesControls: View {
     let onLongPressStart: () -> Void
     let onLongPressEnd: () -> Void
     
+    @State private var isLongPressing = false
+    
     var body: some View {
         HStack(spacing: 0) {
             Color.black.opacity(0.01)
@@ -22,10 +24,16 @@ struct StoriesControls: View {
                 .gesture(
                     DragGesture(minimumDistance: 0, coordinateSpace: .local)
                         .onChanged { _ in
-                            onLongPressStart()
+                            if !isLongPressing {
+                                isLongPressing = true
+                                onLongPressStart()
+                            }
                         }
                         .onEnded { _ in
-                            onLongPressEnd()
+                            if isLongPressing {
+                                isLongPressing = false
+                                onLongPressEnd()
+                            }
                         }
                 )
             
