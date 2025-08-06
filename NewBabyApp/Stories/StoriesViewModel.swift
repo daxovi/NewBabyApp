@@ -128,4 +128,25 @@ class StoriesViewModel: ObservableObject {
             }
         }
     }
+    
+    /// Jumps to a specific story by index
+    /// Used when user taps on a progress bar segment
+    func jumpToStory(at index: Int) {
+        // Validate index is within bounds
+        guard index >= 0 && index < storiesGroup.stories.count else { return }
+        
+        // Update selected story
+        selectedStory = index
+        timerProgress = 0.0
+        
+        // Reset video progress for the target story
+        if index < videoProgressGroup.count {
+            videoProgressGroup[index] = 0.0
+        }
+        
+        // If target story is a video, trigger video restart
+        if let story = storiesGroup.stories[safe: index], story.type == .video {
+            shouldRestartVideo = true
+        }
+    }
 }
