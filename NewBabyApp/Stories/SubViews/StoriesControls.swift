@@ -10,7 +10,10 @@ import SwiftUI
 struct StoriesControls: View {
     let onTapPrevious: () -> Void
     let onTapNext: () -> Void
-    let onTapAndHold: () -> Void
+    let onLongPressStart: () -> Void
+    let onLongPressEnd: () -> Void
+    
+    @State private var isLongPressing = false
     
     var body: some View {
         HStack(spacing: 0) {
@@ -18,9 +21,20 @@ struct StoriesControls: View {
                 .onTapGesture(perform: onTapPrevious)
             
             Color.black.opacity(0.01)
-                .onLongPressGesture(
-                    minimumDuration: 0.1,
-                    perform: onTapAndHold
+                .gesture(
+                    DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                        .onChanged { _ in
+                            if !isLongPressing {
+                                isLongPressing = true
+                                onLongPressStart()
+                            }
+                        }
+                        .onEnded { _ in
+                            if isLongPressing {
+                                isLongPressing = false
+                                onLongPressEnd()
+                            }
+                        }
                 )
             
             Color.black.opacity(0.01)

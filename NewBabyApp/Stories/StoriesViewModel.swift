@@ -15,6 +15,7 @@ class StoriesViewModel: ObservableObject {
     @Published var shouldDismiss: Bool = false
     @Published var videoProgressGroup: [Double] = []
     @Published var isPaused: Bool = false
+    @Published var shouldRestartVideo: Bool = false
     
     private var timer: Timer?
     private let timerInterval: TimeInterval = 0.02
@@ -42,6 +43,20 @@ class StoriesViewModel: ObservableObject {
     func stopTimer() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    func startPause() {
+        if !isPaused {
+            isPaused = true
+            stopTimer()
+        }
+    }
+    
+    func endPause() {
+        if isPaused {
+            isPaused = false
+            startTimer()
+        }
     }
     
     func togglePause() {
@@ -94,12 +109,22 @@ class StoriesViewModel: ObservableObject {
             if selectedStory < videoProgressGroup.count {
                 videoProgressGroup[selectedStory] = 0.0
             }
+            
+            // If current story is a video, trigger video restart
+            if let story = currentStory, story.type == .video {
+                shouldRestartVideo = true
+            }
         } else if selectedStory > 0 {
             // Go to previous story
             selectedStory -= 1
             timerProgress = 0.0
             if selectedStory < videoProgressGroup.count {
                 videoProgressGroup[selectedStory] = 0.0
+            }
+            
+            // If previous story is a video, trigger video restart
+            if let story = currentStory, story.type == .video {
+                shouldRestartVideo = true
             }
         }
     }

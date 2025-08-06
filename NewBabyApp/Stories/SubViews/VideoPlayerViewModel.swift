@@ -12,8 +12,11 @@ import SwiftUI
 class VideoPlayerViewModel: ObservableObject {
     @Published var player: AVPlayer
     @Published var currentProgress: Double = 0.0
+    @Published var shouldRestart: Bool = false
+    @Published var shouldPause: Bool = false
 
     private var timeObserverToken: Any?
+    private var wasPlayingBeforePause: Bool = false
 
     init(videoName: String) {
         if let filePath = Bundle.main.path(forResource: videoName, ofType: "mp4") {
@@ -34,11 +37,24 @@ class VideoPlayerViewModel: ObservableObject {
     func restart() {
         player.seek(to: .zero)
         player.play()
+        currentProgress = 0.0
     }
 
     func pause() {
+        wasPlayingBeforePause = player.timeControlStatus == .playing
+        player.pause()
+    }
+    
+    func resume() {
+        if wasPlayingBeforePause {
+            player.play()
+        }
+    }
+    
+    func pauseAndSeekToZero() {
         player.pause()
         player.seek(to: .zero)
+        currentProgress = 0.0
     }
     
     func updateVideoName(_ newVideoName: String) {
