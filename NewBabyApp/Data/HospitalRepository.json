@@ -34,6 +34,150 @@
             "title" : "title_jaktounasvypadaporod"
           },
           {
+            "_comment" : "TEST: jak to u nás vypadá bez titulků",
+            "bannerName" : "jak-to-u-nas-vypada-0",
+            "isHalf" : false,
+            "stories" : [
+              {
+                "type" : "video",
+                "text" : "Milé nastávající maminky, vítám vás na porodních sálech ve Fakultní nemocnici Olomouc. Pojďte se s námi podívat na naše porodní boxy.",
+                "sourceName" : "porodnisaly-beztitulku-01"
+              },
+              {
+                "type" : "video",
+                "text" : "Součástí každého pokoje je speciální porodnické lůžko, které je polohovatelné.",
+                "sourceName" : "porodnisaly-beztitulku-02"
+              },
+              {
+                "type" : "video",
+                "text" : "Žena má po ruce ruční ovladač, kterým si může, lůžko polohovat sama do různých poloh.",
+                "sourceName" : "porodnisaly-beztitulku-03"
+              },
+              {
+                "type" : "video",
+                "text" : "Může si jej zvednout, opřít se o něj, může si zvedat i část, která je za hlavou.",
+                "sourceName" : "porodnisaly-beztitulku-04"
+              },
+              {
+                "type" : "video",
+                "text" : "Při spontánním porodu může žena využít naší bylinné napářky.",
+                "sourceName" : "porodnisaly-beztitulku-05"
+              },
+              {
+                "type" : "video",
+                "text" : "Máme speciální stoličky k vaginální napářce, směs bylinek, které se zalijí horkou vodou.",
+                "sourceName" : "porodnisaly-beztitulku-06"
+              },
+              {
+                "type" : "video",
+                "text" : "Na ženu bylinná napářka působí velmi příznivě, uvolňuje svaly pánevního dna a působí relaxačně.",
+                "sourceName" : "porodnisaly-beztitulku-07"
+              },
+              {
+                "type" : "video",
+                "text" : "Hojně využíváme aromaterapii, používáme speciální esenciální oleje, kterých máme několik druhů.",
+                "sourceName" : "porodnisaly-beztitulku-08"
+              },
+              {
+                "type" : "video",
+                "text" : "Používáme je do aroma difuzéru, které navozují krásnou klidnou atmosféru v pokoji.",
+                "sourceName" : "porodnisaly-beztitulku-09"
+              },
+              {
+                "type" : "video",
+                "text" : "Používáme esenciální oleje i do speciálních olejíčků, které si mícháme podle potřeby ženy a následně potom masírujeme.",
+                "sourceName" : "porodnisaly-beztitulku-10"
+              },
+              {
+                "type" : "video",
+                "text" : "Máme i různé masážní pomůcky.",
+                "sourceName" : "porodnisaly-beztitulku-11"
+              },
+              {
+                "type" : "video",
+                "text" : "Pokud žena bude chtít, můžeme ji na porodní pokoji zavěsit liánu.",
+                "sourceName" : "porodnisaly-beztitulku-12"
+              },
+              {
+                "type" : "video",
+                "text" : "Je to speciální závěs, do kterého se žena může opřít a dodává jí pocit opory.",
+                "sourceName" : "porodnisaly-beztitulku-13"
+              },
+              {
+                "type" : "video",
+                "text" : "Naše zkušené porodní asistentky používají hojně při porodu rebozo. Dokáží se tím napravit nevýhodné polohy miminka a žena se rebozem dokáže i hezky zrelaxovat.",
+                "sourceName" : "porodnisaly-beztitulku-14"
+              },
+              {
+                "type" : "video",
+                "text" : "Součástí každého pokoje jsou dnes už běžné věci. Soukromé sociální zařízení, televize.",
+                "sourceName" : "porodnisaly-beztitulku-15"
+              },
+              {
+                "type" : "video",
+                "text" : "Máme tu lůžko, které je rozkládací pro doprovod pacientky, telemetrické sondy, které jsou bezdrátové a žena se může volně po pokoji pohybovat. Klimatizace a šatní skříň.",
+                "sourceName" : "porodnisaly-beztitulku-16"
+              },
+              {
+                "type" : "video",
+                "text" : "Milé budoucí rodičky, velmi se těšíme na vás a na spolupráci s vámi.",
+                "sourceName" : "porodnisaly-beztitulku-17"
+              }
+            ],
+            "type" : "stories",
+            "title" : "Jak to u nás vypadá bez titulků"
+          },
+          {
+            "_comment" : "TEST: jak to u nás vypadá s titulky",
+            "bannerName" : "jak-to-u-nas-vypada-0",
+            "isHalf" : false,
+            "stories" : [
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-01"
+              },
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-02"
+              },
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-03"
+              },
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-04"
+              },
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-05"
+              },
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-06"
+              },
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-07"
+              },
+              {
+                "type" : "video",
+                "text" : "",
+                "sourceName" : "porodnisaly-titulky-08"
+              }
+            ],
+            "type" : "stories",
+            "title" : "Jak to u nás vypadá s titulky"
+          },
+          
+          {
             "bannerName" : "vase-cesta-porodem-0",
             "isHalf" : false,
             "stories" : [

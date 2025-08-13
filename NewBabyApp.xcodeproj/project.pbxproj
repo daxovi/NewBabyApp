@@ -195,6 +195,31 @@
 		CFB1E10E2E4C8A1600C6C4ED /* title-pregnant.riv in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E10D2E4C8A1600C6C4ED /* title-pregnant.riv */; };
 		CFB1E1102E4C93C600C6C4ED /* title-baby.riv in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E10F2E4C93C600C6C4ED /* title-baby.riv */; };
 		CFB1E1122E4C9F9200C6C4ED /* title-home.riv in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1112E4C9F9200C6C4ED /* title-home.riv */; };
+		CFB1E1242E4CC84C00C6C4ED /* porodnisaly-titulky-01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E11C2E4CC84C00C6C4ED /* porodnisaly-titulky-01.mp4 */; };
+		CFB1E1282E4CC84C00C6C4ED /* porodnisaly-titulky-08.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1232E4CC84C00C6C4ED /* porodnisaly-titulky-08.mp4 */; };
+		CFB1E1292E4CC84C00C6C4ED /* porodnisaly-titulky-06.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1212E4CC84C00C6C4ED /* porodnisaly-titulky-06.mp4 */; };
+		CFB1E12E2E4CC84C00C6C4ED /* porodnisaly-titulky-03.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E11E2E4CC84C00C6C4ED /* porodnisaly-titulky-03.mp4 */; };
+		CFB1E12F2E4CC84C00C6C4ED /* porodnisaly-titulky-07.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1222E4CC84C00C6C4ED /* porodnisaly-titulky-07.mp4 */; };
+		CFB1E1302E4CC84C00C6C4ED /* porodnisaly-titulky-02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E11D2E4CC84C00C6C4ED /* porodnisaly-titulky-02.mp4 */; };
+		CFB1E1322E4CC84C00C6C4ED /* porodnisaly-titulky-04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E11F2E4CC84C00C6C4ED /* porodnisaly-titulky-04.mp4 */; };
+		CFB1E1332E4CC84C00C6C4ED /* porodnisaly-titulky-05.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1202E4CC84C00C6C4ED /* porodnisaly-titulky-05.mp4 */; };
+		CFB1E1452E4CCC0900C6C4ED /* porodnisaly-beztitulku-16.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1432E4CCC0900C6C4ED /* porodnisaly-beztitulku-16.mp4 */; };
+		CFB1E1462E4CCC0900C6C4ED /* porodnisaly-beztitulku-03.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1362E4CCC0900C6C4ED /* porodnisaly-beztitulku-03.mp4 */; };
+		CFB1E1472E4CCC0900C6C4ED /* porodnisaly-beztitulku-04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1372E4CCC0900C6C4ED /* porodnisaly-beztitulku-04.mp4 */; };
+		CFB1E1482E4CCC0900C6C4ED /* porodnisaly-beztitulku-06.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1392E4CCC0900C6C4ED /* porodnisaly-beztitulku-06.mp4 */; };
+		CFB1E1492E4CCC0900C6C4ED /* porodnisaly-beztitulku-15.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1422E4CCC0900C6C4ED /* porodnisaly-beztitulku-15.mp4 */; };
+		CFB1E14A2E4CCC0900C6C4ED /* porodnisaly-beztitulku-17.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1442E4CCC0900C6C4ED /* porodnisaly-beztitulku-17.mp4 */; };
+		CFB1E14B2E4CCC0900C6C4ED /* porodnisaly-beztitulku-13.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1402E4CCC0900C6C4ED /* porodnisaly-beztitulku-13.mp4 */; };
+		CFB1E14C2E4CCC0900C6C4ED /* porodnisaly-beztitulku-08.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E13B2E4CCC0900C6C4ED /* porodnisaly-beztitulku-08.mp4 */; };
+		CFB1E14D2E4CCC0900C6C4ED /* porodnisaly-beztitulku-11.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E13E2E4CCC0900C6C4ED /* porodnisaly-beztitulku-11.mp4 */; };
+		CFB1E14E2E4CCC0900C6C4ED /* porodnisaly-beztitulku-07.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E13A2E4CCC0900C6C4ED /* porodnisaly-beztitulku-07.mp4 */; };
+		CFB1E14F2E4CCC0900C6C4ED /* porodnisaly-beztitulku-05.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1382E4CCC0900C6C4ED /* porodnisaly-beztitulku-05.mp4 */; };
+		CFB1E1502E4CCC0900C6C4ED /* porodnisaly-beztitulku-12.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E13F2E4CCC0900C6C4ED /* porodnisaly-beztitulku-12.mp4 */; };
+		CFB1E1512E4CCC0900C6C4ED /* porodnisaly-beztitulku-10.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E13D2E4CCC0900C6C4ED /* porodnisaly-beztitulku-10.mp4 */; };
+		CFB1E1522E4CCC0900C6C4ED /* porodnisaly-beztitulku-01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1342E4CCC0900C6C4ED /* porodnisaly-beztitulku-01.mp4 */; };
+		CFB1E1532E4CCC0900C6C4ED /* porodnisaly-beztitulku-09.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E13C2E4CCC0900C6C4ED /* porodnisaly-beztitulku-09.mp4 */; };
+		CFB1E1542E4CCC0900C6C4ED /* porodnisaly-beztitulku-02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1352E4CCC0900C6C4ED /* porodnisaly-beztitulku-02.mp4 */; };
+		CFB1E1552E4CCC0900C6C4ED /* porodnisaly-beztitulku-14.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1412E4CCC0900C6C4ED /* porodnisaly-beztitulku-14.mp4 */; };
 		CFB8E8842DFFFE1900689C2A /* String+folded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8E8832DFFFE1300689C2A /* String+folded.swift */; };
 		CFC6C3DC2E3C940900FD04B8 /* StoriesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6C3DB2E3C940900FD04B8 /* StoriesHeader.swift */; };
 		CFDAE4632E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */; };
@@ -434,6 +459,31 @@
 		CFB1E10D2E4C8A1600C6C4ED /* title-pregnant.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "title-pregnant.riv"; sourceTree = "<group>"; };
 		CFB1E10F2E4C93C600C6C4ED /* title-baby.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "title-baby.riv"; sourceTree = "<group>"; };
 		CFB1E1112E4C9F9200C6C4ED /* title-home.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "title-home.riv"; sourceTree = "<group>"; };
+		CFB1E11C2E4CC84C00C6C4ED /* porodnisaly-titulky-01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-01.mp4"; sourceTree = "<group>"; };
+		CFB1E11D2E4CC84C00C6C4ED /* porodnisaly-titulky-02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-02.mp4"; sourceTree = "<group>"; };
+		CFB1E11E2E4CC84C00C6C4ED /* porodnisaly-titulky-03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-03.mp4"; sourceTree = "<group>"; };
+		CFB1E11F2E4CC84C00C6C4ED /* porodnisaly-titulky-04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-04.mp4"; sourceTree = "<group>"; };
+		CFB1E1202E4CC84C00C6C4ED /* porodnisaly-titulky-05.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-05.mp4"; sourceTree = "<group>"; };
+		CFB1E1212E4CC84C00C6C4ED /* porodnisaly-titulky-06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-06.mp4"; sourceTree = "<group>"; };
+		CFB1E1222E4CC84C00C6C4ED /* porodnisaly-titulky-07.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-07.mp4"; sourceTree = "<group>"; };
+		CFB1E1232E4CC84C00C6C4ED /* porodnisaly-titulky-08.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-titulky-08.mp4"; sourceTree = "<group>"; };
+		CFB1E1342E4CCC0900C6C4ED /* porodnisaly-beztitulku-01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-01.mp4"; sourceTree = "<group>"; };
+		CFB1E1352E4CCC0900C6C4ED /* porodnisaly-beztitulku-02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-02.mp4"; sourceTree = "<group>"; };
+		CFB1E1362E4CCC0900C6C4ED /* porodnisaly-beztitulku-03.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-03.mp4"; sourceTree = "<group>"; };
+		CFB1E1372E4CCC0900C6C4ED /* porodnisaly-beztitulku-04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-04.mp4"; sourceTree = "<group>"; };
+		CFB1E1382E4CCC0900C6C4ED /* porodnisaly-beztitulku-05.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-05.mp4"; sourceTree = "<group>"; };
+		CFB1E1392E4CCC0900C6C4ED /* porodnisaly-beztitulku-06.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-06.mp4"; sourceTree = "<group>"; };
+		CFB1E13A2E4CCC0900C6C4ED /* porodnisaly-beztitulku-07.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-07.mp4"; sourceTree = "<group>"; };
+		CFB1E13B2E4CCC0900C6C4ED /* porodnisaly-beztitulku-08.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-08.mp4"; sourceTree = "<group>"; };
+		CFB1E13C2E4CCC0900C6C4ED /* porodnisaly-beztitulku-09.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-09.mp4"; sourceTree = "<group>"; };
+		CFB1E13D2E4CCC0900C6C4ED /* porodnisaly-beztitulku-10.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-10.mp4"; sourceTree = "<group>"; };
+		CFB1E13E2E4CCC0900C6C4ED /* porodnisaly-beztitulku-11.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-11.mp4"; sourceTree = "<group>"; };
+		CFB1E13F2E4CCC0900C6C4ED /* porodnisaly-beztitulku-12.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-12.mp4"; sourceTree = "<group>"; };
+		CFB1E1402E4CCC0900C6C4ED /* porodnisaly-beztitulku-13.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-13.mp4"; sourceTree = "<group>"; };
+		CFB1E1412E4CCC0900C6C4ED /* porodnisaly-beztitulku-14.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-14.mp4"; sourceTree = "<group>"; };
+		CFB1E1422E4CCC0900C6C4ED /* porodnisaly-beztitulku-15.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-15.mp4"; sourceTree = "<group>"; };
+		CFB1E1432E4CCC0900C6C4ED /* porodnisaly-beztitulku-16.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-16.mp4"; sourceTree = "<group>"; };
+		CFB1E1442E4CCC0900C6C4ED /* porodnisaly-beztitulku-17.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "porodnisaly-beztitulku-17.mp4"; sourceTree = "<group>"; };
 		CFB8E8832DFFFE1300689C2A /* String+folded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+folded.swift"; sourceTree = "<group>"; };
 		CFC6C3DB2E3C940900FD04B8 /* StoriesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesHeader.swift; sourceTree = "<group>"; };
 		CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-3.mp4"; sourceTree = "<group>"; };
@@ -718,6 +768,7 @@
 		CF478CF22DEF89E2003AE7D8 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				CFB1E1132E4CC83A00C6C4ED /* Test */,
 				CF92792C2E43CA25008A6A3F /* nutricni */,
 				CF9279242E43C8E0008A6A3F /* kojeni */,
 				CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */,
@@ -898,6 +949,38 @@
 			path = nutricni;
 			sourceTree = "<group>";
 		};
+		CFB1E1132E4CC83A00C6C4ED /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1E1342E4CCC0900C6C4ED /* porodnisaly-beztitulku-01.mp4 */,
+				CFB1E1352E4CCC0900C6C4ED /* porodnisaly-beztitulku-02.mp4 */,
+				CFB1E1362E4CCC0900C6C4ED /* porodnisaly-beztitulku-03.mp4 */,
+				CFB1E1372E4CCC0900C6C4ED /* porodnisaly-beztitulku-04.mp4 */,
+				CFB1E1382E4CCC0900C6C4ED /* porodnisaly-beztitulku-05.mp4 */,
+				CFB1E1392E4CCC0900C6C4ED /* porodnisaly-beztitulku-06.mp4 */,
+				CFB1E13A2E4CCC0900C6C4ED /* porodnisaly-beztitulku-07.mp4 */,
+				CFB1E13B2E4CCC0900C6C4ED /* porodnisaly-beztitulku-08.mp4 */,
+				CFB1E13C2E4CCC0900C6C4ED /* porodnisaly-beztitulku-09.mp4 */,
+				CFB1E13D2E4CCC0900C6C4ED /* porodnisaly-beztitulku-10.mp4 */,
+				CFB1E13E2E4CCC0900C6C4ED /* porodnisaly-beztitulku-11.mp4 */,
+				CFB1E13F2E4CCC0900C6C4ED /* porodnisaly-beztitulku-12.mp4 */,
+				CFB1E1402E4CCC0900C6C4ED /* porodnisaly-beztitulku-13.mp4 */,
+				CFB1E1412E4CCC0900C6C4ED /* porodnisaly-beztitulku-14.mp4 */,
+				CFB1E1422E4CCC0900C6C4ED /* porodnisaly-beztitulku-15.mp4 */,
+				CFB1E1432E4CCC0900C6C4ED /* porodnisaly-beztitulku-16.mp4 */,
+				CFB1E1442E4CCC0900C6C4ED /* porodnisaly-beztitulku-17.mp4 */,
+				CFB1E11C2E4CC84C00C6C4ED /* porodnisaly-titulky-01.mp4 */,
+				CFB1E11D2E4CC84C00C6C4ED /* porodnisaly-titulky-02.mp4 */,
+				CFB1E11E2E4CC84C00C6C4ED /* porodnisaly-titulky-03.mp4 */,
+				CFB1E11F2E4CC84C00C6C4ED /* porodnisaly-titulky-04.mp4 */,
+				CFB1E1202E4CC84C00C6C4ED /* porodnisaly-titulky-05.mp4 */,
+				CFB1E1212E4CC84C00C6C4ED /* porodnisaly-titulky-06.mp4 */,
+				CFB1E1222E4CC84C00C6C4ED /* porodnisaly-titulky-07.mp4 */,
+				CFB1E1232E4CC84C00C6C4ED /* porodnisaly-titulky-08.mp4 */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		CFE57A1C2CBD6FA100C48924 = {
 			isa = PBXGroup;
 			children = (
@@ -1020,6 +1103,14 @@
 				CF478D3F2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-3.jpg in Resources */,
 				CF478D412DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-2.jpg in Resources */,
 				CFB1E1102E4C93C600C6C4ED /* title-baby.riv in Resources */,
+				CFB1E1242E4CC84C00C6C4ED /* porodnisaly-titulky-01.mp4 in Resources */,
+				CFB1E1282E4CC84C00C6C4ED /* porodnisaly-titulky-08.mp4 in Resources */,
+				CFB1E1292E4CC84C00C6C4ED /* porodnisaly-titulky-06.mp4 in Resources */,
+				CFB1E12E2E4CC84C00C6C4ED /* porodnisaly-titulky-03.mp4 in Resources */,
+				CFB1E12F2E4CC84C00C6C4ED /* porodnisaly-titulky-07.mp4 in Resources */,
+				CFB1E1302E4CC84C00C6C4ED /* porodnisaly-titulky-02.mp4 in Resources */,
+				CFB1E1322E4CC84C00C6C4ED /* porodnisaly-titulky-04.mp4 in Resources */,
+				CFB1E1332E4CC84C00C6C4ED /* porodnisaly-titulky-05.mp4 in Resources */,
 				CFDAE47B2E169728008F5105 /* poloha-pri-tlaceni-5.mp4 in Resources */,
 				CF478D442DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg in Resources */,
 				CFDAE4792E16970C008F5105 /* poloha-pri-tlaceni-4.mp4 in Resources */,
@@ -1082,6 +1173,23 @@
 				CFDAE4932E16A20C008F5105 /* vysetreni-sluchu-7.jpg in Resources */,
 				CFDAE4942E16A20C008F5105 /* vysetreni-sluchu-6.jpg in Resources */,
 				CFDAE4952E16A20C008F5105 /* vysetreni-sluchu-4.jpg in Resources */,
+				CFB1E1452E4CCC0900C6C4ED /* porodnisaly-beztitulku-16.mp4 in Resources */,
+				CFB1E1462E4CCC0900C6C4ED /* porodnisaly-beztitulku-03.mp4 in Resources */,
+				CFB1E1472E4CCC0900C6C4ED /* porodnisaly-beztitulku-04.mp4 in Resources */,
+				CFB1E1482E4CCC0900C6C4ED /* porodnisaly-beztitulku-06.mp4 in Resources */,
+				CFB1E1492E4CCC0900C6C4ED /* porodnisaly-beztitulku-15.mp4 in Resources */,
+				CFB1E14A2E4CCC0900C6C4ED /* porodnisaly-beztitulku-17.mp4 in Resources */,
+				CFB1E14B2E4CCC0900C6C4ED /* porodnisaly-beztitulku-13.mp4 in Resources */,
+				CFB1E14C2E4CCC0900C6C4ED /* porodnisaly-beztitulku-08.mp4 in Resources */,
+				CFB1E14D2E4CCC0900C6C4ED /* porodnisaly-beztitulku-11.mp4 in Resources */,
+				CFB1E14E2E4CCC0900C6C4ED /* porodnisaly-beztitulku-07.mp4 in Resources */,
+				CFB1E14F2E4CCC0900C6C4ED /* porodnisaly-beztitulku-05.mp4 in Resources */,
+				CFB1E1502E4CCC0900C6C4ED /* porodnisaly-beztitulku-12.mp4 in Resources */,
+				CFB1E1512E4CCC0900C6C4ED /* porodnisaly-beztitulku-10.mp4 in Resources */,
+				CFB1E1522E4CCC0900C6C4ED /* porodnisaly-beztitulku-01.mp4 in Resources */,
+				CFB1E1532E4CCC0900C6C4ED /* porodnisaly-beztitulku-09.mp4 in Resources */,
+				CFB1E1542E4CCC0900C6C4ED /* porodnisaly-beztitulku-02.mp4 in Resources */,
+				CFB1E1552E4CCC0900C6C4ED /* porodnisaly-beztitulku-14.mp4 in Resources */,
 				CF478D642DEF89E2003AE7D8 /* vase-cesta-porodem-4.jpg in Resources */,
 				CF478D652DEF89E2003AE7D8 /* vase-cesta-porodem-5.jpg in Resources */,
 				CF478D662DEF89E2003AE7D8 /* vase-cesta-porodem-6.jpg in Resources */,
