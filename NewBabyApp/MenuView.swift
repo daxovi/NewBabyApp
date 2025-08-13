@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RiveRuntime
 
 struct MenuView: View {
     let headerImageString: String?
@@ -18,6 +19,7 @@ struct MenuView: View {
     @Binding var path: NavigationPath
     @State private var showVideo: Bool = false
     @State private var isSearchActive: Bool = false
+    @StateObject private var riveViewModel: RiveViewModel
     
     init(model: MenuModel, clientName: String?, path: Binding<NavigationPath>, heartTapAction: (() -> Void)? = nil) {
         self.headerImageString = model.headerImageString
@@ -27,6 +29,7 @@ struct MenuView: View {
         self._path = path
         self.title = model.title
         self.heartTapAction = heartTapAction
+        self._riveViewModel = StateObject(wrappedValue: RiveViewModel(fileName: model.headerImageString ?? ""))
     }
     
     var body: some View {
@@ -42,9 +45,15 @@ struct MenuView: View {
                 }
                 
                 if let headerImageString {
-                    Image(headerImageString)
-                        .resizable()
-                        .scaledToFit()
+                    riveViewModel.view()
+                        .onTapGesture {
+                            riveViewModel.play(loop: .oneShot)
+                            riveViewModel.reset()
+                        }
+                        .frame(height: 130)
+//                    Image(headerImageString)
+//                        .resizable()
+//                        .scaledToFit()
                 }
                 
                 if groupedMenuItems().count == 0 {

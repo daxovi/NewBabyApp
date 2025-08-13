@@ -12,6 +12,7 @@
 		CF0E61482E3BA00F0014A616 /* kojeni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF0E61472E3BA00F0014A616 /* kojeni.mp3 */; };
 		CF0E61922E3BD45A0014A616 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61912E3BD4510014A616 /* StoriesViewModel.swift */; };
 		CF0E61952E3C91120014A616 /* StoriesProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61942E3C91100014A616 /* StoriesProgressBar.swift */; };
+		CF179D182E4B799A00CA22CA /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CF179D172E4B799A00CA22CA /* RiveRuntime */; };
 		CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173C22E1438C800D6F11E /* SearchResultRow.swift */; };
 		CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */; };
 		CF4173DE2E15029700D6F11E /* PodcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */; };
@@ -191,6 +192,9 @@
 		CFABC4F32E3C91E300A66E4E /* StoriesControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F22E3C91E300A66E4E /* StoriesControls.swift */; };
 		CFABC4F52E3C920300A66E4E /* StoriesEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F42E3C920300A66E4E /* StoriesEmptyView.swift */; };
 		CFABC4F72E3C922800A66E4E /* StoriesDebugOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFABC4F62E3C922800A66E4E /* StoriesDebugOverlay.swift */; };
+		CFB1E10E2E4C8A1600C6C4ED /* title-pregnant.riv in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E10D2E4C8A1600C6C4ED /* title-pregnant.riv */; };
+		CFB1E1102E4C93C600C6C4ED /* title-baby.riv in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E10F2E4C93C600C6C4ED /* title-baby.riv */; };
+		CFB1E1122E4C9F9200C6C4ED /* title-home.riv in Resources */ = {isa = PBXBuildFile; fileRef = CFB1E1112E4C9F9200C6C4ED /* title-home.riv */; };
 		CFB8E8842DFFFE1900689C2A /* String+folded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8E8832DFFFE1300689C2A /* String+folded.swift */; };
 		CFC6C3DC2E3C940900FD04B8 /* StoriesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC6C3DB2E3C940900FD04B8 /* StoriesHeader.swift */; };
 		CFDAE4632E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */; };
@@ -427,6 +431,9 @@
 		CFABC4F22E3C91E300A66E4E /* StoriesControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesControls.swift; sourceTree = "<group>"; };
 		CFABC4F42E3C920300A66E4E /* StoriesEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesEmptyView.swift; sourceTree = "<group>"; };
 		CFABC4F62E3C922800A66E4E /* StoriesDebugOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesDebugOverlay.swift; sourceTree = "<group>"; };
+		CFB1E10D2E4C8A1600C6C4ED /* title-pregnant.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "title-pregnant.riv"; sourceTree = "<group>"; };
+		CFB1E10F2E4C93C600C6C4ED /* title-baby.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "title-baby.riv"; sourceTree = "<group>"; };
+		CFB1E1112E4C9F9200C6C4ED /* title-home.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "title-home.riv"; sourceTree = "<group>"; };
 		CFB8E8832DFFFE1300689C2A /* String+folded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+folded.swift"; sourceTree = "<group>"; };
 		CFC6C3DB2E3C940900FD04B8 /* StoriesHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesHeader.swift; sourceTree = "<group>"; };
 		CFDAE4622E1694A9008F5105 /* tlumeni-bolesti-bez-leku-3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-bez-leku-3.mp4"; sourceTree = "<group>"; };
@@ -483,6 +490,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF179D182E4B799A00CA22CA /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +510,16 @@
 				CF478C712DEF89E2003AE7D8 /* VideoPlayerView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CF179D192E4B79FA00CA22CA /* Rive */ = {
+			isa = PBXGroup;
+			children = (
+				CFB1E1112E4C9F9200C6C4ED /* title-home.riv */,
+				CFB1E10F2E4C93C600C6C4ED /* title-baby.riv */,
+				CFB1E10D2E4C8A1600C6C4ED /* title-pregnant.riv */,
+			);
+			path = Rive;
 			sourceTree = "<group>";
 		};
 		CF4173E22E15038C00D6F11E /* Podcast */ = {
@@ -820,6 +838,7 @@
 		CF478D0A2DEF89E2003AE7D8 /* NewBabyApp */ = {
 			isa = PBXGroup;
 			children = (
+				CF179D192E4B79FA00CA22CA /* Rive */,
 				CF4173FC2E153CA700D6F11E /* Info.plist */,
 				CF4173FA2E153C1E00D6F11E /* AudioManager.swift */,
 				CF4173E52E150D6500D6F11E /* MenuItems */,
@@ -922,6 +941,7 @@
 			);
 			name = NewBabyApp;
 			packageProductDependencies = (
+				CF179D172E4B799A00CA22CA /* RiveRuntime */,
 			);
 			productName = NewBabyApp;
 			productReference = CFE57A252CBD6FA100C48924 /* NewBabyApp.app */;
@@ -951,6 +971,9 @@
 			);
 			mainGroup = CFE57A1C2CBD6FA100C48924;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CF179D162E4B799A00CA22CA /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CFE57A262CBD6FA100C48924 /* Products */;
 			projectDirPath = "";
@@ -996,6 +1019,7 @@
 				CF478D3E2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-2.jpg in Resources */,
 				CF478D3F2DEF89E2003AE7D8 /* iii-doba-porodni-jak-probiha-3.jpg in Resources */,
 				CF478D412DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-2.jpg in Resources */,
+				CFB1E1102E4C93C600C6C4ED /* title-baby.riv in Resources */,
 				CFDAE47B2E169728008F5105 /* poloha-pri-tlaceni-5.mp4 in Resources */,
 				CF478D442DEF89E2003AE7D8 /* iv-doba-porodni-jak-probiha-5.jpg in Resources */,
 				CFDAE4792E16970C008F5105 /* poloha-pri-tlaceni-4.mp4 in Resources */,
@@ -1038,6 +1062,7 @@
 				CF478D5E2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-2.jpg in Resources */,
 				CF478D5F2DEF89E2003AE7D8 /* tlumeni-bolesti-s-pouzitim-leku-3.jpg in Resources */,
 				CF0E61482E3BA00F0014A616 /* kojeni.mp3 in Resources */,
+				CFB1E1122E4C9F9200C6C4ED /* title-home.riv in Resources */,
 				CF9279252E43C8E0008A6A3F /* kojeni-01b.mp4 in Resources */,
 				CF9279262E43C8E0008A6A3F /* kojeni-04.mp4 in Resources */,
 				CF9279272E43C8E0008A6A3F /* kojeni-03.mp4 in Resources */,
@@ -1080,6 +1105,7 @@
 				CF478D6F2DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-1.jpg in Resources */,
 				CF478D702DEF89E2003AE7D8 /* jake-jsou-priznaky-zloutenky-2.jpg in Resources */,
 				CFF992B22DFD60F500859DC9 /* jak-vypada-miminko-po-porodu-3.jpg in Resources */,
+				CFB1E10E2E4C8A1600C6C4ED /* title-pregnant.riv in Resources */,
 				CF9279312E43CA3E008A6A3F /* nutricni-1.mp4 in Resources */,
 				CF9279322E43CA3E008A6A3F /* nutricni-2.mp4 in Resources */,
 				CF9279332E43CA3E008A6A3F /* nutricni-3.mp4 in Resources */,
@@ -1436,6 +1462,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF179D162E4B799A00CA22CA /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF179D172E4B799A00CA22CA /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF179D162E4B799A00CA22CA /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFE57A1D2CBD6FA100C48924 /* Project object */;
 }
