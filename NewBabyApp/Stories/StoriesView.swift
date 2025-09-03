@@ -40,6 +40,7 @@ struct StoriesView: View {
                             proxy: proxy,
                             viewModel: viewModel
                         )
+                        .animation(.easeInOut(duration: 0.2), value: viewModel.selectedStory)
                     }
                 }
                 .background(Color.background)
