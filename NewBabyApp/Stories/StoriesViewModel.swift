@@ -97,6 +97,9 @@ class StoriesViewModel: ObservableObject {
         if selectedStory < storiesGroup.stories.count - 1 {
             selectedStory += 1
             timerProgress = 0.0
+            
+            // Trigger preloading for the new current video and its adjacent videos
+            triggerVideoPreloading()
         } else {
             shouldDismiss = true
         }
@@ -126,6 +129,9 @@ class StoriesViewModel: ObservableObject {
             if let story = currentStory, story.type == .video {
                 shouldRestartVideo = true
             }
+            
+            // Trigger preloading for the new current video and its adjacent videos
+            triggerVideoPreloading()
         }
     }
     
@@ -147,6 +153,24 @@ class StoriesViewModel: ObservableObject {
         // If target story is a video, trigger video restart
         if let story = storiesGroup.stories[safe: index], story.type == .video {
             shouldRestartVideo = true
+        }
+        
+        // Trigger preloading for the new current video and its adjacent videos
+        triggerVideoPreloading()
+    }
+    
+    // MARK: - Video Preloading Support
+    
+    /// Triggers video preloading for current story and adjacent videos
+    /// This is called by the video player to coordinate preloading
+    private func triggerVideoPreloading() {
+        // This method helps coordinate with the video player pool manager
+        // The actual preloading logic is handled in VideoPlayerPoolManager
+        // but this method can be used to notify other parts of the system
+        
+        // Force a UI update to ensure video player receives the new story info
+        DispatchQueue.main.async {
+            self.objectWillChange.send()
         }
     }
 }

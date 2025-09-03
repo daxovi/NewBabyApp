@@ -19,6 +19,7 @@ struct StoriesMediaContainer: View {
             StoriesMediaView(
                 story: story,
                 proxy: proxy,
+                storiesGroup: viewModel.storiesGroup.stories,
                 progress: Binding(
                     get: {
                         guard viewModel.selectedStory < viewModel.videoProgressGroup.count else { return 0.0 }
@@ -47,6 +48,7 @@ struct StoriesMediaContainer: View {
 private struct StoriesMediaView: View {
     var story: Story
     var proxy: GeometryProxy
+    var storiesGroup: [Story]
     @Binding var progress: Double
     @Binding var shouldRestart: Bool
     @Binding var isPaused: Bool
@@ -56,7 +58,8 @@ private struct StoriesMediaView: View {
             Color.clear
                 .overlay(
                     VideoPlayerView(
-                        videoName: story.sourceName, 
+                        videoName: story.sourceName,
+                        storiesGroup: storiesGroup, 
                         progress: $progress,
                         shouldRestart: $shouldRestart,
                         isPaused: $isPaused
@@ -70,9 +73,11 @@ private struct StoriesMediaView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .scaledToFill()
                         .clipped()
+                        .id(story.sourceName) // Add unique ID for smooth transitions
                 )
                 .clipShape(clipShape)
                 .ignoresSafeArea()
+                .transition(.opacity) // Add smooth opacity transition
         } else {
             if let image = getImage(imageName: story.sourceName) {
                 Color.clear
@@ -85,6 +90,7 @@ private struct StoriesMediaView: View {
                     )
                     .clipShape(clipShape)
                     .ignoresSafeArea()
+                    .transition(.opacity) // Add smooth opacity transition for consistency
             }
         }
     }
