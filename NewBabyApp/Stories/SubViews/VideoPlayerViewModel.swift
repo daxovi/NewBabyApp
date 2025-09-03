@@ -30,7 +30,11 @@ class VideoPlayerViewModel: ObservableObject {
         self.player = AVPlayer() // Temporary, will be replaced by pool manager
         
         setupPoolManagerBindings()
-        poolManager.setCurrentVideo(videoName)
+        
+        // Slight delay to ensure UI is ready, then start preloading
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.poolManager.setCurrentVideo(videoName)
+        }
     }
 
     deinit {

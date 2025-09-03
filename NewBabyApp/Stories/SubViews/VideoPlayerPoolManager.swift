@@ -54,6 +54,11 @@ class VideoPlayerPoolManager: ObservableObject {
         switchToPlayer(player, for: videoName)
     }
     
+    /// Preloads a video without switching to it
+    func preloadVideo(_ videoName: String) {
+        preloadVideoIfNeeded(videoName)
+    }
+    
     /// Seeks current video to beginning and starts playing
     func restart() {
         currentPlayer.seek(to: .zero)
@@ -81,6 +86,8 @@ class VideoPlayerPoolManager: ObservableObject {
     // MARK: - Private Methods
     
     private func switchToPlayer(_ player: AVPlayer, for videoName: String) {
+        print("VideoPlayerPoolManager: Switching to video: \(videoName)")
+        
         // Remove time observer from previous player
         if let token = timeObserverTokens[currentPlayer] {
             currentPlayer.removeTimeObserver(token)
@@ -103,10 +110,11 @@ class VideoPlayerPoolManager: ObservableObject {
     
     private func loadAndSwitchToVideo(_ videoName: String) {
         guard let player = createPlayer(for: videoName) else {
-            print("Failed to create player for video: \(videoName)")
+            print("VideoPlayerPoolManager: Failed to create player for video: \(videoName)")
             return
         }
         
+        print("VideoPlayerPoolManager: Loading and switching to video: \(videoName)")
         playerPool[videoName] = player
         preloadedVideos.insert(videoName)
         switchToPlayer(player, for: videoName)
@@ -125,6 +133,8 @@ class VideoPlayerPoolManager: ObservableObject {
             DispatchQueue.main.async {
                 self.playerPool[videoName] = player
                 self.preloadedVideos.insert(videoName)
+                
+                print("VideoPlayerPoolManager: Successfully preloaded video: \(videoName)")
                 
                 // Preload the video by seeking to start (this loads the video)
                 player.seek(to: .zero)
