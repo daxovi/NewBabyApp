@@ -397,29 +397,6 @@
                     "content" : "detail_chranenihrazebehemporodu"
                   },
                   {
-                    "type" : "stories",
-                    "title" : "title_poporodu",
-                    "bannerName" : "placeholder",
-                    "isHalf" : false,
-                    "stories" : [
-                      {
-                        "sourceName" : "po-porodu-1",
-                        "type" : "image",
-                        "text" : "po_porodu_1"
-                      },
-                      {
-                        "sourceName" : "po-porodu-2",
-                        "type" : "image",
-                        "text" : "po_porodu_2"
-                      },
-                      {
-                        "sourceName" : "po-porodu-3",
-                        "type" : "image",
-                        "text" : "po_porodu_3"
-                      }
-                    ]
-                  },
-                  {
                     "type" : "introText",
                     "title" : "title_moznekomplikaceiidobaporodni",
                     "isCollapsable" : false,
@@ -455,6 +432,29 @@
                     "content" : "detail_jakprobihaiiifazeporodu",
                     "type" : "introText",
                     "isCollapsable" : false
+                  },
+                  {
+                    "type" : "stories",
+                    "title" : "title_poporodu",
+                    "bannerName" : "placeholder",
+                    "isHalf" : false,
+                    "stories" : [
+                      {
+                        "sourceName" : "po-porodu-1",
+                        "type" : "image",
+                        "text" : "po_porodu_1"
+                      },
+                      {
+                        "sourceName" : "po-porodu-2",
+                        "type" : "image",
+                        "text" : "po_porodu_2"
+                      },
+                      {
+                        "sourceName" : "po-porodu-3",
+                        "type" : "image",
+                        "text" : "po_porodu_3"
+                      }
+                    ]
                   },
                   {
                     "title" : "title_placentajakoodkaz",
