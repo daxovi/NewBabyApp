@@ -99,11 +99,10 @@
             "title" : "title_vasecestaporodem"
           },
           {
-            "fileName" : "poroddovody",
-            "isHalf" : false,
-            "type" : "podcast",
-            "title" : "title_poroddovody",
-            "source" : ""
+            "content" : "detail_poprijezdudoporodnice",
+            "isCollapsable" : false,
+            "type" : "introText",
+            "title" : "title_poprijezdudoporodnice"
           },
           {
             "bannerName" : "placeholder",
@@ -189,7 +188,7 @@
                   {
                     "stories" : [
                       {
-                        "type" : "image",
+                        "type" : "video",
                         "sourceName" : "tlumeni-bolesti-s-pouzitim-leku-1",
                         "text" : "tlumeni_bolesti_s_pouzitim_leku_1"
                       },
@@ -233,12 +232,6 @@
                     "title" : "title_cosedejevedruhefaziporodu",
                     "isCollapsable" : false,
                     "content" : "detail_cosedejevedruhefaziporodu"
-                  },
-                  {
-                    "type" : "introText",
-                    "title" : "title_kdyzporodpottrebujepomociifazeporodni",
-                    "isCollapsable" : false,
-                    "content" : "detail_kdyzporodpotrebujepomociifazeporodni"
                   },
                   {
                     "type" : "stories",
@@ -286,21 +279,47 @@
                   },
                   {
                     "type" : "introText",
-                    "title" : "title_moznekomplikaceiidobaporodni",
+                    "title" : "title_kdyzporodpottrebujepomociifazeporodni",
                     "isCollapsable" : false,
-                    "content" : "detail_moznekomplikaceiidobaporodni"
+                    "content" : "detail_kdyzporodpotrebujepomociifazeporodni"
                   },
                   {
-                    "type" : "introText",
-                    "title" : "title_vakuumextrakce",
-                    "isCollapsable" : true,
-                    "content" : "vakuumextrakce_1"
-                  },
-                  {
-                    "type" : "introText",
-                    "title" : "title_porodnickekleste",
-                    "isCollapsable" : true,
-                    "content" : "porodnicke_kleste_1"
+                    "type" : "stories",
+                    "title" : "title_moznekomplikaceiidobaporodni",
+                    "isHalf" : false,
+                    "bannerName" : "placeholder",
+                    "stories" : [
+                      {
+                        "sourceName" : "placeholder",
+                        "type" : "image",
+                        "text" : "stories_moznekomplikaceiidobaporodni_1"
+                      },
+                      {
+                        "sourceName" : "placeholder",
+                        "type" : "image",
+                        "text" : "stories_moznekomplikaceiidobaporodni_2"
+                      },
+                      {
+                        "sourceName" : "placeholder",
+                        "type" : "image",
+                        "text" : "stories_moznekomplikaceiidobaporodni_3"
+                      },
+                      {
+                        "sourceName" : "placeholder",
+                        "type" : "image",
+                        "text" : "stories_moznekomplikaceiidobaporodni_4"
+                      },
+                      {
+                        "sourceName" : "placeholder",
+                        "type" : "image",
+                        "text" : "stories_moznekomplikaceiidobaporodni_5"
+                      },
+                      {
+                        "sourceName" : "placeholder",
+                        "type" : "image",
+                        "text" : "stories_moznekomplikaceiidobaporodni_6"
+                      }
+                    ]
                   }
                 ],
                 "isHalf" : false,
@@ -362,12 +381,6 @@
                     "content" : "detail_moznekomplikaceiiifazeporodu",
                     "type" : "introText",
                     "isCollapsable" : true
-                  },
-                  {
-                    "title" : "title_moznostireseniiiifazeporodu",
-                    "content" : "detail_moznostireseniiiifazeporodu",
-                    "type" : "introText",
-                    "isCollapsable" : true
                   }
                 ],
                 "isHalf" : false,
@@ -419,12 +432,6 @@
                         "sourceName" : "iv-doba-porodni-jak-probiha-6"
                       }
                     ]
-                  },
-                  {
-                    "title" : "title_moznostireseniivfazeporodu",
-                    "content" : "detail_moznostireseniivfazeporodu",
-                    "type" : "introText",
-                    "isCollapsable" : false
                   }
                 ],
                 "isHalf" : false,
@@ -499,6 +506,15 @@
                       "sourceName" : "akutni-cisarsky-rez-4"
                     }
                 ]
+              },
+              {
+                "title" : "title_peceojizvu",
+                "bannerName" : "placeholder",
+                "type" : "stories",
+                "isHalf" : false,
+                "stories" : [
+
+                ],
               }
             ],
             "type" : "menu",
@@ -515,7 +531,7 @@
                 "isCollapsable" : false
               },
               {
-                "title" : "title_jakprobihaakutnicisarskyrez",
+                "title" : "title_jakprobihaplanovanycisarskyrez",
                 "bannerName" : "jak-probiha-akutni-cisarsky-rez-0",
                 "type" : "stories",
                 "isHalf" : false,
@@ -1046,11 +1062,6 @@
                   "text" : "srdecni_jak_probiha_mereni_2",
                   "type" : "image",
                   "sourceName" : "srdecni-jak-probiha-mereni-2"
-                },
-                {
-                  "text" : "srdecni_jak_probiha_mereni_3",
-                  "type" : "image",
-                  "sourceName" : "srdecni-jak-probiha-mereni-3"
                 }
               ],
               "type" : "stories",

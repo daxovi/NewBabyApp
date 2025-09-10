@@ -45,5 +45,6 @@ struct VideoPlayerView: View {
                     videoPlayerViewModel.resume()
                 }
             }
+            .background(.red)
     }
 }

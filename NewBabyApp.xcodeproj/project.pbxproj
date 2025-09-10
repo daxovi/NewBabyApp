@@ -12,6 +12,7 @@
 		CF0E61482E3BA00F0014A616 /* kojeni.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF0E61472E3BA00F0014A616 /* kojeni.mp3 */; };
 		CF0E61922E3BD45A0014A616 /* StoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61912E3BD4510014A616 /* StoriesViewModel.swift */; };
 		CF0E61952E3C91120014A616 /* StoriesProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0E61942E3C91100014A616 /* StoriesProgressBar.swift */; };
+		CF10D0542E71DA7D00F84454 /* tlumeni-bolesti-s-pouzitim-leku-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF10D0532E71DA7D00F84454 /* tlumeni-bolesti-s-pouzitim-leku-1.mp4 */; };
 		CF179D182E4B799A00CA22CA /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CF179D172E4B799A00CA22CA /* RiveRuntime */; };
 		CF4173C32E1438C800D6F11E /* SearchResultRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173C22E1438C800D6F11E /* SearchResultRow.swift */; };
 		CF4173DC2E14FFE000D6F11E /* PodcastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */; };
@@ -276,6 +277,7 @@
 		CF0E61472E3BA00F0014A616 /* kojeni.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kojeni.mp3; sourceTree = "<group>"; };
 		CF0E61912E3BD4510014A616 /* StoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModel.swift; sourceTree = "<group>"; };
 		CF0E61942E3C91100014A616 /* StoriesProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesProgressBar.swift; sourceTree = "<group>"; };
+		CF10D0532E71DA7D00F84454 /* tlumeni-bolesti-s-pouzitim-leku-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tlumeni-bolesti-s-pouzitim-leku-1.mp4"; sourceTree = "<group>"; };
 		CF4173C22E1438C800D6F11E /* SearchResultRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultRow.swift; sourceTree = "<group>"; };
 		CF4173DB2E14FFDD00D6F11E /* PodcastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastModel.swift; sourceTree = "<group>"; };
 		CF4173DD2E15028F00D6F11E /* PodcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastViewModel.swift; sourceTree = "<group>"; };
@@ -771,6 +773,7 @@
 				CFB1E1132E4CC83A00C6C4ED /* Test */,
 				CF92792C2E43CA25008A6A3F /* nutricni */,
 				CF9279242E43C8E0008A6A3F /* kojeni */,
+				CF10D0532E71DA7D00F84454 /* tlumeni-bolesti-s-pouzitim-leku-1.mp4 */,
 				CF6D13F92E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 */,
 				CFF992BF2DFED31D00859DC9 /* vysetreni-ledvin-1.mp4 */,
 				CFF992C02DFED31D00859DC9 /* vysetreni-ledvin-2.mp4 */,
@@ -1078,6 +1081,7 @@
 				CF6D13FA2E170F110030BA12 /* vysetreni-sedy-zakal-2.mp4 in Resources */,
 				CF478D292DEF89E2003AE7D8 /* jak-bonding-probiha-2.jpeg in Resources */,
 				CF478D2A2DEF89E2003AE7D8 /* jak-bonding-probiha-3.jpeg in Resources */,
+				CF10D0542E71DA7D00F84454 /* tlumeni-bolesti-s-pouzitim-leku-1.mp4 in Resources */,
 				CFF992BD2DFECF8100859DC9 /* jak-to-u-nas-vypada-1.mp4 in Resources */,
 				CFF992BE2DFECF8100859DC9 /* jak-to-u-nas-vypada-2.mp4 in Resources */,
 				CF478D2B2DEF89E2003AE7D8 /* jak-bonding-probiha-4.jpeg in Resources */,
