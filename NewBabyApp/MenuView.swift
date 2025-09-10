@@ -19,6 +19,7 @@ struct MenuView: View {
     @Binding var path: NavigationPath
     @State private var showVideo: Bool = false
     @State private var isSearchActive: Bool = false
+    @State private var isNavbarTitleVisible: Bool = false
     @StateObject private var riveViewModel: RiveViewModel
     
     init(model: MenuModel, clientName: String?, path: Binding<NavigationPath>, heartTapAction: (() -> Void)? = nil) {
@@ -40,6 +41,28 @@ struct MenuView: View {
             MenuBackground()
             
             ScrollView {
+                Text(title)
+                    .textStyle(.navigationTitle)
+                    .fontWeight(.bold)
+                    .padding(.horizontal)
+                    .padding(.top)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .overlay {
+                        GeometryReader { proxy in
+                            Color.clear
+                                .onChange(of: proxy.frame(in: .named("scroll")).minY) { value in
+                                    if value < 0 && !isNavbarTitleVisible {
+                                        withAnimation(.easeInOut(duration: 2)) {
+                                            isNavbarTitleVisible = true
+                                        }
+                                    } else if value >= 0 && isNavbarTitleVisible {
+                                        withAnimation(.easeInOut(duration: 2)) {
+                                            isNavbarTitleVisible = false
+                                        }
+                                    }
+                                }
+                        }
+                    }
                 if headerImageString != nil {
                     MenuHeader(clientName: clientName, subtitle: subtitle, heartTapAction: heartTapAction)
                 }
@@ -104,7 +127,8 @@ struct MenuView: View {
         .sheet(isPresented: $isSearchActive, content: {
             SearchView()
         })
-        .navigationTitle(title)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(isNavbarTitleVisible ? title : "")
         .toolbar {
 //            ToolbarItem(placement: .topBarLeading) {
 //                Image("fnol-heart")

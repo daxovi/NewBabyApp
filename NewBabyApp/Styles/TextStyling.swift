@@ -52,6 +52,7 @@ enum TextColor {
 }
 
 enum TextStyle {
+    case navigationTitle
     case titlePrimary
     case subtitleSecondary
     case bodyPrimary
@@ -62,7 +63,7 @@ enum TextStyle {
     
     var fontSize: FontSize {
         switch self {
-        case .titlePrimary: return .title
+        case .titlePrimary, .navigationTitle: return .title
         case .subtitleSecondary: return .subtitle
         case .bodyPrimary, .boldDanger, .textContent: return .body
         case .bannerOverlay: return .subtitle
@@ -75,7 +76,7 @@ enum TextStyle {
         case .titlePrimary: return .semibold
         case .subtitleSecondary: return .medium
         case .bodyPrimary, .textContent: return .regular
-        case .boldDanger: return .bold
+        case .boldDanger, .navigationTitle: return .bold
         case .bannerOverlay: return .medium
         case .smallTitle: return .regular
         }
@@ -83,7 +84,7 @@ enum TextStyle {
     
     var textColor: TextColor {
         switch self {
-        case .titlePrimary, .bodyPrimary, .smallTitle: return .primary
+        case .titlePrimary, .bodyPrimary, .smallTitle, .navigationTitle: return .primary
         case .subtitleSecondary, .textContent: return .secondary
         case .boldDanger: return .danger
         case .bannerOverlay: return .primary
@@ -92,7 +93,7 @@ enum TextStyle {
     
     var font: Font {
         switch self {
-        case .titlePrimary: return .title
+        case .titlePrimary, .navigationTitle: return .title
         case .subtitleSecondary: return .title3
         case .bodyPrimary: return .body
         case .textContent: return .callout
