@@ -10,78 +10,108 @@ import Combine
 import SwiftUI
 
 class VideoPlayerViewModel: ObservableObject {
-    @Published var player: AVPlayer
+    @Published var player: AVPlayer {
+        didSet {
+            // When player changes, update the published property
+            objectWillChange.send()
+        }
+    }
     @Published var currentProgress: Double = 0.0
     @Published var shouldRestart: Bool = false
     @Published var shouldPause: Bool = false
 
-    private var timeObserverToken: Any?
+    private let poolManager = VideoPlayerPoolManager()
     private var wasPlayingBeforePause: Bool = false
+    private var cancellables = Set<AnyCancellable>()
+    private var currentVideoName: String
 
     init(videoName: String) {
-        if let filePath = Bundle.main.path(forResource: videoName, ofType: "mp4") {
-            self.player = AVPlayer(url: URL(fileURLWithPath: filePath))
-        } else {
-            self.player = AVPlayer() // Empty player in case the video file is missing
-        }
+        self.currentVideoName = videoName
+        self.player = AVPlayer() // Temporary, will be replaced by pool manager
         
-
-        // Setup time observer to track video progress
-        addTimeObserver()
+        setupPoolManagerBindings()
+        
+        // Slight delay to ensure UI is ready, then start preloading
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.poolManager.setCurrentVideo(videoName)
+        }
     }
 
     deinit {
-        removeTimeObserver()
+        cancellables.removeAll()
     }
 
     func restart() {
-        player.seek(to: .zero)
-        player.play()
-        currentProgress = 0.0
+        poolManager.restart()
     }
 
     func pause() {
         wasPlayingBeforePause = player.timeControlStatus == .playing
-        player.pause()
+        poolManager.pause()
     }
     
     func resume() {
         if wasPlayingBeforePause {
-            player.play()
+            poolManager.resume()
         }
     }
     
     func pauseAndSeekToZero() {
-        player.pause()
-        player.seek(to: .zero)
-        currentProgress = 0.0
+        poolManager.pauseAndSeekToZero()
     }
     
-    func updateVideoName(_ newVideoName: String) {
-        if let filePath = Bundle.main.path(forResource: newVideoName, ofType: "mp4") {
-            player.replaceCurrentItem(with: AVPlayerItem(url: URL(fileURLWithPath: filePath)))
-            restart() // Restart the player with the new video
-        } else {
-            print("Cesta k souboru \(newVideoName) nebyla nalezena.")
-        }
+    func updateVideoName(_ newVideoName: String, storiesGroup: [Story]? = nil) {
+        guard newVideoName != currentVideoName else { return }
+        
+        currentVideoName = newVideoName
+        
+        // Find adjacent videos for preloading
+        let (previousVideo, nextVideo) = findAdjacentVideos(for: newVideoName, in: storiesGroup)
+        
+        // Use pool manager for smooth transition
+        poolManager.setCurrentVideo(newVideoName, previousVideo: previousVideo, nextVideo: nextVideo)
     }
-
-    private func addTimeObserver() {
-        let interval = CMTime(seconds: 0.1, preferredTimescale: CMTimeScale(NSEC_PER_SEC)) // Update every 0.1 seconds
-        timeObserverToken = player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] time in
-            guard let self = self,
-                  let duration = self.player.currentItem?.duration.seconds,
-                  duration > 0 else { return }
-
-            let currentTime = time.seconds
-            self.currentProgress = currentTime / duration // Normalized progress between 0 and 1
-        }
+    
+    private func setupPoolManagerBindings() {
+        // Bind pool manager's player to our published player
+        poolManager.$currentPlayer
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.player, on: self)
+            .store(in: &cancellables)
+        
+        // Bind pool manager's progress to our published progress
+        poolManager.$currentProgress
+            .receive(on: DispatchQueue.main)
+            .assign(to: \.currentProgress, on: self)
+            .store(in: &cancellables)
     }
-
-    private func removeTimeObserver() {
-        if let token = timeObserverToken {
-            player.removeTimeObserver(token)
-            timeObserverToken = nil
+    
+    private func findAdjacentVideos(for videoName: String, in storiesGroup: [Story]?) -> (previous: String?, next: String?) {
+        guard let stories = storiesGroup else { return (nil, nil) }
+        
+        // Find current video index
+        guard let currentIndex = stories.firstIndex(where: { $0.sourceName == videoName && $0.type == .video }) else {
+            return (nil, nil)
         }
+        
+        // Find previous video
+        var previousVideo: String?
+        for i in stride(from: currentIndex - 1, through: 0, by: -1) {
+            if stories[i].type == .video {
+                previousVideo = stories[i].sourceName
+                break
+            }
+        }
+        
+        // Find next video  
+        var nextVideo: String?
+        for i in (currentIndex + 1)..<stories.count {
+            if stories[i].type == .video {
+                nextVideo = stories[i].sourceName
+                break
+            }
+        }
+        
+        return (previousVideo, nextVideo)
     }
 }

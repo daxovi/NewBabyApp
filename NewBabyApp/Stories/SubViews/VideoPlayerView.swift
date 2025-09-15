@@ -9,13 +9,15 @@ import _AVKit_SwiftUI
 
 struct VideoPlayerView: View {
     var videoName: String
+    var storiesGroup: [Story]? // Added for adjacent video detection
     @StateObject var videoPlayerViewModel: VideoPlayerViewModel
     @Binding var progress: Double // Binding pro přenos progressu do ContentView
     @Binding var shouldRestart: Bool
     @Binding var isPaused: Bool
     
-    init(videoName: String, progress: Binding<Double>, shouldRestart: Binding<Bool>, isPaused: Binding<Bool>) {
+    init(videoName: String, storiesGroup: [Story]? = nil, progress: Binding<Double>, shouldRestart: Binding<Bool>, isPaused: Binding<Bool>) {
         _videoPlayerViewModel = StateObject(wrappedValue: VideoPlayerViewModel(videoName: videoName))
+        self.storiesGroup = storiesGroup
         _progress = progress
         _shouldRestart = shouldRestart
         _isPaused = isPaused
@@ -30,7 +32,7 @@ struct VideoPlayerView: View {
                 progress = newProgress // Aktualizace bindingu v ContentView
             }
             .onChange(of: videoName) { newValue in
-                videoPlayerViewModel.updateVideoName(newValue)
+                videoPlayerViewModel.updateVideoName(newValue, storiesGroup: storiesGroup)
             }
             .onChange(of: shouldRestart) { newValue in
                 if newValue {
